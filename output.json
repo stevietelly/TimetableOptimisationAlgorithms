@@ -1,0 +1,684 @@
+{
+  "error": false,
+  "message": "Optimization completed with cost 0.00",
+  "sessions": [
+    {
+      "identifier": "2_4-3",
+      "group": "2",
+      "instructor": "3",
+      "unit": "4",
+      "day": "Wednesday",
+      "time": "7:00am",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "2_3-1",
+      "group": "2",
+      "instructor": "4",
+      "unit": "3",
+      "day": "Thursday",
+      "time": "11:00am",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "3_2-0",
+      "group": "3",
+      "instructor": "5",
+      "unit": "2",
+      "day": "Wednesday",
+      "time": "1:00pm",
+      "room": "1",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "4_1-0",
+      "group": "4",
+      "instructor": "2",
+      "unit": "1",
+      "day": "Wednesday",
+      "time": "9:00am",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "4_3-1",
+      "group": "4",
+      "instructor": "4",
+      "unit": "3",
+      "day": "Tuesday",
+      "time": "1:00pm",
+      "room": "3",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "5_6-1",
+      "group": "5",
+      "instructor": "6",
+      "unit": "6",
+      "day": "Thursday",
+      "time": "5:00pm",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "1_1-0",
+      "group": "1",
+      "instructor": "2",
+      "unit": "1",
+      "day": "Wednesday",
+      "time": "11:00am",
+      "room": "1",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "1_2-1",
+      "group": "1",
+      "instructor": "5",
+      "unit": "2",
+      "day": "Wednesday",
+      "time": "5:00pm",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "2_4-0",
+      "group": "2",
+      "instructor": "3",
+      "unit": "4",
+      "day": "Monday",
+      "time": "11:00am",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "3_1-0",
+      "group": "3",
+      "instructor": "2",
+      "unit": "1",
+      "day": "Monday",
+      "time": "10:00am",
+      "room": "3",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "4_1-1",
+      "group": "4",
+      "instructor": "2",
+      "unit": "1",
+      "day": "Thursday",
+      "time": "9:00am",
+      "room": "1",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "6_6-1",
+      "group": "6",
+      "instructor": "6",
+      "unit": "6",
+      "day": "Tuesday",
+      "time": "12:00pm",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "6_3-1",
+      "group": "6",
+      "instructor": "4",
+      "unit": "3",
+      "day": "Thursday",
+      "time": "4:00pm",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "1_3-1",
+      "group": "1",
+      "instructor": "4",
+      "unit": "3",
+      "day": "Monday",
+      "time": "12:00pm",
+      "room": "1",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "2_4-2",
+      "group": "2",
+      "instructor": "3",
+      "unit": "4",
+      "day": "Monday",
+      "time": "3:00pm",
+      "room": "1",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "2_2-0",
+      "group": "2",
+      "instructor": "5",
+      "unit": "2",
+      "day": "Monday",
+      "time": "7:00am",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "4_3-0",
+      "group": "4",
+      "instructor": "4",
+      "unit": "3",
+      "day": "Wednesday",
+      "time": "4:00pm",
+      "room": "1",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "5_1-0",
+      "group": "5",
+      "instructor": "2",
+      "unit": "1",
+      "day": "Tuesday",
+      "time": "5:00pm",
+      "room": "1",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "5_2-0",
+      "group": "5",
+      "instructor": "5",
+      "unit": "2",
+      "day": "Wednesday",
+      "time": "11:00am",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "1_1-1",
+      "group": "1",
+      "instructor": "2",
+      "unit": "1",
+      "day": "Thursday",
+      "time": "1:00pm",
+      "room": "3",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "1_2-0",
+      "group": "1",
+      "instructor": "5",
+      "unit": "2",
+      "day": "Thursday",
+      "time": "5:00pm",
+      "room": "1",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "2_1-1",
+      "group": "2",
+      "instructor": "2",
+      "unit": "1",
+      "day": "Monday",
+      "time": "9:00am",
+      "room": "3",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "2_2-1",
+      "group": "2",
+      "instructor": "5",
+      "unit": "2",
+      "day": "Thursday",
+      "time": "9:00am",
+      "room": "4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "3_2-1",
+      "group": "3",
+      "instructor": "5",
+      "unit": "2",
+      "day": "Monday",
+      "time": "3:00pm",
+      "room": "4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "5_1-1",
+      "group": "5",
+      "instructor": "2",
+      "unit": "1",
+      "day": "Tuesday",
+      "time": "9:00am",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "5_2-1",
+      "group": "5",
+      "instructor": "5",
+      "unit": "2",
+      "day": "Tuesday",
+      "time": "7:00am",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "5_6-0",
+      "group": "5",
+      "instructor": "6",
+      "unit": "6",
+      "day": "Monday",
+      "time": "2:00pm",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "2_4-1",
+      "group": "2",
+      "instructor": "3",
+      "unit": "4",
+      "day": "Thursday",
+      "time": "1:00pm",
+      "room": "4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "2_3-0",
+      "group": "2",
+      "instructor": "4",
+      "unit": "3",
+      "day": "Monday",
+      "time": "4:00pm",
+      "room": "3",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "4_5-1",
+      "group": "4",
+      "instructor": "7",
+      "unit": "5",
+      "day": "Tuesday",
+      "time": "11:00am",
+      "room": "3",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "4_2-0",
+      "group": "4",
+      "instructor": "5",
+      "unit": "2",
+      "day": "Monday",
+      "time": "5:00pm",
+      "room": "4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "5_3-1",
+      "group": "5",
+      "instructor": "4",
+      "unit": "3",
+      "day": "Thursday",
+      "time": "9:00am",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "6_1-1",
+      "group": "6",
+      "instructor": "2",
+      "unit": "1",
+      "day": "Monday",
+      "time": "1:00pm",
+      "room": "3",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "4_2-1",
+      "group": "4",
+      "instructor": "5",
+      "unit": "2",
+      "day": "Wednesday",
+      "time": "8:00am",
+      "room": "1",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "6_1-0",
+      "group": "6",
+      "instructor": "2",
+      "unit": "1",
+      "day": "Tuesday",
+      "time": "11:00am",
+      "room": "4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "3_1-1",
+      "group": "3",
+      "instructor": "2",
+      "unit": "1",
+      "day": "Tuesday",
+      "time": "2:00pm",
+      "room": "1",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "4_5-0",
+      "group": "4",
+      "instructor": "7",
+      "unit": "5",
+      "day": "Tuesday",
+      "time": "3:00pm",
+      "room": "3",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "5_3-0",
+      "group": "5",
+      "instructor": "4",
+      "unit": "3",
+      "day": "Wednesday",
+      "time": "12:00pm",
+      "room": "1",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "6_6-0",
+      "group": "6",
+      "instructor": "6",
+      "unit": "6",
+      "day": "Wednesday",
+      "time": "4:00pm",
+      "room": "4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "6_3-0",
+      "group": "6",
+      "instructor": "4",
+      "unit": "3",
+      "day": "Thursday",
+      "time": "1:00pm",
+      "room": "1",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "1_3-0",
+      "group": "1",
+      "instructor": "4",
+      "unit": "3",
+      "day": "Monday",
+      "time": "3:00pm",
+      "room": "2",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "2_1-0",
+      "group": "2",
+      "instructor": "2",
+      "unit": "1",
+      "day": "Tuesday",
+      "time": "7:00am",
+      "room": "3",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    }
+  ],
+  "stats": {
+    "overall_score": 100,
+    "time_taken": 0.0021717,
+    "memory_usage_mb": 1.1740341186523438,
+    "solution_found": true
+  }
+}

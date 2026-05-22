@@ -1,0 +1,149 @@
+{
+    "configuration": 
+    {
+        "name": "",
+        "meta_data": {"input_version": "0.4.0", "generator_type": "manual","generator_version": null},
+        "days": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        "priorities": {"room": null, "instructors": null, "units": null, "groups": null},
+        "start_time": "8:00am",
+        "end_time": "16:00pm",
+        "duration": {"maximum": 3, "minimum": 1, "division": "hour"},
+        "constraint_satisfaction": {"soft": null, "hard": null},
+        "consecutive": {"room": null, "instructor": null, "group": null},
+        "system": {"limit": 0, "saturation": true, "tries": 0}
+       
+    },
+   
+    "groups": 
+    [ 
+        {"id": "1", "total": 50, "preferences": [], "units": ["1", "2", "3"]},
+        {
+            "id": "2", 
+            "total": 20, 
+            "preferences": [
+                {
+                    "type": "unavailable_times",
+                    "days": ["tuesday"]
+                }
+            ], 
+            "units": ["1", "4", "2", "3"]
+        },
+        {"id": "3", "total": 30, "preferences": [], "units": ["1", "2"]},
+        {"id": "4", "total": 20, "preferences": [], "units": ["1", "5", "2", "3"]},
+        {"id": "5", "total": 20, "preferences": [], "units": ["1", "2", "3", "6"]},
+        {"id": "6", "total": 40, "preferences": [], "units": ["1", "6", "3"]}
+    ],
+    "instructors": 
+    [
+        {
+            "id": "1", 
+            "preferences": [
+                {
+                    "type": "unavailable_times",
+                    "days": ["monday"]
+                }
+            ]
+        },
+        {"id": "2", "preferences": []},
+        {"id": "3", "preferences": []},
+        {"id": "4", "preferences": []},
+        {"id": "5", "preferences": []},
+        {"id": "6", "preferences": []},
+        {"id": "7", "preferences": []}
+    ],
+    "units": [
+        {"id": "1", "instructors": ["2"], "lessons": 2, "preferences": []},
+        {"id": "2", "instructors": ["5"], "lessons": 2, "preferences": []},
+        {"id": "3", "instructors": ["4"], "lessons": 2, "preferences": []},
+        {
+            "id": "4", 
+            "instructors": ["3"], 
+            "lessons": 4, 
+            "preferences": [
+                {
+                    "type": "unavailable_times",
+                    "days": ["monday"],
+                    "times": ["09:00"]
+                }
+            ]
+        },
+        {"id": "5", "instructors": ["7"], "lessons": 2, "preferences": []},
+        {"id": "6", "instructors": ["6"], "lessons": 2, "preferences": []}
+           
+    ],
+    "rooms": [
+        {"id": "1", "capacity": 60, "preferences": []},
+        {"id": "2", "capacity": 90, "preferences": []},
+        {"id": "3", "capacity": 40, "preferences": []},
+        {"id": "4", "capacity": 100, "preferences": []}
+       
+    ],
+    "blocks": [
+     {
+      "title": "Period 1",
+      "start": "7:00am",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 2",
+      "start": "8:00am",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 3",
+      "start": "9:00am",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 4",
+      "start": "10:00am",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 5",
+      "start": "11:00am",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 6",
+      "start": "12:00pm",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 7",
+      "start": "1:00pm",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 8",
+      "start": "2:00pm",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 9",
+      "start": "3:00pm",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 10",
+      "start": "4:00pm",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 11",
+      "start": "5:00pm",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     }
+    ]
+}

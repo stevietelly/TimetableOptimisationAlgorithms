@@ -1,0 +1,5396 @@
+{
+ 
+  "instructors": [
+   {
+    "id": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+    "preferences": [],
+    "color": "#3b82f6",
+    "name": "Ian Kwambai",
+    "title": "Mr",
+    "short": "IK"
+   },
+   {
+    "id": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+    "preferences": [],
+    "color": "#10b981",
+    "name": "Samson Nyarondia",
+    "title": "Mr",
+    "short": "SN"
+   },
+   {
+    "id": "d7294898-e5f5-4154-a297-db62a63231f5",
+    "preferences": [],
+    "color": "#f59e0b",
+    "name": "Lucy Nyakeyo",
+    "title": "Mrs",
+    "short": "LN"
+   },
+   {
+    "id": "eed27651-0da9-40b5-965f-d5eef7218177",
+    "preferences": [],
+    "color": "#ef4444",
+    "name": "John Sibuor",
+    "title": "Dr",
+    "short": "JS"
+   },
+   {
+    "id": "69088895-33d9-43a5-a038-e12404a5affa",
+    "preferences": [],
+    "color": "#8b5cf6",
+    "name": "Daphen Ojala",
+    "title": "Ms",
+    "short": "DO"
+   },
+   {
+    "id": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+    "preferences": [],
+    "color": "#06b6d4",
+    "name": "Cliffe Ogaga",
+    "title": "Mr",
+    "short": "CO"
+   },
+   {
+    "id": "27e2e54f-6613-455d-9377-174913aa2856",
+    "preferences": [],
+    "color": "#84cc16",
+    "name": "Bob Ochieng",
+    "title": "Mr",
+    "short": "BO"
+   },
+   {
+    "id": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+    "preferences": [],
+    "color": "#ec4899",
+    "name": "Julie Bett",
+    "title": "Mrs",
+    "short": "JB"
+   },
+   {
+    "id": "25811033-b23a-49ff-b02b-9b6317c51903",
+    "preferences": [],
+    "color": "#f97316",
+    "name": "Moses Obama",
+    "title": "Mr",
+    "short": "MO"
+   },
+   {
+    "id": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+    "preferences": [],
+    "color": "#6366f1",
+    "name": "Richard Nyangosi",
+    "title": "Prof",
+    "short": "RN"
+   },
+   {
+    "id": "39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3",
+    "preferences": [],
+    "color": "#14b8a6",
+    "name": "Jonathan Mulwa",
+    "title": "Prof",
+    "short": "JM"
+   },
+   {
+    "id": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+    "preferences": [],
+    "color": "#a855f7",
+    "name": "Geoffrey Ondari",
+    "title": "Mr",
+    "short": "GO"
+   },
+   {
+    "id": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+    "preferences": [],
+    "color": "#0ea5e9",
+    "name": "Jared Ongonga",
+    "title": "Prof",
+    "short": "JO"
+   },
+   {
+    "id": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+    "preferences": [],
+    "color": "#d946ef",
+    "name": "Denis Okemwa",
+    "title": "Dr",
+    "short": "DK"
+   },
+   {
+    "id": "594ba91f-2054-4161-9cff-3e0b2f502910",
+    "preferences": [],
+    "color": "#22c55e",
+    "name": "Wyckliffe Robby",
+    "title": "Dr",
+    "short": "WR"
+   },
+   {
+    "id": "5556ebb1-51ad-47df-b488-099649ed2066",
+    "preferences": [],
+    "color": "#f43f5e",
+    "name": "Janet Wagude",
+    "title": "Dr",
+    "short": "JW"
+   },
+   {
+    "id": "8f17db11-9043-4651-8e4e-c376e8777b50",
+    "preferences": [],
+    "color": "#fb923c",
+    "name": "Stephen Momanyi",
+    "title": "Dr",
+    "short": "SM"
+   },
+   {
+    "id": "9289b6af-902a-439e-ad09-1b9de024076f",
+    "preferences": [],
+    "color": "#4ade80",
+    "name": "Patrick Kwoba",
+    "title": "Mr",
+    "short": "PK"
+   },
+   {
+    "id": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+    "preferences": [],
+    "color": "#60a5fa",
+    "name": "Pleasure Chebus",
+    "title": "Ms",
+    "short": "PC"
+   },
+   {
+    "id": "dab61dad-0192-477a-9986-9449fac05998",
+    "preferences": [],
+    "color": "#c084fc",
+    "name": "Jonathan Omollo",
+    "title": "Dr",
+    "short": "JOL"
+   },
+   {
+    "id": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "preferences": [],
+    "color": "#94a3b8",
+    "name": "BTH Department Staff",
+    "title": "Mr",
+    "short": "BTH"
+   },
+   {
+    "id": "578c3e61-b597-4b95-9cd3-a397d349f7b6",
+    "preferences": [],
+    "color": "#78716c",
+    "name": "HSS Department Staff",
+    "title": "Mr",
+    "short": "HSS"
+   },
+   {
+    "id": "905583df-a803-4a71-875a-15a80eb993db",
+    "preferences": [],
+    "color": "#a16207",
+    "name": "LLL Language Staff",
+    "title": "Mr",
+    "short": "LLL"
+   },
+   {
+    "id": "gu6bCA",
+    "preferences": [],
+    "color": "#09d6b4ff",
+    "name": "Alex Mwangi",
+    "title": "Mr",
+    "short": "BTH1"
+   },
+   {
+    "id": "bXuuRE",
+    "preferences": [],
+    "color": "#ad115dff",
+    "name": "Chelsea Peretti",
+    "title": "Mrs",
+    "short": "HSP1"
+   },
+   {
+    "id": "XUiRVz",
+    "preferences": [],
+    "color": "#2deaf7ff",
+    "name": "Jules Awino",
+    "title": "Ms",
+    "short": "PRJ"
+   }
+  ],
+  "rooms": [
+   {
+    "short": "LR13",
+    "id": "7e339db0-cb0b-43ef-862f-20e8c56dcb9f",
+    "capacity": 60,
+    "preferences": [],
+    "title": "Lecture Room 13",
+    "color": "#de02b6ff"
+   },
+   {
+    "short": "E002",
+    "id": "fe374c4f-c02c-4aff-bbdc-5fec5fc13e9f",
+    "capacity": 100,
+    "preferences": [],
+    "title": "Exam Hall E002",
+    "color": "#1bfaebff"
+   },
+   {
+    "short": "MPH",
+    "id": "6b592fde-54d1-4b85-b247-d031da57ed03",
+    "capacity": 150,
+    "preferences": [],
+    "title": "Main Parking Hall",
+    "color": "#b0fc23ff"
+   },
+   {
+    "short": "E102",
+    "id": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+    "capacity": 80,
+    "preferences": [],
+    "title": "Exam Hall E102",
+    "color": "#fab60aff"
+   },
+   {
+    "short": "W309",
+    "id": "500e22a1-bae3-418b-80db-e1d03869793d",
+    "capacity": 60,
+    "preferences": [],
+    "title": "Workshop Room W309",
+    "color": "#344bc9ff"
+   },
+   {
+    "short": "LR9A",
+    "id": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+    "capacity": 50,
+    "preferences": [],
+    "title": "Lecture Room 9A",
+    "color": "#5ceb2dff"
+   },
+   {
+    "short": "LR8",
+    "id": "3d4096e6-b3a1-4bb1-8174-32c9ff55eb22",
+    "capacity": 50,
+    "preferences": [],
+    "title": "Lecture Room 8",
+    "color": "#4e1ed4ff"
+   },
+   {
+    "short": "LR9B",
+    "id": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+    "capacity": 50,
+    "preferences": [],
+    "title": "Lecture Room 9B",
+    "color": "#501c99ff"
+   },
+   {
+    "short": "E107",
+    "id": "ecac5ce3-5774-476f-b183-b0b22965240f",
+    "capacity": 80,
+    "preferences": [],
+    "title": "Exam Hall E107",
+    "color": "#2876fcff"
+   },
+   {
+    "short": "LR11",
+    "id": "0d6d24fd-b74c-4f3d-82c9-07750852588d",
+    "capacity": 60,
+    "preferences": [],
+    "title": "Lecture Room 11",
+    "color": "#078ba8ff"
+   },
+   {
+    "short": "LR12",
+    "id": "d5113453-d9e3-46b2-8cd9-1f759923f5fe",
+    "capacity": 50,
+    "preferences": [],
+    "title": "Lecture Room 12",
+    "color": "#0bbfe3ff"
+   },
+   {
+    "short": "LR2",
+    "id": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+    "capacity": 40,
+    "preferences": [],
+    "title": "Lecture Room 2",
+    "color": "#1087e3ff"
+   },
+   {
+    "short": "LR3",
+    "id": "0e030fb2-94db-43cb-aad9-220f86ce1e1a",
+    "capacity": 40,
+    "preferences": [],
+    "title": "Lecture Room 3",
+    "color": "#0ecdebff"
+   },
+   {
+    "short": "E209",
+    "id": "1d32c978-927a-45be-9fab-809a9237b0c4",
+    "capacity": 60,
+    "preferences": [],
+    "title": "Exam Hall E209",
+    "color": "#bdb135ff"
+   },
+   {
+    "short": "RL13",
+    "id": "a4612bb2-c098-45fe-871d-cc6a087616c4",
+    "capacity": 60,
+    "preferences": [],
+    "title": "Lecture Room 13 (RL13)",
+    "color": "#33e8c1ff"
+   }
+  ],
+  "groups": [
+   {
+    "id": "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+    "units": [
+     {
+      "unitID": "28a07655-430b-4fc7-965a-bba613884ebe",
+      "instructorID": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "36df7f8e-b205-434c-812d-d8aaedfbcd76",
+      "instructorID": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "instructorID": "gu6bCA",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "ffda8304-c743-4e08-b4de-5441ebd51dfb",
+      "instructorID": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "instructorID": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "cdfab22c-a391-4c32-9f8d-bf394488f725",
+      "instructorID": "69088895-33d9-43a5-a038-e12404a5affa",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BCom 1st Year (KUCCUPS)",
+    "short": "BC1",
+    "color": "#ab730aff"
+   },
+   {
+    "id": "3c66e5da-6564-4c41-a960-ed3d78529572",
+    "units": [
+     {
+      "unitID": "16209308-0c0c-4351-85e3-23a35f382d49",
+      "instructorID": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "8a3e5b00-78fd-4b2c-8156-54221ef7453c",
+      "instructorID": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+      "instructorID": "27e2e54f-6613-455d-9377-174913aa2856",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+      "instructorID": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "46fdcfb6-c3c9-4218-8913-082d8589a3e4",
+      "instructorID": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "3bf905c8-d1f2-4aea-ba42-f5e50e529d1c",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "3dc78129-69a6-459d-b478-1385a7aca654",
+      "instructorID": "25811033-b23a-49ff-b02b-9b6317c51903",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BCom 2nd Year (KUCCUPS)",
+    "short": "BC2",
+    "color": "#14b519ff"
+   },
+   {
+    "id": "d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+    "units": [
+     {
+      "unitID": "85faa224-75dd-40fc-af2c-2fda871ec774",
+      "instructorID": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "27b90ecf-7bbf-4039-9101-643b15b3cb4f",
+      "instructorID": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "a88c4ebb-3aaf-4cd4-8901-87a1cf2175a2",
+      "instructorID": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+      "instructorID": "578c3e61-b597-4b95-9cd3-a397d349f7b6",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 40,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BCom 3rd Year Finance (KUCCUPS)",
+    "short": "BC3F",
+    "color": "#24d5f0ff"
+   },
+   {
+    "id": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "units": [
+     {
+      "unitID": "5677547f-c2e1-4896-8010-529cffeb71e1",
+      "instructorID": "27e2e54f-6613-455d-9377-174913aa2856",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "19dc8e4e-d76a-4f4e-b1f8-3631e3e5c1f6",
+      "instructorID": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7691243b-c260-45b4-8cf6-e71c58d81a76",
+      "instructorID": "27e2e54f-6613-455d-9377-174913aa2856",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "f075f5d9-7a9f-4251-92f7-ff5d9864b68d",
+      "instructorID": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "6a6c1458-5817-4853-b9aa-03da09b35f7d",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 40,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BCom 4th Year Purchasing & Supplies (KUCCUPS)",
+    "short": "BC4PS",
+    "color": "#1586d6ff"
+   },
+   {
+    "id": "0d36c58c-26ea-4802-ac7b-1e50a6719e9b",
+    "units": [
+     {
+      "unitID": "f075f5d9-7a9f-4251-92f7-ff5d9864b68d",
+      "instructorID": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "6a6c1458-5817-4853-b9aa-03da09b35f7d",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
+      "instructorID": "578c3e61-b597-4b95-9cd3-a397d349f7b6",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 40,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BCom 4th Year Accounting (KUCCUPS)",
+    "short": "BC4A",
+    "color": "#2fad9dff"
+   },
+   {
+    "id": "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+    "units": [
+     {
+      "unitID": "24ac72f6-b61e-4e05-8683-38f2626244da",
+      "instructorID": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "5c381618-3b3a-4dd2-999c-b91fd494d86b",
+      "instructorID": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "04911e60-85e8-4de5-883c-e261fe71a33a",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "8dc6e3e7-613f-473c-84d5-a997a059e076",
+      "instructorID": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "instructorID": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "cdfab22c-a391-4c32-9f8d-bf394488f725",
+      "instructorID": "69088895-33d9-43a5-a038-e12404a5affa",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BBM 1st Year (KUCCUPS)",
+    "short": "BBM1",
+    "color": "#46a32cff"
+   },
+   {
+    "id": "078bd9b0-233c-4f07-b27c-dcf169911965",
+    "units": [
+     {
+      "unitID": "28a07655-430b-4fc7-965a-bba613884ebe",
+      "instructorID": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "b914908c-92ae-401b-89a6-1c58fb5fb193",
+      "instructorID": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "instructorID": "gu6bCA",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "ffda8304-c743-4e08-b4de-5441ebd51dfb",
+      "instructorID": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "instructorID": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "8e6a3df4-8afe-4f10-89b5-cdfe1acaf63f",
+      "instructorID": "69088895-33d9-43a5-a038-e12404a5affa",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BSc Supply Chain 1st Year (KUCCUPS)",
+    "short": "BSC1",
+    "color": "#deb22fff"
+   },
+   {
+    "id": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "units": [
+     {
+      "unitID": "c9f68bed-da52-4b2a-b09b-8da4a565b496",
+      "instructorID": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "f0723732-00c5-4e05-8eac-508e878e7cf2",
+      "instructorID": "27e2e54f-6613-455d-9377-174913aa2856",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "8a3e5b00-78fd-4b2c-8156-54221ef7453c",
+      "instructorID": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+      "instructorID": "27e2e54f-6613-455d-9377-174913aa2856",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "instructorID": "gu6bCA",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "ffda8304-c743-4e08-b4de-5441ebd51dfb",
+      "instructorID": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "4ddc0348-c939-44d0-9630-6c1896cb2958",
+      "instructorID": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BSc Supply Chain 2nd Year (KUCCUPS)",
+    "short": "BSC2",
+    "color": "#8828a6ff"
+   },
+   {
+    "id": "cc323960-3ec8-49b9-9995-b8285f5e209b",
+    "units": [
+     {
+      "unitID": "8647c909-903b-43ab-a652-fb5282df599b",
+      "instructorID": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "2fb5ba4e-4e7d-47cf-ae73-7c165edd5570",
+      "instructorID": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "980421dc-621f-48f9-ab9d-b97482ea17d5",
+      "instructorID": "594ba91f-2054-4161-9cff-3e0b2f502910",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "42771b15-68a7-407f-9568-93fc3712d2c1",
+      "instructorID": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "instructorID": "gu6bCA",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "instructorID": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BSc HRM 1st Year (KUCCUPS)",
+    "short": "BHR1",
+    "color": "#d43154ff"
+   },
+   {
+    "id": "1b333ad7-714f-45e6-a453-2f16ba387975",
+    "units": [
+     {
+      "unitID": "ae84c2b8-5a9e-48d1-a6a8-1b31df6fcd98",
+      "instructorID": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "960c2fba-736e-40bf-9316-c72cf26191d6",
+      "instructorID": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "b11cd0de-3162-4e97-92a6-c113501868e8",
+      "instructorID": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "10f5d19c-8c80-4e4f-b6de-fd4d1c496fad",
+      "instructorID": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "2d52bb8b-5547-4174-ab75-79940d9311bc",
+      "instructorID": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "e7462f7f-868c-4111-92a6-bbf949c19a93",
+      "instructorID": "594ba91f-2054-4161-9cff-3e0b2f502910",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BSc HRM 2nd Year (KUCCUPS)",
+    "short": "BHR2",
+    "color": "#480cc2ff"
+   },
+   {
+    "id": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "units": [
+     {
+      "unitID": "5914fa07-f582-42be-a435-814380809356",
+      "instructorID": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "de9b1611-5af9-46a6-97d9-968ffb292d6c",
+      "instructorID": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "cedc6b5e-b028-4e18-9d9c-42ada8d16760",
+      "instructorID": "594ba91f-2054-4161-9cff-3e0b2f502910",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "fd15eede-4b8c-416b-945b-68158a448ceb",
+      "instructorID": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+      "instructorID": "578c3e61-b597-4b95-9cd3-a397d349f7b6",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 40,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BSc HRM 3rd Year (KUCCUPS)",
+    "short": "BHR3",
+    "color": "#16a191ff"
+   },
+   {
+    "id": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "units": [
+     {
+      "unitID": "137e40e3-762e-45f8-8127-ea3f99dd1bfc",
+      "instructorID": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "2f01d3ff-c019-4457-a302-2cd117371664",
+      "instructorID": "27e2e54f-6613-455d-9377-174913aa2856",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "2fda46e6-5fd8-488c-a0f4-426501761691",
+      "instructorID": "5556ebb1-51ad-47df-b488-099649ed2066",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "4ddc0348-c939-44d0-9630-6c1896cb2958",
+      "instructorID": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "15164936-7cd9-4a3b-be0e-ce6ed8f2036a",
+      "instructorID": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7f87f2e7-b62d-4b86-9837-dccb97d25e61",
+      "instructorID": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "instructorID": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BSc PPM 1st Year (KUCCUPS)",
+    "short": "BPM1",
+    "color": "#17d427ff"
+   },
+   {
+    "id": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "units": [
+     {
+      "unitID": "5a5ac926-cdd7-4ee7-8d6d-a60bacf31f08",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "42e628f6-a887-4776-98e9-13e7447dbe0c",
+      "instructorID": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "a8cd7a11-c476-422f-beab-447b9c07bc5d",
+      "instructorID": "5556ebb1-51ad-47df-b488-099649ed2066",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "1090ee50-05cb-475d-8bc6-3a67894d9e77",
+      "instructorID": "dab61dad-0192-477a-9986-9449fac05998",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "e8b3d848-f96b-481f-b584-64b3d76459a5",
+      "instructorID": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "a4f32e6a-7755-46bd-8489-f43ce46c2453",
+      "instructorID": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "144285f7-80ae-4395-ba9c-22d8faf252bc",
+      "instructorID": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BSc PPM 2nd Year (KUCCUPS)",
+    "short": "BPM2",
+    "color": "#2ba7baff"
+   },
+   {
+    "id": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "units": [
+     {
+      "unitID": "d716351e-9631-4e27-b12b-605d0481c4c1",
+      "instructorID": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "93232e89-4885-436d-ac2e-b2981851ad9e",
+      "instructorID": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "24454761-a2ad-474d-bde2-8ecb12851c80",
+      "instructorID": "dab61dad-0192-477a-9986-9449fac05998",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "f3ce7c04-aca9-4d91-a18a-d415d71f68b8",
+      "instructorID": "594ba91f-2054-4161-9cff-3e0b2f502910",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 40,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BSc PPM 3rd Year (KUCCUPS)",
+    "short": "BPM3",
+    "color": "#db6912ff"
+   },
+   {
+    "id": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "units": [
+     {
+      "unitID": "d47725b7-a804-423f-8b1d-3e82ae28618b",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "c570ec4e-b1aa-42a0-9a4e-9f5caeeacf2f",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "9a3a34fb-fb43-424e-8751-83826e0585c7",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "fe5bba8c-c28c-4b08-b814-d15b714b91c2",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "2b343b15-ba87-4ca4-9341-2f7283ff87eb",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 40,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BSc PPM 4th Year (KUCCUPS)",
+    "short": "BPM4K",
+    "color": "#34d10dff"
+   },
+   {
+    "id": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "units": [
+     {
+      "unitID": "d47725b7-a804-423f-8b1d-3e82ae28618b",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "c570ec4e-b1aa-42a0-9a4e-9f5caeeacf2f",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "9a3a34fb-fb43-424e-8751-83826e0585c7",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "fe5bba8c-c28c-4b08-b814-d15b714b91c2",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "2b343b15-ba87-4ca4-9341-2f7283ff87eb",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 40,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BSc PPM 4th Year (ODEL)",
+    "short": "BPM4O",
+    "color": "#269e74ff"
+   },
+   {
+    "id": "7db87841-f9a0-4643-9218-3ac9644d9716",
+    "units": [
+     {
+      "unitID": "a959bb81-03d1-4c50-a062-f35beb9014dc",
+      "instructorID": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "001d61b8-2019-446b-8761-491336ec0d02",
+      "instructorID": "9289b6af-902a-439e-ad09-1b9de024076f",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "6fed0bcf-319f-4ab4-b999-d57f59799041",
+      "instructorID": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "instructorID": "gu6bCA",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "9ba43e05-7f47-4400-b36d-d92e53b165cd",
+      "instructorID": "905583df-a803-4a71-875a-15a80eb993db",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "instructorID": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BTH Management 1st Year (KUCCUPS)",
+    "short": "BTHM1",
+    "color": "#0261bfff"
+   },
+   {
+    "id": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "units": [
+     {
+      "unitID": "523e7b4f-ee21-43e1-b7d0-fc07d54cee68",
+      "instructorID": "9289b6af-902a-439e-ad09-1b9de024076f",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+      "instructorID": "27e2e54f-6613-455d-9377-174913aa2856",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+      "instructorID": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "b80d9761-72d3-48ea-a7ba-d9751cac453f",
+      "instructorID": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "0def79b9-2214-4abf-8428-47cdc94627f9",
+      "instructorID": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "27f15df5-142d-4a06-9bc9-0e3390b72ffd",
+      "instructorID": "905583df-a803-4a71-875a-15a80eb993db",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BTH Management 2nd Year (KUCCUPS)",
+    "short": "BTHM2",
+    "color": "#0bb361ff"
+   },
+   {
+    "id": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "units": [
+     {
+      "unitID": "a83b6117-96c6-4f41-9fb0-66e2fe96c13b",
+      "instructorID": "9289b6af-902a-439e-ad09-1b9de024076f",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "61e691ff-87be-495e-864b-3a40348a0fdc",
+      "instructorID": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "b98179dd-528d-4758-b98f-d4e2de9e9dfa",
+      "instructorID": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "2272158e-aa8e-4a68-b836-387c476d125c",
+      "instructorID": "905583df-a803-4a71-875a-15a80eb993db",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 40,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BTH Management 3rd Year Tourism (KUCCUPS)",
+    "short": "BTHM3T",
+    "color": "#cc378eff"
+   },
+   {
+    "id": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "units": [
+     {
+      "unitID": "d37ec2c0-6186-4772-a1d2-686c3e956f1e",
+      "instructorID": "bXuuRE",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "2272158e-aa8e-4a68-b836-387c476d125c",
+      "instructorID": "905583df-a803-4a71-875a-15a80eb993db",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+      "instructorID": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "b32a8c1c-70b2-49a1-bf21-66aedaa71e51",
+      "instructorID": "bXuuRE",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "3f10c5c1-e195-4562-85f8-c25f15604154",
+      "instructorID": "bXuuRE",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 40,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BTH Management 3rd Year Hospitality (KUCCUPS)",
+    "short": "BTHM3H",
+    "color": "#c71285ff"
+   },
+   {
+    "id": "d92ac466-790c-4af7-85da-67ecd7683491",
+    "units": [
+     {
+      "unitID": "001d61b8-2019-446b-8761-491336ec0d02",
+      "instructorID": "9289b6af-902a-439e-ad09-1b9de024076f",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "a959bb81-03d1-4c50-a062-f35beb9014dc",
+      "instructorID": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "instructorID": "gu6bCA",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "4ddc0348-c939-44d0-9630-6c1896cb2958",
+      "instructorID": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "6fed0bcf-319f-4ab4-b999-d57f59799041",
+      "instructorID": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "9ba43e05-7f47-4400-b36d-d92e53b165cd",
+      "instructorID": "905583df-a803-4a71-875a-15a80eb993db",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "instructorID": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BTourism Management 1st Year (KUCCUPS)",
+    "short": "BTM1",
+    "color": "#2dd6d6ff"
+   },
+   {
+    "id": "68591fa4-9326-4089-a8be-83fa552333df",
+    "units": [
+     {
+      "unitID": "523e7b4f-ee21-43e1-b7d0-fc07d54cee68",
+      "instructorID": "9289b6af-902a-439e-ad09-1b9de024076f",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+      "instructorID": "27e2e54f-6613-455d-9377-174913aa2856",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+      "instructorID": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "b80d9761-72d3-48ea-a7ba-d9751cac453f",
+      "instructorID": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "0def79b9-2214-4abf-8428-47cdc94627f9",
+      "instructorID": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "27f15df5-142d-4a06-9bc9-0e3390b72ffd",
+      "instructorID": "905583df-a803-4a71-875a-15a80eb993db",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BTourism Management 2nd Year (KUCCUPS)",
+    "short": "BTM2",
+    "color": "#f53884ff"
+   },
+   {
+    "id": "94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+    "units": [
+     {
+      "unitID": "dea76e2b-4c3d-4478-9ad8-6f59f0f40a0b",
+      "instructorID": "9289b6af-902a-439e-ad09-1b9de024076f",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "ab912148-3b49-478b-8141-3dbba1daae91",
+      "instructorID": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "instructorID": "gu6bCA",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "13ff4a9a-f2f1-458d-9c1b-26e4ca49efa2",
+      "instructorID": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "instructorID": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "9ba43e05-7f47-4400-b36d-d92e53b165cd",
+      "instructorID": "905583df-a803-4a71-875a-15a80eb993db",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BHotel & Hospitality Management 1st Year (KUCCUPS)",
+    "short": "BHH1",
+    "color": "#9c112aff"
+   },
+   {
+    "id": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "units": [
+     {
+      "unitID": "af0dd192-1c68-49d8-8242-45b96ee5586d",
+      "instructorID": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+      "instructorID": "27e2e54f-6613-455d-9377-174913aa2856",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+      "instructorID": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "e10f34b9-87e6-42d1-8ed4-f6499133059a",
+      "instructorID": "bXuuRE",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "27f15df5-142d-4a06-9bc9-0e3390b72ffd",
+      "instructorID": "905583df-a803-4a71-875a-15a80eb993db",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "535ce32b-6435-4e7c-8b7d-5fa90dcdf966",
+      "instructorID": "bXuuRE",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 50,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "BHotel & Hospitality Management 2nd Year (KUCCUPS)",
+    "short": "BHH2",
+    "color": "#bd263fff"
+   },
+   {
+    "id": "2995d630-775d-45e4-8fcb-b3f0f39e6e70",
+    "units": [
+     {
+      "unitID": "cf0a1135-c7e1-4db9-a339-ea632222040b",
+      "instructorID": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 30,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "PG Diploma SHRM 1st Year",
+    "short": "PGSHRM",
+    "color": "#3a9dd6ff"
+   },
+   {
+    "id": "0a5cef40-2223-476e-92df-1f3e4284122c",
+    "units": [
+     {
+      "unitID": "6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2",
+      "instructorID": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "9ec7190a-1235-4ae9-9be7-1678eb19ac1d",
+      "instructorID": "5556ebb1-51ad-47df-b488-099649ed2066",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "343f8cb1-cda5-41f9-aa52-312ed9306678",
+      "instructorID": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "58d42752-b7bc-4d9d-8418-a492536b358e",
+      "instructorID": "39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "bff5bfed-c4db-4663-bb2d-8d8588a18b95",
+      "instructorID": "39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "3e5f5f6b-b778-4688-96d3-ac742a1b4cbd",
+      "instructorID": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 30,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "MBA 1st Year Finance Option (Online)",
+    "short": "MBAFIN",
+    "color": "#03a356ff"
+   },
+   {
+    "id": "51d7dd76-2508-4222-8cc9-582b0849712f",
+    "units": [
+     {
+      "unitID": "6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2",
+      "instructorID": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "9ec7190a-1235-4ae9-9be7-1678eb19ac1d",
+      "instructorID": "5556ebb1-51ad-47df-b488-099649ed2066",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "d9b61014-e99f-4623-94ab-975dbdfda00b",
+      "instructorID": "5556ebb1-51ad-47df-b488-099649ed2066",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "dfee7547-6f68-48f2-9f93-6d32cf87213f",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "45b973c2-cb68-4445-803e-3d8f79e91052",
+      "instructorID": "XUiRVz",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "2ba6dbf6-39b7-4e32-ab57-e09ce1de74da",
+      "instructorID": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 30,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "MBA 1st Year PPM Option (Online)",
+    "short": "MBAPPM",
+    "color": "#5825a1ff"
+   },
+   {
+    "id": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "units": [
+     {
+      "unitID": "6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2",
+      "instructorID": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "9ec7190a-1235-4ae9-9be7-1678eb19ac1d",
+      "instructorID": "5556ebb1-51ad-47df-b488-099649ed2066",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "b989c5cd-5277-484c-9e82-405c78a3ddf1",
+      "instructorID": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "46094cd1-a544-4f7f-992d-9bc4048013b3",
+      "instructorID": "594ba91f-2054-4161-9cff-3e0b2f502910",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "ca5ee672-8457-4048-898b-6c5050c996d3",
+      "instructorID": "dab61dad-0192-477a-9986-9449fac05998",
+      "divisionID": null,
+      "subDivisionID": null
+     },
+     {
+      "unitID": "74c87be5-013d-4e38-a857-34e31ec37730",
+      "instructorID": "dab61dad-0192-477a-9986-9449fac05998",
+      "divisionID": null,
+      "subDivisionID": null
+     }
+    ],
+    "total": 30,
+    "default_room": "",
+    "divisions": [],
+    "preferences": [],
+    "title": "MBA 1st Year HRM Option (Online)",
+    "short": "MBAHRM",
+    "color": "#7fb031ff"
+   }
+  ],
+  "units": [
+   {
+    "id": "28a07655-430b-4fc7-965a-bba613884ebe",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["d44692c3-a634-43f0-8557-e8e343ac77ee"],
+    "color": "#3b82f6",
+    "title": "Business Computing",
+    "short": "BCB112",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "36df7f8e-b205-434c-812d-d8aaedfbcd76",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["0c8295f2-a475-4ca2-aae9-78881db64ae1"],
+    "color": "#10b981",
+    "title": "Introduction to Business",
+    "short": "BCB111",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "d61e7655-1623-415c-9a6c-4077feae6250",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["gu6bCA"],
+    "color": "#f59e0bff",
+    "title": "Financial Accounting I",
+    "short": "BCA111",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "ffda8304-c743-4e08-b4de-5441ebd51dfb",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["d7294898-e5f5-4154-a297-db62a63231f5"],
+    "color": "#ef4444",
+    "title": "Business Law I",
+    "short": "BCB113",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+    "preferences": [
+     {
+      "type": "ONLY",
+      "target": { "kind": "DAY", "label": "Friday", "value": "Friday" }
+     },
+     {
+      "type": "BEFORE",
+      "target": { "kind": "TIME", "label": "12:00pm", "value": "12:00pm" }
+     }
+    ],
+    "lessons": 3,
+    "instructors": ["eed27651-0da9-40b5-965f-d5eef7218177"],
+    "color": "#8b5cf6ff",
+    "title": "HIV/AIDS and Society",
+    "short": "MIC117",
+    "online": true,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "cdfab22c-a391-4c32-9f8d-bf394488f725",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["69088895-33d9-43a5-a038-e12404a5affa"],
+    "color": "#06b6d4",
+    "title": "Basic Microeconomics",
+    "short": "ECO110",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "16209308-0c0c-4351-85e3-23a35f382d49",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": [
+     "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+     "76d56d23-38fa-46f9-8e4c-7b249dac4bae"
+    ],
+    "color": "#84cc16",
+    "title": "Human Resource Management I",
+    "short": "BCH211",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "8a3e5b00-78fd-4b2c-8156-54221ef7453c",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["d7294898-e5f5-4154-a297-db62a63231f5"],
+    "color": "#ec4899",
+    "title": "Financial Management",
+    "short": "BCF211",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["27e2e54f-6613-455d-9377-174913aa2856"],
+    "color": "#f97316",
+    "title": "Marketing Management",
+    "short": "BCM211",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["d0f75cab-8c9e-4bc2-b6a2-862e6d32f450"],
+    "color": "#6366f1",
+    "title": "Business Statistics",
+    "short": "BCB211",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "46fdcfb6-c3c9-4218-8913-082d8589a3e4",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["0c8295f2-a475-4ca2-aae9-78881db64ae1"],
+    "color": "#14b8a6",
+    "title": "Organizational Behaviour",
+    "short": "BCB212",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "3bf905c8-d1f2-4aea-ba42-f5e50e529d1c",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["76d56d23-38fa-46f9-8e4c-7b249dac4bae"],
+    "color": "#a855f7",
+    "title": "Accounting for Assets and Liabilities",
+    "short": "BCA211",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "3dc78129-69a6-459d-b478-1385a7aca654",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["25811033-b23a-49ff-b02b-9b6317c51903"],
+    "color": "#0ea5e9",
+    "title": "Intermediate Microeconomics I",
+    "short": "ECO210",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "85faa224-75dd-40fc-af2c-2fda871ec774",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["0c8295f2-a475-4ca2-aae9-78881db64ae1"],
+    "color": "#d946ef",
+    "title": "Financial Institutions and Markets",
+    "short": "BCF311",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "27b90ecf-7bbf-4039-9101-643b15b3cb4f",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["0c8295f2-a475-4ca2-aae9-78881db64ae1"],
+    "color": "#22c55e",
+    "title": "Security Analysis and Securitization",
+    "short": "BCF312",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "a88c4ebb-3aaf-4cd4-8901-87a1cf2175a2",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["46fcd9ab-6105-4bb8-bfe9-691e24570490"],
+    "color": "#f43f5e",
+    "title": "Financial Law",
+    "short": "BCF313",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["76d56d23-38fa-46f9-8e4c-7b249dac4bae"],
+    "color": "#fb923c",
+    "title": "Managerial Statistics",
+    "short": "BCB311",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+    "preferences": [],
+    "lessons": 2,
+    "instructors": [
+     "578c3e61-b597-4b95-9cd3-a397d349f7b6",
+     "76d56d23-38fa-46f9-8e4c-7b249dac4bae"
+    ],
+    "color": "#4ade80",
+    "title": "Ethics, Integrity and Social Responsibility",
+    "short": "SAS311",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "5677547f-c2e1-4896-8010-529cffeb71e1",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["27e2e54f-6613-455d-9377-174913aa2856"],
+    "color": "#60a5fa",
+    "title": "Negotiation in Procurement",
+    "short": "BCP411",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "19dc8e4e-d76a-4f4e-b1f8-3631e3e5c1f6",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["fc77b31c-fb32-4c37-aa20-df3b8cdd6206"],
+    "color": "#c084fc",
+    "title": "Total Quality Management",
+    "short": "BCB412",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "7691243b-c260-45b4-8cf6-e71c58d81a76",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["27e2e54f-6613-455d-9377-174913aa2856"],
+    "color": "#94a3b8",
+    "title": "Global Purchasing and Logistics",
+    "short": "BSM412",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "f075f5d9-7a9f-4251-92f7-ff5d9864b68d",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["46fcd9ab-6105-4bb8-bfe9-691e24570490"],
+    "color": "#78716c",
+    "title": "Taxation Theory and Practice",
+    "short": "BCA411",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "6a6c1458-5817-4853-b9aa-03da09b35f7d",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["XUiRVz"],
+    "color": "#a16207ff",
+    "title": "Research Project I",
+    "short": "BCB411",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
+    "preferences": [],
+    "lessons": 2,
+    "instructors": [
+     "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+     "578c3e61-b597-4b95-9cd3-a397d349f7b6"
+    ],
+    "color": "#7c3aed",
+    "title": "Entrepreneurship and Employability",
+    "short": "BCE413",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "04911e60-85e8-4de5-883c-e261fe71a33a",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["76d56d23-38fa-46f9-8e4c-7b249dac4bae"],
+    "color": "#be185d",
+    "title": "Principles of Accounting I",
+    "short": "BBA111",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "24ac72f6-b61e-4e05-8683-38f2626244da",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["d44692c3-a634-43f0-8557-e8e343ac77ee"],
+    "color": "#0369a1",
+    "title": "Introduction to Computer Science",
+    "short": "BBM112",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "5c381618-3b3a-4dd2-999c-b91fd494d86b",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["0c8295f2-a475-4ca2-aae9-78881db64ae1"],
+    "color": "#047857",
+    "title": "Introduction to Business (BBM)",
+    "short": "BBM111",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "8dc6e3e7-613f-473c-84d5-a997a059e076",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["d7294898-e5f5-4154-a297-db62a63231f5"],
+    "color": "#b45309",
+    "title": "Business Law I (BBM)",
+    "short": "BBM113",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "b914908c-92ae-401b-89a6-1c58fb5fb193",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["fc77b31c-fb32-4c37-aa20-df3b8cdd6206"],
+    "color": "#c2410c",
+    "title": "Principles of Procurement",
+    "short": "BSP111",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "8e6a3df4-8afe-4f10-89b5-cdfe1acaf63f",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["69088895-33d9-43a5-a038-e12404a5affa"],
+    "color": "#1d4ed8",
+    "title": "Principles of Economics",
+    "short": "ECO100",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "f0723732-00c5-4e05-8eac-508e878e7cf2",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["27e2e54f-6613-455d-9377-174913aa2856"],
+    "color": "#15803d",
+    "title": "Inventory Management",
+    "short": "BSM211",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "c9f68bed-da52-4b2a-b09b-8da4a565b496",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["fc77b31c-fb32-4c37-aa20-df3b8cdd6206"],
+    "color": "#b91c1c",
+    "title": "Retail and Merchandise Management",
+    "short": "BSM212",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "4ddc0348-c939-44d0-9630-6c1896cb2958",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["d0f75cab-8c9e-4bc2-b6a2-862e6d32f450"],
+    "color": "#6d28d9",
+    "title": "Project Planning, Design and Implementation",
+    "short": "BPM113",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "8647c909-903b-43ab-a652-fb5282df599b",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": [
+     "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+     "76d56d23-38fa-46f9-8e4c-7b249dac4bae"
+    ],
+    "color": "#0891b2",
+    "title": "Human Resource Management I (HRM)",
+    "short": "BHR111",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "2fb5ba4e-4e7d-47cf-ae73-7c165edd5570",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["738f513b-8a7b-404c-9b62-25bc8707e33b"],
+    "color": "#059669",
+    "title": "Human Resource Planning",
+    "short": "BHR112",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "980421dc-621f-48f9-ab9d-b97482ea17d5",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["594ba91f-2054-4161-9cff-3e0b2f502910"],
+    "color": "#d97706",
+    "title": "Staff Resourcing",
+    "short": "BHR113",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "42771b15-68a7-407f-9568-93fc3712d2c1",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["ac8f5a59-0ce3-4aa6-822e-b4a5e4116211"],
+    "color": "#dc2626",
+    "title": "Organizational Structure and Design",
+    "short": "BHR114",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "b11cd0de-3162-4e97-92a6-c113501868e8",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["738f513b-8a7b-404c-9b62-25bc8707e33b"],
+    "color": "#7c3aed",
+    "title": "Workplace Diversity",
+    "short": "BHR211",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "10f5d19c-8c80-4e4f-b6de-fd4d1c496fad",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": [
+     "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+     "76d56d23-38fa-46f9-8e4c-7b249dac4bae"
+    ],
+    "color": "#0d9488",
+    "title": "Talent Management",
+    "short": "BHR212",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "2d52bb8b-5547-4174-ab75-79940d9311bc",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["0c8295f2-a475-4ca2-aae9-78881db64ae1"],
+    "color": "#ea580c",
+    "title": "Organizational Theory and Behaviour",
+    "short": "BHR213",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "e7462f7f-868c-4111-92a6-bbf949c19a93",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["594ba91f-2054-4161-9cff-3e0b2f502910"],
+    "color": "#9333ea",
+    "title": "HR Management Information Systems",
+    "short": "BHR214",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "ae84c2b8-5a9e-48d1-a6a8-1b31df6fcd98",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["0c8295f2-a475-4ca2-aae9-78881db64ae1"],
+    "color": "#2563eb",
+    "title": "Labour Economics",
+    "short": "BHR215",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "960c2fba-736e-40bf-9316-c72cf26191d6",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["fc77b31c-fb32-4c37-aa20-df3b8cdd6206"],
+    "color": "#16a34a",
+    "title": "Taxation and Human Resource",
+    "short": "BHR216",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "fd15eede-4b8c-416b-945b-68158a448ceb",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["8f17db11-9043-4651-8e4e-c376e8777b50"],
+    "color": "#ca8a04",
+    "title": "Research Methodology",
+    "short": "BHR311",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "5914fa07-f582-42be-a435-814380809356",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["738f513b-8a7b-404c-9b62-25bc8707e33b"],
+    "color": "#e11d48",
+    "title": "Work Design, Measurement and Compensation",
+    "short": "BHR312",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "de9b1611-5af9-46a6-97d9-968ffb292d6c",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": [
+     "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+     "76d56d23-38fa-46f9-8e4c-7b249dac4bae"
+    ],
+    "color": "#0284c7",
+    "title": "Cultural Reengineering",
+    "short": "BHR313",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "cedc6b5e-b028-4e18-9d9c-42ada8d16760",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["594ba91f-2054-4161-9cff-3e0b2f502910"],
+    "color": "#65a30d",
+    "title": "Emerging Issues in Industrial and Labour Laws",
+    "short": "BHR314",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "137e40e3-762e-45f8-8127-ea3f99dd1bfc",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["d44692c3-a634-43f0-8557-e8e343ac77ee"],
+    "color": "#4f46e5",
+    "title": "Information Technology in Project Management",
+    "short": "BPM114",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "2fda46e6-5fd8-488c-a0f4-426501761691",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["5556ebb1-51ad-47df-b488-099649ed2066"],
+    "color": "#0f766e",
+    "title": "Fundamentals of Project Management",
+    "short": "BPM112",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "15164936-7cd9-4a3b-be0e-ce6ed8f2036a",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["ac8f5a59-0ce3-4aa6-822e-b4a5e4116211"],
+    "color": "#b45309",
+    "title": "Project Organization",
+    "short": "BPM115",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "7f87f2e7-b62d-4b86-9837-dccb97d25e61",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["ac8f5a59-0ce3-4aa6-822e-b4a5e4116211"],
+    "color": "#c2410c",
+    "title": "Resource Mobilization",
+    "short": "BPM116",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "2f01d3ff-c019-4457-a302-2cd117371664",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["27e2e54f-6613-455d-9377-174913aa2856"],
+    "color": "#1d4ed8",
+    "title": "Marketing Management (BPM)",
+    "short": "BPM111",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "a8cd7a11-c476-422f-beab-447b9c07bc5d",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["5556ebb1-51ad-47df-b488-099649ed2066"],
+    "color": "#15803d",
+    "title": "Rural and Urban Planning and Management",
+    "short": "BPM211",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "42e628f6-a887-4776-98e9-13e7447dbe0c",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["d0f75cab-8c9e-4bc2-b6a2-862e6d32f450"],
+    "color": "#b91c1c",
+    "title": "Consultancy in Project Management",
+    "short": "BPM212",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "a4f32e6a-7755-46bd-8489-f43ce46c2453",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["0c8295f2-a475-4ca2-aae9-78881db64ae1"],
+    "color": "#6d28d9",
+    "title": "Strategic Dilemma and Project Justification",
+    "short": "BPM213",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "5a5ac926-cdd7-4ee7-8d6d-a60bacf31f08",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["XUiRVz"],
+    "color": "#0891b2ff",
+    "title": "Project Planning and Appraisal",
+    "short": "BPM214",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "e8b3d848-f96b-481f-b584-64b3d76459a5",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["d7294898-e5f5-4154-a297-db62a63231f5"],
+    "color": "#059669",
+    "title": "Project Selection Criteria",
+    "short": "BPM215",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "144285f7-80ae-4395-ba9c-22d8faf252bc",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["ac8f5a59-0ce3-4aa6-822e-b4a5e4116211"],
+    "color": "#d97706",
+    "title": "Project Stakeholders Management",
+    "short": "BPM216",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "1090ee50-05cb-475d-8bc6-3a67894d9e77",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["dab61dad-0192-477a-9986-9449fac05998"],
+    "color": "#dc2626",
+    "title": "Organization Values and Social Responsibility",
+    "short": "BPM217",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "24454761-a2ad-474d-bde2-8ecb12851c80",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["dab61dad-0192-477a-9986-9449fac05998"],
+    "color": "#7c3aed",
+    "title": "Organization Values and Social Responsibility (3rd yr)",
+    "short": "BPM311",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "93232e89-4885-436d-ac2e-b2981851ad9e",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["738f513b-8a7b-404c-9b62-25bc8707e33b"],
+    "color": "#0d9488",
+    "title": "Ethics and Development in Project Management",
+    "short": "BPM312",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "f3ce7c04-aca9-4d91-a18a-d415d71f68b8",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["594ba91f-2054-4161-9cff-3e0b2f502910"],
+    "color": "#ea580c",
+    "title": "Labour Relations and Labour Law",
+    "short": "BPM314",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "d716351e-9631-4e27-b12b-605d0481c4c1",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": [
+     "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+     "76d56d23-38fa-46f9-8e4c-7b249dac4bae"
+    ],
+    "color": "#9333ea",
+    "title": "Gender Issues in Project Planning Management",
+    "short": "BPM315",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "d47725b7-a804-423f-8b1d-3e82ae28618b",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["XUiRVz"],
+    "color": "#2563ebff",
+    "title": "Regional Planning and Economic Development",
+    "short": "BPM411",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "c570ec4e-b1aa-42a0-9a4e-9f5caeeacf2f",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["XUiRVz"],
+    "color": "#16a34aff",
+    "title": "Project Termination, Conclusion and Reporting",
+    "short": "BPM412",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "9a3a34fb-fb43-424e-8751-83826e0585c7",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["76d56d23-38fa-46f9-8e4c-7b249dac4bae"],
+    "color": "#ca8a04",
+    "title": "Project Management, Regionalization and Globalization",
+    "short": "BPM413",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "fe5bba8c-c28c-4b08-b814-d15b714b91c2",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["XUiRVz"],
+    "color": "#e11d48ff",
+    "title": "Research Project (Final Year)",
+    "short": "BPM414",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "2b343b15-ba87-4ca4-9341-2f7283ff87eb",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["XUiRVz"],
+    "color": "#0284c7ff",
+    "title": "Project Management and Strategic Planning Concept",
+    "short": "BPM415",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "a959bb81-03d1-4c50-a062-f35beb9014dc",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["8f17db11-9043-4651-8e4e-c376e8777b50"],
+    "color": "#65a30d",
+    "title": "Introduction to Tourism Management and Operations",
+    "short": "BTH111",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "001d61b8-2019-446b-8761-491336ec0d02",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["9289b6af-902a-439e-ad09-1b9de024076f"],
+    "color": "#4f46e5",
+    "title": "Introduction to Hospitality Management and Operations",
+    "short": "BTH112",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "6fed0bcf-319f-4ab4-b999-d57f59799041",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["6d14f1ec-d21a-4faa-a486-79f59676f742"],
+    "color": "#0f766e",
+    "title": "Introduction to Travel and Tour Operations",
+    "short": "BTH113",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "9ba43e05-7f47-4400-b36d-d92e53b165cd",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["905583df-a803-4a71-875a-15a80eb993db"],
+    "color": "#b45309",
+    "title": "French Structure I",
+    "short": "FRE110",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "0def79b9-2214-4abf-8428-47cdc94627f9",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["6d14f1ec-d21a-4faa-a486-79f59676f742"],
+    "color": "#c2410c",
+    "title": "Tourism Business Environment",
+    "short": "BTH211",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "523e7b4f-ee21-43e1-b7d0-fc07d54cee68",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["9289b6af-902a-439e-ad09-1b9de024076f"],
+    "color": "#1d4ed8",
+    "title": "Tourism and Hospitality Economics",
+    "short": "BTH212",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "b80d9761-72d3-48ea-a7ba-d9751cac453f",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["8f17db11-9043-4651-8e4e-c376e8777b50"],
+    "color": "#15803d",
+    "title": "Tourism and Hospitality Law",
+    "short": "BTH213",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "27f15df5-142d-4a06-9bc9-0e3390b72ffd",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["905583df-a803-4a71-875a-15a80eb993db"],
+    "color": "#b91c1c",
+    "title": "French Structure III",
+    "short": "FRE213",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "a83b6117-96c6-4f41-9fb0-66e2fe96c13b",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["9289b6af-902a-439e-ad09-1b9de024076f"],
+    "color": "#6d28d9",
+    "title": "Tourism Policy and Planning",
+    "short": "BTM311",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "61e691ff-87be-495e-864b-3a40348a0fdc",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["8f17db11-9043-4651-8e4e-c376e8777b50"],
+    "color": "#0891b2",
+    "title": "Sustainable Tourism",
+    "short": "BTM312",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "b98179dd-528d-4758-b98f-d4e2de9e9dfa",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["6d14f1ec-d21a-4faa-a486-79f59676f742"],
+    "color": "#059669",
+    "title": "Tourism Business Environment (3rd yr)",
+    "short": "BTM313",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "2272158e-aa8e-4a68-b836-387c476d125c",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["905583df-a803-4a71-875a-15a80eb993db"],
+    "color": "#d97706",
+    "title": "French Structure (Translation) I",
+    "short": "FRE312",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "b32a8c1c-70b2-49a1-bf21-66aedaa71e51",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["bXuuRE"],
+    "color": "#dc2626ff",
+    "title": "Menu Planning and Costing",
+    "short": "BHM311",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "d37ec2c0-6186-4772-a1d2-686c3e956f1e",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["bXuuRE"],
+    "color": "#7c3aedff",
+    "title": "Food and Beverage Production",
+    "short": "BHM312",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "3f10c5c1-e195-4562-85f8-c25f15604154",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["bXuuRE"],
+    "color": "#0d9488ff",
+    "title": "Food and Beverage Service",
+    "short": "BHM313",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "ab912148-3b49-478b-8141-3dbba1daae91",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["8f17db11-9043-4651-8e4e-c376e8777b50"],
+    "color": "#ea580c",
+    "title": "Principles of Tourism Management",
+    "short": "BHT111",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "dea76e2b-4c3d-4478-9ad8-6f59f0f40a0b",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["9289b6af-902a-439e-ad09-1b9de024076f"],
+    "color": "#9333ea",
+    "title": "Principles of Hospitality Management",
+    "short": "BHT112",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "13ff4a9a-f2f1-458d-9c1b-26e4ca49efa2",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["6d14f1ec-d21a-4faa-a486-79f59676f742"],
+    "color": "#2563eb",
+    "title": "Health Safety and Security in Hospitality",
+    "short": "BHT113",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "af0dd192-1c68-49d8-8242-45b96ee5586d",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["8f17db11-9043-4651-8e4e-c376e8777b50"],
+    "color": "#16a34a",
+    "title": "Consumer Behaviour in Hospitality",
+    "short": "BHM211",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "e10f34b9-87e6-42d1-8ed4-f6499133059a",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["bXuuRE"],
+    "color": "#ca8a04ff",
+    "title": "Food and Beverage Production (2nd yr)",
+    "short": "BHM212",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "535ce32b-6435-4e7c-8b7d-5fa90dcdf966",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["bXuuRE"],
+    "color": "#e11d48ff",
+    "title": "Food and Beverage Service (2nd yr)",
+    "short": "BHM213",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "cf0a1135-c7e1-4db9-a339-ea632222040b",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["d7294898-e5f5-4154-a297-db62a63231f5"],
+    "color": "#0284c7",
+    "title": "Managerial Finance (PG)",
+    "short": "BBM714",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["ac8f5a59-0ce3-4aa6-822e-b4a5e4116211"],
+    "color": "#65a30d",
+    "title": "Strategic Management (MBA)",
+    "short": "MBA821",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "9ec7190a-1235-4ae9-9be7-1678eb19ac1d",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["5556ebb1-51ad-47df-b488-099649ed2066"],
+    "color": "#4f46e5",
+    "title": "Research Seminar (MBA)",
+    "short": "MBA822",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "343f8cb1-cda5-41f9-aa52-312ed9306678",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["46fcd9ab-6105-4bb8-bfe9-691e24570490"],
+    "color": "#0f766e",
+    "title": "Financial Institutions and Markets (MBA)",
+    "short": "BFN821",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "58d42752-b7bc-4d9d-8418-a492536b358e",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3"],
+    "color": "#b45309",
+    "title": "Corporate Finance (MBA)",
+    "short": "BFN822",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "bff5bfed-c4db-4663-bb2d-8d8588a18b95",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3"],
+    "color": "#c2410c",
+    "title": "Investment and Portfolio Management (MBA)",
+    "short": "BFN823",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "3e5f5f6b-b778-4688-96d3-ac742a1b4cbd",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["46fcd9ab-6105-4bb8-bfe9-691e24570490"],
+    "color": "#1d4ed8",
+    "title": "International Finance (MBA)",
+    "short": "BFN824",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "d9b61014-e99f-4623-94ab-975dbdfda00b",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["5556ebb1-51ad-47df-b488-099649ed2066"],
+    "color": "#15803d",
+    "title": "Project Monitoring and Control (MBA)",
+    "short": "BPM821",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "dfee7547-6f68-48f2-9f93-6d32cf87213f",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["XUiRVz"],
+    "color": "#b91c1cff",
+    "title": "Project Procurement Management (MBA)",
+    "short": "BPM822",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "45b973c2-cb68-4445-803e-3d8f79e91052",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["XUiRVz"],
+    "color": "#6d28d9ff",
+    "title": "Project Quality and Risk Management (MBA)",
+    "short": "BPM823",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "2ba6dbf6-39b7-4e32-ab57-e09ce1de74da",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["ac8f5a59-0ce3-4aa6-822e-b4a5e4116211"],
+    "color": "#0891b2",
+    "title": "Project Management Consultancy (MBA)",
+    "short": "BPM824",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "b989c5cd-5277-484c-9e82-405c78a3ddf1",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["738f513b-8a7b-404c-9b62-25bc8707e33b"],
+    "color": "#059669",
+    "title": "Employee Counselling (MBA)",
+    "short": "HRM821",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "46094cd1-a544-4f7f-992d-9bc4048013b3",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["594ba91f-2054-4161-9cff-3e0b2f502910"],
+    "color": "#d97706",
+    "title": "Employee Relations and Law (MBA)",
+    "short": "HRM822",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "ca5ee672-8457-4048-898b-6c5050c996d3",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["dab61dad-0192-477a-9986-9449fac05998"],
+    "color": "#dc2626",
+    "title": "Reward Management (MBA)",
+    "short": "HRM823",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   },
+   {
+    "id": "74c87be5-013d-4e38-a857-34e31ec37730",
+    "preferences": [],
+    "lessons": 3,
+    "instructors": ["dab61dad-0192-477a-9986-9449fac05998"],
+    "color": "#7c3aed",
+    "title": "Cases in Human Resource Management (MBA)",
+    "short": "HRM824",
+    "online": false,
+    "default_room": "",
+    "additional_columns": [],
+    "aditional_data": {}
+   }
+  ],
+
+  "lessons": [
+   {
+    "identifier": "us8GL89@d44692c3-a634-43f0-8557-e8e343ac77ee-28a07655-430b-4fc7-965a-bba613884ebe-b04c650c-d11b-42e4-8131-e3132eaf3a76",
+    "group": "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+    "unit": "28a07655-430b-4fc7-965a-bba613884ebe",
+    "instructor": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b04c650c-d11b-42e4-8131-e3132eaf3a76"]
+   },
+   {
+    "identifier": "wtq5mD6@0c8295f2-a475-4ca2-aae9-78881db64ae1-36df7f8e-b205-434c-812d-d8aaedfbcd76-b04c650c-d11b-42e4-8131-e3132eaf3a76",
+    "group": "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+    "unit": "36df7f8e-b205-434c-812d-d8aaedfbcd76",
+    "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b04c650c-d11b-42e4-8131-e3132eaf3a76"]
+   },
+   {
+    "identifier": "tkNOGcy@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-b04c650c-d11b-42e4-8131-e3132eaf3a76",
+    "group": "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+    "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+    "instructor": "gu6bCA",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b04c650c-d11b-42e4-8131-e3132eaf3a76"]
+   },
+   {
+    "identifier": "66wiHz3@d7294898-e5f5-4154-a297-db62a63231f5-ffda8304-c743-4e08-b4de-5441ebd51dfb-b04c650c-d11b-42e4-8131-e3132eaf3a76",
+    "group": "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+    "unit": "ffda8304-c743-4e08-b4de-5441ebd51dfb",
+    "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b04c650c-d11b-42e4-8131-e3132eaf3a76"]
+   },
+   {
+    "identifier": "9gBxQem@69088895-33d9-43a5-a038-e12404a5affa-cdfab22c-a391-4c32-9f8d-bf394488f725-b04c650c-d11b-42e4-8131-e3132eaf3a76",
+    "group": "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+    "unit": "cdfab22c-a391-4c32-9f8d-bf394488f725",
+    "instructor": "69088895-33d9-43a5-a038-e12404a5affa",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b04c650c-d11b-42e4-8131-e3132eaf3a76"]
+   },
+   {
+    "identifier": "bfh2qEp@8cf2816c-cebf-4157-b2b7-ab7a24577c00-16209308-0c0c-4351-85e3-23a35f382d49-3c66e5da-6564-4c41-a960-ed3d78529572",
+    "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+    "unit": "16209308-0c0c-4351-85e3-23a35f382d49",
+    "instructor": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3c66e5da-6564-4c41-a960-ed3d78529572"]
+   },
+   {
+    "identifier": "Z6tMJgE@d7294898-e5f5-4154-a297-db62a63231f5-8a3e5b00-78fd-4b2c-8156-54221ef7453c-3c66e5da-6564-4c41-a960-ed3d78529572",
+    "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+    "unit": "8a3e5b00-78fd-4b2c-8156-54221ef7453c",
+    "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3c66e5da-6564-4c41-a960-ed3d78529572"]
+   },
+   {
+    "identifier": "Y0qUokp@27e2e54f-6613-455d-9377-174913aa2856-b383dec8-1114-45fc-a761-ac7d4eb1e787-3c66e5da-6564-4c41-a960-ed3d78529572",
+    "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+    "unit": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+    "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3c66e5da-6564-4c41-a960-ed3d78529572"]
+   },
+   {
+    "identifier": "T4ndLKp@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-ed0e1b4e-a50c-4bcd-9025-2ea03316c191-3c66e5da-6564-4c41-a960-ed3d78529572",
+    "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+    "unit": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+    "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3c66e5da-6564-4c41-a960-ed3d78529572"]
+   },
+   {
+    "identifier": "3jHeJ2r@0c8295f2-a475-4ca2-aae9-78881db64ae1-46fdcfb6-c3c9-4218-8913-082d8589a3e4-3c66e5da-6564-4c41-a960-ed3d78529572",
+    "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+    "unit": "46fdcfb6-c3c9-4218-8913-082d8589a3e4",
+    "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3c66e5da-6564-4c41-a960-ed3d78529572"]
+   },
+   {
+    "identifier": "XPsf3Hr@76d56d23-38fa-46f9-8e4c-7b249dac4bae-3bf905c8-d1f2-4aea-ba42-f5e50e529d1c-3c66e5da-6564-4c41-a960-ed3d78529572",
+    "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+    "unit": "3bf905c8-d1f2-4aea-ba42-f5e50e529d1c",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3c66e5da-6564-4c41-a960-ed3d78529572"]
+   },
+   {
+    "identifier": "GCJs01v@25811033-b23a-49ff-b02b-9b6317c51903-3dc78129-69a6-459d-b478-1385a7aca654-3c66e5da-6564-4c41-a960-ed3d78529572",
+    "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+    "unit": "3dc78129-69a6-459d-b478-1385a7aca654",
+    "instructor": "25811033-b23a-49ff-b02b-9b6317c51903",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3c66e5da-6564-4c41-a960-ed3d78529572"]
+   },
+   {
+    "identifier": "EqZKsj4@0c8295f2-a475-4ca2-aae9-78881db64ae1-85faa224-75dd-40fc-af2c-2fda871ec774-d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+    "group": "d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+    "unit": "85faa224-75dd-40fc-af2c-2fda871ec774",
+    "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["d0ff3c26-da3a-4697-aa55-e9225a466ce1"]
+   },
+   {
+    "identifier": "nPJt62a@0c8295f2-a475-4ca2-aae9-78881db64ae1-27b90ecf-7bbf-4039-9101-643b15b3cb4f-d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+    "group": "d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+    "unit": "27b90ecf-7bbf-4039-9101-643b15b3cb4f",
+    "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["d0ff3c26-da3a-4697-aa55-e9225a466ce1"]
+   },
+   {
+    "identifier": "sz2pzWQ@46fcd9ab-6105-4bb8-bfe9-691e24570490-a88c4ebb-3aaf-4cd4-8901-87a1cf2175a2-d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+    "group": "d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+    "unit": "a88c4ebb-3aaf-4cd4-8901-87a1cf2175a2",
+    "instructor": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["d0ff3c26-da3a-4697-aa55-e9225a466ce1"]
+   },
+   {
+    "identifier": "rx0JxEN@76d56d23-38fa-46f9-8e4c-7b249dac4bae-dd032243-fded-4a13-af35-d8f6766a9fb8-d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+    "group": "d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+    "unit": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["d0ff3c26-da3a-4697-aa55-e9225a466ce1"]
+   },
+   {
+    "identifier": "5dGyGYf@578c3e61-b597-4b95-9cd3-a397d349f7b6-0feebdd6-16ee-446b-945d-d506fdbb41e8-d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+    "group": "d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+    "unit": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+    "instructor": "578c3e61-b597-4b95-9cd3-a397d349f7b6",
+    "distribution": [2],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 2,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["d0ff3c26-da3a-4697-aa55-e9225a466ce1"]
+   },
+   {
+    "identifier": "36LPdj8@27e2e54f-6613-455d-9377-174913aa2856-5677547f-c2e1-4896-8010-529cffeb71e1-c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "group": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "unit": "5677547f-c2e1-4896-8010-529cffeb71e1",
+    "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["c2363c69-74a5-4a21-ae21-a784fe024f05"]
+   },
+   {
+    "identifier": "zpQWhFB@fc77b31c-fb32-4c37-aa20-df3b8cdd6206-19dc8e4e-d76a-4f4e-b1f8-3631e3e5c1f6-c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "group": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "unit": "19dc8e4e-d76a-4f4e-b1f8-3631e3e5c1f6",
+    "instructor": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["c2363c69-74a5-4a21-ae21-a784fe024f05"]
+   },
+   {
+    "identifier": "EsuOsc2@27e2e54f-6613-455d-9377-174913aa2856-7691243b-c260-45b4-8cf6-e71c58d81a76-c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "group": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "unit": "7691243b-c260-45b4-8cf6-e71c58d81a76",
+    "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["c2363c69-74a5-4a21-ae21-a784fe024f05"]
+   },
+   {
+    "identifier": "ESa5kej@46fcd9ab-6105-4bb8-bfe9-691e24570490-f075f5d9-7a9f-4251-92f7-ff5d9864b68d-c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "group": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "unit": "f075f5d9-7a9f-4251-92f7-ff5d9864b68d",
+    "instructor": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["c2363c69-74a5-4a21-ae21-a784fe024f05"]
+   },
+   {
+    "identifier": "dwW16gs@XUiRVz-6a6c1458-5817-4853-b9aa-03da09b35f7d-c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "group": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "unit": "6a6c1458-5817-4853-b9aa-03da09b35f7d",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["c2363c69-74a5-4a21-ae21-a784fe024f05"]
+   },
+   {
+    "identifier": "KeZ7cYJ@76d56d23-38fa-46f9-8e4c-7b249dac4bae-7311de5e-8fbd-43f4-a7d4-42c85a082c52-c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "group": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+    "unit": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [2],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 2,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["c2363c69-74a5-4a21-ae21-a784fe024f05"]
+   },
+   {
+    "identifier": "R5gQLpq@46fcd9ab-6105-4bb8-bfe9-691e24570490-f075f5d9-7a9f-4251-92f7-ff5d9864b68d-0d36c58c-26ea-4802-ac7b-1e50a6719e9b",
+    "group": "0d36c58c-26ea-4802-ac7b-1e50a6719e9b",
+    "unit": "f075f5d9-7a9f-4251-92f7-ff5d9864b68d",
+    "instructor": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["0d36c58c-26ea-4802-ac7b-1e50a6719e9b"]
+   },
+   {
+    "identifier": "471Xzc5@XUiRVz-6a6c1458-5817-4853-b9aa-03da09b35f7d-0d36c58c-26ea-4802-ac7b-1e50a6719e9b",
+    "group": "0d36c58c-26ea-4802-ac7b-1e50a6719e9b",
+    "unit": "6a6c1458-5817-4853-b9aa-03da09b35f7d",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["0d36c58c-26ea-4802-ac7b-1e50a6719e9b"]
+   },
+   {
+    "identifier": "ZaTntn3@578c3e61-b597-4b95-9cd3-a397d349f7b6-7311de5e-8fbd-43f4-a7d4-42c85a082c52-0d36c58c-26ea-4802-ac7b-1e50a6719e9b",
+    "group": "0d36c58c-26ea-4802-ac7b-1e50a6719e9b",
+    "unit": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
+    "instructor": "578c3e61-b597-4b95-9cd3-a397d349f7b6",
+    "distribution": [2],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 2,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["0d36c58c-26ea-4802-ac7b-1e50a6719e9b"]
+   },
+   {
+    "identifier": "Y2oDaNL@d44692c3-a634-43f0-8557-e8e343ac77ee-24ac72f6-b61e-4e05-8683-38f2626244da-2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+    "group": "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+    "unit": "24ac72f6-b61e-4e05-8683-38f2626244da",
+    "instructor": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["2c043571-5a4c-4ec0-afe1-f4e64e761b28"]
+   },
+   {
+    "identifier": "747AyPO@0c8295f2-a475-4ca2-aae9-78881db64ae1-5c381618-3b3a-4dd2-999c-b91fd494d86b-2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+    "group": "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+    "unit": "5c381618-3b3a-4dd2-999c-b91fd494d86b",
+    "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["2c043571-5a4c-4ec0-afe1-f4e64e761b28"]
+   },
+   {
+    "identifier": "YH5CKk9@76d56d23-38fa-46f9-8e4c-7b249dac4bae-04911e60-85e8-4de5-883c-e261fe71a33a-2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+    "group": "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+    "unit": "04911e60-85e8-4de5-883c-e261fe71a33a",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["2c043571-5a4c-4ec0-afe1-f4e64e761b28"]
+   },
+   {
+    "identifier": "Y2R0oAt@d7294898-e5f5-4154-a297-db62a63231f5-8dc6e3e7-613f-473c-84d5-a997a059e076-2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+    "group": "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+    "unit": "8dc6e3e7-613f-473c-84d5-a997a059e076",
+    "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["2c043571-5a4c-4ec0-afe1-f4e64e761b28"]
+   },
+   {
+    "identifier": "WD4dDDB@69088895-33d9-43a5-a038-e12404a5affa-cdfab22c-a391-4c32-9f8d-bf394488f725-2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+    "group": "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+    "unit": "cdfab22c-a391-4c32-9f8d-bf394488f725",
+    "instructor": "69088895-33d9-43a5-a038-e12404a5affa",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["2c043571-5a4c-4ec0-afe1-f4e64e761b28"]
+   },
+   {
+    "identifier": "DoT3zuA@d44692c3-a634-43f0-8557-e8e343ac77ee-28a07655-430b-4fc7-965a-bba613884ebe-078bd9b0-233c-4f07-b27c-dcf169911965",
+    "group": "078bd9b0-233c-4f07-b27c-dcf169911965",
+    "unit": "28a07655-430b-4fc7-965a-bba613884ebe",
+    "instructor": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["078bd9b0-233c-4f07-b27c-dcf169911965"]
+   },
+   {
+    "identifier": "tvPpJvo@fc77b31c-fb32-4c37-aa20-df3b8cdd6206-b914908c-92ae-401b-89a6-1c58fb5fb193-078bd9b0-233c-4f07-b27c-dcf169911965",
+    "group": "078bd9b0-233c-4f07-b27c-dcf169911965",
+    "unit": "b914908c-92ae-401b-89a6-1c58fb5fb193",
+    "instructor": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["078bd9b0-233c-4f07-b27c-dcf169911965"]
+   },
+   {
+    "identifier": "GeSS08k@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-078bd9b0-233c-4f07-b27c-dcf169911965",
+    "group": "078bd9b0-233c-4f07-b27c-dcf169911965",
+    "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+    "instructor": "gu6bCA",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["078bd9b0-233c-4f07-b27c-dcf169911965"]
+   },
+   {
+    "identifier": "rH5LYxP@d7294898-e5f5-4154-a297-db62a63231f5-ffda8304-c743-4e08-b4de-5441ebd51dfb-078bd9b0-233c-4f07-b27c-dcf169911965",
+    "group": "078bd9b0-233c-4f07-b27c-dcf169911965",
+    "unit": "ffda8304-c743-4e08-b4de-5441ebd51dfb",
+    "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["078bd9b0-233c-4f07-b27c-dcf169911965"]
+   },
+   {
+    "identifier": "K1ftgXa@69088895-33d9-43a5-a038-e12404a5affa-8e6a3df4-8afe-4f10-89b5-cdfe1acaf63f-078bd9b0-233c-4f07-b27c-dcf169911965",
+    "group": "078bd9b0-233c-4f07-b27c-dcf169911965",
+    "unit": "8e6a3df4-8afe-4f10-89b5-cdfe1acaf63f",
+    "instructor": "69088895-33d9-43a5-a038-e12404a5affa",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["078bd9b0-233c-4f07-b27c-dcf169911965"]
+   },
+   {
+    "identifier": "ihvrbx6@fc77b31c-fb32-4c37-aa20-df3b8cdd6206-c9f68bed-da52-4b2a-b09b-8da4a565b496-b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "unit": "c9f68bed-da52-4b2a-b09b-8da4a565b496",
+    "instructor": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b1d9a4af-9524-47ee-8e86-0d575816297d"]
+   },
+   {
+    "identifier": "1q8gZNY@27e2e54f-6613-455d-9377-174913aa2856-f0723732-00c5-4e05-8eac-508e878e7cf2-b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "unit": "f0723732-00c5-4e05-8eac-508e878e7cf2",
+    "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b1d9a4af-9524-47ee-8e86-0d575816297d"]
+   },
+   {
+    "identifier": "sc7gx1S@d7294898-e5f5-4154-a297-db62a63231f5-8a3e5b00-78fd-4b2c-8156-54221ef7453c-b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "unit": "8a3e5b00-78fd-4b2c-8156-54221ef7453c",
+    "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b1d9a4af-9524-47ee-8e86-0d575816297d"]
+   },
+   {
+    "identifier": "7COdusy@27e2e54f-6613-455d-9377-174913aa2856-b383dec8-1114-45fc-a761-ac7d4eb1e787-b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "unit": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+    "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b1d9a4af-9524-47ee-8e86-0d575816297d"]
+   },
+   {
+    "identifier": "KAkF7QG@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+    "instructor": "gu6bCA",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b1d9a4af-9524-47ee-8e86-0d575816297d"]
+   },
+   {
+    "identifier": "DQgv30i@d7294898-e5f5-4154-a297-db62a63231f5-ffda8304-c743-4e08-b4de-5441ebd51dfb-b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "unit": "ffda8304-c743-4e08-b4de-5441ebd51dfb",
+    "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b1d9a4af-9524-47ee-8e86-0d575816297d"]
+   },
+   {
+    "identifier": "ak7GPlw@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-4ddc0348-c939-44d0-9630-6c1896cb2958-b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+    "unit": "4ddc0348-c939-44d0-9630-6c1896cb2958",
+    "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b1d9a4af-9524-47ee-8e86-0d575816297d"]
+   },
+   {
+    "identifier": "iAhqoMK@8cf2816c-cebf-4157-b2b7-ab7a24577c00-8647c909-903b-43ab-a652-fb5282df599b-cc323960-3ec8-49b9-9995-b8285f5e209b",
+    "group": "cc323960-3ec8-49b9-9995-b8285f5e209b",
+    "unit": "8647c909-903b-43ab-a652-fb5282df599b",
+    "instructor": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["cc323960-3ec8-49b9-9995-b8285f5e209b"]
+   },
+   {
+    "identifier": "BAZqLuO@738f513b-8a7b-404c-9b62-25bc8707e33b-2fb5ba4e-4e7d-47cf-ae73-7c165edd5570-cc323960-3ec8-49b9-9995-b8285f5e209b",
+    "group": "cc323960-3ec8-49b9-9995-b8285f5e209b",
+    "unit": "2fb5ba4e-4e7d-47cf-ae73-7c165edd5570",
+    "instructor": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["cc323960-3ec8-49b9-9995-b8285f5e209b"]
+   },
+   {
+    "identifier": "hTeOHzj@594ba91f-2054-4161-9cff-3e0b2f502910-980421dc-621f-48f9-ab9d-b97482ea17d5-cc323960-3ec8-49b9-9995-b8285f5e209b",
+    "group": "cc323960-3ec8-49b9-9995-b8285f5e209b",
+    "unit": "980421dc-621f-48f9-ab9d-b97482ea17d5",
+    "instructor": "594ba91f-2054-4161-9cff-3e0b2f502910",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["cc323960-3ec8-49b9-9995-b8285f5e209b"]
+   },
+   {
+    "identifier": "LSn9XZ9@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-42771b15-68a7-407f-9568-93fc3712d2c1-cc323960-3ec8-49b9-9995-b8285f5e209b",
+    "group": "cc323960-3ec8-49b9-9995-b8285f5e209b",
+    "unit": "42771b15-68a7-407f-9568-93fc3712d2c1",
+    "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["cc323960-3ec8-49b9-9995-b8285f5e209b"]
+   },
+   {
+    "identifier": "NKxztTo@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-cc323960-3ec8-49b9-9995-b8285f5e209b",
+    "group": "cc323960-3ec8-49b9-9995-b8285f5e209b",
+    "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+    "instructor": "gu6bCA",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["cc323960-3ec8-49b9-9995-b8285f5e209b"]
+   },
+   {
+    "identifier": "YZba5yf@0c8295f2-a475-4ca2-aae9-78881db64ae1-ae84c2b8-5a9e-48d1-a6a8-1b31df6fcd98-1b333ad7-714f-45e6-a453-2f16ba387975",
+    "group": "1b333ad7-714f-45e6-a453-2f16ba387975",
+    "unit": "ae84c2b8-5a9e-48d1-a6a8-1b31df6fcd98",
+    "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["1b333ad7-714f-45e6-a453-2f16ba387975"]
+   },
+   {
+    "identifier": "Cp3FTWw@fc77b31c-fb32-4c37-aa20-df3b8cdd6206-960c2fba-736e-40bf-9316-c72cf26191d6-1b333ad7-714f-45e6-a453-2f16ba387975",
+    "group": "1b333ad7-714f-45e6-a453-2f16ba387975",
+    "unit": "960c2fba-736e-40bf-9316-c72cf26191d6",
+    "instructor": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["1b333ad7-714f-45e6-a453-2f16ba387975"]
+   },
+   {
+    "identifier": "ncsUANt@738f513b-8a7b-404c-9b62-25bc8707e33b-b11cd0de-3162-4e97-92a6-c113501868e8-1b333ad7-714f-45e6-a453-2f16ba387975",
+    "group": "1b333ad7-714f-45e6-a453-2f16ba387975",
+    "unit": "b11cd0de-3162-4e97-92a6-c113501868e8",
+    "instructor": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["1b333ad7-714f-45e6-a453-2f16ba387975"]
+   },
+   {
+    "identifier": "hqkTkFg@8cf2816c-cebf-4157-b2b7-ab7a24577c00-10f5d19c-8c80-4e4f-b6de-fd4d1c496fad-1b333ad7-714f-45e6-a453-2f16ba387975",
+    "group": "1b333ad7-714f-45e6-a453-2f16ba387975",
+    "unit": "10f5d19c-8c80-4e4f-b6de-fd4d1c496fad",
+    "instructor": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["1b333ad7-714f-45e6-a453-2f16ba387975"]
+   },
+   {
+    "identifier": "2WXSt6K@0c8295f2-a475-4ca2-aae9-78881db64ae1-2d52bb8b-5547-4174-ab75-79940d9311bc-1b333ad7-714f-45e6-a453-2f16ba387975",
+    "group": "1b333ad7-714f-45e6-a453-2f16ba387975",
+    "unit": "2d52bb8b-5547-4174-ab75-79940d9311bc",
+    "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["1b333ad7-714f-45e6-a453-2f16ba387975"]
+   },
+   {
+    "identifier": "Tey2cta@594ba91f-2054-4161-9cff-3e0b2f502910-e7462f7f-868c-4111-92a6-bbf949c19a93-1b333ad7-714f-45e6-a453-2f16ba387975",
+    "group": "1b333ad7-714f-45e6-a453-2f16ba387975",
+    "unit": "e7462f7f-868c-4111-92a6-bbf949c19a93",
+    "instructor": "594ba91f-2054-4161-9cff-3e0b2f502910",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["1b333ad7-714f-45e6-a453-2f16ba387975"]
+   },
+   {
+    "identifier": "L11xWn4@738f513b-8a7b-404c-9b62-25bc8707e33b-5914fa07-f582-42be-a435-814380809356-3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "group": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "unit": "5914fa07-f582-42be-a435-814380809356",
+    "instructor": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea"]
+   },
+   {
+    "identifier": "AzH1nnZ@8cf2816c-cebf-4157-b2b7-ab7a24577c00-de9b1611-5af9-46a6-97d9-968ffb292d6c-3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "group": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "unit": "de9b1611-5af9-46a6-97d9-968ffb292d6c",
+    "instructor": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea"]
+   },
+   {
+    "identifier": "T3k64MM@594ba91f-2054-4161-9cff-3e0b2f502910-cedc6b5e-b028-4e18-9d9c-42ada8d16760-3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "group": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "unit": "cedc6b5e-b028-4e18-9d9c-42ada8d16760",
+    "instructor": "594ba91f-2054-4161-9cff-3e0b2f502910",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea"]
+   },
+   {
+    "identifier": "QfmnxKh@76d56d23-38fa-46f9-8e4c-7b249dac4bae-dd032243-fded-4a13-af35-d8f6766a9fb8-3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "group": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "unit": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea"]
+   },
+   {
+    "identifier": "GHsapCJ@8f17db11-9043-4651-8e4e-c376e8777b50-fd15eede-4b8c-416b-945b-68158a448ceb-3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "group": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "unit": "fd15eede-4b8c-416b-945b-68158a448ceb",
+    "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea"]
+   },
+   {
+    "identifier": "MOkaDUl@578c3e61-b597-4b95-9cd3-a397d349f7b6-0feebdd6-16ee-446b-945d-d506fdbb41e8-3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "group": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+    "unit": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+    "instructor": "578c3e61-b597-4b95-9cd3-a397d349f7b6",
+    "distribution": [2],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 2,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea"]
+   },
+   {
+    "identifier": "wh21Pzb@d44692c3-a634-43f0-8557-e8e343ac77ee-137e40e3-762e-45f8-8127-ea3f99dd1bfc-4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "group": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "unit": "137e40e3-762e-45f8-8127-ea3f99dd1bfc",
+    "instructor": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["4c4d6902-a547-4e43-ba7e-011e954305f0"]
+   },
+   {
+    "identifier": "8FhZr0N@27e2e54f-6613-455d-9377-174913aa2856-2f01d3ff-c019-4457-a302-2cd117371664-4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "group": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "unit": "2f01d3ff-c019-4457-a302-2cd117371664",
+    "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["4c4d6902-a547-4e43-ba7e-011e954305f0"]
+   },
+   {
+    "identifier": "wIVaz1Z@5556ebb1-51ad-47df-b488-099649ed2066-2fda46e6-5fd8-488c-a0f4-426501761691-4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "group": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "unit": "2fda46e6-5fd8-488c-a0f4-426501761691",
+    "instructor": "5556ebb1-51ad-47df-b488-099649ed2066",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["4c4d6902-a547-4e43-ba7e-011e954305f0"]
+   },
+   {
+    "identifier": "S3TJCUb@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-4ddc0348-c939-44d0-9630-6c1896cb2958-4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "group": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "unit": "4ddc0348-c939-44d0-9630-6c1896cb2958",
+    "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["4c4d6902-a547-4e43-ba7e-011e954305f0"]
+   },
+   {
+    "identifier": "BLekseG@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-15164936-7cd9-4a3b-be0e-ce6ed8f2036a-4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "group": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "unit": "15164936-7cd9-4a3b-be0e-ce6ed8f2036a",
+    "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["4c4d6902-a547-4e43-ba7e-011e954305f0"]
+   },
+   {
+    "identifier": "5fv3ihJ@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-7f87f2e7-b62d-4b86-9837-dccb97d25e61-4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "group": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+    "unit": "7f87f2e7-b62d-4b86-9837-dccb97d25e61",
+    "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["4c4d6902-a547-4e43-ba7e-011e954305f0"]
+   },
+   {
+    "identifier": "sHq0LWM@XUiRVz-5a5ac926-cdd7-4ee7-8d6d-a60bacf31f08-9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "unit": "5a5ac926-cdd7-4ee7-8d6d-a60bacf31f08",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9199f1e0-3569-43a4-938b-5e69747dd9df"]
+   },
+   {
+    "identifier": "vsvaJXx@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-42e628f6-a887-4776-98e9-13e7447dbe0c-9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "unit": "42e628f6-a887-4776-98e9-13e7447dbe0c",
+    "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9199f1e0-3569-43a4-938b-5e69747dd9df"]
+   },
+   {
+    "identifier": "uOztp7R@5556ebb1-51ad-47df-b488-099649ed2066-a8cd7a11-c476-422f-beab-447b9c07bc5d-9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "unit": "a8cd7a11-c476-422f-beab-447b9c07bc5d",
+    "instructor": "5556ebb1-51ad-47df-b488-099649ed2066",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9199f1e0-3569-43a4-938b-5e69747dd9df"]
+   },
+   {
+    "identifier": "oIF2ByN@dab61dad-0192-477a-9986-9449fac05998-1090ee50-05cb-475d-8bc6-3a67894d9e77-9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "unit": "1090ee50-05cb-475d-8bc6-3a67894d9e77",
+    "instructor": "dab61dad-0192-477a-9986-9449fac05998",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9199f1e0-3569-43a4-938b-5e69747dd9df"]
+   },
+   {
+    "identifier": "NIx21mt@d7294898-e5f5-4154-a297-db62a63231f5-e8b3d848-f96b-481f-b584-64b3d76459a5-9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "unit": "e8b3d848-f96b-481f-b584-64b3d76459a5",
+    "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9199f1e0-3569-43a4-938b-5e69747dd9df"]
+   },
+   {
+    "identifier": "INCX82N@0c8295f2-a475-4ca2-aae9-78881db64ae1-a4f32e6a-7755-46bd-8489-f43ce46c2453-9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "unit": "a4f32e6a-7755-46bd-8489-f43ce46c2453",
+    "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9199f1e0-3569-43a4-938b-5e69747dd9df"]
+   },
+   {
+    "identifier": "xonlMOH@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-144285f7-80ae-4395-ba9c-22d8faf252bc-9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+    "unit": "144285f7-80ae-4395-ba9c-22d8faf252bc",
+    "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9199f1e0-3569-43a4-938b-5e69747dd9df"]
+   },
+   {
+    "identifier": "HbU6dy6@8cf2816c-cebf-4157-b2b7-ab7a24577c00-d716351e-9631-4e27-b12b-605d0481c4c1-b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "group": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "unit": "d716351e-9631-4e27-b12b-605d0481c4c1",
+    "instructor": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b7876ae8-5f71-4690-80c0-4cbc6e23517b"]
+   },
+   {
+    "identifier": "SefPU5k@738f513b-8a7b-404c-9b62-25bc8707e33b-93232e89-4885-436d-ac2e-b2981851ad9e-b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "group": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "unit": "93232e89-4885-436d-ac2e-b2981851ad9e",
+    "instructor": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b7876ae8-5f71-4690-80c0-4cbc6e23517b"]
+   },
+   {
+    "identifier": "JWeCoI5@dab61dad-0192-477a-9986-9449fac05998-24454761-a2ad-474d-bde2-8ecb12851c80-b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "group": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "unit": "24454761-a2ad-474d-bde2-8ecb12851c80",
+    "instructor": "dab61dad-0192-477a-9986-9449fac05998",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b7876ae8-5f71-4690-80c0-4cbc6e23517b"]
+   },
+   {
+    "identifier": "8yOkAEy@594ba91f-2054-4161-9cff-3e0b2f502910-f3ce7c04-aca9-4d91-a18a-d415d71f68b8-b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "group": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "unit": "f3ce7c04-aca9-4d91-a18a-d415d71f68b8",
+    "instructor": "594ba91f-2054-4161-9cff-3e0b2f502910",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b7876ae8-5f71-4690-80c0-4cbc6e23517b"]
+   },
+   {
+    "identifier": "8aodmBE@76d56d23-38fa-46f9-8e4c-7b249dac4bae-dd032243-fded-4a13-af35-d8f6766a9fb8-b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "group": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "unit": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b7876ae8-5f71-4690-80c0-4cbc6e23517b"]
+   },
+   {
+    "identifier": "rZVhyjV@76d56d23-38fa-46f9-8e4c-7b249dac4bae-0feebdd6-16ee-446b-945d-d506fdbb41e8-b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "group": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+    "unit": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [2],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 2,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["b7876ae8-5f71-4690-80c0-4cbc6e23517b"]
+   },
+   {
+    "identifier": "Rtop760@XUiRVz-d47725b7-a804-423f-8b1d-3e82ae28618b-9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "group": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "unit": "d47725b7-a804-423f-8b1d-3e82ae28618b",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9adec9b5-e9dc-440b-a389-021b9f5ed0f9"]
+   },
+   {
+    "identifier": "SeY2fIy@XUiRVz-c570ec4e-b1aa-42a0-9a4e-9f5caeeacf2f-9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "group": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "unit": "c570ec4e-b1aa-42a0-9a4e-9f5caeeacf2f",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9adec9b5-e9dc-440b-a389-021b9f5ed0f9"]
+   },
+   {
+    "identifier": "9yaOBfY@76d56d23-38fa-46f9-8e4c-7b249dac4bae-9a3a34fb-fb43-424e-8751-83826e0585c7-9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "group": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "unit": "9a3a34fb-fb43-424e-8751-83826e0585c7",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9adec9b5-e9dc-440b-a389-021b9f5ed0f9"]
+   },
+   {
+    "identifier": "yPR2ndk@XUiRVz-fe5bba8c-c28c-4b08-b814-d15b714b91c2-9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "group": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "unit": "fe5bba8c-c28c-4b08-b814-d15b714b91c2",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9adec9b5-e9dc-440b-a389-021b9f5ed0f9"]
+   },
+   {
+    "identifier": "61Yo2nt@XUiRVz-2b343b15-ba87-4ca4-9341-2f7283ff87eb-9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "group": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "unit": "2b343b15-ba87-4ca4-9341-2f7283ff87eb",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9adec9b5-e9dc-440b-a389-021b9f5ed0f9"]
+   },
+   {
+    "identifier": "qvjFyTT@76d56d23-38fa-46f9-8e4c-7b249dac4bae-7311de5e-8fbd-43f4-a7d4-42c85a082c52-9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "group": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+    "unit": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [2],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 2,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["9adec9b5-e9dc-440b-a389-021b9f5ed0f9"]
+   },
+   {
+    "identifier": "6VKLFSq@XUiRVz-d47725b7-a804-423f-8b1d-3e82ae28618b-36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "group": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "unit": "d47725b7-a804-423f-8b1d-3e82ae28618b",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["36ad9170-3d7c-4efa-b8f0-a70094ee3510"]
+   },
+   {
+    "identifier": "oVKhAFL@XUiRVz-c570ec4e-b1aa-42a0-9a4e-9f5caeeacf2f-36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "group": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "unit": "c570ec4e-b1aa-42a0-9a4e-9f5caeeacf2f",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["36ad9170-3d7c-4efa-b8f0-a70094ee3510"]
+   },
+   {
+    "identifier": "PGlHM5I@76d56d23-38fa-46f9-8e4c-7b249dac4bae-9a3a34fb-fb43-424e-8751-83826e0585c7-36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "group": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "unit": "9a3a34fb-fb43-424e-8751-83826e0585c7",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["36ad9170-3d7c-4efa-b8f0-a70094ee3510"]
+   },
+   {
+    "identifier": "Gq0mwXo@XUiRVz-fe5bba8c-c28c-4b08-b814-d15b714b91c2-36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "group": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "unit": "fe5bba8c-c28c-4b08-b814-d15b714b91c2",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["36ad9170-3d7c-4efa-b8f0-a70094ee3510"]
+   },
+   {
+    "identifier": "jwRlQir@XUiRVz-2b343b15-ba87-4ca4-9341-2f7283ff87eb-36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "group": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "unit": "2b343b15-ba87-4ca4-9341-2f7283ff87eb",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["36ad9170-3d7c-4efa-b8f0-a70094ee3510"]
+   },
+   {
+    "identifier": "hnqHcQZ@76d56d23-38fa-46f9-8e4c-7b249dac4bae-7311de5e-8fbd-43f4-a7d4-42c85a082c52-36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "group": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+    "unit": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [2],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 2,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["36ad9170-3d7c-4efa-b8f0-a70094ee3510"]
+   },
+   {
+    "identifier": "dDTDg5U@8f17db11-9043-4651-8e4e-c376e8777b50-a959bb81-03d1-4c50-a062-f35beb9014dc-7db87841-f9a0-4643-9218-3ac9644d9716",
+    "group": "7db87841-f9a0-4643-9218-3ac9644d9716",
+    "unit": "a959bb81-03d1-4c50-a062-f35beb9014dc",
+    "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["7db87841-f9a0-4643-9218-3ac9644d9716"]
+   },
+   {
+    "identifier": "HS1zpy4@9289b6af-902a-439e-ad09-1b9de024076f-001d61b8-2019-446b-8761-491336ec0d02-7db87841-f9a0-4643-9218-3ac9644d9716",
+    "group": "7db87841-f9a0-4643-9218-3ac9644d9716",
+    "unit": "001d61b8-2019-446b-8761-491336ec0d02",
+    "instructor": "9289b6af-902a-439e-ad09-1b9de024076f",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["7db87841-f9a0-4643-9218-3ac9644d9716"]
+   },
+   {
+    "identifier": "OsUGIpG@6d14f1ec-d21a-4faa-a486-79f59676f742-6fed0bcf-319f-4ab4-b999-d57f59799041-7db87841-f9a0-4643-9218-3ac9644d9716",
+    "group": "7db87841-f9a0-4643-9218-3ac9644d9716",
+    "unit": "6fed0bcf-319f-4ab4-b999-d57f59799041",
+    "instructor": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["7db87841-f9a0-4643-9218-3ac9644d9716"]
+   },
+   {
+    "identifier": "mmNWDID@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-7db87841-f9a0-4643-9218-3ac9644d9716",
+    "group": "7db87841-f9a0-4643-9218-3ac9644d9716",
+    "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+    "instructor": "gu6bCA",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["7db87841-f9a0-4643-9218-3ac9644d9716"]
+   },
+   {
+    "identifier": "m2XKtnQ@905583df-a803-4a71-875a-15a80eb993db-9ba43e05-7f47-4400-b36d-d92e53b165cd-7db87841-f9a0-4643-9218-3ac9644d9716",
+    "group": "7db87841-f9a0-4643-9218-3ac9644d9716",
+    "unit": "9ba43e05-7f47-4400-b36d-d92e53b165cd",
+    "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["7db87841-f9a0-4643-9218-3ac9644d9716"]
+   },
+   {
+    "identifier": "4rOQLvz@9289b6af-902a-439e-ad09-1b9de024076f-523e7b4f-ee21-43e1-b7d0-fc07d54cee68-75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "group": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "unit": "523e7b4f-ee21-43e1-b7d0-fc07d54cee68",
+    "instructor": "9289b6af-902a-439e-ad09-1b9de024076f",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["75704dcd-e1a7-40b6-a3f6-92a5ab30548f"]
+   },
+   {
+    "identifier": "IMldG90@27e2e54f-6613-455d-9377-174913aa2856-b383dec8-1114-45fc-a761-ac7d4eb1e787-75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "group": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "unit": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+    "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["75704dcd-e1a7-40b6-a3f6-92a5ab30548f"]
+   },
+   {
+    "identifier": "mipMb5X@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-ed0e1b4e-a50c-4bcd-9025-2ea03316c191-75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "group": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "unit": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+    "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["75704dcd-e1a7-40b6-a3f6-92a5ab30548f"]
+   },
+   {
+    "identifier": "Lnxnzpo@8f17db11-9043-4651-8e4e-c376e8777b50-b80d9761-72d3-48ea-a7ba-d9751cac453f-75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "group": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "unit": "b80d9761-72d3-48ea-a7ba-d9751cac453f",
+    "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["75704dcd-e1a7-40b6-a3f6-92a5ab30548f"]
+   },
+   {
+    "identifier": "LcsU87X@6d14f1ec-d21a-4faa-a486-79f59676f742-0def79b9-2214-4abf-8428-47cdc94627f9-75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "group": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "unit": "0def79b9-2214-4abf-8428-47cdc94627f9",
+    "instructor": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["75704dcd-e1a7-40b6-a3f6-92a5ab30548f"]
+   },
+   {
+    "identifier": "EXnUO0w@905583df-a803-4a71-875a-15a80eb993db-27f15df5-142d-4a06-9bc9-0e3390b72ffd-75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "group": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+    "unit": "27f15df5-142d-4a06-9bc9-0e3390b72ffd",
+    "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["75704dcd-e1a7-40b6-a3f6-92a5ab30548f"]
+   },
+   {
+    "identifier": "FYC2JR6@9289b6af-902a-439e-ad09-1b9de024076f-a83b6117-96c6-4f41-9fb0-66e2fe96c13b-608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "group": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "unit": "a83b6117-96c6-4f41-9fb0-66e2fe96c13b",
+    "instructor": "9289b6af-902a-439e-ad09-1b9de024076f",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["608a9cb8-7551-4fc1-94be-1ff7a825cb85"]
+   },
+   {
+    "identifier": "5MiKqBj@8f17db11-9043-4651-8e4e-c376e8777b50-61e691ff-87be-495e-864b-3a40348a0fdc-608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "group": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "unit": "61e691ff-87be-495e-864b-3a40348a0fdc",
+    "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["608a9cb8-7551-4fc1-94be-1ff7a825cb85"]
+   },
+   {
+    "identifier": "cZndSKY@6d14f1ec-d21a-4faa-a486-79f59676f742-b98179dd-528d-4758-b98f-d4e2de9e9dfa-608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "group": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "unit": "b98179dd-528d-4758-b98f-d4e2de9e9dfa",
+    "instructor": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["608a9cb8-7551-4fc1-94be-1ff7a825cb85"]
+   },
+   {
+    "identifier": "wI8iAMj@76d56d23-38fa-46f9-8e4c-7b249dac4bae-dd032243-fded-4a13-af35-d8f6766a9fb8-608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "group": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "unit": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["608a9cb8-7551-4fc1-94be-1ff7a825cb85"]
+   },
+   {
+    "identifier": "P4ASEkn@76d56d23-38fa-46f9-8e4c-7b249dac4bae-0feebdd6-16ee-446b-945d-d506fdbb41e8-608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "group": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "unit": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [2],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 2,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["608a9cb8-7551-4fc1-94be-1ff7a825cb85"]
+   },
+   {
+    "identifier": "EEuR3BW@905583df-a803-4a71-875a-15a80eb993db-2272158e-aa8e-4a68-b836-387c476d125c-608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "group": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+    "unit": "2272158e-aa8e-4a68-b836-387c476d125c",
+    "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["608a9cb8-7551-4fc1-94be-1ff7a825cb85"]
+   },
+   {
+    "identifier": "xGRQTT1@bXuuRE-d37ec2c0-6186-4772-a1d2-686c3e956f1e-647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "group": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "unit": "d37ec2c0-6186-4772-a1d2-686c3e956f1e",
+    "instructor": "bXuuRE",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["647d272b-b6cb-463a-a3e6-fc78ee799480"]
+   },
+   {
+    "identifier": "hEzs29x@76d56d23-38fa-46f9-8e4c-7b249dac4bae-dd032243-fded-4a13-af35-d8f6766a9fb8-647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "group": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "unit": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["647d272b-b6cb-463a-a3e6-fc78ee799480"]
+   },
+   {
+    "identifier": "HpJiY7M@905583df-a803-4a71-875a-15a80eb993db-2272158e-aa8e-4a68-b836-387c476d125c-647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "group": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "unit": "2272158e-aa8e-4a68-b836-387c476d125c",
+    "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["647d272b-b6cb-463a-a3e6-fc78ee799480"]
+   },
+   {
+    "identifier": "AnuQvvq@76d56d23-38fa-46f9-8e4c-7b249dac4bae-0feebdd6-16ee-446b-945d-d506fdbb41e8-647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "group": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "unit": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+    "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+    "distribution": [2],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 2,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["647d272b-b6cb-463a-a3e6-fc78ee799480"]
+   },
+   {
+    "identifier": "Qu4KwjP@bXuuRE-b32a8c1c-70b2-49a1-bf21-66aedaa71e51-647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "group": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "unit": "b32a8c1c-70b2-49a1-bf21-66aedaa71e51",
+    "instructor": "bXuuRE",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["647d272b-b6cb-463a-a3e6-fc78ee799480"]
+   },
+   {
+    "identifier": "GjQNYMS@bXuuRE-3f10c5c1-e195-4562-85f8-c25f15604154-647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "group": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+    "unit": "3f10c5c1-e195-4562-85f8-c25f15604154",
+    "instructor": "bXuuRE",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["647d272b-b6cb-463a-a3e6-fc78ee799480"]
+   },
+   {
+    "identifier": "2iX3MpJ@9289b6af-902a-439e-ad09-1b9de024076f-001d61b8-2019-446b-8761-491336ec0d02-d92ac466-790c-4af7-85da-67ecd7683491",
+    "group": "d92ac466-790c-4af7-85da-67ecd7683491",
+    "unit": "001d61b8-2019-446b-8761-491336ec0d02",
+    "instructor": "9289b6af-902a-439e-ad09-1b9de024076f",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["d92ac466-790c-4af7-85da-67ecd7683491"]
+   },
+   {
+    "identifier": "XFgEakO@8f17db11-9043-4651-8e4e-c376e8777b50-a959bb81-03d1-4c50-a062-f35beb9014dc-d92ac466-790c-4af7-85da-67ecd7683491",
+    "group": "d92ac466-790c-4af7-85da-67ecd7683491",
+    "unit": "a959bb81-03d1-4c50-a062-f35beb9014dc",
+    "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["d92ac466-790c-4af7-85da-67ecd7683491"]
+   },
+   {
+    "identifier": "7c0uQeX@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-d92ac466-790c-4af7-85da-67ecd7683491",
+    "group": "d92ac466-790c-4af7-85da-67ecd7683491",
+    "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+    "instructor": "gu6bCA",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["d92ac466-790c-4af7-85da-67ecd7683491"]
+   },
+   {
+    "identifier": "40hkSXR@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-4ddc0348-c939-44d0-9630-6c1896cb2958-d92ac466-790c-4af7-85da-67ecd7683491",
+    "group": "d92ac466-790c-4af7-85da-67ecd7683491",
+    "unit": "4ddc0348-c939-44d0-9630-6c1896cb2958",
+    "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["d92ac466-790c-4af7-85da-67ecd7683491"]
+   },
+   {
+    "identifier": "z4rbRLi@6d14f1ec-d21a-4faa-a486-79f59676f742-6fed0bcf-319f-4ab4-b999-d57f59799041-d92ac466-790c-4af7-85da-67ecd7683491",
+    "group": "d92ac466-790c-4af7-85da-67ecd7683491",
+    "unit": "6fed0bcf-319f-4ab4-b999-d57f59799041",
+    "instructor": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["d92ac466-790c-4af7-85da-67ecd7683491"]
+   },
+   {
+    "identifier": "amm2rB7@905583df-a803-4a71-875a-15a80eb993db-9ba43e05-7f47-4400-b36d-d92e53b165cd-d92ac466-790c-4af7-85da-67ecd7683491",
+    "group": "d92ac466-790c-4af7-85da-67ecd7683491",
+    "unit": "9ba43e05-7f47-4400-b36d-d92e53b165cd",
+    "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["d92ac466-790c-4af7-85da-67ecd7683491"]
+   },
+   {
+    "identifier": "EpjIM5G@9289b6af-902a-439e-ad09-1b9de024076f-523e7b4f-ee21-43e1-b7d0-fc07d54cee68-68591fa4-9326-4089-a8be-83fa552333df",
+    "group": "68591fa4-9326-4089-a8be-83fa552333df",
+    "unit": "523e7b4f-ee21-43e1-b7d0-fc07d54cee68",
+    "instructor": "9289b6af-902a-439e-ad09-1b9de024076f",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["68591fa4-9326-4089-a8be-83fa552333df"]
+   },
+   {
+    "identifier": "Lcp8uPd@27e2e54f-6613-455d-9377-174913aa2856-b383dec8-1114-45fc-a761-ac7d4eb1e787-68591fa4-9326-4089-a8be-83fa552333df",
+    "group": "68591fa4-9326-4089-a8be-83fa552333df",
+    "unit": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+    "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["68591fa4-9326-4089-a8be-83fa552333df"]
+   },
+   {
+    "identifier": "mLRFl4g@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-ed0e1b4e-a50c-4bcd-9025-2ea03316c191-68591fa4-9326-4089-a8be-83fa552333df",
+    "group": "68591fa4-9326-4089-a8be-83fa552333df",
+    "unit": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+    "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["68591fa4-9326-4089-a8be-83fa552333df"]
+   },
+   {
+    "identifier": "96s1K6c@8f17db11-9043-4651-8e4e-c376e8777b50-b80d9761-72d3-48ea-a7ba-d9751cac453f-68591fa4-9326-4089-a8be-83fa552333df",
+    "group": "68591fa4-9326-4089-a8be-83fa552333df",
+    "unit": "b80d9761-72d3-48ea-a7ba-d9751cac453f",
+    "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["68591fa4-9326-4089-a8be-83fa552333df"]
+   },
+   {
+    "identifier": "AhxB0Gb@6d14f1ec-d21a-4faa-a486-79f59676f742-0def79b9-2214-4abf-8428-47cdc94627f9-68591fa4-9326-4089-a8be-83fa552333df",
+    "group": "68591fa4-9326-4089-a8be-83fa552333df",
+    "unit": "0def79b9-2214-4abf-8428-47cdc94627f9",
+    "instructor": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["68591fa4-9326-4089-a8be-83fa552333df"]
+   },
+   {
+    "identifier": "UraZFmp@905583df-a803-4a71-875a-15a80eb993db-27f15df5-142d-4a06-9bc9-0e3390b72ffd-68591fa4-9326-4089-a8be-83fa552333df",
+    "group": "68591fa4-9326-4089-a8be-83fa552333df",
+    "unit": "27f15df5-142d-4a06-9bc9-0e3390b72ffd",
+    "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["68591fa4-9326-4089-a8be-83fa552333df"]
+   },
+   {
+    "identifier": "uYdGR36@9289b6af-902a-439e-ad09-1b9de024076f-dea76e2b-4c3d-4478-9ad8-6f59f0f40a0b-94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+    "group": "94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+    "unit": "dea76e2b-4c3d-4478-9ad8-6f59f0f40a0b",
+    "instructor": "9289b6af-902a-439e-ad09-1b9de024076f",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["94bac470-7d0b-4d53-afe3-2c8f1553e3bf"]
+   },
+   {
+    "identifier": "jV96lf3@8f17db11-9043-4651-8e4e-c376e8777b50-ab912148-3b49-478b-8141-3dbba1daae91-94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+    "group": "94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+    "unit": "ab912148-3b49-478b-8141-3dbba1daae91",
+    "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["94bac470-7d0b-4d53-afe3-2c8f1553e3bf"]
+   },
+   {
+    "identifier": "M3JRU6f@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+    "group": "94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+    "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+    "instructor": "gu6bCA",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["94bac470-7d0b-4d53-afe3-2c8f1553e3bf"]
+   },
+   {
+    "identifier": "COjgkT6@6d14f1ec-d21a-4faa-a486-79f59676f742-13ff4a9a-f2f1-458d-9c1b-26e4ca49efa2-94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+    "group": "94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+    "unit": "13ff4a9a-f2f1-458d-9c1b-26e4ca49efa2",
+    "instructor": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["94bac470-7d0b-4d53-afe3-2c8f1553e3bf"]
+   },
+   {
+    "identifier": "SNNFWAN@905583df-a803-4a71-875a-15a80eb993db-9ba43e05-7f47-4400-b36d-d92e53b165cd-94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+    "group": "94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+    "unit": "9ba43e05-7f47-4400-b36d-d92e53b165cd",
+    "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["94bac470-7d0b-4d53-afe3-2c8f1553e3bf"]
+   },
+   {
+    "identifier": "kkJ5UwP@8f17db11-9043-4651-8e4e-c376e8777b50-af0dd192-1c68-49d8-8242-45b96ee5586d-1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "group": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "unit": "af0dd192-1c68-49d8-8242-45b96ee5586d",
+    "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["1feb3e0d-78a5-47a1-bbc8-4a627974f239"]
+   },
+   {
+    "identifier": "tKKLKtW@27e2e54f-6613-455d-9377-174913aa2856-b383dec8-1114-45fc-a761-ac7d4eb1e787-1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "group": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "unit": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+    "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["1feb3e0d-78a5-47a1-bbc8-4a627974f239"]
+   },
+   {
+    "identifier": "QFS5Jzi@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-ed0e1b4e-a50c-4bcd-9025-2ea03316c191-1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "group": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "unit": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+    "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["1feb3e0d-78a5-47a1-bbc8-4a627974f239"]
+   },
+   {
+    "identifier": "UECHRre@bXuuRE-e10f34b9-87e6-42d1-8ed4-f6499133059a-1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "group": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "unit": "e10f34b9-87e6-42d1-8ed4-f6499133059a",
+    "instructor": "bXuuRE",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["1feb3e0d-78a5-47a1-bbc8-4a627974f239"]
+   },
+   {
+    "identifier": "tV0EkFy@905583df-a803-4a71-875a-15a80eb993db-27f15df5-142d-4a06-9bc9-0e3390b72ffd-1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "group": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "unit": "27f15df5-142d-4a06-9bc9-0e3390b72ffd",
+    "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["1feb3e0d-78a5-47a1-bbc8-4a627974f239"]
+   },
+   {
+    "identifier": "sJeFuzd@bXuuRE-535ce32b-6435-4e7c-8b7d-5fa90dcdf966-1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "group": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+    "unit": "535ce32b-6435-4e7c-8b7d-5fa90dcdf966",
+    "instructor": "bXuuRE",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["1feb3e0d-78a5-47a1-bbc8-4a627974f239"]
+   },
+   {
+    "identifier": "1Ii703t@d7294898-e5f5-4154-a297-db62a63231f5-cf0a1135-c7e1-4db9-a339-ea632222040b-2995d630-775d-45e4-8fcb-b3f0f39e6e70",
+    "group": "2995d630-775d-45e4-8fcb-b3f0f39e6e70",
+    "unit": "cf0a1135-c7e1-4db9-a339-ea632222040b",
+    "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["2995d630-775d-45e4-8fcb-b3f0f39e6e70"]
+   },
+   {
+    "identifier": "X7m5h2I@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2-0a5cef40-2223-476e-92df-1f3e4284122c",
+    "group": "0a5cef40-2223-476e-92df-1f3e4284122c",
+    "unit": "6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2",
+    "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["0a5cef40-2223-476e-92df-1f3e4284122c"]
+   },
+   {
+    "identifier": "KpFo0Kn@5556ebb1-51ad-47df-b488-099649ed2066-9ec7190a-1235-4ae9-9be7-1678eb19ac1d-0a5cef40-2223-476e-92df-1f3e4284122c",
+    "group": "0a5cef40-2223-476e-92df-1f3e4284122c",
+    "unit": "9ec7190a-1235-4ae9-9be7-1678eb19ac1d",
+    "instructor": "5556ebb1-51ad-47df-b488-099649ed2066",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["0a5cef40-2223-476e-92df-1f3e4284122c"]
+   },
+   {
+    "identifier": "bhEic1e@46fcd9ab-6105-4bb8-bfe9-691e24570490-343f8cb1-cda5-41f9-aa52-312ed9306678-0a5cef40-2223-476e-92df-1f3e4284122c",
+    "group": "0a5cef40-2223-476e-92df-1f3e4284122c",
+    "unit": "343f8cb1-cda5-41f9-aa52-312ed9306678",
+    "instructor": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["0a5cef40-2223-476e-92df-1f3e4284122c"]
+   },
+   {
+    "identifier": "3Gbw2KL@39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3-58d42752-b7bc-4d9d-8418-a492536b358e-0a5cef40-2223-476e-92df-1f3e4284122c",
+    "group": "0a5cef40-2223-476e-92df-1f3e4284122c",
+    "unit": "58d42752-b7bc-4d9d-8418-a492536b358e",
+    "instructor": "39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["0a5cef40-2223-476e-92df-1f3e4284122c"]
+   },
+   {
+    "identifier": "2d4aKum@39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3-bff5bfed-c4db-4663-bb2d-8d8588a18b95-0a5cef40-2223-476e-92df-1f3e4284122c",
+    "group": "0a5cef40-2223-476e-92df-1f3e4284122c",
+    "unit": "bff5bfed-c4db-4663-bb2d-8d8588a18b95",
+    "instructor": "39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["0a5cef40-2223-476e-92df-1f3e4284122c"]
+   },
+   {
+    "identifier": "0gLvT3z@46fcd9ab-6105-4bb8-bfe9-691e24570490-3e5f5f6b-b778-4688-96d3-ac742a1b4cbd-0a5cef40-2223-476e-92df-1f3e4284122c",
+    "group": "0a5cef40-2223-476e-92df-1f3e4284122c",
+    "unit": "3e5f5f6b-b778-4688-96d3-ac742a1b4cbd",
+    "instructor": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["0a5cef40-2223-476e-92df-1f3e4284122c"]
+   },
+   {
+    "identifier": "ji3Ny4F@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2-51d7dd76-2508-4222-8cc9-582b0849712f",
+    "group": "51d7dd76-2508-4222-8cc9-582b0849712f",
+    "unit": "6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2",
+    "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["51d7dd76-2508-4222-8cc9-582b0849712f"]
+   },
+   {
+    "identifier": "QnhNaBK@5556ebb1-51ad-47df-b488-099649ed2066-9ec7190a-1235-4ae9-9be7-1678eb19ac1d-51d7dd76-2508-4222-8cc9-582b0849712f",
+    "group": "51d7dd76-2508-4222-8cc9-582b0849712f",
+    "unit": "9ec7190a-1235-4ae9-9be7-1678eb19ac1d",
+    "instructor": "5556ebb1-51ad-47df-b488-099649ed2066",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["51d7dd76-2508-4222-8cc9-582b0849712f"]
+   },
+   {
+    "identifier": "ug4kCWk@5556ebb1-51ad-47df-b488-099649ed2066-d9b61014-e99f-4623-94ab-975dbdfda00b-51d7dd76-2508-4222-8cc9-582b0849712f",
+    "group": "51d7dd76-2508-4222-8cc9-582b0849712f",
+    "unit": "d9b61014-e99f-4623-94ab-975dbdfda00b",
+    "instructor": "5556ebb1-51ad-47df-b488-099649ed2066",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["51d7dd76-2508-4222-8cc9-582b0849712f"]
+   },
+   {
+    "identifier": "Y2FEnJ5@XUiRVz-dfee7547-6f68-48f2-9f93-6d32cf87213f-51d7dd76-2508-4222-8cc9-582b0849712f",
+    "group": "51d7dd76-2508-4222-8cc9-582b0849712f",
+    "unit": "dfee7547-6f68-48f2-9f93-6d32cf87213f",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["51d7dd76-2508-4222-8cc9-582b0849712f"]
+   },
+   {
+    "identifier": "PZPrgLG@XUiRVz-45b973c2-cb68-4445-803e-3d8f79e91052-51d7dd76-2508-4222-8cc9-582b0849712f",
+    "group": "51d7dd76-2508-4222-8cc9-582b0849712f",
+    "unit": "45b973c2-cb68-4445-803e-3d8f79e91052",
+    "instructor": "XUiRVz",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["51d7dd76-2508-4222-8cc9-582b0849712f"]
+   },
+   {
+    "identifier": "78w62ss@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-2ba6dbf6-39b7-4e32-ab57-e09ce1de74da-51d7dd76-2508-4222-8cc9-582b0849712f",
+    "group": "51d7dd76-2508-4222-8cc9-582b0849712f",
+    "unit": "2ba6dbf6-39b7-4e32-ab57-e09ce1de74da",
+    "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["51d7dd76-2508-4222-8cc9-582b0849712f"]
+   },
+   {
+    "identifier": "PH1NgNE@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2-f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "group": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "unit": "6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2",
+    "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["f5e4a927-f582-45fe-a3ae-616267a098f7"]
+   },
+   {
+    "identifier": "Y17aRCr@5556ebb1-51ad-47df-b488-099649ed2066-9ec7190a-1235-4ae9-9be7-1678eb19ac1d-f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "group": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "unit": "9ec7190a-1235-4ae9-9be7-1678eb19ac1d",
+    "instructor": "5556ebb1-51ad-47df-b488-099649ed2066",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["f5e4a927-f582-45fe-a3ae-616267a098f7"]
+   },
+   {
+    "identifier": "NWApYHT@738f513b-8a7b-404c-9b62-25bc8707e33b-b989c5cd-5277-484c-9e82-405c78a3ddf1-f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "group": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "unit": "b989c5cd-5277-484c-9e82-405c78a3ddf1",
+    "instructor": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["f5e4a927-f582-45fe-a3ae-616267a098f7"]
+   },
+   {
+    "identifier": "5ue7xCO@594ba91f-2054-4161-9cff-3e0b2f502910-46094cd1-a544-4f7f-992d-9bc4048013b3-f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "group": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "unit": "46094cd1-a544-4f7f-992d-9bc4048013b3",
+    "instructor": "594ba91f-2054-4161-9cff-3e0b2f502910",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["f5e4a927-f582-45fe-a3ae-616267a098f7"]
+   },
+   {
+    "identifier": "60mJw42@dab61dad-0192-477a-9986-9449fac05998-ca5ee672-8457-4048-898b-6c5050c996d3-f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "group": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "unit": "ca5ee672-8457-4048-898b-6c5050c996d3",
+    "instructor": "dab61dad-0192-477a-9986-9449fac05998",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["f5e4a927-f582-45fe-a3ae-616267a098f7"]
+   },
+   {
+    "identifier": "S8ZhW4m@dab61dad-0192-477a-9986-9449fac05998-74c87be5-013d-4e38-a857-34e31ec37730-f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "group": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+    "unit": "74c87be5-013d-4e38-a857-34e31ec37730",
+    "instructor": "dab61dad-0192-477a-9986-9449fac05998",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": false,
+    "total_lessons": 3,
+    "default_room": "",
+    "multiple": false,
+    "type": "regular",
+    "affected_groups": ["f5e4a927-f582-45fe-a3ae-616267a098f7"]
+   },
+   {
+    "identifier": "H8PkdVh@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-b04c650c-d11b-42e4-8131-e3132eaf3a76&&iD7zKoN@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-2c043571-5a4c-4ec0-afe1-f4e64e761b28&&gq65GgQ@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-078bd9b0-233c-4f07-b27c-dcf169911965&&j8h9RXv@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-cc323960-3ec8-49b9-9995-b8285f5e209b&&8xxroKL@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-4c4d6902-a547-4e43-ba7e-011e954305f0&&gFNSsuK@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-7db87841-f9a0-4643-9218-3ac9644d9716&&tRSKsBS@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-d92ac466-790c-4af7-85da-67ecd7683491&&p8v4wYs@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+    "group": "group",
+    "unit": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+    "instructor": "eed27651-0da9-40b5-965f-d5eef7218177",
+    "distribution": [3],
+    "combined_preferences": { "group": [], "unit": [], "instructor": [] },
+    "online": true,
+    "total_lessons": 3,
+    "multiple": true,
+    "type": "lesson-merge",
+    "multiple_ids": [
+     {
+      "unit_id": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "group_id": "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+      "inst_id": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "online": true
+     },
+     {
+      "unit_id": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "group_id": "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+      "inst_id": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "online": true
+     },
+     {
+      "unit_id": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "group_id": "078bd9b0-233c-4f07-b27c-dcf169911965",
+      "inst_id": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "online": true
+     },
+     {
+      "unit_id": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "group_id": "cc323960-3ec8-49b9-9995-b8285f5e209b",
+      "inst_id": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "online": true
+     },
+     {
+      "unit_id": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "group_id": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+      "inst_id": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "online": true
+     },
+     {
+      "unit_id": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "group_id": "7db87841-f9a0-4643-9218-3ac9644d9716",
+      "inst_id": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "online": true
+     },
+     {
+      "unit_id": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "group_id": "d92ac466-790c-4af7-85da-67ecd7683491",
+      "inst_id": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "online": true
+     },
+     {
+      "unit_id": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "group_id": "94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+      "inst_id": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "online": true
+     }
+    ],
+    "short": "F1-MIC",
+    "title": "FIrst Years Taking MIC 117",
+    "affected_groups": [
+     "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+     "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+     "078bd9b0-233c-4f07-b27c-dcf169911965",
+     "cc323960-3ec8-49b9-9995-b8285f5e209b",
+     "4c4d6902-a547-4e43-ba7e-011e954305f0",
+     "7db87841-f9a0-4643-9218-3ac9644d9716",
+     "d92ac466-790c-4af7-85da-67ecd7683491",
+     "94bac470-7d0b-4d53-afe3-2c8f1553e3bf"
+    ]
+   }
+  ],
+  "configuration": {
+ 
+     "startTime": "7:00am",
+     "endTime": "6:00pm",
+     "startDay": "Monday",
+     "endDay": "Friday",
+     "durations": { "minimum": 1, "maximum": 0, "division": "hours" },
+     "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+     "breaks": [],
+     "times": [
+      "7:00am",
+      "8:00am",
+      "9:00am",
+      "10:00am",
+      "11:00am",
+      "12:00pm",
+      "1:00pm",
+      "2:00pm",
+      "3:00pm",
+      "4:00pm",
+      "5:00pm"
+     ]
+    },
+    "blocks": [
+     {
+      "title": "Period 1",
+      "start": "7:00am",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 2",
+      "start": "8:00am",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 3",
+      "start": "9:00am",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 4",
+      "start": "10:00am",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 5",
+      "start": "11:00am",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 6",
+      "start": "12:00pm",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 7",
+      "start": "1:00pm",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 8",
+      "start": "2:00pm",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 9",
+      "start": "3:00pm",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 10",
+      "start": "4:00pm",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     },
+     {
+      "title": "Period 11",
+      "start": "5:00pm",
+      "duration": { "duration": 1, "division": "hours" },
+      "type": "period"
+     }
+    ]
+  
+ 
+ 
+}
