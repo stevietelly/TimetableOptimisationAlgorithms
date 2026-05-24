@@ -28,6 +28,8 @@ type CPSolver struct {
 	unitMap       map[string]models.Unit
 	instructorMap map[string]models.Instructor
 	groupMap      map[string]models.Group
+	
+	backtrackCount int
 }
 
 func NewCPSolver() *CPSolver {
@@ -50,6 +52,7 @@ func (s *CPSolver) Solve(ctx context.Context, req *models.Request, tracker Progr
 	}
 
 	// 3. Backtracking Search
+	s.backtrackCount = 0
 	assignment := make(Chromosome, len(s.schedulableItems))
 	for i := range assignment {
 		assignment[i] = Gene{DayIdx: -1, BlockIdx: -1, RoomIdx: -2} // Unassigned
@@ -243,6 +246,14 @@ func (s *CPSolver) backtrack(ctx context.Context, assignment Chromosome, step in
 			
 			if tracker != nil {
 				tracker.Update(ProgressReport{
+					CurrentStep: step + 1,
+					TotalSteps:  len(s.schedulableItems),
+					StepLabel:   fmt.Sprintf("Assigning %d/%d", step+1, len(s.schedulableItems)),
+					Metrics: map[string]interface{}{
+						"assigned_count":  step + 1,
+						"total_count":     len(s.schedulableItems),
+						"backtrack_count": s.backtrackCount,
+					},
 					Trace: &models.TraceStep{
 						Type:  "assignment",
 						Label: fmt.Sprintf("Assign %s to (D%d, B%d, R%d)", s.schedulableItems[varIdx].LessonID, slot.DayIdx, slot.BlockIdx, slot.RoomIdx),
@@ -255,8 +266,17 @@ func (s *CPSolver) backtrack(ctx context.Context, assignment Chromosome, step in
 				return true, res
 			}
 			
+			s.backtrackCount++
 			if tracker != nil {
 				tracker.Update(ProgressReport{
+					CurrentStep: step,
+					TotalSteps:  len(s.schedulableItems),
+					StepLabel:   fmt.Sprintf("Backtracking %d/%d (total backtracks: %d)", step, len(s.schedulableItems), s.backtrackCount),
+					Metrics: map[string]interface{}{
+						"assigned_count":  step,
+						"total_count":     len(s.schedulableItems),
+						"backtrack_count": s.backtrackCount,
+					},
 					Trace: &models.TraceStep{
 						Type:  "backtrack",
 						Label: fmt.Sprintf("Backtrack from %s", s.schedulableItems[varIdx].LessonID),
@@ -343,7 +363,15 @@ func (s *CPSolver) isConsistent(varIdx int, slot Slot, assignment Chromosome) bo
 }
 
 func (s *CPSolver) formatResponse(c Chromosome, runtime float64) *models.Response {
-	// Use same formatting as GeneticSolver
-	gs := &GeneticSolver{rooms: s.rooms, days: s.days, blocks: s.blocks, schedulableItems: s.schedulableItems, groupMap: s.groupMap}
+	gs := &GeneticSolver{
+		rooms:            s.rooms,
+		days:             s.days,
+		blocks:           s.blocks,
+		schedulableItems: s.schedulableItems,
+		groupMap:         s.groupMap,
+		unitMap:          s.unitMap,
+		instructorMap:    s.instructorMap,
+	}
+	gs.buildEvalParams()
 	return gs.formatResponse(c, runtime)
 }

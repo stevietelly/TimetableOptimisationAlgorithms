@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"context"
 	"encoding/json"
 	"flag"
@@ -19,8 +20,8 @@ var globalStartTime time.Time
 
 func main() {
 	globalStartTime = time.Now()
-	inputPath := flag.String("i", "", "Input JSON file path")
-	outputPath := flag.String("o", "output.json", "Output JSON file path")
+	inputPath := flag.String("i", "", "Input JSON file path (reads from stdin if empty)")
+	outputPath := flag.String("o", "", "Output JSON file path (stdout if empty)")
 	mapPath := flag.String("map", "", "Output search map path (.json or .html)")
 	algo := flag.String("a", "genetic", "Algorithm to use (genetic, annealing, cp)")
 	timeout := flag.Int("t", 30, "Timeout in seconds")
@@ -38,25 +39,32 @@ func main() {
 
 	flag.Parse()
 
-	if *inputPath == "" {
-		fmt.Println("Error: input file (-i) is required")
-		os.Exit(1)
-	}
-
 	// 1. Read and Parse Input
-	data, err := ioutil.ReadFile(*inputPath)
-	if err != nil {
-		reportError("FILE_ERROR", fmt.Sprintf("Failed to read input file: %v", err))
-		os.Exit(1)
-	}
-
 	var req models.Request
-	if err := json.Unmarshal(data, &req); err != nil {
-		reportError("INVALID_INPUT", fmt.Sprintf("Failed to parse JSON: %v", err))
-		os.Exit(1)
+
+	if *inputPath != "" {
+		data, err := ioutil.ReadFile(*inputPath)
+		if err != nil {
+			reportError("FILE_ERROR", fmt.Sprintf("Failed to read input file: %v", err))
+			os.Exit(1)
+		}
+		if err := json.Unmarshal(data, &req); err != nil {
+			reportError("INVALID_INPUT", fmt.Sprintf("Failed to parse JSON: %v", err))
+			os.Exit(1)
+		}
+	} else {
+		scanner := bufio.NewScanner(os.Stdin)
+		scanner.Buffer(make([]byte, 10*1024*1024), 10*1024*1024)
+		if !scanner.Scan() {
+			reportError("INVALID_INPUT", "No input received on stdin")
+			os.Exit(1)
+		}
+		if err := json.Unmarshal([]byte(scanner.Text()), &req); err != nil {
+			reportError("INVALID_INPUT", fmt.Sprintf("Failed to parse JSON: %v", err))
+			os.Exit(1)
+		}
 	}
 
-	// Normalize data (handle nested configuration)
 	req.Normalize()
 
 	// 2. Feasibility Check
@@ -82,6 +90,18 @@ func main() {
 	}
 
 	tracker := progress.NewDefaultTracker(0, func(report solver.ProgressReport) {
+		line, _ := json.Marshal(map[string]interface{}{
+			"type":         "progress",
+			"progress":     float64(report.CurrentStep) / float64(max(report.TotalSteps, 1)),
+			"message":      report.StepLabel,
+			"current_step": report.CurrentStep,
+			"total_steps":  report.TotalSteps,
+			"best_fitness": report.BestFitness,
+			"eta_seconds":  report.ETASeconds,
+			"metrics":      report.Metrics,
+		})
+		fmt.Println(string(line))
+
 		if *verbose {
 			fmt.Fprintf(os.Stderr, "\r[%s] Step: %d/%d | Fitness: %.2f | ETA: %.1fs    ",
 				*algo, report.CurrentStep, report.TotalSteps, report.BestFitness, report.ETASeconds)
@@ -111,7 +131,7 @@ func main() {
 	if *mapPath != "" {
 		trace := tracker.GetTrace()
 		result.Trace = trace
-		
+
 		if strings.HasSuffix(*mapPath, ".html") {
 			html := generateHTMLTrace(trace, *algo)
 			_ = ioutil.WriteFile(*mapPath, []byte(html), 0644)
@@ -121,21 +141,29 @@ func main() {
 		}
 	}
 
-	// Check if solution is valid (no hard clashes)
+	// Check if solution is valid
 	if !result.Stats.SolutionFound {
 		reportError("INVALID_SOLUTION", "Could not find a valid clash-free solution within the limits")
 		os.Exit(4)
 	}
 
 	// 5. Write Output
-	outputData, _ := json.MarshalIndent(result, "", "  ")
-	if err := ioutil.WriteFile(*outputPath, outputData, 0644); err != nil {
-		reportError("WRITE_ERROR", fmt.Sprintf("Failed to write output: %v", err))
-		os.Exit(1)
+	resultLine, _ := json.Marshal(map[string]interface{}{
+		"type":  "result",
+		"value": result,
+	})
+	fmt.Println(string(resultLine))
+
+	if *outputPath != "" {
+		outputData, _ := json.MarshalIndent(result, "", "  ")
+		if err := ioutil.WriteFile(*outputPath, outputData, 0644); err != nil {
+			reportError("WRITE_ERROR", fmt.Sprintf("Failed to write output: %v", err))
+			os.Exit(1)
+		}
 	}
 
 	if *verbose {
-		fmt.Printf("\n✅ Optimization complete! Memory used: %.2f MB\n", result.Stats.MemoryUsageMB)
+		fmt.Fprintf(os.Stderr, "\n✅ Optimization complete! Memory used: %.2f MB\n", result.Stats.MemoryUsageMB)
 	}
 }
 
@@ -172,8 +200,15 @@ func reportError(code, message string) {
 			TimeTaken:     time.Since(globalStartTime).Seconds(),
 		},
 	}
-	data, _ := json.MarshalIndent(resp, "", "  ")
-	fmt.Fprintln(os.Stderr, string(data))
+
+	errorLine, _ := json.Marshal(map[string]interface{}{
+		"type":    "error",
+		"message": message,
+		"code":    code,
+		"value":   resp,
+	})
+	fmt.Fprintln(os.Stderr, string(errorLine))
+	fmt.Println(string(errorLine))
 }
 
 func generateHTMLTrace(trace []models.TraceStep, algo string) string {
@@ -218,4 +253,11 @@ func generateHTMLTrace(trace []models.TraceStep, algo string) string {
 	</table>
 </body>
 </html>`, algo, algo, len(trace), rows.String())
+}
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }

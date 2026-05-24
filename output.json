@@ -1,431 +1,15 @@
 {
   "error": false,
-  "message": "Optimization completed with cost 0.00",
+  "message": "Optimization successful",
   "sessions": [
     {
-      "identifier": "2_4-3",
-      "group": "2",
-      "instructor": "3",
-      "unit": "4",
+      "identifier": "qvjFyTT@76d56d23-38fa-46f9-8e4c-7b249dac4bae-7311de5e-8fbd-43f4-a7d4-42c85a082c52-9adec9b5-e9dc-440b-a389-021b9f5ed0f9-0",
+      "group": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
       "day": "Wednesday",
-      "time": "7:00am",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "2_3-1",
-      "group": "2",
-      "instructor": "4",
-      "unit": "3",
-      "day": "Thursday",
-      "time": "11:00am",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "3_2-0",
-      "group": "3",
-      "instructor": "5",
-      "unit": "2",
-      "day": "Wednesday",
-      "time": "1:00pm",
-      "room": "1",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "4_1-0",
-      "group": "4",
-      "instructor": "2",
-      "unit": "1",
-      "day": "Wednesday",
-      "time": "9:00am",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "4_3-1",
-      "group": "4",
-      "instructor": "4",
-      "unit": "3",
-      "day": "Tuesday",
-      "time": "1:00pm",
-      "room": "3",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "5_6-1",
-      "group": "5",
-      "instructor": "6",
-      "unit": "6",
-      "day": "Thursday",
-      "time": "5:00pm",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "1_1-0",
-      "group": "1",
-      "instructor": "2",
-      "unit": "1",
-      "day": "Wednesday",
-      "time": "11:00am",
-      "room": "1",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "1_2-1",
-      "group": "1",
-      "instructor": "5",
-      "unit": "2",
-      "day": "Wednesday",
-      "time": "5:00pm",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "2_4-0",
-      "group": "2",
-      "instructor": "3",
-      "unit": "4",
-      "day": "Monday",
-      "time": "11:00am",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "3_1-0",
-      "group": "3",
-      "instructor": "2",
-      "unit": "1",
-      "day": "Monday",
-      "time": "10:00am",
-      "room": "3",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "4_1-1",
-      "group": "4",
-      "instructor": "2",
-      "unit": "1",
-      "day": "Thursday",
-      "time": "9:00am",
-      "room": "1",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "6_6-1",
-      "group": "6",
-      "instructor": "6",
-      "unit": "6",
-      "day": "Tuesday",
-      "time": "12:00pm",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "6_3-1",
-      "group": "6",
-      "instructor": "4",
-      "unit": "3",
-      "day": "Thursday",
-      "time": "4:00pm",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "1_3-1",
-      "group": "1",
-      "instructor": "4",
-      "unit": "3",
-      "day": "Monday",
-      "time": "12:00pm",
-      "room": "1",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "2_4-2",
-      "group": "2",
-      "instructor": "3",
-      "unit": "4",
-      "day": "Monday",
-      "time": "3:00pm",
-      "room": "1",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "2_2-0",
-      "group": "2",
-      "instructor": "5",
-      "unit": "2",
-      "day": "Monday",
-      "time": "7:00am",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "4_3-0",
-      "group": "4",
-      "instructor": "4",
-      "unit": "3",
-      "day": "Wednesday",
-      "time": "4:00pm",
-      "room": "1",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "5_1-0",
-      "group": "5",
-      "instructor": "2",
-      "unit": "1",
-      "day": "Tuesday",
-      "time": "5:00pm",
-      "room": "1",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "5_2-0",
-      "group": "5",
-      "instructor": "5",
-      "unit": "2",
-      "day": "Wednesday",
-      "time": "11:00am",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "1_1-1",
-      "group": "1",
-      "instructor": "2",
-      "unit": "1",
-      "day": "Thursday",
-      "time": "1:00pm",
-      "room": "3",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "1_2-0",
-      "group": "1",
-      "instructor": "5",
-      "unit": "2",
-      "day": "Thursday",
-      "time": "5:00pm",
-      "room": "1",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "2_1-1",
-      "group": "2",
-      "instructor": "2",
-      "unit": "1",
-      "day": "Monday",
-      "time": "9:00am",
-      "room": "3",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "2_2-1",
-      "group": "2",
-      "instructor": "5",
-      "unit": "2",
-      "day": "Thursday",
-      "time": "9:00am",
-      "room": "4",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "3_2-1",
-      "group": "3",
-      "instructor": "5",
-      "unit": "2",
-      "day": "Monday",
-      "time": "3:00pm",
-      "room": "4",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "5_1-1",
-      "group": "5",
-      "instructor": "2",
-      "unit": "1",
-      "day": "Tuesday",
-      "time": "9:00am",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "5_2-1",
-      "group": "5",
-      "instructor": "5",
-      "unit": "2",
-      "day": "Tuesday",
-      "time": "7:00am",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "5_6-0",
-      "group": "5",
-      "instructor": "6",
-      "unit": "6",
-      "day": "Monday",
       "time": "2:00pm",
-      "room": "2",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
       "online": false,
       "database_ids": {
         "group": "",
@@ -435,13 +19,13 @@
       }
     },
     {
-      "identifier": "2_4-1",
-      "group": "2",
-      "instructor": "3",
-      "unit": "4",
+      "identifier": "HS1zpy4@9289b6af-902a-439e-ad09-1b9de024076f-001d61b8-2019-446b-8761-491336ec0d02-7db87841-f9a0-4643-9218-3ac9644d9716-0",
+      "group": "7db87841-f9a0-4643-9218-3ac9644d9716",
+      "instructor": "9289b6af-902a-439e-ad09-1b9de024076f",
+      "unit": "001d61b8-2019-446b-8761-491336ec0d02",
       "day": "Thursday",
-      "time": "1:00pm",
-      "room": "4",
+      "time": "8:00am",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
       "online": false,
       "database_ids": {
         "group": "",
@@ -451,13 +35,29 @@
       }
     },
     {
-      "identifier": "2_3-0",
-      "group": "2",
-      "instructor": "4",
-      "unit": "3",
+      "identifier": "cZndSKY@6d14f1ec-d21a-4faa-a486-79f59676f742-b98179dd-528d-4758-b98f-d4e2de9e9dfa-608a9cb8-7551-4fc1-94be-1ff7a825cb85-0",
+      "group": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+      "instructor": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+      "unit": "b98179dd-528d-4758-b98f-d4e2de9e9dfa",
+      "day": "Friday",
+      "time": "3:00pm",
+      "room": "fe374c4f-c02c-4aff-bbdc-5fec5fc13e9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "EqZKsj4@0c8295f2-a475-4ca2-aae9-78881db64ae1-85faa224-75dd-40fc-af2c-2fda871ec774-d0ff3c26-da3a-4697-aa55-e9225a466ce1-0",
+      "group": "d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+      "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "unit": "85faa224-75dd-40fc-af2c-2fda871ec774",
       "day": "Monday",
-      "time": "4:00pm",
-      "room": "3",
+      "time": "7:00am",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
       "online": false,
       "database_ids": {
         "group": "",
@@ -467,45 +67,13 @@
       }
     },
     {
-      "identifier": "4_5-1",
-      "group": "4",
-      "instructor": "7",
-      "unit": "5",
-      "day": "Tuesday",
-      "time": "11:00am",
-      "room": "3",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "4_2-0",
-      "group": "4",
-      "instructor": "5",
-      "unit": "2",
-      "day": "Monday",
-      "time": "5:00pm",
-      "room": "4",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "5_3-1",
-      "group": "5",
-      "instructor": "4",
-      "unit": "3",
+      "identifier": "Y17aRCr@5556ebb1-51ad-47df-b488-099649ed2066-9ec7190a-1235-4ae9-9be7-1678eb19ac1d-f5e4a927-f582-45fe-a3ae-616267a098f7-0",
+      "group": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+      "instructor": "5556ebb1-51ad-47df-b488-099649ed2066",
+      "unit": "9ec7190a-1235-4ae9-9be7-1678eb19ac1d",
       "day": "Thursday",
-      "time": "9:00am",
-      "room": "2",
+      "time": "10:00am",
+      "room": "3d4096e6-b3a1-4bb1-8174-32c9ff55eb22",
       "online": false,
       "database_ids": {
         "group": "",
@@ -515,29 +83,13 @@
       }
     },
     {
-      "identifier": "6_1-1",
-      "group": "6",
-      "instructor": "2",
-      "unit": "1",
-      "day": "Monday",
-      "time": "1:00pm",
-      "room": "3",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "4_2-1",
-      "group": "4",
-      "instructor": "5",
-      "unit": "2",
+      "identifier": "P4ASEkn@76d56d23-38fa-46f9-8e4c-7b249dac4bae-0feebdd6-16ee-446b-945d-d506fdbb41e8-608a9cb8-7551-4fc1-94be-1ff7a825cb85-0",
+      "group": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
       "day": "Wednesday",
       "time": "8:00am",
-      "room": "1",
+      "room": "3d4096e6-b3a1-4bb1-8174-32c9ff55eb22",
       "online": false,
       "database_ids": {
         "group": "",
@@ -547,125 +99,2413 @@
       }
     },
     {
-      "identifier": "6_1-0",
-      "group": "6",
-      "instructor": "2",
-      "unit": "1",
-      "day": "Tuesday",
-      "time": "11:00am",
-      "room": "4",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "3_1-1",
-      "group": "3",
-      "instructor": "2",
-      "unit": "1",
-      "day": "Tuesday",
-      "time": "2:00pm",
-      "room": "1",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "4_5-0",
-      "group": "4",
-      "instructor": "7",
-      "unit": "5",
-      "day": "Tuesday",
-      "time": "3:00pm",
-      "room": "3",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "5_3-0",
-      "group": "5",
-      "instructor": "4",
-      "unit": "3",
-      "day": "Wednesday",
-      "time": "12:00pm",
-      "room": "1",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "6_6-0",
-      "group": "6",
-      "instructor": "6",
-      "unit": "6",
-      "day": "Wednesday",
-      "time": "4:00pm",
-      "room": "4",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "6_3-0",
-      "group": "6",
-      "instructor": "4",
-      "unit": "3",
-      "day": "Thursday",
-      "time": "1:00pm",
-      "room": "1",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "1_3-0",
-      "group": "1",
-      "instructor": "4",
-      "unit": "3",
-      "day": "Monday",
-      "time": "3:00pm",
-      "room": "2",
-      "online": false,
-      "database_ids": {
-        "group": "",
-        "instructor": "",
-        "unit": "",
-        "room": ""
-      }
-    },
-    {
-      "identifier": "2_1-0",
-      "group": "2",
-      "instructor": "2",
-      "unit": "1",
+      "identifier": "AnuQvvq@76d56d23-38fa-46f9-8e4c-7b249dac4bae-0feebdd6-16ee-446b-945d-d506fdbb41e8-647d272b-b6cb-463a-a3e6-fc78ee799480-0",
+      "group": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
       "day": "Tuesday",
       "time": "7:00am",
-      "room": "3",
+      "room": "6b592fde-54d1-4b85-b247-d031da57ed03",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "wtq5mD6@0c8295f2-a475-4ca2-aae9-78881db64ae1-36df7f8e-b205-434c-812d-d8aaedfbcd76-b04c650c-d11b-42e4-8131-e3132eaf3a76-0",
+      "group": "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+      "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "unit": "36df7f8e-b205-434c-812d-d8aaedfbcd76",
+      "day": "Friday",
+      "time": "2:00pm",
+      "room": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "471Xzc5@XUiRVz-6a6c1458-5817-4853-b9aa-03da09b35f7d-0d36c58c-26ea-4802-ac7b-1e50a6719e9b-0",
+      "group": "0d36c58c-26ea-4802-ac7b-1e50a6719e9b",
+      "instructor": "XUiRVz",
+      "unit": "6a6c1458-5817-4853-b9aa-03da09b35f7d",
+      "day": "Wednesday",
+      "time": "7:00am",
+      "room": "1d32c978-927a-45be-9fab-809a9237b0c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "K1ftgXa@69088895-33d9-43a5-a038-e12404a5affa-8e6a3df4-8afe-4f10-89b5-cdfe1acaf63f-078bd9b0-233c-4f07-b27c-dcf169911965-0",
+      "group": "078bd9b0-233c-4f07-b27c-dcf169911965",
+      "instructor": "69088895-33d9-43a5-a038-e12404a5affa",
+      "unit": "8e6a3df4-8afe-4f10-89b5-cdfe1acaf63f",
+      "day": "Monday",
+      "time": "7:00am",
+      "room": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "yPR2ndk@XUiRVz-fe5bba8c-c28c-4b08-b814-d15b714b91c2-9adec9b5-e9dc-440b-a389-021b9f5ed0f9-0",
+      "group": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+      "instructor": "XUiRVz",
+      "unit": "fe5bba8c-c28c-4b08-b814-d15b714b91c2",
+      "day": "Tuesday",
+      "time": "2:00pm",
+      "room": "7e339db0-cb0b-43ef-862f-20e8c56dcb9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "5MiKqBj@8f17db11-9043-4651-8e4e-c376e8777b50-61e691ff-87be-495e-864b-3a40348a0fdc-608a9cb8-7551-4fc1-94be-1ff7a825cb85-0",
+      "group": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+      "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "unit": "61e691ff-87be-495e-864b-3a40348a0fdc",
+      "day": "Thursday",
+      "time": "8:00am",
+      "room": "d5113453-d9e3-46b2-8cd9-1f759923f5fe",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "z4rbRLi@6d14f1ec-d21a-4faa-a486-79f59676f742-6fed0bcf-319f-4ab4-b999-d57f59799041-d92ac466-790c-4af7-85da-67ecd7683491-0",
+      "group": "d92ac466-790c-4af7-85da-67ecd7683491",
+      "instructor": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+      "unit": "6fed0bcf-319f-4ab4-b999-d57f59799041",
+      "day": "Monday",
+      "time": "11:00am",
+      "room": "6b592fde-54d1-4b85-b247-d031da57ed03",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "jV96lf3@8f17db11-9043-4651-8e4e-c376e8777b50-ab912148-3b49-478b-8141-3dbba1daae91-94bac470-7d0b-4d53-afe3-2c8f1553e3bf-0",
+      "group": "94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+      "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "unit": "ab912148-3b49-478b-8141-3dbba1daae91",
+      "day": "Tuesday",
+      "time": "11:00am",
+      "room": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "tKKLKtW@27e2e54f-6613-455d-9377-174913aa2856-b383dec8-1114-45fc-a761-ac7d4eb1e787-1feb3e0d-78a5-47a1-bbc8-4a627974f239-0",
+      "group": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+      "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+      "unit": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+      "day": "Thursday",
+      "time": "3:00pm",
+      "room": "6b592fde-54d1-4b85-b247-d031da57ed03",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "1Ii703t@d7294898-e5f5-4154-a297-db62a63231f5-cf0a1135-c7e1-4db9-a339-ea632222040b-2995d630-775d-45e4-8fcb-b3f0f39e6e70-0",
+      "group": "2995d630-775d-45e4-8fcb-b3f0f39e6e70",
+      "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "unit": "cf0a1135-c7e1-4db9-a339-ea632222040b",
+      "day": "Monday",
+      "time": "3:00pm",
+      "room": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "2d4aKum@39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3-bff5bfed-c4db-4663-bb2d-8d8588a18b95-0a5cef40-2223-476e-92df-1f3e4284122c-0",
+      "group": "0a5cef40-2223-476e-92df-1f3e4284122c",
+      "instructor": "39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3",
+      "unit": "bff5bfed-c4db-4663-bb2d-8d8588a18b95",
+      "day": "Wednesday",
+      "time": "3:00pm",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "ihvrbx6@fc77b31c-fb32-4c37-aa20-df3b8cdd6206-c9f68bed-da52-4b2a-b09b-8da4a565b496-b1d9a4af-9524-47ee-8e86-0d575816297d-0",
+      "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+      "instructor": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+      "unit": "c9f68bed-da52-4b2a-b09b-8da4a565b496",
+      "day": "Tuesday",
+      "time": "8:00am",
+      "room": "7e339db0-cb0b-43ef-862f-20e8c56dcb9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "60mJw42@dab61dad-0192-477a-9986-9449fac05998-ca5ee672-8457-4048-898b-6c5050c996d3-f5e4a927-f582-45fe-a3ae-616267a098f7-0",
+      "group": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+      "instructor": "dab61dad-0192-477a-9986-9449fac05998",
+      "unit": "ca5ee672-8457-4048-898b-6c5050c996d3",
+      "day": "Wednesday",
+      "time": "9:00am",
+      "room": "1d32c978-927a-45be-9fab-809a9237b0c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "Z6tMJgE@d7294898-e5f5-4154-a297-db62a63231f5-8a3e5b00-78fd-4b2c-8156-54221ef7453c-3c66e5da-6564-4c41-a960-ed3d78529572-0",
+      "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+      "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "unit": "8a3e5b00-78fd-4b2c-8156-54221ef7453c",
+      "day": "Monday",
+      "time": "3:00pm",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "GeSS08k@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-078bd9b0-233c-4f07-b27c-dcf169911965-0",
+      "group": "078bd9b0-233c-4f07-b27c-dcf169911965",
+      "instructor": "gu6bCA",
+      "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "day": "Monday",
+      "time": "10:00am",
+      "room": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "oIF2ByN@dab61dad-0192-477a-9986-9449fac05998-1090ee50-05cb-475d-8bc6-3a67894d9e77-9199f1e0-3569-43a4-938b-5e69747dd9df-0",
+      "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+      "instructor": "dab61dad-0192-477a-9986-9449fac05998",
+      "unit": "1090ee50-05cb-475d-8bc6-3a67894d9e77",
+      "day": "Thursday",
+      "time": "1:00pm",
+      "room": "1d32c978-927a-45be-9fab-809a9237b0c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "Qu4KwjP@bXuuRE-b32a8c1c-70b2-49a1-bf21-66aedaa71e51-647d272b-b6cb-463a-a3e6-fc78ee799480-0",
+      "group": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+      "instructor": "bXuuRE",
+      "unit": "b32a8c1c-70b2-49a1-bf21-66aedaa71e51",
+      "day": "Wednesday",
+      "time": "1:00pm",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "3jHeJ2r@0c8295f2-a475-4ca2-aae9-78881db64ae1-46fdcfb6-c3c9-4218-8913-082d8589a3e4-3c66e5da-6564-4c41-a960-ed3d78529572-0",
+      "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+      "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "unit": "46fdcfb6-c3c9-4218-8913-082d8589a3e4",
+      "day": "Monday",
+      "time": "7:00am",
+      "room": "fe374c4f-c02c-4aff-bbdc-5fec5fc13e9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "nPJt62a@0c8295f2-a475-4ca2-aae9-78881db64ae1-27b90ecf-7bbf-4039-9101-643b15b3cb4f-d0ff3c26-da3a-4697-aa55-e9225a466ce1-0",
+      "group": "d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+      "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "unit": "27b90ecf-7bbf-4039-9101-643b15b3cb4f",
+      "day": "Monday",
+      "time": "2:00pm",
+      "room": "0d6d24fd-b74c-4f3d-82c9-07750852588d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "8yOkAEy@594ba91f-2054-4161-9cff-3e0b2f502910-f3ce7c04-aca9-4d91-a18a-d415d71f68b8-b7876ae8-5f71-4690-80c0-4cbc6e23517b-0",
+      "group": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+      "instructor": "594ba91f-2054-4161-9cff-3e0b2f502910",
+      "unit": "f3ce7c04-aca9-4d91-a18a-d415d71f68b8",
+      "day": "Wednesday",
+      "time": "7:00am",
+      "room": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "ug4kCWk@5556ebb1-51ad-47df-b488-099649ed2066-d9b61014-e99f-4623-94ab-975dbdfda00b-51d7dd76-2508-4222-8cc9-582b0849712f-0",
+      "group": "51d7dd76-2508-4222-8cc9-582b0849712f",
+      "instructor": "5556ebb1-51ad-47df-b488-099649ed2066",
+      "unit": "d9b61014-e99f-4623-94ab-975dbdfda00b",
+      "day": "Friday",
+      "time": "2:00pm",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "EsuOsc2@27e2e54f-6613-455d-9377-174913aa2856-7691243b-c260-45b4-8cf6-e71c58d81a76-c2363c69-74a5-4a21-ae21-a784fe024f05-0",
+      "group": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+      "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+      "unit": "7691243b-c260-45b4-8cf6-e71c58d81a76",
+      "day": "Friday",
+      "time": "1:00pm",
+      "room": "7e339db0-cb0b-43ef-862f-20e8c56dcb9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "xonlMOH@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-144285f7-80ae-4395-ba9c-22d8faf252bc-9199f1e0-3569-43a4-938b-5e69747dd9df-0",
+      "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+      "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "unit": "144285f7-80ae-4395-ba9c-22d8faf252bc",
+      "day": "Friday",
+      "time": "9:00am",
+      "room": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "IMldG90@27e2e54f-6613-455d-9377-174913aa2856-b383dec8-1114-45fc-a761-ac7d4eb1e787-75704dcd-e1a7-40b6-a3f6-92a5ab30548f-0",
+      "group": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+      "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+      "unit": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+      "day": "Monday",
+      "time": "12:00pm",
+      "room": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "mipMb5X@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-ed0e1b4e-a50c-4bcd-9025-2ea03316c191-75704dcd-e1a7-40b6-a3f6-92a5ab30548f-0",
+      "group": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+      "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "unit": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+      "day": "Wednesday",
+      "time": "12:00pm",
+      "room": "0e030fb2-94db-43cb-aad9-220f86ce1e1a",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "X7m5h2I@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2-0a5cef40-2223-476e-92df-1f3e4284122c-0",
+      "group": "0a5cef40-2223-476e-92df-1f3e4284122c",
+      "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "unit": "6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2",
+      "day": "Friday",
+      "time": "1:00pm",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "QnhNaBK@5556ebb1-51ad-47df-b488-099649ed2066-9ec7190a-1235-4ae9-9be7-1678eb19ac1d-51d7dd76-2508-4222-8cc9-582b0849712f-0",
+      "group": "51d7dd76-2508-4222-8cc9-582b0849712f",
+      "instructor": "5556ebb1-51ad-47df-b488-099649ed2066",
+      "unit": "9ec7190a-1235-4ae9-9be7-1678eb19ac1d",
+      "day": "Monday",
+      "time": "3:00pm",
+      "room": "6b592fde-54d1-4b85-b247-d031da57ed03",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "Y2FEnJ5@XUiRVz-dfee7547-6f68-48f2-9f93-6d32cf87213f-51d7dd76-2508-4222-8cc9-582b0849712f-0",
+      "group": "51d7dd76-2508-4222-8cc9-582b0849712f",
+      "instructor": "XUiRVz",
+      "unit": "dfee7547-6f68-48f2-9f93-6d32cf87213f",
+      "day": "Wednesday",
+      "time": "1:00pm",
+      "room": "ecac5ce3-5774-476f-b183-b0b22965240f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "PZPrgLG@XUiRVz-45b973c2-cb68-4445-803e-3d8f79e91052-51d7dd76-2508-4222-8cc9-582b0849712f-0",
+      "group": "51d7dd76-2508-4222-8cc9-582b0849712f",
+      "instructor": "XUiRVz",
+      "unit": "45b973c2-cb68-4445-803e-3d8f79e91052",
+      "day": "Monday",
+      "time": "12:00pm",
+      "room": "fe374c4f-c02c-4aff-bbdc-5fec5fc13e9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "vsvaJXx@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-42e628f6-a887-4776-98e9-13e7447dbe0c-9199f1e0-3569-43a4-938b-5e69747dd9df-0",
+      "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+      "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "unit": "42e628f6-a887-4776-98e9-13e7447dbe0c",
+      "day": "Friday",
+      "time": "7:00am",
+      "room": "6b592fde-54d1-4b85-b247-d031da57ed03",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "Lcp8uPd@27e2e54f-6613-455d-9377-174913aa2856-b383dec8-1114-45fc-a761-ac7d4eb1e787-68591fa4-9326-4089-a8be-83fa552333df-0",
+      "group": "68591fa4-9326-4089-a8be-83fa552333df",
+      "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+      "unit": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+      "day": "Friday",
+      "time": "3:00pm",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "dwW16gs@XUiRVz-6a6c1458-5817-4853-b9aa-03da09b35f7d-c2363c69-74a5-4a21-ae21-a784fe024f05-0",
+      "group": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+      "instructor": "XUiRVz",
+      "unit": "6a6c1458-5817-4853-b9aa-03da09b35f7d",
+      "day": "Thursday",
+      "time": "3:00pm",
+      "room": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "L11xWn4@738f513b-8a7b-404c-9b62-25bc8707e33b-5914fa07-f582-42be-a435-814380809356-3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea-0",
+      "group": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+      "instructor": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+      "unit": "5914fa07-f582-42be-a435-814380809356",
+      "day": "Monday",
+      "time": "3:00pm",
+      "room": "6b592fde-54d1-4b85-b247-d031da57ed03",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "rZVhyjV@76d56d23-38fa-46f9-8e4c-7b249dac4bae-0feebdd6-16ee-446b-945d-d506fdbb41e8-b7876ae8-5f71-4690-80c0-4cbc6e23517b-0",
+      "group": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+      "day": "Tuesday",
+      "time": "3:00pm",
+      "room": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "Y2oDaNL@d44692c3-a634-43f0-8557-e8e343ac77ee-24ac72f6-b61e-4e05-8683-38f2626244da-2c043571-5a4c-4ec0-afe1-f4e64e761b28-0",
+      "group": "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+      "instructor": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+      "unit": "24ac72f6-b61e-4e05-8683-38f2626244da",
+      "day": "Thursday",
+      "time": "8:00am",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "UraZFmp@905583df-a803-4a71-875a-15a80eb993db-27f15df5-142d-4a06-9bc9-0e3390b72ffd-68591fa4-9326-4089-a8be-83fa552333df-0",
+      "group": "68591fa4-9326-4089-a8be-83fa552333df",
+      "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+      "unit": "27f15df5-142d-4a06-9bc9-0e3390b72ffd",
+      "day": "Wednesday",
+      "time": "12:00pm",
+      "room": "6b592fde-54d1-4b85-b247-d031da57ed03",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "PH1NgNE@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2-f5e4a927-f582-45fe-a3ae-616267a098f7-0",
+      "group": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+      "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "unit": "6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2",
+      "day": "Wednesday",
+      "time": "10:00am",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "Y0qUokp@27e2e54f-6613-455d-9377-174913aa2856-b383dec8-1114-45fc-a761-ac7d4eb1e787-3c66e5da-6564-4c41-a960-ed3d78529572-0",
+      "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+      "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+      "unit": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+      "day": "Wednesday",
+      "time": "11:00am",
+      "room": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "XPsf3Hr@76d56d23-38fa-46f9-8e4c-7b249dac4bae-3bf905c8-d1f2-4aea-ba42-f5e50e529d1c-3c66e5da-6564-4c41-a960-ed3d78529572-0",
+      "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "3bf905c8-d1f2-4aea-ba42-f5e50e529d1c",
+      "day": "Monday",
+      "time": "11:00am",
+      "room": "fe374c4f-c02c-4aff-bbdc-5fec5fc13e9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "GCJs01v@25811033-b23a-49ff-b02b-9b6317c51903-3dc78129-69a6-459d-b478-1385a7aca654-3c66e5da-6564-4c41-a960-ed3d78529572-0",
+      "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+      "instructor": "25811033-b23a-49ff-b02b-9b6317c51903",
+      "unit": "3dc78129-69a6-459d-b478-1385a7aca654",
+      "day": "Tuesday",
+      "time": "9:00am",
+      "room": "1d32c978-927a-45be-9fab-809a9237b0c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "WD4dDDB@69088895-33d9-43a5-a038-e12404a5affa-cdfab22c-a391-4c32-9f8d-bf394488f725-2c043571-5a4c-4ec0-afe1-f4e64e761b28-0",
+      "group": "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+      "instructor": "69088895-33d9-43a5-a038-e12404a5affa",
+      "unit": "cdfab22c-a391-4c32-9f8d-bf394488f725",
+      "day": "Thursday",
+      "time": "7:00am",
+      "room": "fe374c4f-c02c-4aff-bbdc-5fec5fc13e9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "8aodmBE@76d56d23-38fa-46f9-8e4c-7b249dac4bae-dd032243-fded-4a13-af35-d8f6766a9fb8-b7876ae8-5f71-4690-80c0-4cbc6e23517b-0",
+      "group": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+      "day": "Friday",
+      "time": "2:00pm",
+      "room": "6b592fde-54d1-4b85-b247-d031da57ed03",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "PGlHM5I@76d56d23-38fa-46f9-8e4c-7b249dac4bae-9a3a34fb-fb43-424e-8751-83826e0585c7-36ad9170-3d7c-4efa-b8f0-a70094ee3510-0",
+      "group": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "9a3a34fb-fb43-424e-8751-83826e0585c7",
+      "day": "Thursday",
+      "time": "2:00pm",
+      "room": "0d6d24fd-b74c-4f3d-82c9-07750852588d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "hEzs29x@76d56d23-38fa-46f9-8e4c-7b249dac4bae-dd032243-fded-4a13-af35-d8f6766a9fb8-647d272b-b6cb-463a-a3e6-fc78ee799480-0",
+      "group": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+      "day": "Thursday",
+      "time": "1:00pm",
+      "room": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "mLRFl4g@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-ed0e1b4e-a50c-4bcd-9025-2ea03316c191-68591fa4-9326-4089-a8be-83fa552333df-0",
+      "group": "68591fa4-9326-4089-a8be-83fa552333df",
+      "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "unit": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+      "day": "Monday",
+      "time": "2:00pm",
+      "room": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "KeZ7cYJ@76d56d23-38fa-46f9-8e4c-7b249dac4bae-7311de5e-8fbd-43f4-a7d4-42c85a082c52-c2363c69-74a5-4a21-ae21-a784fe024f05-0",
+      "group": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
+      "day": "Tuesday",
+      "time": "4:00pm",
+      "room": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "Tey2cta@594ba91f-2054-4161-9cff-3e0b2f502910-e7462f7f-868c-4111-92a6-bbf949c19a93-1b333ad7-714f-45e6-a453-2f16ba387975-0",
+      "group": "1b333ad7-714f-45e6-a453-2f16ba387975",
+      "instructor": "594ba91f-2054-4161-9cff-3e0b2f502910",
+      "unit": "e7462f7f-868c-4111-92a6-bbf949c19a93",
+      "day": "Friday",
+      "time": "7:00am",
+      "room": "0e030fb2-94db-43cb-aad9-220f86ce1e1a",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "2iX3MpJ@9289b6af-902a-439e-ad09-1b9de024076f-001d61b8-2019-446b-8761-491336ec0d02-d92ac466-790c-4af7-85da-67ecd7683491-0",
+      "group": "d92ac466-790c-4af7-85da-67ecd7683491",
+      "instructor": "9289b6af-902a-439e-ad09-1b9de024076f",
+      "unit": "001d61b8-2019-446b-8761-491336ec0d02",
+      "day": "Wednesday",
+      "time": "10:00am",
+      "room": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "sJeFuzd@bXuuRE-535ce32b-6435-4e7c-8b7d-5fa90dcdf966-1feb3e0d-78a5-47a1-bbc8-4a627974f239-0",
+      "group": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+      "instructor": "bXuuRE",
+      "unit": "535ce32b-6435-4e7c-8b7d-5fa90dcdf966",
+      "day": "Monday",
+      "time": "3:00pm",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "KpFo0Kn@5556ebb1-51ad-47df-b488-099649ed2066-9ec7190a-1235-4ae9-9be7-1678eb19ac1d-0a5cef40-2223-476e-92df-1f3e4284122c-0",
+      "group": "0a5cef40-2223-476e-92df-1f3e4284122c",
+      "instructor": "5556ebb1-51ad-47df-b488-099649ed2066",
+      "unit": "9ec7190a-1235-4ae9-9be7-1678eb19ac1d",
+      "day": "Wednesday",
+      "time": "7:00am",
+      "room": "d5113453-d9e3-46b2-8cd9-1f759923f5fe",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "ji3Ny4F@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2-51d7dd76-2508-4222-8cc9-582b0849712f-0",
+      "group": "51d7dd76-2508-4222-8cc9-582b0849712f",
+      "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "unit": "6eea1080-8b73-44b6-b8f0-83d3d2d9b3e2",
+      "day": "Friday",
+      "time": "9:00am",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "36LPdj8@27e2e54f-6613-455d-9377-174913aa2856-5677547f-c2e1-4896-8010-529cffeb71e1-c2363c69-74a5-4a21-ae21-a784fe024f05-0",
+      "group": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+      "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+      "unit": "5677547f-c2e1-4896-8010-529cffeb71e1",
+      "day": "Wednesday",
+      "time": "12:00pm",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "7COdusy@27e2e54f-6613-455d-9377-174913aa2856-b383dec8-1114-45fc-a761-ac7d4eb1e787-b1d9a4af-9524-47ee-8e86-0d575816297d-0",
+      "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+      "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+      "unit": "b383dec8-1114-45fc-a761-ac7d4eb1e787",
+      "day": "Thursday",
+      "time": "11:00am",
+      "room": "ecac5ce3-5774-476f-b183-b0b22965240f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "ak7GPlw@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-4ddc0348-c939-44d0-9630-6c1896cb2958-b1d9a4af-9524-47ee-8e86-0d575816297d-0",
+      "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+      "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "unit": "4ddc0348-c939-44d0-9630-6c1896cb2958",
+      "day": "Wednesday",
+      "time": "12:00pm",
+      "room": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "wh21Pzb@d44692c3-a634-43f0-8557-e8e343ac77ee-137e40e3-762e-45f8-8127-ea3f99dd1bfc-4c4d6902-a547-4e43-ba7e-011e954305f0-0",
+      "group": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+      "instructor": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+      "unit": "137e40e3-762e-45f8-8127-ea3f99dd1bfc",
+      "day": "Tuesday",
+      "time": "2:00pm",
+      "room": "fe374c4f-c02c-4aff-bbdc-5fec5fc13e9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "S3TJCUb@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-4ddc0348-c939-44d0-9630-6c1896cb2958-4c4d6902-a547-4e43-ba7e-011e954305f0-0",
+      "group": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+      "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "unit": "4ddc0348-c939-44d0-9630-6c1896cb2958",
+      "day": "Monday",
+      "time": "7:00am",
+      "room": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "oVKhAFL@XUiRVz-c570ec4e-b1aa-42a0-9a4e-9f5caeeacf2f-36ad9170-3d7c-4efa-b8f0-a70094ee3510-0",
+      "group": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+      "instructor": "XUiRVz",
+      "unit": "c570ec4e-b1aa-42a0-9a4e-9f5caeeacf2f",
+      "day": "Thursday",
+      "time": "12:00pm",
+      "room": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "LcsU87X@6d14f1ec-d21a-4faa-a486-79f59676f742-0def79b9-2214-4abf-8428-47cdc94627f9-75704dcd-e1a7-40b6-a3f6-92a5ab30548f-0",
+      "group": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+      "instructor": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+      "unit": "0def79b9-2214-4abf-8428-47cdc94627f9",
+      "day": "Tuesday",
+      "time": "10:00am",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "EEuR3BW@905583df-a803-4a71-875a-15a80eb993db-2272158e-aa8e-4a68-b836-387c476d125c-608a9cb8-7551-4fc1-94be-1ff7a825cb85-0",
+      "group": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+      "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+      "unit": "2272158e-aa8e-4a68-b836-387c476d125c",
+      "day": "Monday",
+      "time": "11:00am",
+      "room": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "1q8gZNY@27e2e54f-6613-455d-9377-174913aa2856-f0723732-00c5-4e05-8eac-508e878e7cf2-b1d9a4af-9524-47ee-8e86-0d575816297d-0",
+      "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+      "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+      "unit": "f0723732-00c5-4e05-8eac-508e878e7cf2",
+      "day": "Tuesday",
+      "time": "8:00am",
+      "room": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "SeY2fIy@XUiRVz-c570ec4e-b1aa-42a0-9a4e-9f5caeeacf2f-9adec9b5-e9dc-440b-a389-021b9f5ed0f9-0",
+      "group": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+      "instructor": "XUiRVz",
+      "unit": "c570ec4e-b1aa-42a0-9a4e-9f5caeeacf2f",
+      "day": "Tuesday",
+      "time": "9:00am",
+      "room": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "GjQNYMS@bXuuRE-3f10c5c1-e195-4562-85f8-c25f15604154-647d272b-b6cb-463a-a3e6-fc78ee799480-0",
+      "group": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+      "instructor": "bXuuRE",
+      "unit": "3f10c5c1-e195-4562-85f8-c25f15604154",
+      "day": "Friday",
+      "time": "8:00am",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "uYdGR36@9289b6af-902a-439e-ad09-1b9de024076f-dea76e2b-4c3d-4478-9ad8-6f59f0f40a0b-94bac470-7d0b-4d53-afe3-2c8f1553e3bf-0",
+      "group": "94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+      "instructor": "9289b6af-902a-439e-ad09-1b9de024076f",
+      "unit": "dea76e2b-4c3d-4478-9ad8-6f59f0f40a0b",
+      "day": "Friday",
+      "time": "2:00pm",
+      "room": "0e030fb2-94db-43cb-aad9-220f86ce1e1a",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "SNNFWAN@905583df-a803-4a71-875a-15a80eb993db-9ba43e05-7f47-4400-b36d-d92e53b165cd-94bac470-7d0b-4d53-afe3-2c8f1553e3bf-0",
+      "group": "94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+      "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+      "unit": "9ba43e05-7f47-4400-b36d-d92e53b165cd",
+      "day": "Friday",
+      "time": "11:00am",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "3Gbw2KL@39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3-58d42752-b7bc-4d9d-8418-a492536b358e-0a5cef40-2223-476e-92df-1f3e4284122c-0",
+      "group": "0a5cef40-2223-476e-92df-1f3e4284122c",
+      "instructor": "39cdcf30-9c37-4c2e-b3b7-d9a25efcc4f3",
+      "unit": "58d42752-b7bc-4d9d-8418-a492536b358e",
+      "day": "Tuesday",
+      "time": "2:00pm",
+      "room": "0d6d24fd-b74c-4f3d-82c9-07750852588d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "0gLvT3z@46fcd9ab-6105-4bb8-bfe9-691e24570490-3e5f5f6b-b778-4688-96d3-ac742a1b4cbd-0a5cef40-2223-476e-92df-1f3e4284122c-0",
+      "group": "0a5cef40-2223-476e-92df-1f3e4284122c",
+      "instructor": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+      "unit": "3e5f5f6b-b778-4688-96d3-ac742a1b4cbd",
+      "day": "Thursday",
+      "time": "12:00pm",
+      "room": "d5113453-d9e3-46b2-8cd9-1f759923f5fe",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "wIVaz1Z@5556ebb1-51ad-47df-b488-099649ed2066-2fda46e6-5fd8-488c-a0f4-426501761691-4c4d6902-a547-4e43-ba7e-011e954305f0-0",
+      "group": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+      "instructor": "5556ebb1-51ad-47df-b488-099649ed2066",
+      "unit": "2fda46e6-5fd8-488c-a0f4-426501761691",
+      "day": "Tuesday",
+      "time": "12:00pm",
+      "room": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "jwRlQir@XUiRVz-2b343b15-ba87-4ca4-9341-2f7283ff87eb-36ad9170-3d7c-4efa-b8f0-a70094ee3510-0",
+      "group": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+      "instructor": "XUiRVz",
+      "unit": "2b343b15-ba87-4ca4-9341-2f7283ff87eb",
+      "day": "Friday",
+      "time": "8:00am",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "amm2rB7@905583df-a803-4a71-875a-15a80eb993db-9ba43e05-7f47-4400-b36d-d92e53b165cd-d92ac466-790c-4af7-85da-67ecd7683491-0",
+      "group": "d92ac466-790c-4af7-85da-67ecd7683491",
+      "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+      "unit": "9ba43e05-7f47-4400-b36d-d92e53b165cd",
+      "day": "Thursday",
+      "time": "10:00am",
+      "room": "e97b0cf1-0a7d-441f-ae1f-2a95d9a1adbb",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "bhEic1e@46fcd9ab-6105-4bb8-bfe9-691e24570490-343f8cb1-cda5-41f9-aa52-312ed9306678-0a5cef40-2223-476e-92df-1f3e4284122c-0",
+      "group": "0a5cef40-2223-476e-92df-1f3e4284122c",
+      "instructor": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+      "unit": "343f8cb1-cda5-41f9-aa52-312ed9306678",
+      "day": "Wednesday",
+      "time": "7:00am",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "bfh2qEp@8cf2816c-cebf-4157-b2b7-ab7a24577c00-16209308-0c0c-4351-85e3-23a35f382d49-3c66e5da-6564-4c41-a960-ed3d78529572-0",
+      "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+      "instructor": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+      "unit": "16209308-0c0c-4351-85e3-23a35f382d49",
+      "day": "Thursday",
+      "time": "11:00am",
+      "room": "1d32c978-927a-45be-9fab-809a9237b0c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "T4ndLKp@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-ed0e1b4e-a50c-4bcd-9025-2ea03316c191-3c66e5da-6564-4c41-a960-ed3d78529572-0",
+      "group": "3c66e5da-6564-4c41-a960-ed3d78529572",
+      "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "unit": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+      "day": "Thursday",
+      "time": "8:00am",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "INCX82N@0c8295f2-a475-4ca2-aae9-78881db64ae1-a4f32e6a-7755-46bd-8489-f43ce46c2453-9199f1e0-3569-43a4-938b-5e69747dd9df-0",
+      "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+      "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "unit": "a4f32e6a-7755-46bd-8489-f43ce46c2453",
+      "day": "Tuesday",
+      "time": "11:00am",
+      "room": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "HbU6dy6@8cf2816c-cebf-4157-b2b7-ab7a24577c00-d716351e-9631-4e27-b12b-605d0481c4c1-b7876ae8-5f71-4690-80c0-4cbc6e23517b-0",
+      "group": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+      "instructor": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+      "unit": "d716351e-9631-4e27-b12b-605d0481c4c1",
+      "day": "Friday",
+      "time": "7:00am",
+      "room": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "SefPU5k@738f513b-8a7b-404c-9b62-25bc8707e33b-93232e89-4885-436d-ac2e-b2981851ad9e-b7876ae8-5f71-4690-80c0-4cbc6e23517b-0",
+      "group": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+      "instructor": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+      "unit": "93232e89-4885-436d-ac2e-b2981851ad9e",
+      "day": "Monday",
+      "time": "1:00pm",
+      "room": "0e030fb2-94db-43cb-aad9-220f86ce1e1a",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "KAkF7QG@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-b1d9a4af-9524-47ee-8e86-0d575816297d-0",
+      "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+      "instructor": "gu6bCA",
+      "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "day": "Monday",
+      "time": "11:00am",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "wI8iAMj@76d56d23-38fa-46f9-8e4c-7b249dac4bae-dd032243-fded-4a13-af35-d8f6766a9fb8-608a9cb8-7551-4fc1-94be-1ff7a825cb85-0",
+      "group": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+      "day": "Monday",
+      "time": "3:00pm",
+      "room": "3d4096e6-b3a1-4bb1-8174-32c9ff55eb22",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "FYC2JR6@9289b6af-902a-439e-ad09-1b9de024076f-a83b6117-96c6-4f41-9fb0-66e2fe96c13b-608a9cb8-7551-4fc1-94be-1ff7a825cb85-0",
+      "group": "608a9cb8-7551-4fc1-94be-1ff7a825cb85",
+      "instructor": "9289b6af-902a-439e-ad09-1b9de024076f",
+      "unit": "a83b6117-96c6-4f41-9fb0-66e2fe96c13b",
+      "day": "Tuesday",
+      "time": "7:00am",
+      "room": "fe374c4f-c02c-4aff-bbdc-5fec5fc13e9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "747AyPO@0c8295f2-a475-4ca2-aae9-78881db64ae1-5c381618-3b3a-4dd2-999c-b91fd494d86b-2c043571-5a4c-4ec0-afe1-f4e64e761b28-0",
+      "group": "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+      "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "unit": "5c381618-3b3a-4dd2-999c-b91fd494d86b",
+      "day": "Thursday",
+      "time": "1:00pm",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "rH5LYxP@d7294898-e5f5-4154-a297-db62a63231f5-ffda8304-c743-4e08-b4de-5441ebd51dfb-078bd9b0-233c-4f07-b27c-dcf169911965-0",
+      "group": "078bd9b0-233c-4f07-b27c-dcf169911965",
+      "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "unit": "ffda8304-c743-4e08-b4de-5441ebd51dfb",
+      "day": "Thursday",
+      "time": "7:00am",
+      "room": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "DQgv30i@d7294898-e5f5-4154-a297-db62a63231f5-ffda8304-c743-4e08-b4de-5441ebd51dfb-b1d9a4af-9524-47ee-8e86-0d575816297d-0",
+      "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+      "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "unit": "ffda8304-c743-4e08-b4de-5441ebd51dfb",
+      "day": "Monday",
+      "time": "8:00am",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "Cp3FTWw@fc77b31c-fb32-4c37-aa20-df3b8cdd6206-960c2fba-736e-40bf-9316-c72cf26191d6-1b333ad7-714f-45e6-a453-2f16ba387975-0",
+      "group": "1b333ad7-714f-45e6-a453-2f16ba387975",
+      "instructor": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+      "unit": "960c2fba-736e-40bf-9316-c72cf26191d6",
+      "day": "Tuesday",
+      "time": "3:00pm",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "JWeCoI5@dab61dad-0192-477a-9986-9449fac05998-24454761-a2ad-474d-bde2-8ecb12851c80-b7876ae8-5f71-4690-80c0-4cbc6e23517b-0",
+      "group": "b7876ae8-5f71-4690-80c0-4cbc6e23517b",
+      "instructor": "dab61dad-0192-477a-9986-9449fac05998",
+      "unit": "24454761-a2ad-474d-bde2-8ecb12851c80",
+      "day": "Thursday",
+      "time": "12:00pm",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "9yaOBfY@76d56d23-38fa-46f9-8e4c-7b249dac4bae-9a3a34fb-fb43-424e-8751-83826e0585c7-9adec9b5-e9dc-440b-a389-021b9f5ed0f9-0",
+      "group": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "9a3a34fb-fb43-424e-8751-83826e0585c7",
+      "day": "Monday",
+      "time": "8:00am",
+      "room": "6b592fde-54d1-4b85-b247-d031da57ed03",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "LSn9XZ9@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-42771b15-68a7-407f-9568-93fc3712d2c1-cc323960-3ec8-49b9-9995-b8285f5e209b-0",
+      "group": "cc323960-3ec8-49b9-9995-b8285f5e209b",
+      "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "unit": "42771b15-68a7-407f-9568-93fc3712d2c1",
+      "day": "Monday",
+      "time": "9:00am",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "GHsapCJ@8f17db11-9043-4651-8e4e-c376e8777b50-fd15eede-4b8c-416b-945b-68158a448ceb-3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea-0",
+      "group": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+      "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "unit": "fd15eede-4b8c-416b-945b-68158a448ceb",
+      "day": "Tuesday",
+      "time": "2:00pm",
+      "room": "0e030fb2-94db-43cb-aad9-220f86ce1e1a",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "ZaTntn3@578c3e61-b597-4b95-9cd3-a397d349f7b6-7311de5e-8fbd-43f4-a7d4-42c85a082c52-0d36c58c-26ea-4802-ac7b-1e50a6719e9b-0",
+      "group": "0d36c58c-26ea-4802-ac7b-1e50a6719e9b",
+      "instructor": "578c3e61-b597-4b95-9cd3-a397d349f7b6",
+      "unit": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
+      "day": "Wednesday",
+      "time": "9:00am",
+      "room": "6b592fde-54d1-4b85-b247-d031da57ed03",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "5ue7xCO@594ba91f-2054-4161-9cff-3e0b2f502910-46094cd1-a544-4f7f-992d-9bc4048013b3-f5e4a927-f582-45fe-a3ae-616267a098f7-0",
+      "group": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+      "instructor": "594ba91f-2054-4161-9cff-3e0b2f502910",
+      "unit": "46094cd1-a544-4f7f-992d-9bc4048013b3",
+      "day": "Friday",
+      "time": "8:00am",
+      "room": "1d32c978-927a-45be-9fab-809a9237b0c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "Y2R0oAt@d7294898-e5f5-4154-a297-db62a63231f5-8dc6e3e7-613f-473c-84d5-a997a059e076-2c043571-5a4c-4ec0-afe1-f4e64e761b28-0",
+      "group": "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+      "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "unit": "8dc6e3e7-613f-473c-84d5-a997a059e076",
+      "day": "Tuesday",
+      "time": "3:00pm",
+      "room": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "ncsUANt@738f513b-8a7b-404c-9b62-25bc8707e33b-b11cd0de-3162-4e97-92a6-c113501868e8-1b333ad7-714f-45e6-a453-2f16ba387975-0",
+      "group": "1b333ad7-714f-45e6-a453-2f16ba387975",
+      "instructor": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+      "unit": "b11cd0de-3162-4e97-92a6-c113501868e8",
+      "day": "Monday",
+      "time": "12:00pm",
+      "room": "fe374c4f-c02c-4aff-bbdc-5fec5fc13e9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "MOkaDUl@578c3e61-b597-4b95-9cd3-a397d349f7b6-0feebdd6-16ee-446b-945d-d506fdbb41e8-3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea-0",
+      "group": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+      "instructor": "578c3e61-b597-4b95-9cd3-a397d349f7b6",
+      "unit": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+      "day": "Tuesday",
+      "time": "12:00pm",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "BLekseG@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-15164936-7cd9-4a3b-be0e-ce6ed8f2036a-4c4d6902-a547-4e43-ba7e-011e954305f0-0",
+      "group": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+      "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "unit": "15164936-7cd9-4a3b-be0e-ce6ed8f2036a",
+      "day": "Monday",
+      "time": "1:00pm",
+      "room": "3d4096e6-b3a1-4bb1-8174-32c9ff55eb22",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "sHq0LWM@XUiRVz-5a5ac926-cdd7-4ee7-8d6d-a60bacf31f08-9199f1e0-3569-43a4-938b-5e69747dd9df-0",
+      "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+      "instructor": "XUiRVz",
+      "unit": "5a5ac926-cdd7-4ee7-8d6d-a60bacf31f08",
+      "day": "Thursday",
+      "time": "1:00pm",
+      "room": "7e339db0-cb0b-43ef-862f-20e8c56dcb9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "xGRQTT1@bXuuRE-d37ec2c0-6186-4772-a1d2-686c3e956f1e-647d272b-b6cb-463a-a3e6-fc78ee799480-0",
+      "group": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+      "instructor": "bXuuRE",
+      "unit": "d37ec2c0-6186-4772-a1d2-686c3e956f1e",
+      "day": "Friday",
+      "time": "1:00pm",
+      "room": "0d6d24fd-b74c-4f3d-82c9-07750852588d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "AhxB0Gb@6d14f1ec-d21a-4faa-a486-79f59676f742-0def79b9-2214-4abf-8428-47cdc94627f9-68591fa4-9326-4089-a8be-83fa552333df-0",
+      "group": "68591fa4-9326-4089-a8be-83fa552333df",
+      "instructor": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+      "unit": "0def79b9-2214-4abf-8428-47cdc94627f9",
+      "day": "Thursday",
+      "time": "7:00am",
+      "room": "7e339db0-cb0b-43ef-862f-20e8c56dcb9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "ESa5kej@46fcd9ab-6105-4bb8-bfe9-691e24570490-f075f5d9-7a9f-4251-92f7-ff5d9864b68d-c2363c69-74a5-4a21-ae21-a784fe024f05-0",
+      "group": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+      "instructor": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+      "unit": "f075f5d9-7a9f-4251-92f7-ff5d9864b68d",
+      "day": "Tuesday",
+      "time": "12:00pm",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "iAhqoMK@8cf2816c-cebf-4157-b2b7-ab7a24577c00-8647c909-903b-43ab-a652-fb5282df599b-cc323960-3ec8-49b9-9995-b8285f5e209b-0",
+      "group": "cc323960-3ec8-49b9-9995-b8285f5e209b",
+      "instructor": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+      "unit": "8647c909-903b-43ab-a652-fb5282df599b",
+      "day": "Friday",
+      "time": "11:00am",
+      "room": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "mmNWDID@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-7db87841-f9a0-4643-9218-3ac9644d9716-0",
+      "group": "7db87841-f9a0-4643-9218-3ac9644d9716",
+      "instructor": "gu6bCA",
+      "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "day": "Thursday",
+      "time": "2:00pm",
+      "room": "d5113453-d9e3-46b2-8cd9-1f759923f5fe",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "4rOQLvz@9289b6af-902a-439e-ad09-1b9de024076f-523e7b4f-ee21-43e1-b7d0-fc07d54cee68-75704dcd-e1a7-40b6-a3f6-92a5ab30548f-0",
+      "group": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+      "instructor": "9289b6af-902a-439e-ad09-1b9de024076f",
+      "unit": "523e7b4f-ee21-43e1-b7d0-fc07d54cee68",
+      "day": "Tuesday",
+      "time": "2:00pm",
+      "room": "0e030fb2-94db-43cb-aad9-220f86ce1e1a",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "7c0uQeX@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-d92ac466-790c-4af7-85da-67ecd7683491-0",
+      "group": "d92ac466-790c-4af7-85da-67ecd7683491",
+      "instructor": "gu6bCA",
+      "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "day": "Wednesday",
+      "time": "7:00am",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "40hkSXR@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-4ddc0348-c939-44d0-9630-6c1896cb2958-d92ac466-790c-4af7-85da-67ecd7683491-0",
+      "group": "d92ac466-790c-4af7-85da-67ecd7683491",
+      "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "unit": "4ddc0348-c939-44d0-9630-6c1896cb2958",
+      "day": "Friday",
+      "time": "10:00am",
+      "room": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "H8PkdVh@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-b04c650c-d11b-42e4-8131-e3132eaf3a76\u0026\u0026iD7zKoN@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-2c043571-5a4c-4ec0-afe1-f4e64e761b28\u0026\u0026gq65GgQ@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-078bd9b0-233c-4f07-b27c-dcf169911965\u0026\u0026j8h9RXv@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-cc323960-3ec8-49b9-9995-b8285f5e209b\u0026\u00268xxroKL@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-4c4d6902-a547-4e43-ba7e-011e954305f0\u0026\u0026gFNSsuK@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-7db87841-f9a0-4643-9218-3ac9644d9716\u0026\u0026tRSKsBS@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-d92ac466-790c-4af7-85da-67ecd7683491\u0026\u0026p8v4wYs@eed27651-0da9-40b5-965f-d5eef7218177-7124b2cb-5448-4b18-a944-ebd7a285e03f-94bac470-7d0b-4d53-afe3-2c8f1553e3bf-0",
+      "group": "",
+      "instructor": "eed27651-0da9-40b5-965f-d5eef7218177",
+      "unit": "7124b2cb-5448-4b18-a944-ebd7a285e03f",
+      "day": "Monday",
+      "time": "3:00pm",
+      "room": "",
+      "online": true,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "5dGyGYf@578c3e61-b597-4b95-9cd3-a397d349f7b6-0feebdd6-16ee-446b-945d-d506fdbb41e8-d0ff3c26-da3a-4697-aa55-e9225a466ce1-0",
+      "group": "d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+      "instructor": "578c3e61-b597-4b95-9cd3-a397d349f7b6",
+      "unit": "0feebdd6-16ee-446b-945d-d506fdbb41e8",
+      "day": "Tuesday",
+      "time": "8:00am",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "R5gQLpq@46fcd9ab-6105-4bb8-bfe9-691e24570490-f075f5d9-7a9f-4251-92f7-ff5d9864b68d-0d36c58c-26ea-4802-ac7b-1e50a6719e9b-0",
+      "group": "0d36c58c-26ea-4802-ac7b-1e50a6719e9b",
+      "instructor": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+      "unit": "f075f5d9-7a9f-4251-92f7-ff5d9864b68d",
+      "day": "Friday",
+      "time": "3:00pm",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "YH5CKk9@76d56d23-38fa-46f9-8e4c-7b249dac4bae-04911e60-85e8-4de5-883c-e261fe71a33a-2c043571-5a4c-4ec0-afe1-f4e64e761b28-0",
+      "group": "2c043571-5a4c-4ec0-afe1-f4e64e761b28",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "04911e60-85e8-4de5-883c-e261fe71a33a",
+      "day": "Wednesday",
+      "time": "1:00pm",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "NKxztTo@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-cc323960-3ec8-49b9-9995-b8285f5e209b-0",
+      "group": "cc323960-3ec8-49b9-9995-b8285f5e209b",
+      "instructor": "gu6bCA",
+      "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "day": "Tuesday",
+      "time": "11:00am",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "AzH1nnZ@8cf2816c-cebf-4157-b2b7-ab7a24577c00-de9b1611-5af9-46a6-97d9-968ffb292d6c-3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea-0",
+      "group": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+      "instructor": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+      "unit": "de9b1611-5af9-46a6-97d9-968ffb292d6c",
+      "day": "Thursday",
+      "time": "8:00am",
+      "room": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "5fv3ihJ@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-7f87f2e7-b62d-4b86-9837-dccb97d25e61-4c4d6902-a547-4e43-ba7e-011e954305f0-0",
+      "group": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+      "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "unit": "7f87f2e7-b62d-4b86-9837-dccb97d25e61",
+      "day": "Tuesday",
+      "time": "8:00am",
+      "room": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "dDTDg5U@8f17db11-9043-4651-8e4e-c376e8777b50-a959bb81-03d1-4c50-a062-f35beb9014dc-7db87841-f9a0-4643-9218-3ac9644d9716-0",
+      "group": "7db87841-f9a0-4643-9218-3ac9644d9716",
+      "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "unit": "a959bb81-03d1-4c50-a062-f35beb9014dc",
+      "day": "Friday",
+      "time": "7:00am",
+      "room": "7e339db0-cb0b-43ef-862f-20e8c56dcb9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "Lnxnzpo@8f17db11-9043-4651-8e4e-c376e8777b50-b80d9761-72d3-48ea-a7ba-d9751cac453f-75704dcd-e1a7-40b6-a3f6-92a5ab30548f-0",
+      "group": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+      "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "unit": "b80d9761-72d3-48ea-a7ba-d9751cac453f",
+      "day": "Wednesday",
+      "time": "2:00pm",
+      "room": "7e339db0-cb0b-43ef-862f-20e8c56dcb9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "us8GL89@d44692c3-a634-43f0-8557-e8e343ac77ee-28a07655-430b-4fc7-965a-bba613884ebe-b04c650c-d11b-42e4-8131-e3132eaf3a76-0",
+      "group": "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+      "instructor": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+      "unit": "28a07655-430b-4fc7-965a-bba613884ebe",
+      "day": "Monday",
+      "time": "3:00pm",
+      "room": "ecac5ce3-5774-476f-b183-b0b22965240f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "zpQWhFB@fc77b31c-fb32-4c37-aa20-df3b8cdd6206-19dc8e4e-d76a-4f4e-b1f8-3631e3e5c1f6-c2363c69-74a5-4a21-ae21-a784fe024f05-0",
+      "group": "c2363c69-74a5-4a21-ae21-a784fe024f05",
+      "instructor": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+      "unit": "19dc8e4e-d76a-4f4e-b1f8-3631e3e5c1f6",
+      "day": "Monday",
+      "time": "3:00pm",
+      "room": "0d6d24fd-b74c-4f3d-82c9-07750852588d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "YZba5yf@0c8295f2-a475-4ca2-aae9-78881db64ae1-ae84c2b8-5a9e-48d1-a6a8-1b31df6fcd98-1b333ad7-714f-45e6-a453-2f16ba387975-0",
+      "group": "1b333ad7-714f-45e6-a453-2f16ba387975",
+      "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "unit": "ae84c2b8-5a9e-48d1-a6a8-1b31df6fcd98",
+      "day": "Wednesday",
+      "time": "8:00am",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "2WXSt6K@0c8295f2-a475-4ca2-aae9-78881db64ae1-2d52bb8b-5547-4174-ab75-79940d9311bc-1b333ad7-714f-45e6-a453-2f16ba387975-0",
+      "group": "1b333ad7-714f-45e6-a453-2f16ba387975",
+      "instructor": "0c8295f2-a475-4ca2-aae9-78881db64ae1",
+      "unit": "2d52bb8b-5547-4174-ab75-79940d9311bc",
+      "day": "Monday",
+      "time": "11:00am",
+      "room": "1d32c978-927a-45be-9fab-809a9237b0c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "NIx21mt@d7294898-e5f5-4154-a297-db62a63231f5-e8b3d848-f96b-481f-b584-64b3d76459a5-9199f1e0-3569-43a4-938b-5e69747dd9df-0",
+      "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+      "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "unit": "e8b3d848-f96b-481f-b584-64b3d76459a5",
+      "day": "Tuesday",
+      "time": "9:00am",
+      "room": "0d6d24fd-b74c-4f3d-82c9-07750852588d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "HpJiY7M@905583df-a803-4a71-875a-15a80eb993db-2272158e-aa8e-4a68-b836-387c476d125c-647d272b-b6cb-463a-a3e6-fc78ee799480-0",
+      "group": "647d272b-b6cb-463a-a3e6-fc78ee799480",
+      "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+      "unit": "2272158e-aa8e-4a68-b836-387c476d125c",
+      "day": "Wednesday",
+      "time": "9:00am",
+      "room": "ecac5ce3-5774-476f-b183-b0b22965240f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "QFS5Jzi@d0f75cab-8c9e-4bc2-b6a2-862e6d32f450-ed0e1b4e-a50c-4bcd-9025-2ea03316c191-1feb3e0d-78a5-47a1-bbc8-4a627974f239-0",
+      "group": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+      "instructor": "d0f75cab-8c9e-4bc2-b6a2-862e6d32f450",
+      "unit": "ed0e1b4e-a50c-4bcd-9025-2ea03316c191",
+      "day": "Wednesday",
+      "time": "3:00pm",
+      "room": "3d4096e6-b3a1-4bb1-8174-32c9ff55eb22",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "UECHRre@bXuuRE-e10f34b9-87e6-42d1-8ed4-f6499133059a-1feb3e0d-78a5-47a1-bbc8-4a627974f239-0",
+      "group": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+      "instructor": "bXuuRE",
+      "unit": "e10f34b9-87e6-42d1-8ed4-f6499133059a",
+      "day": "Friday",
+      "time": "3:00pm",
+      "room": "ecac5ce3-5774-476f-b183-b0b22965240f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "sc7gx1S@d7294898-e5f5-4154-a297-db62a63231f5-8a3e5b00-78fd-4b2c-8156-54221ef7453c-b1d9a4af-9524-47ee-8e86-0d575816297d-0",
+      "group": "b1d9a4af-9524-47ee-8e86-0d575816297d",
+      "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "unit": "8a3e5b00-78fd-4b2c-8156-54221ef7453c",
+      "day": "Friday",
+      "time": "10:00am",
+      "room": "3d4096e6-b3a1-4bb1-8174-32c9ff55eb22",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "BAZqLuO@738f513b-8a7b-404c-9b62-25bc8707e33b-2fb5ba4e-4e7d-47cf-ae73-7c165edd5570-cc323960-3ec8-49b9-9995-b8285f5e209b-0",
+      "group": "cc323960-3ec8-49b9-9995-b8285f5e209b",
+      "instructor": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+      "unit": "2fb5ba4e-4e7d-47cf-ae73-7c165edd5570",
+      "day": "Wednesday",
+      "time": "2:00pm",
+      "room": "0d6d24fd-b74c-4f3d-82c9-07750852588d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "hqkTkFg@8cf2816c-cebf-4157-b2b7-ab7a24577c00-10f5d19c-8c80-4e4f-b6de-fd4d1c496fad-1b333ad7-714f-45e6-a453-2f16ba387975-0",
+      "group": "1b333ad7-714f-45e6-a453-2f16ba387975",
+      "instructor": "8cf2816c-cebf-4157-b2b7-ab7a24577c00",
+      "unit": "10f5d19c-8c80-4e4f-b6de-fd4d1c496fad",
+      "day": "Thursday",
+      "time": "12:00pm",
+      "room": "ecac5ce3-5774-476f-b183-b0b22965240f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "T3k64MM@594ba91f-2054-4161-9cff-3e0b2f502910-cedc6b5e-b028-4e18-9d9c-42ada8d16760-3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea-0",
+      "group": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+      "instructor": "594ba91f-2054-4161-9cff-3e0b2f502910",
+      "unit": "cedc6b5e-b028-4e18-9d9c-42ada8d16760",
+      "day": "Friday",
+      "time": "12:00pm",
+      "room": "7e339db0-cb0b-43ef-862f-20e8c56dcb9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "8FhZr0N@27e2e54f-6613-455d-9377-174913aa2856-2f01d3ff-c019-4457-a302-2cd117371664-4c4d6902-a547-4e43-ba7e-011e954305f0-0",
+      "group": "4c4d6902-a547-4e43-ba7e-011e954305f0",
+      "instructor": "27e2e54f-6613-455d-9377-174913aa2856",
+      "unit": "2f01d3ff-c019-4457-a302-2cd117371664",
+      "day": "Tuesday",
+      "time": "3:00pm",
+      "room": "7e339db0-cb0b-43ef-862f-20e8c56dcb9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "Rtop760@XUiRVz-d47725b7-a804-423f-8b1d-3e82ae28618b-9adec9b5-e9dc-440b-a389-021b9f5ed0f9-0",
+      "group": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+      "instructor": "XUiRVz",
+      "unit": "d47725b7-a804-423f-8b1d-3e82ae28618b",
+      "day": "Thursday",
+      "time": "10:00am",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "6VKLFSq@XUiRVz-d47725b7-a804-423f-8b1d-3e82ae28618b-36ad9170-3d7c-4efa-b8f0-a70094ee3510-0",
+      "group": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+      "instructor": "XUiRVz",
+      "unit": "d47725b7-a804-423f-8b1d-3e82ae28618b",
+      "day": "Tuesday",
+      "time": "3:00pm",
+      "room": "0d6d24fd-b74c-4f3d-82c9-07750852588d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "hnqHcQZ@76d56d23-38fa-46f9-8e4c-7b249dac4bae-7311de5e-8fbd-43f4-a7d4-42c85a082c52-36ad9170-3d7c-4efa-b8f0-a70094ee3510-0",
+      "group": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "7311de5e-8fbd-43f4-a7d4-42c85a082c52",
+      "day": "Wednesday",
+      "time": "4:00pm",
+      "room": "fe374c4f-c02c-4aff-bbdc-5fec5fc13e9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "61Yo2nt@XUiRVz-2b343b15-ba87-4ca4-9341-2f7283ff87eb-9adec9b5-e9dc-440b-a389-021b9f5ed0f9-0",
+      "group": "9adec9b5-e9dc-440b-a389-021b9f5ed0f9",
+      "instructor": "XUiRVz",
+      "unit": "2b343b15-ba87-4ca4-9341-2f7283ff87eb",
+      "day": "Wednesday",
+      "time": "10:00am",
+      "room": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "EpjIM5G@9289b6af-902a-439e-ad09-1b9de024076f-523e7b4f-ee21-43e1-b7d0-fc07d54cee68-68591fa4-9326-4089-a8be-83fa552333df-0",
+      "group": "68591fa4-9326-4089-a8be-83fa552333df",
+      "instructor": "9289b6af-902a-439e-ad09-1b9de024076f",
+      "unit": "523e7b4f-ee21-43e1-b7d0-fc07d54cee68",
+      "day": "Friday",
+      "time": "8:00am",
+      "room": "0e030fb2-94db-43cb-aad9-220f86ce1e1a",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "COjgkT6@6d14f1ec-d21a-4faa-a486-79f59676f742-13ff4a9a-f2f1-458d-9c1b-26e4ca49efa2-94bac470-7d0b-4d53-afe3-2c8f1553e3bf-0",
+      "group": "94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+      "instructor": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+      "unit": "13ff4a9a-f2f1-458d-9c1b-26e4ca49efa2",
+      "day": "Tuesday",
+      "time": "2:00pm",
+      "room": "d5113453-d9e3-46b2-8cd9-1f759923f5fe",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "kkJ5UwP@8f17db11-9043-4651-8e4e-c376e8777b50-af0dd192-1c68-49d8-8242-45b96ee5586d-1feb3e0d-78a5-47a1-bbc8-4a627974f239-0",
+      "group": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+      "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "unit": "af0dd192-1c68-49d8-8242-45b96ee5586d",
+      "day": "Monday",
+      "time": "1:00pm",
+      "room": "3d4096e6-b3a1-4bb1-8174-32c9ff55eb22",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "tV0EkFy@905583df-a803-4a71-875a-15a80eb993db-27f15df5-142d-4a06-9bc9-0e3390b72ffd-1feb3e0d-78a5-47a1-bbc8-4a627974f239-0",
+      "group": "1feb3e0d-78a5-47a1-bbc8-4a627974f239",
+      "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+      "unit": "27f15df5-142d-4a06-9bc9-0e3390b72ffd",
+      "day": "Monday",
+      "time": "9:00am",
+      "room": "ecac5ce3-5774-476f-b183-b0b22965240f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "78w62ss@ac8f5a59-0ce3-4aa6-822e-b4a5e4116211-2ba6dbf6-39b7-4e32-ab57-e09ce1de74da-51d7dd76-2508-4222-8cc9-582b0849712f-0",
+      "group": "51d7dd76-2508-4222-8cc9-582b0849712f",
+      "instructor": "ac8f5a59-0ce3-4aa6-822e-b4a5e4116211",
+      "unit": "2ba6dbf6-39b7-4e32-ab57-e09ce1de74da",
+      "day": "Wednesday",
+      "time": "12:00pm",
+      "room": "1d32c978-927a-45be-9fab-809a9237b0c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "OsUGIpG@6d14f1ec-d21a-4faa-a486-79f59676f742-6fed0bcf-319f-4ab4-b999-d57f59799041-7db87841-f9a0-4643-9218-3ac9644d9716-0",
+      "group": "7db87841-f9a0-4643-9218-3ac9644d9716",
+      "instructor": "6d14f1ec-d21a-4faa-a486-79f59676f742",
+      "unit": "6fed0bcf-319f-4ab4-b999-d57f59799041",
+      "day": "Friday",
+      "time": "11:00am",
+      "room": "d5113453-d9e3-46b2-8cd9-1f759923f5fe",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "tkNOGcy@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-b04c650c-d11b-42e4-8131-e3132eaf3a76-0",
+      "group": "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+      "instructor": "gu6bCA",
+      "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "day": "Friday",
+      "time": "8:00am",
+      "room": "fe374c4f-c02c-4aff-bbdc-5fec5fc13e9f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "sz2pzWQ@46fcd9ab-6105-4bb8-bfe9-691e24570490-a88c4ebb-3aaf-4cd4-8901-87a1cf2175a2-d0ff3c26-da3a-4697-aa55-e9225a466ce1-0",
+      "group": "d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+      "instructor": "46fcd9ab-6105-4bb8-bfe9-691e24570490",
+      "unit": "a88c4ebb-3aaf-4cd4-8901-87a1cf2175a2",
+      "day": "Tuesday",
+      "time": "3:00pm",
+      "room": "1d32c978-927a-45be-9fab-809a9237b0c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "Gq0mwXo@XUiRVz-fe5bba8c-c28c-4b08-b814-d15b714b91c2-36ad9170-3d7c-4efa-b8f0-a70094ee3510-0",
+      "group": "36ad9170-3d7c-4efa-b8f0-a70094ee3510",
+      "instructor": "XUiRVz",
+      "unit": "fe5bba8c-c28c-4b08-b814-d15b714b91c2",
+      "day": "Tuesday",
+      "time": "11:00am",
+      "room": "0e030fb2-94db-43cb-aad9-220f86ce1e1a",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "XFgEakO@8f17db11-9043-4651-8e4e-c376e8777b50-a959bb81-03d1-4c50-a062-f35beb9014dc-d92ac466-790c-4af7-85da-67ecd7683491-0",
+      "group": "d92ac466-790c-4af7-85da-67ecd7683491",
+      "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "unit": "a959bb81-03d1-4c50-a062-f35beb9014dc",
+      "day": "Friday",
+      "time": "7:00am",
+      "room": "0d6d24fd-b74c-4f3d-82c9-07750852588d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "M3JRU6f@gu6bCA-d61e7655-1623-415c-9a6c-4077feae6250-94bac470-7d0b-4d53-afe3-2c8f1553e3bf-0",
+      "group": "94bac470-7d0b-4d53-afe3-2c8f1553e3bf",
+      "instructor": "gu6bCA",
+      "unit": "d61e7655-1623-415c-9a6c-4077feae6250",
+      "day": "Thursday",
+      "time": "8:00am",
+      "room": "6b592fde-54d1-4b85-b247-d031da57ed03",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "tvPpJvo@fc77b31c-fb32-4c37-aa20-df3b8cdd6206-b914908c-92ae-401b-89a6-1c58fb5fb193-078bd9b0-233c-4f07-b27c-dcf169911965-0",
+      "group": "078bd9b0-233c-4f07-b27c-dcf169911965",
+      "instructor": "fc77b31c-fb32-4c37-aa20-df3b8cdd6206",
+      "unit": "b914908c-92ae-401b-89a6-1c58fb5fb193",
+      "day": "Friday",
+      "time": "3:00pm",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "QfmnxKh@76d56d23-38fa-46f9-8e4c-7b249dac4bae-dd032243-fded-4a13-af35-d8f6766a9fb8-3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea-0",
+      "group": "3892f8ab-a7f2-4df9-afbd-3bbb1f9e71ea",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+      "day": "Friday",
+      "time": "9:00am",
+      "room": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "NWApYHT@738f513b-8a7b-404c-9b62-25bc8707e33b-b989c5cd-5277-484c-9e82-405c78a3ddf1-f5e4a927-f582-45fe-a3ae-616267a098f7-0",
+      "group": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+      "instructor": "738f513b-8a7b-404c-9b62-25bc8707e33b",
+      "unit": "b989c5cd-5277-484c-9e82-405c78a3ddf1",
+      "day": "Tuesday",
+      "time": "8:00am",
+      "room": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "66wiHz3@d7294898-e5f5-4154-a297-db62a63231f5-ffda8304-c743-4e08-b4de-5441ebd51dfb-b04c650c-d11b-42e4-8131-e3132eaf3a76-0",
+      "group": "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+      "instructor": "d7294898-e5f5-4154-a297-db62a63231f5",
+      "unit": "ffda8304-c743-4e08-b4de-5441ebd51dfb",
+      "day": "Wednesday",
+      "time": "1:00pm",
+      "room": "d6258227-f4c2-49fe-9fcd-2e2ce739f884",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "96s1K6c@8f17db11-9043-4651-8e4e-c376e8777b50-b80d9761-72d3-48ea-a7ba-d9751cac453f-68591fa4-9326-4089-a8be-83fa552333df-0",
+      "group": "68591fa4-9326-4089-a8be-83fa552333df",
+      "instructor": "8f17db11-9043-4651-8e4e-c376e8777b50",
+      "unit": "b80d9761-72d3-48ea-a7ba-d9751cac453f",
+      "day": "Tuesday",
+      "time": "7:00am",
+      "room": "ecac5ce3-5774-476f-b183-b0b22965240f",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "9gBxQem@69088895-33d9-43a5-a038-e12404a5affa-cdfab22c-a391-4c32-9f8d-bf394488f725-b04c650c-d11b-42e4-8131-e3132eaf3a76-0",
+      "group": "b04c650c-d11b-42e4-8131-e3132eaf3a76",
+      "instructor": "69088895-33d9-43a5-a038-e12404a5affa",
+      "unit": "cdfab22c-a391-4c32-9f8d-bf394488f725",
+      "day": "Tuesday",
+      "time": "9:00am",
+      "room": "3d4096e6-b3a1-4bb1-8174-32c9ff55eb22",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "DoT3zuA@d44692c3-a634-43f0-8557-e8e343ac77ee-28a07655-430b-4fc7-965a-bba613884ebe-078bd9b0-233c-4f07-b27c-dcf169911965-0",
+      "group": "078bd9b0-233c-4f07-b27c-dcf169911965",
+      "instructor": "d44692c3-a634-43f0-8557-e8e343ac77ee",
+      "unit": "28a07655-430b-4fc7-965a-bba613884ebe",
+      "day": "Wednesday",
+      "time": "7:00am",
+      "room": "2d855d99-3276-4ee9-8e11-21b6880df04e",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "uOztp7R@5556ebb1-51ad-47df-b488-099649ed2066-a8cd7a11-c476-422f-beab-447b9c07bc5d-9199f1e0-3569-43a4-938b-5e69747dd9df-0",
+      "group": "9199f1e0-3569-43a4-938b-5e69747dd9df",
+      "instructor": "5556ebb1-51ad-47df-b488-099649ed2066",
+      "unit": "a8cd7a11-c476-422f-beab-447b9c07bc5d",
+      "day": "Thursday",
+      "time": "10:00am",
+      "room": "0d6d24fd-b74c-4f3d-82c9-07750852588d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "m2XKtnQ@905583df-a803-4a71-875a-15a80eb993db-9ba43e05-7f47-4400-b36d-d92e53b165cd-7db87841-f9a0-4643-9218-3ac9644d9716-0",
+      "group": "7db87841-f9a0-4643-9218-3ac9644d9716",
+      "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+      "unit": "9ba43e05-7f47-4400-b36d-d92e53b165cd",
+      "day": "Tuesday",
+      "time": "10:00am",
+      "room": "1d32c978-927a-45be-9fab-809a9237b0c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "EXnUO0w@905583df-a803-4a71-875a-15a80eb993db-27f15df5-142d-4a06-9bc9-0e3390b72ffd-75704dcd-e1a7-40b6-a3f6-92a5ab30548f-0",
+      "group": "75704dcd-e1a7-40b6-a3f6-92a5ab30548f",
+      "instructor": "905583df-a803-4a71-875a-15a80eb993db",
+      "unit": "27f15df5-142d-4a06-9bc9-0e3390b72ffd",
+      "day": "Monday",
+      "time": "2:00pm",
+      "room": "a4612bb2-c098-45fe-871d-cc6a087616c4",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "S8ZhW4m@dab61dad-0192-477a-9986-9449fac05998-74c87be5-013d-4e38-a857-34e31ec37730-f5e4a927-f582-45fe-a3ae-616267a098f7-0",
+      "group": "f5e4a927-f582-45fe-a3ae-616267a098f7",
+      "instructor": "dab61dad-0192-477a-9986-9449fac05998",
+      "unit": "74c87be5-013d-4e38-a857-34e31ec37730",
+      "day": "Friday",
+      "time": "12:00pm",
+      "room": "500e22a1-bae3-418b-80db-e1d03869793d",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "rx0JxEN@76d56d23-38fa-46f9-8e4c-7b249dac4bae-dd032243-fded-4a13-af35-d8f6766a9fb8-d0ff3c26-da3a-4697-aa55-e9225a466ce1-0",
+      "group": "d0ff3c26-da3a-4697-aa55-e9225a466ce1",
+      "instructor": "76d56d23-38fa-46f9-8e4c-7b249dac4bae",
+      "unit": "dd032243-fded-4a13-af35-d8f6766a9fb8",
+      "day": "Wednesday",
+      "time": "9:00am",
+      "room": "7bbb2fba-f7b8-4711-aae8-1d9d3740cdc8",
+      "online": false,
+      "database_ids": {
+        "group": "",
+        "instructor": "",
+        "unit": "",
+        "room": ""
+      }
+    },
+    {
+      "identifier": "hTeOHzj@594ba91f-2054-4161-9cff-3e0b2f502910-980421dc-621f-48f9-ab9d-b97482ea17d5-cc323960-3ec8-49b9-9995-b8285f5e209b-0",
+      "group": "cc323960-3ec8-49b9-9995-b8285f5e209b",
+      "instructor": "594ba91f-2054-4161-9cff-3e0b2f502910",
+      "unit": "980421dc-621f-48f9-ab9d-b97482ea17d5",
+      "day": "Tuesday",
+      "time": "1:00pm",
+      "room": "ecac5ce3-5774-476f-b183-b0b22965240f",
       "online": false,
       "database_ids": {
         "group": "",
@@ -677,8 +2517,8 @@
   ],
   "stats": {
     "overall_score": 100,
-    "time_taken": 0.0021717,
-    "memory_usage_mb": 1.1740341186523438,
+    "time_taken": 0.1158157,
+    "memory_usage_mb": 2.8778762817382812,
     "solution_found": true
   }
 }

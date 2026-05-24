@@ -59,3 +59,9 @@ The engine returns a structured JSON object containing:
     - `time_taken`: Execution time in seconds.
     - `memory_usage_mb`: Peak heap memory allocation.
     - `solution_found`: Boolean indicating if a valid (clash-free) solution was achieved.
+
+## 
+The goal with any optimisation algorithm is to end up with a solution thats satisifies the
+constraints as much as possible and in order to have some level of satisfaction we need to
+rank our priorities, `constraints.md` provides a list of constraints to be saisfied,
+divided into hard and soft with clashes being hard constrainsts that must be met and soft constrainst that are negotiable.

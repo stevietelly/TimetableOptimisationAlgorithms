@@ -3,6 +3,7 @@ package solver
 import (
 	"context"
 	"fmt"
+	"geliana-go/pkg/evaluator"
 	"geliana-go/pkg/models"
 	"math"
 	"math/rand"
@@ -54,6 +55,8 @@ func (s *SimulatedAnnealingSolver) Solve(ctx context.Context, req *models.Reques
 	bestCost := currentCost
 
 	temp := s.InitialTemp
+	acceptedCount := 0
+	totalAttempted := 0
 
 	// 3. Main Loop
 	for i := 0; i < s.MaxIter && temp > s.MinTemp; i++ {
@@ -66,10 +69,12 @@ func (s *SimulatedAnnealingSolver) Solve(ctx context.Context, req *models.Reques
 		neighbor := s.getNeighbor(currentSolution)
 		neighborCost := s.calculateCost(neighbor)
 		
+		totalAttempted++
 		delta := neighborCost - currentCost
 		if delta < 0 || rand.Float64() < math.Exp(-delta/temp) {
 			currentSolution = neighbor
 			currentCost = neighborCost
+			acceptedCount++
 			
 			if currentCost < bestCost {
 				bestCost = currentCost
@@ -84,15 +89,18 @@ func (s *SimulatedAnnealingSolver) Solve(ctx context.Context, req *models.Reques
 
 		// Progress Report (throttled)
 		if tracker != nil && i%100 == 0 {
+			acceptanceRate := float64(acceptedCount) / float64(totalAttempted)
 			tracker.Update(ProgressReport{
 				CurrentStep: i + 1,
 				TotalSteps:  s.MaxIter,
 				StepLabel:   fmt.Sprintf("Iteration %d", i),
 				BestFitness: -bestCost,
 				Metrics: map[string]interface{}{
-					"best_cost":   bestCost,
-					"temp":        temp,
-					"iteration":   i,
+					"best_cost":       bestCost,
+					"current_cost":    currentCost,
+					"temperature":     temp,
+					"acceptance_rate": acceptanceRate,
+					"iteration":       i,
 				},
 				Trace: &models.TraceStep{
 					Type:  "iteration",
@@ -314,6 +322,7 @@ func (s *SimulatedAnnealingSolver) formatResponse(c Chromosome, runtime, cost fl
 				Time:        s.blocks[gene.BlockIdx].Start,
 				Room:        roomID,
 				Online:      item.Online,
+				Blocks:      item.Length,
 				DatabaseIDs: dbIDs,
 				TimetableID: item.LessonDef.TimetableID,
 			}
@@ -324,14 +333,55 @@ func (s *SimulatedAnnealingSolver) formatResponse(c Chromosome, runtime, cost fl
 		sessions = append(sessions, sess)
 	}
 
+	// Evaluate the solution using the constraint evaluator
+	periodTimes := make([]string, len(s.blocks))
+	for i, b := range s.blocks {
+		periodTimes[i] = b.Start
+	}
+
+	lessonSet := make(map[string]models.Lesson)
+	for _, item := range s.schedulableItems {
+		if item.LessonDef != nil {
+			lessonSet[item.LessonDef.Identifier] = *item.LessonDef
+		}
+	}
+	lessons := make([]models.Lesson, 0, len(lessonSet))
+	for _, l := range lessonSet {
+		lessons = append(lessons, l)
+	}
+
+	groups := make([]models.Group, 0, len(s.groupMap))
+	for _, g := range s.groupMap {
+		groups = append(groups, g)
+	}
+	units := make([]models.Unit, 0, len(s.unitMap))
+	for _, u := range s.unitMap {
+		units = append(units, u)
+	}
+	instructors := make([]models.Instructor, 0, len(s.instructorMap))
+	for _, inst := range s.instructorMap {
+		instructors = append(instructors, inst)
+	}
+
+	evalResult := evaluator.Evaluate(sessions, &evaluator.EvaluationParams{
+		Days:        s.days,
+		PeriodTimes: periodTimes,
+		Lessons:     lessons,
+		Rooms:       s.rooms,
+		Groups:      groups,
+		Instructors: instructors,
+		Units:       units,
+		Blocks:      s.blocks,
+	})
+
 	return &models.Response{
 		Error:    false,
 		Message:  fmt.Sprintf("Optimization completed with cost %.2f", cost),
 		Sessions: sessions,
 		Stats: models.OptimizationStats{
-			OverallScore:  math.Max(0, 100-(cost/10.0)), // Dummy score mapping
+			OverallScore:  evalResult.OverallScore,
 			TimeTaken:     runtime,
-			SolutionFound: cost < 1000, // Considered found if no hard clashes
+			SolutionFound: evalResult.HardScore >= 60,
 		},
 	}
 }

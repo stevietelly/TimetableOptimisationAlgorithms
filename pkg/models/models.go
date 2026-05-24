@@ -270,6 +270,7 @@ type Session struct {
 	Time        string            `json:"time"`
 	Room        string            `json:"room"`
 	Online      bool              `json:"online"`
+	Blocks      int               `json:"blocks,omitempty"` // consecutive blocks this session occupies
 	DatabaseIDs LessonDatabaseIDs `json:"database_ids"`
 	TimetableID string            `json:"timetable_id,omitempty"`
 }
