@@ -8,6 +8,7 @@ import (
 	"math"
 	"math/rand"
 	"sort"
+	"strings"
 	"sync"
 	"time"
 )
@@ -603,28 +604,111 @@ func (s *GeneticSolver) chromosomeToSessions(c Chromosome) []models.Session {
 		}
 
 		if sess, ok := merged[key]; ok {
-			if roomID != "" && sess.Room != roomID {
-				sess.Room += ", " + roomID
+			// Aggregate rooms
+			if roomID != "" && !strings.Contains(sess.Room, roomID) {
+				if sess.Room == "" {
+					sess.Room = roomID
+				} else {
+					sess.Room += ", " + roomID
+				}
 			}
+
+			// Aggregate Affected Entities
+			sess.AffectedGroups = mergeUnique(sess.AffectedGroups, item.AffectedGrps)
+			if item.Instructor != "" {
+				sess.AffectedInstructors = mergeUnique(sess.AffectedInstructors, []string{item.Instructor})
+			}
+
+			// Add to MultipleIDs to preserve mapping
+			if item.LessonDef.Multiple {
+				sess.MultipleIDs = append(sess.MultipleIDs, models.SubgroupID{
+					GroupID:        item.Group,
+					InstID:         item.Instructor,
+					UnitID:         item.Unit,
+					RoomID:         roomID,
+					AffectedGroups: item.AffectedGrps,
+				})
+			}
+
 			merged[key] = sess
 		} else {
 			dbIDs := item.LessonDef.DatabaseIDs
 			if !item.Online && gene.RoomIdx != -1 {
 				dbIDs.Room = s.rooms[gene.RoomIdx].DatabaseID
 			}
-			merged[key] = models.Session{
-				Identifier:  fmt.Sprintf("%s-%d", item.LessonID, item.DistIdx),
-				Group:       item.Group,
-				Instructor:  item.Instructor,
-				Unit:        item.Unit,
-				Day:         s.days[gene.DayIdx],
-				Time:        s.blocks[gene.BlockIdx].Start,
-				Room:        roomID,
-				Online:      item.Online,
-				Blocks:      item.Length,
-				DatabaseIDs: dbIDs,
-				TimetableID: item.LessonDef.TimetableID,
+
+			affectedGrps := make([]string, len(item.AffectedGrps))
+			copy(affectedGrps, item.AffectedGrps)
+
+			affectedInsts := []string{}
+			if item.Instructor != "" {
+				affectedInsts = []string{item.Instructor}
 			}
+
+			newSess := models.Session{
+				Identifier:          fmt.Sprintf("%s-%d", item.LessonID, item.DistIdx),
+				Group:               item.Group,
+				Instructor:          item.Instructor,
+				Unit:                item.Unit,
+				Day:                 s.days[gene.DayIdx],
+				Time:                s.blocks[gene.BlockIdx].Start,
+				Room:                roomID,
+				Online:              item.Online,
+				Blocks:              item.Length,
+				DatabaseIDs:         dbIDs,
+				TimetableID:         item.LessonDef.TimetableID,
+				AffectedGroups:      affectedGrps,
+				AffectedInstructors: affectedInsts,
+				Multiple:            item.LessonDef.Multiple,
+				Type:                item.LessonDef.Type,
+				Short:               item.LessonDef.Short,
+				Title:               item.LessonDef.Title,
+			}
+
+			// Populate Times array for multi-block support
+			for b := 0; b < item.Length; b++ {
+				blockIdx := gene.BlockIdx + b
+				if blockIdx < len(s.blocks) {
+					newSess.Times = append(newSess.Times, s.blocks[blockIdx].Start)
+				}
+			}
+
+			if item.LessonDef.Multiple {
+				if item.LessonDef.Type == "lesson-merge" {
+					// Expand all merged combinations immediately
+					for _, mid := range item.LessonDef.MultipleIDs {
+						newSess.MultipleIDs = append(newSess.MultipleIDs, models.SubgroupID{
+							GroupID:        mid.GroupID,
+							GroupDatabase:  mid.GroupDatabase,
+							InstID:         item.Instructor,
+							InstDatabase:   item.LessonDef.DatabaseIDs.Instructor,
+							UnitID:         item.Unit,
+							UnitDatabase:   item.LessonDef.DatabaseIDs.Unit,
+							RoomID:         roomID,
+							RoomDatabase:   dbIDs.Room,
+							Online:         item.Online,
+							AffectedGroups: []string{mid.GroupID},
+						})
+					}
+				} else {
+					// Initial combination for a subgroup
+					mid := item.LessonDef.MultipleIDs[item.MidIdx]
+					newSess.MultipleIDs = []models.SubgroupID{{
+						GroupID:        mid.GroupID,
+						GroupDatabase:  mid.GroupDatabase,
+						InstID:         mid.InstID,
+						InstDatabase:   mid.InstDatabase,
+						UnitID:         mid.UnitID,
+						UnitDatabase:   mid.UnitDatabase,
+						RoomID:         roomID,
+						RoomDatabase:   dbIDs.Room,
+						Online:         item.Online,
+						AffectedGroups: mid.AffectedGroups,
+					}}
+				}
+			}
+
+			merged[key] = newSess
 		}
 	}
 
@@ -633,6 +717,26 @@ func (s *GeneticSolver) chromosomeToSessions(c Chromosome) []models.Session {
 		sessions = append(sessions, sess)
 	}
 	return sessions
+}
+
+func mergeUnique(a, b []string) []string {
+	m := make(map[string]bool)
+	for _, x := range a {
+		if x != "" {
+			m[x] = true
+		}
+	}
+	for _, x := range b {
+		if x != "" {
+			m[x] = true
+		}
+	}
+	res := make([]string, 0, len(m))
+	for x := range m {
+		res = append(res, x)
+	}
+	sort.Strings(res)
+	return res
 }
 
 // ---------------------------------------------------------------------------
@@ -848,6 +952,10 @@ func (s *GeneticSolver) preprocess(req *models.Request) {
 
 			case "subgroup", "subgroup-lesson-merge":
 				for midIdx, m := range l.MultipleIDs {
+					affected := m.AffectedGroups
+					if len(affected) == 0 && m.GroupID != "" {
+						affected = []string{m.GroupID}
+					}
 					s.schedulableItems = append(s.schedulableItems, SchedulableItem{
 						LessonID:     l.Identifier,
 						DistIdx:      distIdx,
@@ -857,7 +965,7 @@ func (s *GeneticSolver) preprocess(req *models.Request) {
 						Group:        m.GroupID,
 						Unit:         m.UnitID,
 						Online:       l.Online,
-						AffectedGrps: m.AffectedGroups,
+						AffectedGrps: affected,
 						LessonDef:    &l,
 					})
 				}

@@ -152,12 +152,18 @@ type LessonDatabaseIDs struct {
 
 type SubgroupID struct {
 	GroupID        string `json:"group_id"`
+	GroupDatabase  string `json:"group_database,omitempty"`
 	InstID         string `json:"inst_id"`
+	InstDatabase   string `json:"inst_database,omitempty"`
 	UnitID         string `json:"unit_id"`
+	UnitDatabase   string `json:"unit_database,omitempty"`
 	RoomID         string `json:"room_id"`
+	RoomDatabase   string `json:"room_database,omitempty"`
 	DivisionID     string `json:"division_id,omitempty"`
 	SubDivisionID  string `json:"sub_division_id,omitempty"`
+	Online         bool   `json:"online"`
 	AffectedGroups []string `json:"affected_groups,omitempty"`
+	AffectedGroupDatabases []string `json:"affected_group_databases,omitempty"`
 }
 
 // Room represents a physical location for lessons.
@@ -167,6 +173,7 @@ type Room struct {
 	Capacity    int          `json:"capacity"`
 	Color       string       `json:"color"`
 	Preferences []Preference `json:"preferences"`
+	DefaultRoom string       `json:"default_room,omitempty"` // Added for completeness
 	DatabaseID  string       `json:"database_id"`
 }
 
@@ -188,6 +195,7 @@ type Group struct {
 	Total       int          `json:"total"`
 	Color       string       `json:"color"`
 	Preferences []Preference `json:"preferences"`
+	DefaultRoom string       `json:"default_room,omitempty"`
 	Units       interface{}  `json:"units"` // interface{} to support []string or []GroupUnit
 	DatabaseID  string       `json:"database_id"`
 }
@@ -207,6 +215,7 @@ type Unit struct {
 	Color       string       `json:"color"`
 	Online      bool         `json:"online"`
 	Preferences []Preference `json:"preferences"`
+	DefaultRoom string       `json:"default_room,omitempty"`
 	Instructors []string     `json:"instructors"` // Added for legacy support
 	DatabaseID  string       `json:"database_id"`
 }
@@ -268,9 +277,20 @@ type Session struct {
 	Unit        string            `json:"unit"`
 	Day         string            `json:"day"`
 	Time        string            `json:"time"`
+	Times       []string          `json:"times,omitempty"`
 	Room        string            `json:"room"`
 	Online      bool              `json:"online"`
 	Blocks      int               `json:"blocks,omitempty"` // consecutive blocks this session occupies
+	
+	// Multi-entity support for merged lessons and subgroups
+	Multiple            bool           `json:"multiple"`
+	Type                string         `json:"type"` 
+	MultipleIDs         []SubgroupID   `json:"multiple_ids,omitempty"`
+	Short               string         `json:"short"`
+	Title               string         `json:"title"`
+	AffectedGroups      []string       `json:"affected_groups,omitempty"`
+	AffectedInstructors []string       `json:"affected_instructors,omitempty"`
+
 	DatabaseIDs LessonDatabaseIDs `json:"database_ids"`
 	TimetableID string            `json:"timetable_id,omitempty"`
 }

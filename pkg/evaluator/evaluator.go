@@ -149,13 +149,26 @@ func evaluateClashes(sessions []models.Session) (float64, int, []ConstraintViola
 
 		sr := sessionRange{s.Identifier, startBlock, endBlock}
 
-		if s.Group != "" {
-			key := bucketKey{s.Day, s.Group}
-			groupBuckets[key] = append(groupBuckets[key], sr)
+		grps := s.AffectedGroups
+		if len(grps) == 0 && s.Group != "" {
+			grps = []string{s.Group}
 		}
-		if s.Instructor != "" {
-			key := bucketKey{s.Day, s.Instructor}
-			instrBuckets[key] = append(instrBuckets[key], sr)
+		for _, g := range grps {
+			if g != "" {
+				key := bucketKey{s.Day, g}
+				groupBuckets[key] = append(groupBuckets[key], sr)
+			}
+		}
+
+		insts := s.AffectedInstructors
+		if len(insts) == 0 && s.Instructor != "" {
+			insts = []string{s.Instructor}
+		}
+		for _, inst := range insts {
+			if inst != "" {
+				key := bucketKey{s.Day, inst}
+				instrBuckets[key] = append(instrBuckets[key], sr)
+			}
 		}
 		if !s.Online && s.Room != "" {
 			rooms := strings.Split(s.Room, ",")
@@ -263,23 +276,37 @@ func evaluatePreferences(sessions []models.Session, params *EvaluationParams) (f
 			name  string
 		}{}
 
-		if g, ok := groupMap[s.Group]; ok {
-			entities = append(entities, struct {
-				prefs []models.Preference
-				name  string
-			}{g.Preferences, "group:" + s.Group})
+		grps := s.AffectedGroups
+		if len(grps) == 0 && s.Group != "" {
+			grps = []string{s.Group}
 		}
+		for _, gID := range grps {
+			if g, ok := groupMap[gID]; ok {
+				entities = append(entities, struct {
+					prefs []models.Preference
+					name  string
+				}{g.Preferences, "group:" + gID})
+			}
+		}
+
 		if u, ok := unitMap[s.Unit]; ok {
 			entities = append(entities, struct {
 				prefs []models.Preference
 				name  string
 			}{u.Preferences, "unit:" + s.Unit})
 		}
-		if i, ok := instrMap[s.Instructor]; ok {
-			entities = append(entities, struct {
-				prefs []models.Preference
-				name  string
-			}{i.Preferences, "instructor:" + s.Instructor})
+
+		insts := s.AffectedInstructors
+		if len(insts) == 0 && s.Instructor != "" {
+			insts = []string{s.Instructor}
+		}
+		for _, iID := range insts {
+			if i, ok := instrMap[iID]; ok {
+				entities = append(entities, struct {
+					prefs []models.Preference
+					name  string
+				}{i.Preferences, "instructor:" + iID})
+			}
 		}
 
 		for _, ent := range entities {
@@ -519,6 +546,16 @@ func evaluateDefaultRooms(sessions []models.Session, params *EvaluationParams) (
 		lessonByGroupUnit[key] = l
 	}
 
+	groupMap := make(map[string]models.Group)
+	for _, g := range params.Groups {
+		groupMap[g.ID] = g
+	}
+
+	unitMap := make(map[string]models.Unit)
+	for _, u := range params.Units {
+		unitMap[u.ID] = u
+	}
+
 	satisfied := 0
 	totalWithPref := 0
 
@@ -529,10 +566,35 @@ func evaluateDefaultRooms(sessions []models.Session, params *EvaluationParams) (
 
 		preferred := ""
 
-		// Check lesson default_room (matched by group+unit)
-		lessonKey := s.Group + "|" + s.Unit
-		if l, ok := lessonByGroupUnit[lessonKey]; ok && l.DefaultRoom != "" {
-			preferred = l.DefaultRoom
+		grps := s.AffectedGroups
+		if len(grps) == 0 && s.Group != "" {
+			grps = []string{s.Group}
+		}
+
+		// 1. Lesson's default_room (matched by affected_group + unit)
+		for _, gID := range grps {
+			lessonKey := gID + "|" + s.Unit
+			if l, ok := lessonByGroupUnit[lessonKey]; ok && l.DefaultRoom != "" {
+				preferred = l.DefaultRoom
+				break
+			}
+		}
+
+		// 2. Unit's default_room
+		if preferred == "" {
+			if u, ok := unitMap[s.Unit]; ok && u.DefaultRoom != "" {
+				preferred = u.DefaultRoom
+			}
+		}
+
+		// 3. Group's default_room
+		if preferred == "" {
+			for _, gID := range grps {
+				if g, ok := groupMap[gID]; ok && g.DefaultRoom != "" {
+					preferred = g.DefaultRoom
+					break
+				}
+			}
 		}
 
 		if preferred == "" {
