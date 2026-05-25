@@ -48,6 +48,19 @@ The engine exclusively uses the **Lesson-Based Format**. If a legacy format (uni
 
 See `PAYLOAD_FORMAT_SPECIFICATION.md` in the root directory for the full schema.
 
+## Advanced Scheduling & Lesson Types
+
+The Go Engine supports complex academic scheduling scenarios through three primary lesson types:
+
+| Type | Structure | Use Case | Multi-Entity Logic |
+| :--- | :--- | :--- | :--- |
+| **Regular** | 1 Unit + 1 Instructor + 1 Group | Standard K-12 lessons | N/A |
+| **Lesson-Merge** | 1 Unit + 1 Instructor + N Groups | Combined classes / Lectures | Schedules one slot; blocks all involved student groups. |
+| **Subgroup** | N combinations of (Unit + Inst) | University Electives | Synchronizes multiple divisions to the same time; different instructors/units per division. |
+
+### Complex Session Output
+For `subgroup` and `lesson-merge` types, the engine generates **expanded sessions** containing a `multiple_ids` array. This preserves the mapping of which instructor taught which group in which room, ensuring full compatibility with the Geliana frontend's "Session Details" view.
+
 ## Output Format
 
 The engine returns a structured JSON object containing:

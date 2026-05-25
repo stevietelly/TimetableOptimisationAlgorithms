@@ -32,8 +32,8 @@ This project is a high-performance, dependency-free Go implementation of the Gel
 
 ### 1. Genetic Solver (`-a genetic`)
 A robust two-phase stochastic solver.
-- **Phase 1**: Focuses exclusively on repairing hard clashes (Group, Instructor, Room) using targeted greedy placement.
-- **Phase 2**: Optimizes soft constraints (Preferences, Distribution) using crossover, selection, and mutation.
+- **Phase 1**: Focuses exclusively on repairing hard clashes (Group, Instructor, Room). For **subgroups**, it enforces slot-synchronization using interval-based overlap detection.
+- **Phase 2**: Optimizes soft constraints (Preferences, Distribution). Multi-entity lessons (merges) are scored as a single unit but validated against all student group schedules.
 - **Concurrency**: Parallelizes fitness evaluation across all CPU cores using goroutines.
 
 ### 2. Simulated Annealing (`-a annealing`)
@@ -48,10 +48,15 @@ Total Score = `(Hard * 0.60) + (Preferences * 0.20) + (Distribution * 0.10) + (D
 
 | Category | Weight | Description |
 | :--- | :--- | :--- |
-| **Hard** | 60% | No overlapping sessions for the same Group, Instructor, or Room. |
-| **Preferences** | 20% | Respects `ONLY`, `EXCEPT`, `BEFORE`, `AFTER` constraints for Days, Times, Rooms, Periods, and Breaks. |
+| **Hard** | 60% | No overlaps for Groups, Instructors, or Rooms. Correctly handles `AffectedGroups` and `AffectedInstructors` for complex lessons. |
+| **Preferences** | 20% | Respects `ONLY`, `EXCEPT`, `BEFORE`, `AFTER` for all involved resources in a session. |
 | **Distribution** | 10% | Matches the desired number of lessons per block/day. |
-| **Default Room**| 10% | Prefers assigned rooms for specific Groups or Units. |
+| **Default Room**| 10% | Prefers assigned rooms. In merges, multiple rooms may be assigned via comma-separated identifiers. |
+
+## Advanced Data Handling
+- **Subgroup Sync**: The engine guarantees that all subdivisions of a subgroup lesson (e.g., Physics, French, and Art electives) are scheduled at the exact same time and day.
+- **Expansion Protocol**: The solver automatically expands `lesson-merge` definitions into full `multiple_ids` arrays in the output, ensuring the frontend can display every student group involved.
+- **Online Persistence**: The `online: true` status is preserved at both the session level and for every individual resource combination.
 
 ## Development Conventions
 

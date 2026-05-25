@@ -19,7 +19,12 @@ This document provides specialized instructions for AI agents maintaining or ext
 - Use structured JSON error reporting via `reportError` in `main.go`.
 - Return specific error codes (e.g., `INFEASIBLE`, `TIMEOUT`, `INVALID_INPUT`) to assist caller logic.
 
-### 2. Performance & Concurrency
+### 2. Complex Lesson Mandates
+- **Subgroup Synchronization**: Any new algorithm or mutation MUST enforce that all `SchedulableItem`s sharing the same `LessonID` and `DistIdx` (subgroups) remain locked to the same Day and Block.
+- **Output Expansion**: Output transformations MUST expand `lesson-merge` and `subgroup` internal combinations into the `multiple_ids` array. Do not return flat sessions for complex types.
+- **Online Tagging**: Ensure the `online` boolean is propagated to both the session root and every `multiple_ids` entry.
+
+### 3. Performance & Concurrency
 - Prefer goroutines for embarrassingly parallel tasks like GA fitness calculation.
 - Avoid global state; encapsulate solver parameters within their respective structs.
 - Use `runtime.ReadMemStats` for memory tracking.
