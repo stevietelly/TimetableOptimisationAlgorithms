@@ -1,0 +1,15 @@
+# Compiled executable and library files
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.o
+*.obj
+
+# Intermediate build and output files
+*.out
+*.app
+*.ilk
+*.exp
+*.pdb
