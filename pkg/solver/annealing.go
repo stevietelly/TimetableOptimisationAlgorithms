@@ -10,378 +10,309 @@ import (
 	"time"
 )
 
-// SimulatedAnnealingSolver implements Simulated Annealing for timetable optimization.
+// SimulatedAnnealingSolver implements Simulated Annealing for timetable
+// optimisation. Key design decisions:
+//
+//   - Smart greedy initialisation (same logic as GeneticSolver) so the
+//     starting solution is already 60–80% clash-free.
+//   - Two-mode neighbour generation: targeted (move a clashing gene) and
+//     random (escape local optima). Ratio shifts as temperature drops.
+//   - Full constraint evaluator used for scoring so SA optimises the same
+//     objective as the GA — preferences, distribution, and rooms included.
+//   - Adaptive reheating: if acceptance rate drops below a threshold the
+//     temperature is bumped back up, preventing premature freezing.
+//   - Shared helpers (preprocess, chromosomeToSessions, buildEvalParams)
+//     delegated to a GeneticSolver instance to avoid duplication.
 type SimulatedAnnealingSolver struct {
+	// Cooling schedule parameters.
 	InitialTemp float64
 	CoolingRate float64
 	MinTemp     float64
 	MaxIter     int
-	
-	schedulableItems []SchedulableItem
-	rooms            []models.Room
-	days             []string
-	blocks           []models.Block
-	
-	roomMap       map[string]int
-	unitMap       map[string]models.Unit
-	instructorMap map[string]models.Instructor
-	groupMap      map[string]models.Group
+
+	// Reheating: if acceptance rate over the last reheatWindow iterations
+	// falls below reheatThreshold, temperature is multiplied by reheatFactor.
+	reheatWindow    int
+	reheatThreshold float64
+	reheatFactor    float64
+
+	// Shared state — populated by preprocess via an embedded GeneticSolver.
+	gs *GeneticSolver
 }
 
 func NewSimulatedAnnealingSolver(iter int) *SimulatedAnnealingSolver {
 	return &SimulatedAnnealingSolver{
-		InitialTemp: 1000.0,
-		CoolingRate: 0.995,
-		MinTemp:     0.1,
-		MaxIter:     iter,
+		InitialTemp:     1000.0,
+		CoolingRate:     0.995,
+		MinTemp:         0.1,
+		MaxIter:         iter,
+		reheatWindow:    200,
+		reheatThreshold: 0.02,  // reheat if fewer than 2% of moves accepted
+		reheatFactor:    2.0,
 	}
 }
 
-func (s *SimulatedAnnealingSolver) Solve(ctx context.Context, req *models.Request, tracker ProgressTracker) (*models.Response, error) {
+// ---------------------------------------------------------------------------
+// Entry point
+// ---------------------------------------------------------------------------
+
+func (s *SimulatedAnnealingSolver) Solve(
+	ctx context.Context,
+	req *models.Request,
+	tracker ProgressTracker,
+) (*models.Response, error) {
 	startTime := time.Now()
-	
-	// 1. Preprocessing (reuse logic or refactor to shared helper)
-	s.preprocess(req)
-	if len(s.schedulableItems) == 0 {
+
+	// Delegate all preprocessing to GeneticSolver so nothing is duplicated.
+	s.gs = NewGeneticSolver(1, 1) // population/gen params unused here
+	s.gs.preprocess(req)
+	s.gs.buildEvalParams()
+
+	if len(s.gs.schedulableItems) == 0 {
 		return nil, fmt.Errorf("no schedulable items found")
 	}
 
-	// 2. Initial Solution
-	currentSolution := s.initializeSolution()
-	currentCost := s.calculateCost(currentSolution)
-	
-	bestSolution := make(Chromosome, len(currentSolution))
-	copy(bestSolution, currentSolution)
-	bestCost := currentCost
+	// --- Phase 0: smart greedy initialisation ---
+	// Uses the same bestPlacement logic as GeneticSolver.initializeSmart so
+	// the starting solution is already mostly conflict-free.
+	current := s.gs.initializeSmart()
+	currentScore := s.fullScore(current)
+
+	best := make(Chromosome, len(current))
+	copy(best, current)
+	bestScore := currentScore
 
 	temp := s.InitialTemp
-	acceptedCount := 0
-	totalAttempted := 0
 
-	// 3. Main Loop
-	for i := 0; i < s.MaxIter && temp > s.MinTemp; i++ {
+	// Rolling window for adaptive reheating.
+	recentAccepted := 0
+	recentAttempted := 0
+
+	for iter := 0; iter < s.MaxIter && temp > s.MinTemp; iter++ {
 		select {
 		case <-ctx.Done():
 			return nil, ctx.Err()
 		default:
 		}
 
-		neighbor := s.getNeighbor(currentSolution)
-		neighborCost := s.calculateCost(neighbor)
-		
-		totalAttempted++
-		delta := neighborCost - currentCost
-		if delta < 0 || rand.Float64() < math.Exp(-delta/temp) {
-			currentSolution = neighbor
-			currentCost = neighborCost
-			acceptedCount++
-			
-			if currentCost < bestCost {
-				bestCost = currentCost
-				copy(bestSolution, currentSolution)
-				if bestCost == 0 {
-					break
-				}
+		// --- Generate neighbour ---
+		// At high temperature: explore randomly (escape basins).
+		// At low temperature: target clashing genes (exploit local structure).
+		targetedProb := 1.0 - (temp / s.InitialTemp) // 0 → 1 as temp cools
+		var neighbour Chromosome
+		if rand.Float64() < targetedProb {
+			neighbour = s.targetedNeighbour(current)
+		} else {
+			neighbour = s.randomNeighbour(current)
+		}
+
+		neighbourScore := s.fullScore(neighbour)
+
+		// --- Acceptance ---
+		// SA accepts improvements always; accepts degradations with
+		// probability exp(Δ/T). Score is 0–100 (higher = better), so
+		// delta is positive when the neighbour is better.
+		delta := neighbourScore - currentScore
+		recentAttempted++
+
+		if delta > 0 || rand.Float64() < math.Exp(delta/temp) {
+			current = neighbour
+			currentScore = neighbourScore
+			recentAccepted++
+
+			if currentScore > bestScore {
+				bestScore = currentScore
+				copy(best, current)
 			}
 		}
 
+		// --- Cool ---
 		temp *= s.CoolingRate
 
-		// Progress Report (throttled)
-		if tracker != nil && i%100 == 0 {
-			acceptanceRate := float64(acceptedCount) / float64(totalAttempted)
+		// --- Adaptive reheating ---
+		if recentAttempted >= s.reheatWindow {
+			rate := float64(recentAccepted) / float64(recentAttempted)
+			if rate < s.reheatThreshold && temp > s.MinTemp*10 {
+				temp = math.Min(temp*s.reheatFactor, s.InitialTemp*0.5)
+			}
+			recentAccepted = 0
+			recentAttempted = 0
+		}
+
+		// --- Progress report (throttled to every 100 iterations) ---
+		if tracker != nil && iter%100 == 0 {
+			acceptanceRate := 0.0
+			if recentAttempted > 0 {
+				acceptanceRate = float64(recentAccepted) / float64(recentAttempted)
+			}
 			tracker.Update(ProgressReport{
-				CurrentStep: i + 1,
+				CurrentStep: iter + 1,
 				TotalSteps:  s.MaxIter,
-				StepLabel:   fmt.Sprintf("Iteration %d", i),
-				BestFitness: -bestCost,
+				StepLabel:   fmt.Sprintf("Iteration %d", iter+1),
+				BestFitness: bestScore,
 				Metrics: map[string]interface{}{
-					"best_cost":       bestCost,
-					"current_cost":    currentCost,
+					"best_score":      bestScore,
+					"current_score":   currentScore,
 					"temperature":     temp,
 					"acceptance_rate": acceptanceRate,
-					"iteration":       i,
+					"iteration":       iter,
 				},
 				Trace: &models.TraceStep{
 					Type:  "iteration",
-					Label: fmt.Sprintf("Iteration %d", i),
-					Score: -bestCost,
+					Label: fmt.Sprintf("Iteration %d", iter+1),
+					Score: bestScore,
 				},
 			})
 		}
+
+		// Perfect solution — no point continuing.
+		if bestScore >= 99.999 {
+			break
+		}
 	}
 
-	runtime := time.Since(startTime).Seconds()
-	if bestCost > 0 && ctx.Err() != nil {
-		return nil, ctx.Err()
-	}
-
-	// 4. Output Generation
-	return s.formatResponse(bestSolution, runtime, bestCost), nil
+	return s.formatResponse(best, time.Since(startTime).Seconds()), nil
 }
 
-// Preprocess logic (Ported from GA, should ideally be shared)
-func (s *SimulatedAnnealingSolver) preprocess(req *models.Request) {
-	s.rooms = req.Rooms
-	s.days = req.Days
-	s.blocks = req.Blocks
-	
-	s.roomMap = make(map[string]int)
-	for i, r := range s.rooms {
-		s.roomMap[r.ID] = i
-	}
-	
-	s.unitMap = make(map[string]models.Unit)
-	for _, u := range req.Units {
-		s.unitMap[u.ID] = u
-	}
-	
-	s.instructorMap = make(map[string]models.Instructor)
-	for _, i := range req.Instructors {
-		s.instructorMap[i.ID] = i
-	}
-	
-	s.groupMap = make(map[string]models.Group)
-	for _, g := range req.Groups {
-		s.groupMap[g.ID] = g
-	}
+// ---------------------------------------------------------------------------
+// Scoring
+// ---------------------------------------------------------------------------
 
-	s.schedulableItems = nil
-	for _, lesson := range req.Lessons {
-		l := lesson
-		for distIdx, count := range l.Distribution {
-			if count == 0 {
-				continue
-			}
-			
-			// Same flattening logic as GA
-			if l.Type == "regular" {
-				s.schedulableItems = append(s.schedulableItems, SchedulableItem{
-					LessonID: l.Identifier, DistIdx: distIdx, Length: count,
-					Instructor: l.Instructor, Group: l.Group, Unit: l.Unit,
-					Online: l.Online, AffectedGrps: []string{l.Group}, LessonDef: &l,
-				})
-			} else if l.Type == "lesson-merge" {
-				var affected []string
-				for _, m := range l.MultipleIDs {
-					affected = append(affected, m.GroupID)
-				}
-				s.schedulableItems = append(s.schedulableItems, SchedulableItem{
-					LessonID: l.Identifier, DistIdx: distIdx, Length: count,
-					Instructor: l.Instructor, Group: "", Unit: l.Unit,
-					Online: l.Online, AffectedGrps: affected, LessonDef: &l,
-				})
-			} else if l.Type == "subgroup" || l.Type == "subgroup-lesson-merge" {
-				for midIdx, m := range l.MultipleIDs {
-					s.schedulableItems = append(s.schedulableItems, SchedulableItem{
-						LessonID: l.Identifier, DistIdx: distIdx, MidIdx: midIdx, Length: count,
-						Instructor: m.InstID, Group: m.GroupID, Unit: m.UnitID,
-						Online: l.Online, AffectedGrps: m.AffectedGroups, LessonDef: &l,
-					})
-				}
-			}
-		}
-	}
+// fullScore converts a chromosome to sessions and runs the full constraint
+// evaluator, returning the overall score (0–100, higher is better).
+// This ensures SA optimises the exact same objective as the GA.
+func (s *SimulatedAnnealingSolver) fullScore(c Chromosome) float64 {
+	sessions := s.gs.chromosomeToSessions(c)
+	result := evaluator.Evaluate(sessions, s.gs.evalParams)
+	return result.OverallScore
 }
 
-func (s *SimulatedAnnealingSolver) initializeSolution() Chromosome {
-	sol := make(Chromosome, len(s.schedulableItems))
-	for i, item := range s.schedulableItems {
-		dayIdx := rand.Intn(len(s.days))
-		maxStart := len(s.blocks) - item.Length
-		blockIdx := 0
-		if maxStart > 0 {
-			blockIdx = rand.Intn(maxStart + 1)
-		}
-		roomIdx := -1
-		if !item.Online && len(s.rooms) > 0 {
-			roomIdx = rand.Intn(len(s.rooms))
-		}
-		sol[i] = Gene{DayIdx: dayIdx, BlockIdx: blockIdx, RoomIdx: roomIdx}
+// ---------------------------------------------------------------------------
+// Neighbour generation
+// ---------------------------------------------------------------------------
+
+// targetedNeighbour finds genes involved in clashes and moves one of them
+// to a better slot using greedy placement. Falls back to randomNeighbour
+// if no clashes are detected (solution is already clash-free).
+func (s *SimulatedAnnealingSolver) targetedNeighbour(current Chromosome) Chromosome {
+	clashing := s.gs.findClashingGenes(current)
+
+	if len(clashing) == 0 {
+		// No hard clashes — perturb a preference or distribution violator
+		// by picking a random gene and moving it to a greedily chosen slot.
+		return s.randomNeighbour(current)
 	}
-	return sol
-}
 
-func (s *SimulatedAnnealingSolver) calculateCost(sol Chromosome) float64 {
-	// Reusing GA fitness logic but returning positive penalty
-	penalty := 0.0
-	
-	type slot struct{ day, start, end int }
-	instSchedules := make(map[string][]slot)
-	roomSchedules := make(map[int][]slot)
-	groupSchedules := make(map[string][]slot)
-	syncMap := make(map[string]slot)
+	// Collect clashing indices and pick one at random.
+	indices := make([]int, 0, len(clashing))
+	for idx := range clashing {
+		indices = append(indices, idx)
+	}
+	pick := indices[rand.Intn(len(indices))]
 
-	for i, gene := range sol {
-		item := s.schedulableItems[i]
-		endBlock := gene.BlockIdx + item.Length
-		
-		syncKey := fmt.Sprintf("%s_%d", item.LessonID, item.DistIdx)
-		if item.LessonDef.Type == "subgroup" || item.LessonDef.Type == "subgroup-lesson-merge" {
-			if target, ok := syncMap[syncKey]; ok {
-				if gene.DayIdx != target.day || gene.BlockIdx != target.start {
-					penalty += 5000
-				}
-			} else {
-				syncMap[syncKey] = slot{gene.DayIdx, gene.BlockIdx, endBlock}
-			}
-		}
+	neighbour := make(Chromosome, len(current))
+	copy(neighbour, current)
 
-		for _, sc := range instSchedules[item.Instructor] {
-			if sc.day == gene.DayIdx && max(gene.BlockIdx, sc.start) < min(endBlock, sc.end) {
-				penalty += 1000
-			}
-		}
-		instSchedules[item.Instructor] = append(instSchedules[item.Instructor], slot{gene.DayIdx, gene.BlockIdx, endBlock})
-
-		if !item.Online && gene.RoomIdx != -1 {
-			for _, sc := range roomSchedules[gene.RoomIdx] {
-				if sc.day == gene.DayIdx && max(gene.BlockIdx, sc.start) < min(endBlock, sc.end) {
-					penalty += 1000
-				}
-			}
-			roomSchedules[gene.RoomIdx] = append(roomSchedules[gene.RoomIdx], slot{gene.DayIdx, gene.BlockIdx, endBlock})
-		}
-
-		for _, grp := range item.AffectedGrps {
-			if grp == "" { continue }
-			for _, sc := range groupSchedules[grp] {
-				if sc.day == gene.DayIdx && max(gene.BlockIdx, sc.start) < min(endBlock, sc.end) {
-					penalty += 1000
-				}
-			}
-			groupSchedules[grp] = append(groupSchedules[grp], slot{gene.DayIdx, gene.BlockIdx, endBlock})
+	// Build occupancy excluding the chosen gene so it doesn't clash
+	// with itself during placement search.
+	occ := newOccupancyMaps()
+	for i, gene := range current {
+		if i != pick {
+			occ.add(&s.gs.schedulableItems[i], gene)
 		}
 	}
-	return penalty
+
+	item := &s.gs.schedulableItems[pick]
+	neighbour[pick] = s.gs.bestPlacement(item, occ, 25)
+
+	return neighbour
 }
 
-func (s *SimulatedAnnealingSolver) getNeighbor(current Chromosome) Chromosome {
-	neighbor := make(Chromosome, len(current))
-	copy(neighbor, current)
-	
-	idx := rand.Intn(len(neighbor))
-	item := s.schedulableItems[idx]
-	
-	moveType := rand.Float64()
-	if moveType < 0.6 {
-		// Time/Day change
-		neighbor[idx].DayIdx = rand.Intn(len(s.days))
-		maxStart := len(s.blocks) - item.Length
-		if maxStart > 0 {
-			neighbor[idx].BlockIdx = rand.Intn(maxStart + 1)
+// randomNeighbour creates a neighbour by making one of three perturbations
+// to a randomly selected gene:
+//
+//	60% — change day and time slot
+//	20% — change room only (keeps time, may fix a room clash)
+//	20% — swap two genes (preserves slot diversity)
+func (s *SimulatedAnnealingSolver) randomNeighbour(current Chromosome) Chromosome {
+	neighbour := make(Chromosome, len(current))
+	copy(neighbour, current)
+
+	n := len(neighbour)
+	idx := rand.Intn(n)
+	item := &s.gs.schedulableItems[idx]
+
+	move := rand.Float64()
+
+	switch {
+	case move < 0.60:
+		// New random day + block.
+		maxBlock := len(s.gs.blocks) - item.Length
+		if maxBlock < 0 {
+			maxBlock = 0
+		}
+		neighbour[idx].DayIdx = rand.Intn(len(s.gs.days))
+		if maxBlock > 0 {
+			neighbour[idx].BlockIdx = rand.Intn(maxBlock + 1)
 		} else {
-			neighbor[idx].BlockIdx = 0
+			neighbour[idx].BlockIdx = 0
 		}
-	} else if !item.Online && len(s.rooms) > 0 {
-		// Room change
-		neighbor[idx].RoomIdx = rand.Intn(len(s.rooms))
+
+	case move < 0.80:
+		// Room swap (only meaningful for non-online sessions).
+		if !item.Online && len(s.gs.rooms) > 0 {
+			neighbour[idx].RoomIdx = rand.Intn(len(s.gs.rooms))
+		} else {
+			// Fall back to time change.
+			maxBlock := len(s.gs.blocks) - item.Length
+			if maxBlock < 0 {
+				maxBlock = 0
+			}
+			neighbour[idx].DayIdx = rand.Intn(len(s.gs.days))
+			if maxBlock > 0 {
+				neighbour[idx].BlockIdx = rand.Intn(maxBlock + 1)
+			}
+		}
+
+	default:
+		// Swap two genes — preserves the set of slots, changes which
+		// items occupy them. Useful when the issue is not the slot itself
+		// but which lesson is in it.
+		other := rand.Intn(n)
+		if other != idx {
+			neighbour[idx], neighbour[other] = neighbour[other], neighbour[idx]
+		} else {
+			// Degenerate case: just do a time change.
+			maxBlock := len(s.gs.blocks) - item.Length
+			if maxBlock < 0 {
+				maxBlock = 0
+			}
+			neighbour[idx].DayIdx = rand.Intn(len(s.gs.days))
+			if maxBlock > 0 {
+				neighbour[idx].BlockIdx = rand.Intn(maxBlock + 1)
+			}
+		}
 	}
-	
-	return neighbor
+
+	return neighbour
 }
 
-func (s *SimulatedAnnealingSolver) formatResponse(c Chromosome, runtime, cost float64) *models.Response {
-	// Reusing GA response formatting (should be refactored)
-	// (Omitted for brevity, but logically identical to GA's formatResponse)
-	// Since I cannot call GA's private method, I'll copy the logic here.
-	
-	var sessions []models.Session
-	type sessionKey struct {
-		lessonID string
-		distIdx  int
-	}
-	merged := make(map[sessionKey]models.Session)
+// ---------------------------------------------------------------------------
+// Output
+// ---------------------------------------------------------------------------
 
-	for i, gene := range c {
-		item := s.schedulableItems[i]
-		key := sessionKey{item.LessonID, item.DistIdx}
-		
-		roomID := ""
-		if gene.RoomIdx != -1 {
-			roomID = s.rooms[gene.RoomIdx].ID
-		}
-
-		if sess, ok := merged[key]; ok {
-			if roomID != "" && sess.Room != roomID {
-				sess.Room += ", " + roomID
-			}
-			merged[key] = sess
-		} else {
-			dbIDs := item.LessonDef.DatabaseIDs
-			if !item.Online && gene.RoomIdx != -1 {
-				dbIDs.Room = s.rooms[gene.RoomIdx].DatabaseID
-			}
-
-			merged[key] = models.Session{
-				Identifier:  fmt.Sprintf("%s-%d", item.LessonID, item.DistIdx),
-				Group:       item.Group,
-				Instructor:  item.Instructor,
-				Unit:        item.Unit,
-				Day:         s.days[gene.DayIdx],
-				Time:        s.blocks[gene.BlockIdx].Start,
-				Room:        roomID,
-				Online:      item.Online,
-				Blocks:      item.Length,
-				DatabaseIDs: dbIDs,
-				TimetableID: item.LessonDef.TimetableID,
-			}
-		}
-	}
-
-	for _, sess := range merged {
-		sessions = append(sessions, sess)
-	}
-
-	// Evaluate the solution using the constraint evaluator
-	periodTimes := make([]string, len(s.blocks))
-	for i, b := range s.blocks {
-		periodTimes[i] = b.Start
-	}
-
-	lessonSet := make(map[string]models.Lesson)
-	for _, item := range s.schedulableItems {
-		if item.LessonDef != nil {
-			lessonSet[item.LessonDef.Identifier] = *item.LessonDef
-		}
-	}
-	lessons := make([]models.Lesson, 0, len(lessonSet))
-	for _, l := range lessonSet {
-		lessons = append(lessons, l)
-	}
-
-	groups := make([]models.Group, 0, len(s.groupMap))
-	for _, g := range s.groupMap {
-		groups = append(groups, g)
-	}
-	units := make([]models.Unit, 0, len(s.unitMap))
-	for _, u := range s.unitMap {
-		units = append(units, u)
-	}
-	instructors := make([]models.Instructor, 0, len(s.instructorMap))
-	for _, inst := range s.instructorMap {
-		instructors = append(instructors, inst)
-	}
-
-	evalResult := evaluator.Evaluate(sessions, &evaluator.EvaluationParams{
-		Days:        s.days,
-		PeriodTimes: periodTimes,
-		Lessons:     lessons,
-		Rooms:       s.rooms,
-		Groups:      groups,
-		Instructors: instructors,
-		Units:       units,
-		Blocks:      s.blocks,
-	})
+func (s *SimulatedAnnealingSolver) formatResponse(c Chromosome, runtime float64) *models.Response {
+	sessions := s.gs.chromosomeToSessions(c)
+	evalResult := evaluator.Evaluate(sessions, s.gs.evalParams)
 
 	return &models.Response{
 		Error:    false,
-		Message:  fmt.Sprintf("Optimization completed with cost %.2f", cost),
+		Message:  "Simulated Annealing optimisation complete",
 		Sessions: sessions,
 		Stats: models.OptimizationStats{
 			OverallScore:  evalResult.OverallScore,
 			TimeTaken:     runtime,
-			SolutionFound: evalResult.HardScore >= 60,
+			SolutionFound: evalResult.HardScore >= 100,
 		},
 	}
 }

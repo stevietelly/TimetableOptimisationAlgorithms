@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"geliana-go/pkg/evaluator"
 	"geliana-go/pkg/models"
+	"math"
 	"math/rand"
 	"sort"
 	"sync"
@@ -58,6 +59,140 @@ type Gene struct {
 
 type Chromosome []Gene
 
+// occKey identifies one occupied block on one day.
+type occKey struct{ day, block int }
+
+// occupancyMaps holds conflict-detection state during placement and repair.
+type occupancyMaps struct {
+	group map[string]map[occKey]bool
+	instr map[string]map[occKey]bool
+	room  map[int]map[occKey]bool
+}
+
+func newOccupancyMaps() *occupancyMaps {
+	return &occupancyMaps{
+		group: make(map[string]map[occKey]bool),
+		instr: make(map[string]map[occKey]bool),
+		room:  make(map[int]map[occKey]bool),
+	}
+}
+
+// add registers all blocks spanned by the gene for the given item.
+func (o *occupancyMaps) add(item *SchedulableItem, gene Gene) {
+	for b := gene.BlockIdx; b < gene.BlockIdx+item.Length; b++ {
+		k := occKey{gene.DayIdx, b}
+		for _, grp := range item.AffectedGrps {
+			if grp == "" {
+				continue
+			}
+			if o.group[grp] == nil {
+				o.group[grp] = make(map[occKey]bool)
+			}
+			o.group[grp][k] = true
+		}
+		if item.Instructor != "" {
+			if o.instr[item.Instructor] == nil {
+				o.instr[item.Instructor] = make(map[occKey]bool)
+			}
+			o.instr[item.Instructor][k] = true
+		}
+		if !item.Online && gene.RoomIdx != -1 {
+			if o.room[gene.RoomIdx] == nil {
+				o.room[gene.RoomIdx] = make(map[occKey]bool)
+			}
+			o.room[gene.RoomIdx][k] = true
+		}
+	}
+}
+
+// remove clears all blocks spanned by the gene for the given item.
+func (o *occupancyMaps) remove(item *SchedulableItem, gene Gene) {
+	for b := gene.BlockIdx; b < gene.BlockIdx+item.Length; b++ {
+		k := occKey{gene.DayIdx, b}
+		for _, grp := range item.AffectedGrps {
+			if grp != "" && o.group[grp] != nil {
+				delete(o.group[grp], k)
+			}
+		}
+		if item.Instructor != "" && o.instr[item.Instructor] != nil {
+			delete(o.instr[item.Instructor], k)
+		}
+		if !item.Online && gene.RoomIdx != -1 && o.room[gene.RoomIdx] != nil {
+			delete(o.room[gene.RoomIdx], k)
+		}
+	}
+}
+
+// conflictCount returns the number of occupied slots that collide with a
+// candidate placement. It does NOT include the item itself (call remove first).
+func (o *occupancyMaps) conflictCount(item *SchedulableItem, dayIdx, blockIdx, roomIdx int) int {
+	penalty := 0
+	for b := blockIdx; b < blockIdx+item.Length; b++ {
+		k := occKey{dayIdx, b}
+		for _, grp := range item.AffectedGrps {
+			if grp != "" && o.group[grp] != nil && o.group[grp][k] {
+				penalty++
+			}
+		}
+		if item.Instructor != "" && o.instr[item.Instructor] != nil && o.instr[item.Instructor][k] {
+			penalty++
+		}
+		if !item.Online && roomIdx != -1 && o.room[roomIdx] != nil && o.room[roomIdx][k] {
+			penalty++
+		}
+	}
+	return penalty
+}
+
+// bestPlacement tries `attempts` random slots and returns the one with the
+// fewest conflicts. The item must already be removed from occ before calling.
+func (s *GeneticSolver) bestPlacement(item *SchedulableItem, occ *occupancyMaps, attempts int) Gene {
+	bestPenalty := math.MaxInt32
+	best := Gene{RoomIdx: -1}
+
+	maxBlock := len(s.blocks) - item.Length
+	if maxBlock < 0 {
+		maxBlock = 0
+	}
+
+	for attempt := 0; attempt < attempts; attempt++ {
+		dayIdx := rand.Intn(len(s.days))
+		blockIdx := 0
+		if maxBlock > 0 {
+			blockIdx = rand.Intn(maxBlock + 1)
+		}
+		roomIdx := -1
+		if !item.Online && len(s.rooms) > 0 {
+			roomIdx = rand.Intn(len(s.rooms))
+		}
+
+		penalty := occ.conflictCount(item, dayIdx, blockIdx, roomIdx)
+
+		// Also penalise capacity violations (soft, but worth avoiding early)
+		if !item.Online && roomIdx != -1 {
+			room := s.rooms[roomIdx]
+			for _, grpID := range item.AffectedGrps {
+				if grpID != "" {
+					if grp, ok := s.groupMap[grpID]; ok && grp.Total > room.Capacity {
+						penalty++
+					}
+				}
+			}
+		}
+
+		if penalty < bestPenalty {
+			bestPenalty = penalty
+			best = Gene{DayIdx: dayIdx, BlockIdx: blockIdx, RoomIdx: roomIdx}
+			if bestPenalty == 0 {
+				break
+			}
+		}
+	}
+	return best
+}
+
+// ---------------------------------------------------------------------------
+
 func NewGeneticSolver(popSize, maxGen int) *GeneticSolver {
 	return &GeneticSolver{
 		PopulationSize: popSize,
@@ -70,7 +205,10 @@ func NewGeneticSolver(popSize, maxGen int) *GeneticSolver {
 	}
 }
 
-// Solve runs the two-phase genetic algorithm.
+// ---------------------------------------------------------------------------
+// Solve — main entry point
+// ---------------------------------------------------------------------------
+
 func (s *GeneticSolver) Solve(ctx context.Context, req *models.Request, tracker ProgressTracker) (*models.Response, error) {
 	startTime := time.Now()
 
@@ -88,8 +226,10 @@ func (s *GeneticSolver) Solve(ctx context.Context, req *models.Request, tracker 
 	var globalBest Chromosome
 	globalBestFitness := -1.0
 	plateauCount := 0
-
 	phase := 1
+
+	// Evaluate population scores once; we reuse them across the loop.
+	fitnessScores := s.evaluatePopulation(population)
 
 	for gen := 0; gen < s.MaxGenerations; gen++ {
 		select {
@@ -98,26 +238,28 @@ func (s *GeneticSolver) Solve(ctx context.Context, req *models.Request, tracker 
 		default:
 		}
 
-		// Transition from Phase 1 to Phase 2
-		if gen >= s.maxPhase1Gen && phase == 1 {
-			phase = 2
-		}
-
-		// --- Phase 1: targeted repair of hard clashes, no crossover ---
+		// --- Phase 1: evaluate first, repair worst half, re-evaluate ---
 		if phase == 1 {
-			population = s.phase1Repair(population)
-		}
+			population, fitnessScores = s.phase1Step(population, fitnessScores)
 
-		// Evaluate all chromosomes using the constraint evaluator
-		fitnessScores := s.evaluatePopulation(population)
-
-		// Track best and check plateau
-		currentBestIdx := 0
-		for i, f := range fitnessScores {
-			if f > fitnessScores[currentBestIdx] {
-				currentBestIdx = i
+			// Check whether hard clashes are gone in the best chromosome.
+			currentBestIdx := argmax(fitnessScores)
+			if s.hardScore(population[currentBestIdx]) >= 100.0 {
+				phase = 2
 			}
+
+			// Force Phase 2 after maxPhase1Gen regardless.
+			if gen >= s.maxPhase1Gen {
+				phase = 2
+			}
+		} else {
+			// --- Phase 2: evolve then evaluate ---
+			population = s.evolve(population, fitnessScores)
+			fitnessScores = s.evaluatePopulation(population)
 		}
+
+		// Track global best and plateau.
+		currentBestIdx := argmax(fitnessScores)
 		currentBestFitness := fitnessScores[currentBestIdx]
 
 		if currentBestFitness > globalBestFitness+0.001 {
@@ -129,15 +271,6 @@ func (s *GeneticSolver) Solve(ctx context.Context, req *models.Request, tracker 
 			plateauCount++
 		}
 
-		// Phase transition check: move to Phase 2 once hard clashes are eliminated
-		if phase == 1 {
-			hardScore := s.evaluateHard(currentBestFitness, population[currentBestIdx])
-			if hardScore >= 100.0 {
-				phase = 2
-			}
-		}
-
-		// Progress report
 		if tracker != nil {
 			tracker.Update(ProgressReport{
 				CurrentStep: gen + 1,
@@ -159,14 +292,8 @@ func (s *GeneticSolver) Solve(ctx context.Context, req *models.Request, tracker 
 			})
 		}
 
-		// Early exit: optimal or stale
 		if globalBestFitness >= 99.999 || plateauCount >= s.plateauLimit {
 			break
-		}
-
-		// --- Phase 2: selection, crossover, mutation ---
-		if phase == 2 {
-			population = s.evolve(population, fitnessScores)
 		}
 	}
 
@@ -184,7 +311,6 @@ func (s *GeneticSolver) initializePopulation(ctx context.Context) []Chromosome {
 	population := make([]Chromosome, s.PopulationSize)
 	var wg sync.WaitGroup
 	wg.Add(s.PopulationSize)
-
 	for i := 0; i < s.PopulationSize; i++ {
 		go func(idx int) {
 			defer wg.Done()
@@ -195,271 +321,221 @@ func (s *GeneticSolver) initializePopulation(ctx context.Context) []Chromosome {
 	return population
 }
 
-// initializeSmart creates one chromosome by placing items greedily to avoid clashes.
+// initializeSmart builds one chromosome using greedy conflict-aware placement.
+// Items are placed one at a time; each placement tries 15 random slots and
+// keeps the one with the fewest conflicts against already-placed items.
 func (s *GeneticSolver) initializeSmart() Chromosome {
 	c := make(Chromosome, len(s.schedulableItems))
+	occ := newOccupancyMaps()
 
-	type occKey struct{ day, block int }
-	groupOcc := make(map[string]map[occKey]bool)
-	instrOcc := make(map[string]map[occKey]bool)
-	roomOcc := make(map[int]map[occKey]bool)
-
-	for i, item := range s.schedulableItems {
-		bestPenalty := -1
-		bestGene := Gene{}
-
-		// Try up to 15 random placements, keep the one with least conflicts
-		for attempt := 0; attempt < 15; attempt++ {
-			dayIdx := rand.Intn(len(s.days))
-			maxStart := len(s.blocks) - item.Length
-			if maxStart < 0 {
-				maxStart = 0
-			}
-			blockIdx := 0
-			if maxStart > 0 {
-				blockIdx = rand.Intn(maxStart + 1)
-			}
-			roomIdx := -1
-			if !item.Online && len(s.rooms) > 0 {
-				roomIdx = rand.Intn(len(s.rooms))
-			}
-
-			penalty := 0
-			ok := occKey{dayIdx, blockIdx}
-
-			for _, grp := range item.AffectedGrps {
-				if grp != "" && groupOcc[grp] != nil && groupOcc[grp][ok] {
-					penalty++
-				}
-			}
-			if item.Instructor != "" && instrOcc[item.Instructor] != nil && instrOcc[item.Instructor][ok] {
-				penalty++
-			}
-			if !item.Online && roomIdx != -1 && roomOcc[roomIdx] != nil && roomOcc[roomIdx][ok] {
-				penalty++
-			}
-
-			if bestPenalty == -1 || penalty < bestPenalty {
-				bestPenalty = penalty
-				bestGene = Gene{DayIdx: dayIdx, BlockIdx: blockIdx, RoomIdx: roomIdx}
-				if penalty == 0 {
-					break
-				}
-			}
-		}
-
-		c[i] = bestGene
-		ok := occKey{bestGene.DayIdx, bestGene.BlockIdx}
-		for _, grp := range item.AffectedGrps {
-			if grp == "" {
-				continue
-			}
-			if groupOcc[grp] == nil {
-				groupOcc[grp] = make(map[occKey]bool)
-			}
-			groupOcc[grp][ok] = true
-		}
-		if item.Instructor != "" {
-			if instrOcc[item.Instructor] == nil {
-				instrOcc[item.Instructor] = make(map[occKey]bool)
-			}
-			instrOcc[item.Instructor][ok] = true
-		}
-		if !item.Online && bestGene.RoomIdx != -1 {
-			if roomOcc[bestGene.RoomIdx] == nil {
-				roomOcc[bestGene.RoomIdx] = make(map[occKey]bool)
-			}
-			roomOcc[bestGene.RoomIdx][ok] = true
-		}
+	for i := range s.schedulableItems {
+		item := &s.schedulableItems[i]
+		gene := s.bestPlacement(item, occ, 15)
+		c[i] = gene
+		occ.add(item, gene)
 	}
 	return c
 }
 
 // ---------------------------------------------------------------------------
-// Phase 1 — Clash Repair
+// Phase 1 — evaluate → repair → re-evaluate
 // ---------------------------------------------------------------------------
 
-// phase1Repair applies targeted mutation to the worst half of the population.
-func (s *GeneticSolver) phase1Repair(population []Chromosome) []Chromosome {
-	// Use fast penalty-based scoring for Phase 1
+// phase1Step scores the population with the fast penalty function, repairs the
+// worst half using greedy slot-finding, then re-evaluates with the full evaluator.
+func (s *GeneticSolver) phase1Step(population []Chromosome, prevScores []float64) ([]Chromosome, []float64) {
+	// Score with fast penalty (lower = worse clash situation).
 	type scored struct {
 		idx  int
 		cost float64
 	}
-	scoredPop := make([]scored, len(population))
+	penalties := make([]scored, len(population))
 	var wg sync.WaitGroup
 	wg.Add(len(population))
-
 	for i := range population {
 		go func(idx int) {
 			defer wg.Done()
-			scoredPop[idx] = scored{idx, s.calculatePenalty(population[idx])}
+			penalties[idx] = scored{idx, s.calculatePenalty(population[idx])}
 		}(i)
 	}
 	wg.Wait()
 
-	sort.Slice(scoredPop, func(i, j int) bool {
-		return scoredPop[i].cost < scoredPop[j].cost
+	sort.Slice(penalties, func(i, j int) bool {
+		return penalties[i].cost < penalties[j].cost
 	})
 
-	// Repair the worst half
+	// Repair the worst half — only if they actually have clashes.
 	repairCount := len(population) / 2
 	for i := 0; i < repairCount; i++ {
-		idx := scoredPop[len(population)-1-i].idx
-		if scoredPop[len(population)-1-i].cost == 0 {
+		entry := penalties[len(population)-1-i]
+		if entry.cost == 0 {
 			continue
 		}
-		repaired := s.repairChromosome(population[idx])
-		newCost := s.calculatePenalty(repaired)
-		if newCost < scoredPop[len(population)-1-i].cost {
-			population[idx] = repaired
+		repaired := s.repairChromosome(population[entry.idx])
+		if s.calculatePenalty(repaired) < entry.cost {
+			population[entry.idx] = repaired
 		}
 	}
-	return population
+
+	// Re-evaluate the full population with the constraint evaluator.
+	return population, s.evaluatePopulation(population)
 }
 
-// repairChromosome finds items involved in clashes and moves them to random new slots.
+// repairChromosome identifies every gene involved in a clash and re-places it
+// using the greedy best-of-N approach, updating occupancy maps as it goes so
+// each successive repair sees the current state of the chromosome.
 func (s *GeneticSolver) repairChromosome(c Chromosome) Chromosome {
 	result := make(Chromosome, len(c))
 	copy(result, c)
 
-	type occKey struct{ day, block int }
-	groupOcc := make(map[string][]occKey)
-	instrOcc := make(map[string][]occKey)
-	roomOcc := make(map[int][]occKey)
+	// Build occupancy from the current chromosome state — multi-block aware.
+	occ := newOccupancyMaps()
+	for i, gene := range result {
+		occ.add(&s.schedulableItems[i], gene)
+	}
 
-	// First pass: record all occupied slots
+	// Identify clashing genes (any block they occupy is also occupied by
+	// another item for the same instructor, group, or room).
+	clashing := s.findClashingGenes(result)
+
+	// Re-place each clashing gene using greedy placement.
+	// Remove the gene from occ first so it doesn't conflict with itself.
+	for idx := range clashing {
+		item := &s.schedulableItems[idx]
+
+		// Remove old placement from occupancy.
+		occ.remove(item, result[idx])
+
+		// Find a better slot now that this gene is absent from occ.
+		newGene := s.bestPlacement(item, occ, 25)
+		result[idx] = newGene
+
+		// Register the new placement so subsequent genes see it.
+		occ.add(item, newGene)
+	}
+
+	return result
+}
+
+// findClashingGenes returns a set of gene indices that are involved in any
+// instructor, group, or room clash. Uses interval overlap detection so that
+// multi-block lessons are handled correctly.
+func (s *GeneticSolver) findClashingGenes(c Chromosome) map[int]bool {
+	type interval struct {
+		geneIdx    int
+		day, start int
+		end        int
+	}
+
+	instrIntervals := make(map[string][]interval)
+	groupIntervals := make(map[string][]interval)
+	roomIntervals  := make(map[int][]interval)
+
 	for i, gene := range c {
-		item := s.schedulableItems[i]
-		ok := occKey{gene.DayIdx, gene.BlockIdx}
+		item := &s.schedulableItems[i]
+		iv := interval{i, gene.DayIdx, gene.BlockIdx, gene.BlockIdx + item.Length}
 
+		if item.Instructor != "" {
+			instrIntervals[item.Instructor] = append(instrIntervals[item.Instructor], iv)
+		}
 		for _, grp := range item.AffectedGrps {
 			if grp != "" {
-				groupOcc[grp] = append(groupOcc[grp], ok)
+				groupIntervals[grp] = append(groupIntervals[grp], iv)
 			}
 		}
-		if item.Instructor != "" {
-			instrOcc[item.Instructor] = append(instrOcc[item.Instructor], ok)
-		}
 		if !item.Online && gene.RoomIdx != -1 {
-			roomOcc[gene.RoomIdx] = append(roomOcc[gene.RoomIdx], ok)
+			roomIntervals[gene.RoomIdx] = append(roomIntervals[gene.RoomIdx], iv)
 		}
 	}
 
 	clashing := make(map[int]bool)
 
-	for i, gene := range c {
-		item := s.schedulableItems[i]
-		ok := occKey{gene.DayIdx, gene.BlockIdx}
-
-		// Count how many items share this slot for each entity
-		for _, grp := range item.AffectedGrps {
-			if grp == "" {
-				continue
-			}
-			count := 0
-			for _, occ := range groupOcc[grp] {
-				if occ == ok {
-					count++
+	checkOverlaps := func(ivs []interval) {
+		for a := 0; a < len(ivs); a++ {
+			for b := a + 1; b < len(ivs); b++ {
+				if ivs[a].day == ivs[b].day &&
+					max(ivs[a].start, ivs[b].start) < min(ivs[a].end, ivs[b].end) {
+					clashing[ivs[a].geneIdx] = true
+					clashing[ivs[b].geneIdx] = true
 				}
-			}
-			if count > 1 {
-				clashing[i] = true
-			}
-		}
-		if item.Instructor != "" {
-			count := 0
-			for _, occ := range instrOcc[item.Instructor] {
-				if occ == ok {
-					count++
-				}
-			}
-			if count > 1 {
-				clashing[i] = true
-			}
-		}
-		if !item.Online && gene.RoomIdx != -1 {
-			count := 0
-			for _, occ := range roomOcc[gene.RoomIdx] {
-				if occ == ok {
-					count++
-				}
-			}
-			if count > 1 {
-				clashing[i] = true
 			}
 		}
 	}
 
-	// Move clashing items
-	for i := range clashing {
-		item := s.schedulableItems[i]
-		result[i].DayIdx = rand.Intn(len(s.days))
-		maxStart := len(s.blocks) - item.Length
-		if maxStart > 0 {
-			result[i].BlockIdx = rand.Intn(maxStart + 1)
-		} else {
-			result[i].BlockIdx = 0
-		}
-		if !item.Online && len(s.rooms) > 0 {
-			result[i].RoomIdx = rand.Intn(len(s.rooms))
-		}
+	for _, ivs := range instrIntervals {
+		checkOverlaps(ivs)
 	}
-	return result
+	for _, ivs := range groupIntervals {
+		checkOverlaps(ivs)
+	}
+	for _, ivs := range roomIntervals {
+		checkOverlaps(ivs)
+	}
+
+	return clashing
 }
 
-// calculatePenalty returns a fast penalty score (lower = better) for Phase 1 ranking.
+// calculatePenalty returns a fast numeric penalty for Phase 1 ranking.
+// Lower is better. Uses interval overlap for accurate multi-block detection.
 func (s *GeneticSolver) calculatePenalty(c Chromosome) float64 {
 	penalty := 0.0
-	type slot struct{ day, start, end int }
-	instSchedules := make(map[string][]slot)
-	roomSchedules := make(map[int][]slot)
-	groupSchedules := make(map[string][]slot)
-	syncMap := make(map[string]slot)
+
+	type interval struct{ day, start, end int }
+	instSlots  := make(map[string][]interval)
+	roomSlots  := make(map[int][]interval)
+	groupSlots := make(map[string][]interval)
+	syncMap    := make(map[string]interval)
+
+	overlap := func(a, b interval) bool {
+		return a.day == b.day && max(a.start, b.start) < min(a.end, b.end)
+	}
 
 	for i, gene := range c {
-		item := s.schedulableItems[i]
-		endBlock := gene.BlockIdx + item.Length
+		item := &s.schedulableItems[i]
+		iv := interval{gene.DayIdx, gene.BlockIdx, gene.BlockIdx + item.Length}
 
-		syncKey := fmt.Sprintf("%s_%d", item.LessonID, item.DistIdx)
+		// Subgroup synchronisation: all sub-divisions of the same lesson+dist
+		// must share the same slot.
 		if s.IsSubgroup(item.LessonDef.Type) {
+			syncKey := fmt.Sprintf("%s_%d", item.LessonID, item.DistIdx)
 			if target, ok := syncMap[syncKey]; ok {
-				if gene.DayIdx != target.day || gene.BlockIdx != target.start {
+				if iv.day != target.day || iv.start != target.start {
 					penalty += 5000
 				}
 			} else {
-				syncMap[syncKey] = slot{gene.DayIdx, gene.BlockIdx, endBlock}
+				syncMap[syncKey] = iv
 			}
 		}
 
-		for _, sc := range instSchedules[item.Instructor] {
-			if sc.day == gene.DayIdx && max(gene.BlockIdx, sc.start) < min(endBlock, sc.end) {
+		for _, sc := range instSlots[item.Instructor] {
+			if overlap(iv, sc) {
 				penalty += 1000
 			}
 		}
-		instSchedules[item.Instructor] = append(instSchedules[item.Instructor], slot{gene.DayIdx, gene.BlockIdx, endBlock})
+		instSlots[item.Instructor] = append(instSlots[item.Instructor], iv)
 
 		if !item.Online && gene.RoomIdx != -1 {
-			for _, sc := range roomSchedules[gene.RoomIdx] {
-				if sc.day == gene.DayIdx && max(gene.BlockIdx, sc.start) < min(endBlock, sc.end) {
+			for _, sc := range roomSlots[gene.RoomIdx] {
+				if overlap(iv, sc) {
 					penalty += 1000
 				}
 			}
-			roomSchedules[gene.RoomIdx] = append(roomSchedules[gene.RoomIdx], slot{gene.DayIdx, gene.BlockIdx, endBlock})
+			roomSlots[gene.RoomIdx] = append(roomSlots[gene.RoomIdx], iv)
 		}
 
 		for _, grp := range item.AffectedGrps {
 			if grp == "" {
 				continue
 			}
-			for _, sc := range groupSchedules[grp] {
-				if sc.day == gene.DayIdx && max(gene.BlockIdx, sc.start) < min(endBlock, sc.end) {
+			for _, sc := range groupSlots[grp] {
+				if overlap(iv, sc) {
 					penalty += 1000
 				}
 			}
-			groupSchedules[grp] = append(groupSchedules[grp], slot{gene.DayIdx, gene.BlockIdx, endBlock})
+			groupSlots[grp] = append(groupSlots[grp], iv)
 		}
 
+		// Capacity soft penalty.
 		if !item.Online && gene.RoomIdx != -1 {
 			room := s.rooms[gene.RoomIdx]
 			for _, grpID := range item.AffectedGrps {
@@ -475,14 +551,13 @@ func (s *GeneticSolver) calculatePenalty(c Chromosome) float64 {
 }
 
 // ---------------------------------------------------------------------------
-// Population Evaluation (Phase 2 — uses constraint evaluator)
+// Full evaluator (Phase 2)
 // ---------------------------------------------------------------------------
 
 func (s *GeneticSolver) evaluatePopulation(population []Chromosome) []float64 {
 	scores := make([]float64, len(population))
 	var wg sync.WaitGroup
 	wg.Add(len(population))
-
 	for i := range population {
 		go func(idx int) {
 			defer wg.Done()
@@ -499,15 +574,16 @@ func (s *GeneticSolver) evaluateFitness(c Chromosome) float64 {
 	return result.OverallScore
 }
 
-// evaluateHard extracts just the hard score from a chromosome.
-func (s *GeneticSolver) evaluateHard(overall float64, c Chromosome) float64 {
+// hardScore runs the full evaluator and returns only the hard-constraint score.
+// Called sparingly — only to check phase transition in Phase 1.
+func (s *GeneticSolver) hardScore(c Chromosome) float64 {
 	sessions := s.chromosomeToSessions(c)
 	result := evaluator.Evaluate(sessions, s.evalParams)
 	return result.HardScore
 }
 
 // ---------------------------------------------------------------------------
-// Chromosome <-> Sessions conversion
+// Chromosome ↔ Sessions
 // ---------------------------------------------------------------------------
 
 func (s *GeneticSolver) chromosomeToSessions(c Chromosome) []models.Session {
@@ -518,12 +594,14 @@ func (s *GeneticSolver) chromosomeToSessions(c Chromosome) []models.Session {
 	merged := make(map[sessionKey]models.Session)
 
 	for i, gene := range c {
-		item := s.schedulableItems[i]
+		item := &s.schedulableItems[i]
 		key := sessionKey{item.LessonID, item.DistIdx}
+
 		roomID := ""
 		if gene.RoomIdx != -1 {
 			roomID = s.rooms[gene.RoomIdx].ID
 		}
+
 		if sess, ok := merged[key]; ok {
 			if roomID != "" && sess.Room != roomID {
 				sess.Room += ", " + roomID
@@ -564,7 +642,7 @@ func (s *GeneticSolver) chromosomeToSessions(c Chromosome) []models.Session {
 func (s *GeneticSolver) evolve(population []Chromosome, scores []float64) []Chromosome {
 	newPop := make([]Chromosome, 0, s.PopulationSize)
 
-	// Elitism
+	// Elitism — copy the top EliteSize chromosomes unchanged.
 	indices := make([]int, len(population))
 	for i := range indices {
 		indices[i] = i
@@ -572,14 +650,13 @@ func (s *GeneticSolver) evolve(population []Chromosome, scores []float64) []Chro
 	sort.Slice(indices, func(i, j int) bool {
 		return scores[indices[i]] > scores[indices[j]]
 	})
-
 	for i := 0; i < s.EliteSize; i++ {
 		elite := make(Chromosome, len(population[indices[i]]))
 		copy(elite, population[indices[i]])
 		newPop = append(newPop, elite)
 	}
 
-	// Reproduction
+	// Reproduction.
 	for len(newPop) < s.PopulationSize {
 		p1 := s.tournamentSelect(population, scores)
 		p2 := s.tournamentSelect(population, scores)
@@ -588,7 +665,8 @@ func (s *GeneticSolver) evolve(population []Chromosome, scores []float64) []Chro
 		if rand.Float64() < s.CrossoverRate {
 			c1, c2 = s.twoPointCrossover(p1, p2)
 		} else {
-			c1, c2 = make(Chromosome, len(p1)), make(Chromosome, len(p2))
+			c1 = make(Chromosome, len(p1))
+			c2 = make(Chromosome, len(p2))
 			copy(c1, p1)
 			copy(c2, p2)
 		}
@@ -601,23 +679,23 @@ func (s *GeneticSolver) evolve(population []Chromosome, scores []float64) []Chro
 			newPop = append(newPop, c2)
 		}
 	}
-
 	return newPop
 }
 
 func (s *GeneticSolver) tournamentSelect(pop []Chromosome, scores []float64) Chromosome {
-	k := 5
 	best := -1
-	for i := 0; i < k; i++ {
+	for i := 0; i < 5; i++ {
 		idx := rand.Intn(len(pop))
 		if best == -1 || scores[idx] > scores[best] {
 			best = idx
 		}
 	}
-	return pop[best]
+	result := make(Chromosome, len(pop[best]))
+	copy(result, pop[best])
+	return result
 }
 
-// twoPointCrossover swaps a contiguous segment between two parents.
+// twoPointCrossover swaps the segment [pt1, pt2) between the two parents.
 func (s *GeneticSolver) twoPointCrossover(p1, p2 Chromosome) (Chromosome, Chromosome) {
 	n := len(p1)
 	pt1 := rand.Intn(n)
@@ -628,7 +706,6 @@ func (s *GeneticSolver) twoPointCrossover(p1, p2 Chromosome) (Chromosome, Chromo
 
 	c1 := make(Chromosome, n)
 	c2 := make(Chromosome, n)
-
 	for i := 0; i < n; i++ {
 		if i >= pt1 && i < pt2 {
 			c1[i], c2[i] = p2[i], p1[i]
@@ -639,15 +716,43 @@ func (s *GeneticSolver) twoPointCrossover(p1, p2 Chromosome) (Chromosome, Chromo
 	return c1, c2
 }
 
+// mutate applies two passes:
+//  1. Targeted repair — any gene still involved in a clash is re-placed
+//     greedily (same logic as repairChromosome).
+//  2. Random noise — 5% of non-clashing genes get a random new slot to
+//     prevent premature convergence.
 func (s *GeneticSolver) mutate(c Chromosome) {
-	// Random mutation: 5% of genes get random new slots
+	// Pass 1: repair clashing genes.
+	clashing := s.findClashingGenes(c)
+	if len(clashing) > 0 {
+		occ := newOccupancyMaps()
+		for i, gene := range c {
+			if !clashing[i] {
+				occ.add(&s.schedulableItems[i], gene)
+			}
+		}
+		for idx := range clashing {
+			item := &s.schedulableItems[idx]
+			newGene := s.bestPlacement(item, occ, 20)
+			c[idx] = newGene
+			occ.add(item, newGene)
+		}
+	}
+
+	// Pass 2: random noise on non-clashing genes.
 	for i := range c {
+		if clashing[i] {
+			continue
+		}
 		if rand.Float64() < s.MutationRate {
-			item := s.schedulableItems[i]
+			item := &s.schedulableItems[i]
+			maxBlock := len(s.blocks) - item.Length
+			if maxBlock < 0 {
+				maxBlock = 0
+			}
 			c[i].DayIdx = rand.Intn(len(s.days))
-			maxStart := len(s.blocks) - item.Length
-			if maxStart > 0 {
-				c[i].BlockIdx = rand.Intn(maxStart + 1)
+			if maxBlock > 0 {
+				c[i].BlockIdx = rand.Intn(maxBlock + 1)
 			} else {
 				c[i].BlockIdx = 0
 			}
@@ -664,12 +769,10 @@ func (s *GeneticSolver) mutate(c Chromosome) {
 
 func (s *GeneticSolver) formatResponse(c Chromosome, runtime float64) *models.Response {
 	sessions := s.chromosomeToSessions(c)
-
 	evalResult := evaluator.Evaluate(sessions, s.evalParams)
-
 	return &models.Response{
-		Error:    false,
-		Message:  "Optimization successful",
+		Error:   false,
+		Message: "Optimization successful",
 		Sessions: sessions,
 		Stats: models.OptimizationStats{
 			OverallScore:  evalResult.OverallScore,
@@ -692,17 +795,14 @@ func (s *GeneticSolver) preprocess(req *models.Request) {
 	for i, r := range s.rooms {
 		s.roomMap[r.ID] = i
 	}
-
 	s.unitMap = make(map[string]models.Unit)
 	for _, u := range req.Units {
 		s.unitMap[u.ID] = u
 	}
-
 	s.instructorMap = make(map[string]models.Instructor)
-	for _, i := range req.Instructors {
-		s.instructorMap[i.ID] = i
+	for _, inst := range req.Instructors {
+		s.instructorMap[inst.ID] = inst
 	}
-
 	s.groupMap = make(map[string]models.Group)
 	for _, g := range req.Groups {
 		s.groupMap[g.ID] = g
@@ -715,8 +815,8 @@ func (s *GeneticSolver) preprocess(req *models.Request) {
 			if count == 0 {
 				continue
 			}
-
-			if l.Type == "regular" {
+			switch l.Type {
+			case "regular":
 				s.schedulableItems = append(s.schedulableItems, SchedulableItem{
 					LessonID:     l.Identifier,
 					DistIdx:      distIdx,
@@ -728,8 +828,9 @@ func (s *GeneticSolver) preprocess(req *models.Request) {
 					AffectedGrps: []string{l.Group},
 					LessonDef:    &l,
 				})
-			} else if l.Type == "lesson-merge" {
-				var affected []string
+
+			case "lesson-merge":
+				affected := make([]string, 0, len(l.MultipleIDs))
 				for _, m := range l.MultipleIDs {
 					affected = append(affected, m.GroupID)
 				}
@@ -744,7 +845,8 @@ func (s *GeneticSolver) preprocess(req *models.Request) {
 					AffectedGrps: affected,
 					LessonDef:    &l,
 				})
-			} else if l.Type == "subgroup" || l.Type == "subgroup-lesson-merge" {
+
+			case "subgroup", "subgroup-lesson-merge":
 				for midIdx, m := range l.MultipleIDs {
 					s.schedulableItems = append(s.schedulableItems, SchedulableItem{
 						LessonID:     l.Identifier,
@@ -790,8 +892,8 @@ func (s *GeneticSolver) buildEvalParams() {
 		units = append(units, u)
 	}
 	instructors := make([]models.Instructor, 0, len(s.instructorMap))
-	for _, i := range s.instructorMap {
-		instructors = append(instructors, i)
+	for _, inst := range s.instructorMap {
+		instructors = append(instructors, inst)
 	}
 
 	s.evalParams = &evaluator.EvaluationParams{
@@ -806,8 +908,23 @@ func (s *GeneticSolver) buildEvalParams() {
 	}
 }
 
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
 func (s *GeneticSolver) IsSubgroup(t string) bool {
 	return t == "subgroup" || t == "subgroup-lesson-merge"
+}
+
+// argmax returns the index of the highest value in a slice.
+func argmax(scores []float64) int {
+	best := 0
+	for i, v := range scores {
+		if v > scores[best] {
+			best = i
+		}
+	}
+	return best
 }
 
 func max(a, b int) int {
@@ -823,3 +940,6 @@ func min(a, b int) int {
 	}
 	return b
 }
+
+// Ensure math import is used.
+var _ = math.MaxInt32
