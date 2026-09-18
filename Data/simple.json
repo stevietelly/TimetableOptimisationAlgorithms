@@ -1,0 +1,252 @@
+{
+	"instructors": [
+		{
+			"id": "mO0j3B",
+			"preferences": [],
+			"color": "#d47637ff",
+			"name": "Stephen",
+			"title": "Mr",
+			"short": "STS"
+		},
+		{
+			"id": "dS8jHS",
+			"preferences": [],
+			"color": "#33bf2cff",
+			"name": "Wangari",
+			"title": "Mrs",
+			"short": "WST"
+		},
+		{
+			"id": "pjBdUZ",
+			"preferences": [],
+			"color": "#a31a4fff",
+			"name": "Wairimu",
+			"title": "Mr",
+			"short": "WET"
+		}
+	],
+	"rooms": [
+		{
+			"short": "LR1",
+			"id": "M0dqqa",
+			"capacity": 30,
+			"preferences": [],
+			"title": "Lecture Room 1",
+			"color": "#29d7f2ff"
+		},
+		{
+			"short": "LR2",
+			"id": "Bwzv1h",
+			"capacity": 30,
+			"preferences": [],
+			"title": "Lecture Room 2",
+			"color": "#91c928ff"
+		},
+		{
+			"short": "LR3",
+			"id": "TULPVI",
+			"capacity": 30,
+			"preferences": [],
+			"title": "Lecture Room 3",
+			"color": "#a12f0dff"
+		}
+	],
+	"groups": [
+		{
+			"id": "qdwcgUl",
+			"units": [
+				{
+					"unitID": "ZjxSwi",
+					"instructorID": "mO0j3B",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "u6KmOj",
+					"instructorID": "dS8jHS",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "9W6FmQ",
+					"instructorID": "pjBdUZ",
+					"divisionID": null,
+					"subDivisionID": null
+				}
+			],
+			"total": 60,
+			"default_room": null,
+			"divisions": [],
+			"preferences": [],
+			"title": "Year 1",
+			"short": "GRP-1",
+			"color": "#2b05b5ff"
+		}
+	],
+	"units": [
+		{
+			"id": "ZjxSwi",
+			"preferences": [],
+			"lessons": 3,
+			"instructors": ["mO0j3B"],
+			"color": "#322badff",
+			"title": "Introduction to Artificial Intelligence",
+			"short": "ATS",
+			"online": false,
+			"default_room": null
+		},
+		{
+			"id": "u6KmOj",
+			"preferences": [],
+			"lessons": 3,
+			"instructors": ["dS8jHS"],
+			"color": "#22d442ff",
+			"title": "HIV and AIDS",
+			"short": "MIT",
+			"online": true,
+			"default_room": null
+		},
+		{
+			"id": "9W6FmQ",
+			"preferences": [],
+			"lessons": 1,
+			"instructors": ["pjBdUZ"],
+			"color": "#a32b29ff",
+			"title": "Shared Intelligence",
+			"short": "STF",
+			"online": false,
+			"default_room": null
+		}
+	],
+	"lessons": [
+		{
+			"identifier": "Gr6Q1S",
+			"group": "qdwcgUl",
+			"unit": "ZjxSwi",
+			"distribution": [2, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": true,
+			"total_lessons": 3,
+			"multiple": false,
+			"type": "regular",
+			"instructor": "mO0j3B"
+		},
+		{
+			"identifier": "aI1cmp",
+			"group": "qdwcgUl",
+			"unit": "u6KmOj",
+			"distribution": [1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": true,
+			"total_lessons": 3,
+			"multiple": false,
+			"type": "regular",
+			"instructor": "dS8jHS"
+		},
+		{
+			"identifier": "6uSaO0",
+			"group": "qdwcgUl",
+			"unit": "9W6FmQ",
+			"distribution": [1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 1,
+			"multiple": false,
+			"type": "regular",
+			"instructor": "pjBdUZ"
+		}
+	],
+
+	"days": ["Monday", "Tuesday", "Wednesday"],
+	"times": ["8:00am", "9:00am", "10:40am", "11:40am", "2:00pm", "3:00pm"],
+	"breaks": [
+		{
+			"title": "Morning Break",
+			"index": 0,
+			"startTime": "10:00am",
+			"duration": {
+				"duration": 40,
+				"division": "minutes"
+			}
+		},
+		{
+			"title": "Lunch Break",
+			"index": 1,
+			"startTime": "12:40pm",
+			"duration": {
+				"duration": 80,
+				"division": "minutes"
+			}
+		}
+	],
+	"blocks": [
+		{
+			"type": "period",
+			"title": "Period 1",
+			"start": "8:00am",
+			"end": "9:00am",
+			"index": 0
+		},
+		{
+			"type": "period",
+			"title": "Period 2",
+			"start": "9:00am",
+			"end": "10:00am",
+			"index": 1
+		},
+		{
+			"type": "break",
+			"title": "Morning Break",
+			"start": "10:00am",
+			"end": "10:40am",
+			"index": 0
+		},
+		{
+			"type": "period",
+			"title": "Period 3",
+			"start": "10:40am",
+			"end": "11:40am",
+			"index": 2
+		},
+		{
+			"type": "period",
+			"title": "Period 4",
+			"start": "11:40am",
+			"end": "12:40pm",
+			"index": 3
+		},
+		{
+			"type": "break",
+			"title": "Lunch Break",
+			"start": "12:40pm",
+			"end": "2:00pm",
+			"index": 1
+		},
+		{
+			"type": "period",
+			"title": "Period 5",
+			"start": "2:00pm",
+			"end": "3:00pm",
+			"index": 4
+		},
+		{
+			"type": "period",
+			"title": "Period 6",
+			"start": "3:00pm",
+			"end": "4:00pm",
+			"index": 5
+		}
+	]
+}

@@ -1,0 +1,229 @@
+package solver
+
+import (
+	"context"
+	"fmt"
+	"geliana-go/pkg/evaluator"
+	"geliana-go/pkg/models"
+	"math/rand"
+	"time"
+)
+
+type Container struct {
+	LessonID     string
+	DistIdx      int
+	MidIdx       int
+	Length       int
+	Instructor   string
+	Group        string
+	Unit         string
+	Online       bool
+	AffectedGrps []string
+	LessonDef    *models.Lesson
+}
+
+type Assignment struct {
+	DayIdx  int
+	TimeIdx int
+	RoomIdx int
+}
+
+type LazySolver struct {
+	containers  []Container
+	assignments []Assignment
+	rooms       []models.Room
+	days        []string
+	times       []string
+	lessons     []models.Lesson
+	groups      []models.Group
+	units       []models.Unit
+	instructors []models.Instructor
+
+	evalParams *evaluator.EvaluationParams
+}
+
+func NewLazySolver() *LazySolver {
+	return &LazySolver{}
+}
+
+func (s *LazySolver) Solve(ctx context.Context, req *models.Request, tracker ProgressTracker) (*models.Response, error) {
+	startTime := time.Now()
+	s.preprocess(req)
+	if len(s.containers) == 0 {
+		return nil, fmt.Errorf("no schedulable items found")
+	}
+
+	s.buildEvalParams()
+
+	for i, container := range s.containers {
+		roomAssignment := -1
+		if !container.Online && len(s.rooms) > 0 {
+			roomAssignment = rand.Intn(len(s.rooms))
+		}
+		s.assignments[i] = Assignment{
+			DayIdx:  rand.Intn(len(s.days)),
+			TimeIdx: rand.Intn(len(s.times)),
+			RoomIdx: roomAssignment,
+		}
+	}
+
+	return s.formatResponse(time.Since(startTime).Seconds()), nil
+}
+
+func (s *LazySolver) preprocess(req *models.Request) {
+	s.rooms = req.Rooms
+	s.days = req.Days
+	s.times = req.Times
+	s.lessons = req.Lessons
+
+	unnasigned := Assignment{DayIdx: -1, TimeIdx: -1, RoomIdx: -1}
+
+	for li := range req.Lessons {
+		l := req.Lessons[li]
+		for distIdx, distribution := range l.Distribution {
+			if distribution == 0 {
+				continue
+			}
+
+			switch l.Type {
+			case "regular":
+				s.containers = append(s.containers, Container{
+					LessonID:     l.Identifier,
+					DistIdx:      distIdx,
+					Length:       distribution,
+					Instructor:   l.Instructor,
+					Group:        l.Group,
+					Unit:         l.Unit,
+					Online:       l.Online,
+					AffectedGrps: []string{l.Group},
+					LessonDef:    &req.Lessons[li],
+				})
+			case "lesson-merge":
+				affected := make([]string, 0, len(l.MultipleIDs))
+				for _, m := range l.MultipleIDs {
+					affected = append(affected, m.GroupID)
+				}
+				s.containers = append(s.containers, Container{
+					LessonID:     l.Identifier,
+					DistIdx:      distIdx,
+					Length:       distribution,
+					Instructor:   l.Instructor,
+					Group:        "",
+					Unit:         l.Unit,
+					Online:       l.Online,
+					AffectedGrps: affected,
+					LessonDef:    &req.Lessons[li],
+				})
+			case "subgroup":
+				s.containers = append(s.containers, Container{
+					LessonID:     l.Identifier,
+					DistIdx:      distIdx,
+					Length:       distribution,
+					Group:        l.Group,
+					Unit:         l.Unit,
+					Online:       l.Online,
+					AffectedGrps: []string{l.Group},
+					LessonDef:    &req.Lessons[li],
+				})
+			}
+
+			s.assignments = append(s.assignments, unnasigned)
+		}
+	}
+}
+
+func (s *LazySolver) buildEvalParams() {
+	periodTimes := make([]string, len(s.times))
+	copy(periodTimes, s.times)
+
+	s.evalParams = &evaluator.EvaluationParams{
+		Days:        s.days,
+		PeriodTimes: periodTimes,
+		Lessons:     s.lessons,
+		Rooms:       s.rooms,
+		Groups:      s.groups,
+		Instructors: s.instructors,
+		Units:       s.units,
+		Blocks:      make([]models.Block, 0),
+	}
+}
+
+// formatResponse converts the randomly-assigned containers into Sessions.
+// It handles "regular", "lesson-merge", and "subgroup" lesson types, and
+// fills every field that has a valid source value instead of leaving zero values.
+func (s *LazySolver) formatResponse(runtime float64) *models.Response {
+	sessions := make([]models.Session, 0, len(s.containers)) // len 0, cap N -- append starts at index 0
+
+	for i, container := range s.containers {
+		assignment := s.assignments[i]
+		def := container.LessonDef
+
+		day := ""
+		if assignment.DayIdx >= 0 && assignment.DayIdx < len(s.days) {
+			day = s.days[assignment.DayIdx]
+		}
+		timeStr := ""
+		if assignment.TimeIdx >= 0 && assignment.TimeIdx < len(s.times) {
+			timeStr = s.times[assignment.TimeIdx]
+		}
+		room := ""
+		if !container.Online && assignment.RoomIdx >= 0 && assignment.RoomIdx < len(s.rooms) {
+			room = s.rooms[assignment.RoomIdx].ID
+		}
+
+		sess := models.Session{
+			Day:         day,
+			Time:        timeStr,
+			Room:        room,
+			Unit:        container.Unit,
+			Online:      container.Online,
+			Blocks:      container.Length,
+			Multiple:    def.Multiple,
+			Type:        def.Type,
+			Short:       def.Short,
+			Title:       def.Title,
+			DatabaseIDs: def.DatabaseIDs,
+			TimetableID: def.TimetableID,
+		}
+
+		switch def.Type {
+		case "regular":
+			sess.Group = container.Group
+			sess.Instructor = container.Instructor
+			sess.Identifier = fmt.Sprintf("%s-%s-%s-%d", def.Identifier, container.Group, container.Instructor, i)
+
+		case "lesson-merge":
+			sess.Instructor = container.Instructor
+			sess.AffectedGroups = container.AffectedGrps
+			sess.MultipleIDs = def.MultipleIDs
+			sess.Identifier = fmt.Sprintf("%s-%s-%d", def.Identifier, container.Instructor, i)
+
+		case "subgroup":
+			sess.AffectedGroups = container.AffectedGrps
+			sess.MultipleIDs = def.MultipleIDs
+			instructors := make([]string, 0, len(def.MultipleIDs))
+			for _, m := range def.MultipleIDs {
+				instructors = append(instructors, m.InstID)
+			}
+			sess.AffectedInstructors = instructors
+			sess.Identifier = fmt.Sprintf("%s-%s-%d", def.Identifier, container.Group, i)
+
+		default:
+			// unknown lesson type -- skip rather than emit a half-filled session
+			continue
+		}
+
+		sessions = append(sessions, sess)
+	}
+
+	return &models.Response{
+		Error:    false,
+		Message:  "Lazy",
+		Sessions: sessions,
+		Stats: models.OptimizationStats{
+			OverallScore:  0,
+			TimeTaken:     runtime,
+			SolutionFound: true,
+		},
+	}
+}

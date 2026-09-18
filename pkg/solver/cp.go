@@ -738,7 +738,12 @@ func (s *CPSolver) formatResponse(c Chromosome, runtime float64) *models.Respons
 func (s *CPSolver) preprocess(req *models.Request) {
 	s.rooms = req.Rooms
 	s.days = req.Days
-	s.blocks = req.Blocks
+	s.blocks = make([]models.Block, 0, len(req.Blocks))
+	for _, b := range req.Blocks {
+		if b.Type != "break" {
+			s.blocks = append(s.blocks, b)
+		}
+	}
 
 	s.roomMap = make(map[string]int)
 	for i, r := range s.rooms {

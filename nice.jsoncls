@@ -1,0 +1,18 @@
+{
+  "error": false,
+  "message": "Lazy",
+  "sessions": [],
+  "stats": {
+    "overall_score": 0,
+    "time_taken": 0.000533,
+    "memory_usage_mb": 0.3288421630859375,
+    "solution_found": true,
+    "hard_score": 0,
+    "preference_score": 0,
+    "distribution_score": 0,
+    "default_room_score": 0,
+    "total_clashes": 0,
+    "hidden_sessions": 0,
+    "health": "low"
+  }
+}

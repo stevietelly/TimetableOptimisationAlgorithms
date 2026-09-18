@@ -1,0 +1,517 @@
+{
+	"error": false,
+	"message": "Optimization successful",
+	"sessions": [
+		{
+			"identifier": "avMbRzZFSLQA@kVPIvR-JK5DbM-uELDZF\u0026\u0026Mp24D4l1mKN5@Ez58Ps-Vg44GL-uELDZF\u0026\u0026k8Sucse1MUF2@OrzJQa-fPO371-uELDZF\u0026\u0026hQtN7fEyRA58@rce0HP-HUy05l-uELDZF-3",
+			"group": "uELDZF",
+			"instructor": "kVPIvR",
+			"unit": "JK5DbM",
+			"day": "Friday",
+			"time": "2:00pm",
+			"times": ["2:00pm"],
+			"room": "GCx1hF, m48cos, 1bTD8P, gXqPrS",
+			"online": false,
+			"blocks": 1,
+			"multiple": true,
+			"type": "subgroup",
+			"multiple_ids": [
+				{
+					"group_id": "uELDZF",
+					"inst_id": "kVPIvR",
+					"unit_id": "JK5DbM",
+					"room_id": "GCx1hF",
+					"online": false
+				},
+				{
+					"group_id": "uELDZF",
+					"inst_id": "Ez58Ps",
+					"unit_id": "Vg44GL",
+					"room_id": "m48cos",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				},
+				{
+					"group_id": "uELDZF",
+					"inst_id": "OrzJQa",
+					"unit_id": "fPO371",
+					"room_id": "1bTD8P",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				},
+				{
+					"group_id": "uELDZF",
+					"inst_id": "rce0HP",
+					"unit_id": "HUy05l",
+					"room_id": "gXqPrS",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				}
+			],
+			"short": "TECH",
+			"title": "",
+			"affected_groups": ["uELDZF"],
+			"affected_instructors": ["Ez58Ps", "OrzJQa", "kVPIvR", "rce0HP"],
+			"database_ids": {
+				"group": "",
+				"instructor": "",
+				"unit": "",
+				"room": ""
+			}
+		},
+		{
+			"identifier": "incie4n5XiZJ@kVPIvR-JK5DbM-caKMeS\u0026\u0026pyzrS4JYVGaE@Ez58Ps-Vg44GL-caKMeS\u0026\u0026AVaPYZ35JO0e@OrzJQa-fPO371-caKMeS\u0026\u0026B4HvY1U8fOge@rce0HP-HUy05l-caKMeS-0",
+			"group": "caKMeS",
+			"instructor": "kVPIvR",
+			"unit": "JK5DbM",
+			"day": "Friday",
+			"time": "5:00pm",
+			"times": ["5:00pm"],
+			"room": "GCx1hF, m48cos, 1bTD8P, WhqdML",
+			"online": false,
+			"blocks": 1,
+			"multiple": true,
+			"type": "subgroup",
+			"multiple_ids": [
+				{
+					"group_id": "caKMeS",
+					"inst_id": "kVPIvR",
+					"unit_id": "JK5DbM",
+					"room_id": "GCx1hF",
+					"online": false
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "Ez58Ps",
+					"unit_id": "Vg44GL",
+					"room_id": "m48cos",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "OrzJQa",
+					"unit_id": "fPO371",
+					"room_id": "1bTD8P",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "rce0HP",
+					"unit_id": "HUy05l",
+					"room_id": "WhqdML",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				}
+			],
+			"short": "TECH",
+			"title": "",
+			"affected_groups": ["caKMeS"],
+			"affected_instructors": ["Ez58Ps", "OrzJQa", "kVPIvR", "rce0HP"],
+			"database_ids": {
+				"group": "",
+				"instructor": "",
+				"unit": "",
+				"room": ""
+			}
+		},
+		{
+			"identifier": "incie4n5XiZJ@kVPIvR-JK5DbM-caKMeS\u0026\u0026pyzrS4JYVGaE@Ez58Ps-Vg44GL-caKMeS\u0026\u0026AVaPYZ35JO0e@OrzJQa-fPO371-caKMeS\u0026\u0026B4HvY1U8fOge@rce0HP-HUy05l-caKMeS-1",
+			"group": "caKMeS",
+			"instructor": "kVPIvR",
+			"unit": "JK5DbM",
+			"day": "Monday",
+			"time": "2:00pm",
+			"times": ["2:00pm"],
+			"room": "m48cos, qneJNH, WhqdML, 1bTD8P",
+			"online": false,
+			"blocks": 1,
+			"multiple": true,
+			"type": "subgroup",
+			"multiple_ids": [
+				{
+					"group_id": "caKMeS",
+					"inst_id": "kVPIvR",
+					"unit_id": "JK5DbM",
+					"room_id": "m48cos",
+					"online": false
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "Ez58Ps",
+					"unit_id": "Vg44GL",
+					"room_id": "qneJNH",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "OrzJQa",
+					"unit_id": "fPO371",
+					"room_id": "WhqdML",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "rce0HP",
+					"unit_id": "HUy05l",
+					"room_id": "1bTD8P",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				}
+			],
+			"short": "TECH",
+			"title": "",
+			"affected_groups": ["caKMeS"],
+			"affected_instructors": ["Ez58Ps", "OrzJQa", "kVPIvR", "rce0HP"],
+			"database_ids": {
+				"group": "",
+				"instructor": "",
+				"unit": "",
+				"room": ""
+			}
+		},
+		{
+			"identifier": "incie4n5XiZJ@kVPIvR-JK5DbM-caKMeS\u0026\u0026pyzrS4JYVGaE@Ez58Ps-Vg44GL-caKMeS\u0026\u0026AVaPYZ35JO0e@OrzJQa-fPO371-caKMeS\u0026\u0026B4HvY1U8fOge@rce0HP-HUy05l-caKMeS-2",
+			"group": "caKMeS",
+			"instructor": "kVPIvR",
+			"unit": "JK5DbM",
+			"day": "Friday",
+			"time": "9:00am",
+			"times": ["9:00am"],
+			"room": "m48cos, WhqdML, 1bTD8P, qneJNH",
+			"online": false,
+			"blocks": 1,
+			"multiple": true,
+			"type": "subgroup",
+			"multiple_ids": [
+				{
+					"group_id": "caKMeS",
+					"inst_id": "kVPIvR",
+					"unit_id": "JK5DbM",
+					"room_id": "m48cos",
+					"online": false
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "Ez58Ps",
+					"unit_id": "Vg44GL",
+					"room_id": "WhqdML",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "OrzJQa",
+					"unit_id": "fPO371",
+					"room_id": "1bTD8P",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "rce0HP",
+					"unit_id": "HUy05l",
+					"room_id": "qneJNH",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				}
+			],
+			"short": "TECH",
+			"title": "",
+			"affected_groups": ["caKMeS"],
+			"affected_instructors": ["Ez58Ps", "OrzJQa", "kVPIvR", "rce0HP"],
+			"database_ids": {
+				"group": "",
+				"instructor": "",
+				"unit": "",
+				"room": ""
+			}
+		},
+		{
+			"identifier": "ZCrWRGq@kOG8Tf-i0CwWm-uELDZF\u0026\u0026f7Vuq2C@kOG8Tf-i0CwWm-caKMeS-0",
+			"group": "",
+			"instructor": "kOG8Tf",
+			"unit": "i0CwWm",
+			"day": "Friday",
+			"time": "8:00am",
+			"times": ["8:00am"],
+			"room": "m48cos",
+			"online": false,
+			"blocks": 1,
+			"multiple": true,
+			"type": "lesson-merge",
+			"multiple_ids": [
+				{
+					"group_id": "uELDZF",
+					"inst_id": "kOG8Tf",
+					"unit_id": "i0CwWm",
+					"room_id": "m48cos",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "kOG8Tf",
+					"unit_id": "i0CwWm",
+					"room_id": "m48cos",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				}
+			],
+			"short": "F4-PE",
+			"title": "Form Fours Taking PE",
+			"affected_groups": ["uELDZF", "caKMeS"],
+			"affected_instructors": ["kOG8Tf"],
+			"database_ids": {
+				"group": "",
+				"instructor": "",
+				"unit": "",
+				"room": ""
+			}
+		},
+		{
+			"identifier": "incie4n5XiZJ@kVPIvR-JK5DbM-caKMeS\u0026\u0026pyzrS4JYVGaE@Ez58Ps-Vg44GL-caKMeS\u0026\u0026AVaPYZ35JO0e@OrzJQa-fPO371-caKMeS\u0026\u0026B4HvY1U8fOge@rce0HP-HUy05l-caKMeS-3",
+			"group": "caKMeS",
+			"instructor": "kVPIvR",
+			"unit": "JK5DbM",
+			"day": "Wednesday",
+			"time": "9:00am",
+			"times": ["9:00am"],
+			"room": "1bTD8P, qneJNH, WhqdML, gXqPrS",
+			"online": false,
+			"blocks": 1,
+			"multiple": true,
+			"type": "subgroup",
+			"multiple_ids": [
+				{
+					"group_id": "caKMeS",
+					"inst_id": "kVPIvR",
+					"unit_id": "JK5DbM",
+					"room_id": "1bTD8P",
+					"online": false
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "Ez58Ps",
+					"unit_id": "Vg44GL",
+					"room_id": "qneJNH",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "OrzJQa",
+					"unit_id": "fPO371",
+					"room_id": "WhqdML",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				},
+				{
+					"group_id": "caKMeS",
+					"inst_id": "rce0HP",
+					"unit_id": "HUy05l",
+					"room_id": "gXqPrS",
+					"online": false,
+					"affected_groups": ["caKMeS"]
+				}
+			],
+			"short": "TECH",
+			"title": "",
+			"affected_groups": ["caKMeS"],
+			"affected_instructors": ["Ez58Ps", "OrzJQa", "kVPIvR", "rce0HP"],
+			"database_ids": {
+				"group": "",
+				"instructor": "",
+				"unit": "",
+				"room": ""
+			}
+		},
+		{
+			"identifier": "avMbRzZFSLQA@kVPIvR-JK5DbM-uELDZF\u0026\u0026Mp24D4l1mKN5@Ez58Ps-Vg44GL-uELDZF\u0026\u0026k8Sucse1MUF2@OrzJQa-fPO371-uELDZF\u0026\u0026hQtN7fEyRA58@rce0HP-HUy05l-uELDZF-0",
+			"group": "uELDZF",
+			"instructor": "kVPIvR",
+			"unit": "JK5DbM",
+			"day": "Friday",
+			"time": "7:00am",
+			"times": ["7:00am"],
+			"room": "1bTD8P, gXqPrS, m48cos, GCx1hF",
+			"online": false,
+			"blocks": 1,
+			"multiple": true,
+			"type": "subgroup",
+			"multiple_ids": [
+				{
+					"group_id": "uELDZF",
+					"inst_id": "kVPIvR",
+					"unit_id": "JK5DbM",
+					"room_id": "1bTD8P",
+					"online": false
+				},
+				{
+					"group_id": "uELDZF",
+					"inst_id": "Ez58Ps",
+					"unit_id": "Vg44GL",
+					"room_id": "gXqPrS",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				},
+				{
+					"group_id": "uELDZF",
+					"inst_id": "OrzJQa",
+					"unit_id": "fPO371",
+					"room_id": "m48cos",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				},
+				{
+					"group_id": "uELDZF",
+					"inst_id": "rce0HP",
+					"unit_id": "HUy05l",
+					"room_id": "GCx1hF",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				}
+			],
+			"short": "TECH",
+			"title": "",
+			"affected_groups": ["uELDZF"],
+			"affected_instructors": ["Ez58Ps", "OrzJQa", "kVPIvR", "rce0HP"],
+			"database_ids": {
+				"group": "",
+				"instructor": "",
+				"unit": "",
+				"room": ""
+			}
+		},
+		{
+			"identifier": "avMbRzZFSLQA@kVPIvR-JK5DbM-uELDZF\u0026\u0026Mp24D4l1mKN5@Ez58Ps-Vg44GL-uELDZF\u0026\u0026k8Sucse1MUF2@OrzJQa-fPO371-uELDZF\u0026\u0026hQtN7fEyRA58@rce0HP-HUy05l-uELDZF-1",
+			"group": "uELDZF",
+			"instructor": "kVPIvR",
+			"unit": "JK5DbM",
+			"day": "Wednesday",
+			"time": "1:00pm",
+			"times": ["1:00pm"],
+			"room": "1bTD8P, gXqPrS, m48cos, GCx1hF",
+			"online": false,
+			"blocks": 1,
+			"multiple": true,
+			"type": "subgroup",
+			"multiple_ids": [
+				{
+					"group_id": "uELDZF",
+					"inst_id": "kVPIvR",
+					"unit_id": "JK5DbM",
+					"room_id": "1bTD8P",
+					"online": false
+				},
+				{
+					"group_id": "uELDZF",
+					"inst_id": "Ez58Ps",
+					"unit_id": "Vg44GL",
+					"room_id": "gXqPrS",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				},
+				{
+					"group_id": "uELDZF",
+					"inst_id": "OrzJQa",
+					"unit_id": "fPO371",
+					"room_id": "m48cos",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				},
+				{
+					"group_id": "uELDZF",
+					"inst_id": "rce0HP",
+					"unit_id": "HUy05l",
+					"room_id": "GCx1hF",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				}
+			],
+			"short": "TECH",
+			"title": "",
+			"affected_groups": ["uELDZF"],
+			"affected_instructors": ["Ez58Ps", "OrzJQa", "kVPIvR", "rce0HP"],
+			"database_ids": {
+				"group": "",
+				"instructor": "",
+				"unit": "",
+				"room": ""
+			}
+		},
+		{
+			"identifier": "avMbRzZFSLQA@kVPIvR-JK5DbM-uELDZF\u0026\u0026Mp24D4l1mKN5@Ez58Ps-Vg44GL-uELDZF\u0026\u0026k8Sucse1MUF2@OrzJQa-fPO371-uELDZF\u0026\u0026hQtN7fEyRA58@rce0HP-HUy05l-uELDZF-2",
+			"group": "uELDZF",
+			"instructor": "kVPIvR",
+			"unit": "JK5DbM",
+			"day": "Thursday",
+			"time": "3:00pm",
+			"times": ["3:00pm"],
+			"room": "m48cos, WhqdML, GCx1hF, 1bTD8P",
+			"online": false,
+			"blocks": 1,
+			"multiple": true,
+			"type": "subgroup",
+			"multiple_ids": [
+				{
+					"group_id": "uELDZF",
+					"inst_id": "kVPIvR",
+					"unit_id": "JK5DbM",
+					"room_id": "m48cos",
+					"online": false
+				},
+				{
+					"group_id": "uELDZF",
+					"inst_id": "Ez58Ps",
+					"unit_id": "Vg44GL",
+					"room_id": "WhqdML",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				},
+				{
+					"group_id": "uELDZF",
+					"inst_id": "OrzJQa",
+					"unit_id": "fPO371",
+					"room_id": "GCx1hF",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				},
+				{
+					"group_id": "uELDZF",
+					"inst_id": "rce0HP",
+					"unit_id": "HUy05l",
+					"room_id": "1bTD8P",
+					"online": false,
+					"affected_groups": ["uELDZF"]
+				}
+			],
+			"short": "TECH",
+			"title": "",
+			"affected_groups": ["uELDZF"],
+			"affected_instructors": ["Ez58Ps", "OrzJQa", "kVPIvR", "rce0HP"],
+			"database_ids": {
+				"group": "",
+				"instructor": "",
+				"unit": "",
+				"room": ""
+			}
+		}
+	],
+	"stats": {
+		"overall_score": 100,
+		"time_taken": 0.0110815,
+		"memory_usage_mb": 1.3441314697265625,
+		"solution_found": true,
+		"hard_score": 100,
+		"preference_score": 100,
+		"distribution_score": 100,
+		"default_room_score": 100,
+		"total_clashes": 0,
+		"hidden_sessions": 0,
+		"health": "high"
+	}
+}

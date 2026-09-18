@@ -47,11 +47,7 @@ func Evaluate(sessions []models.Session, params *EvaluationParams) *EvaluationRe
 	res := &EvaluationResult{}
 
 	// 1. Hard constraints — clashes
-	var periodTimes []string
-	if params != nil {
-		periodTimes = params.PeriodTimes
-	}
-	hardScore, totalClashes, clashViolations := evaluateClashes(sessions, periodTimes)
+	hardScore, totalClashes, clashViolations := evaluateClashes(sessions)
 	res.HardScore = hardScore
 	res.TotalClashes = totalClashes
 	res.Violations = append(res.Violations, clashViolations...)
@@ -105,7 +101,7 @@ func blocksOverlap(a, b sessionRange) bool {
 	return a.startBlock < b.endBlock && b.startBlock < a.endBlock
 }
 
-func evaluateClashes(sessions []models.Session, periodTimes []string) (float64, int, []ConstraintViolation) {
+func evaluateClashes(sessions []models.Session) (float64, int, []ConstraintViolation) {
 	var violations []ConstraintViolation
 	totalClashes := 0
 
@@ -118,52 +114,29 @@ func evaluateClashes(sessions []models.Session, periodTimes []string) (float64, 
 	instrBuckets := make(map[bucketKey][]sessionRange)
 	roomBuckets := make(map[bucketKey][]sessionRange)
 
-	// Build the time→block-index map from the FULL period times list (passed
-	// from the solver's filtered blocks). Building it only from the session
-	// time strings causes gaps when not every period has a session, which
-	// shifts all subsequent indices down and produces false clash detections
-	// for multi-block sessions.
-	timeOrder := make(map[string]int, len(periodTimes))
-	if len(periodTimes) > 0 {
-		// Use the pre-sorted period times directly — they already come from
-		// the solver's ordered block list.
-		for i, t := range periodTimes {
-			timeOrder[t] = i
-		}
-	} else {
-		// Fallback: derive order from the session time strings (legacy path
-		// for callers that don't supply PeriodTimes).
-		allTimes := make([]string, 0, len(sessions))
-		seen := make(map[string]bool)
-		for _, s := range sessions {
-			if !seen[s.Time] {
-				seen[s.Time] = true
-				allTimes = append(allTimes, s.Time)
-			}
-		}
-		sortTimes(allTimes)
-		for i, t := range allTimes {
-			timeOrder[t] = i
-		}
-	}
-	// Guard: sessions with times outside the period grid (hidden sessions)
-	// would otherwise default to index 0 and produce false clashes.
-	// Assign any missing times distinct indices after the grid.
-	missing := make([]string, 0)
+	// Build a quick time→block-index map from the first session's context.
+	// Block indices are inferred from the time string order.
+	// We use an ephemeral index: the evaluator doesn't have Blocks here directly,
+	// so we derive relative ordering from the time strings.
+	// Since we need actual block indices for overlap, we accept that sessions
+	// with Blocks==1 have single-point ranges and don't overlap with same-time peers.
+	// For Blocks>1, we mark the range starting at idx and ending at idx+Blocks.
+	// We compute a session's start block by looking at the time string offset.
+	// All sessions have a Time string; we use its ordinal position in sort order.
+	// For simplicity, we sort all unique time strings and use that as the index.
+
+	timeOrder := make(map[string]int)
+	allTimes := make([]string, 0, len(sessions))
+	seen := make(map[string]bool)
 	for _, s := range sessions {
-		if _, ok := timeOrder[s.Time]; !ok {
-			timeOrder[s.Time] = -1 // mark seen without allocating yet
-			missing = append(missing, s.Time)
+		if !seen[s.Time] {
+			seen[s.Time] = true
+			allTimes = append(allTimes, s.Time)
 		}
 	}
-	if len(missing) > 0 {
-		sortTimes(missing)
-		for _, t := range missing {
-			timeOrder[t] = len(periodTimes)
-			// bump a local counter rather than len(periodTimes) so each
-			// distinct missing time gets its own index
-			periodTimes = append(periodTimes, t)
-		}
+	sortTimes(allTimes)
+	for i, t := range allTimes {
+		timeOrder[t] = i
 	}
 
 	for _, s := range sessions {

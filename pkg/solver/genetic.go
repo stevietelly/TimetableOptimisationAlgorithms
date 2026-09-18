@@ -43,6 +43,11 @@ type GeneticSolver struct {
 	days             []string
 	blocks           []models.Block
 
+	// syncGroups maps a subgroup sync key ("<LessonID>_<DistIdx>") to the
+	// indices of every SchedulableItem (division) that must share the same
+	// day+block. Precomputed in preprocess to keep repair/init fast.
+	syncGroups map[string][]int
+
 	roomMap       map[string]int
 	unitMap       map[string]models.Unit
 	instructorMap map[string]models.Instructor
@@ -325,15 +330,33 @@ func (s *GeneticSolver) initializePopulation(ctx context.Context) []Chromosome {
 // initializeSmart builds one chromosome using greedy conflict-aware placement.
 // Items are placed one at a time; each placement tries 15 random slots and
 // keeps the one with the fewest conflicts against already-placed items.
+// Subgroup divisions are placed jointly so they share the same day+block.
 func (s *GeneticSolver) initializeSmart() Chromosome {
 	c := make(Chromosome, len(s.schedulableItems))
 	occ := newOccupancyMaps()
 
+	placed := make(map[int]bool)
 	for i := range s.schedulableItems {
+		if placed[i] {
+			continue
+		}
 		item := &s.schedulableItems[i]
+
+		if s.IsSubgroup(item.LessonDef.Type) {
+			siblings := s.siblingIndices(i)
+			if len(siblings) > 1 {
+				s.repairSyncGroup(siblings, occ, c)
+				for _, sib := range siblings {
+					placed[sib] = true
+				}
+				continue
+			}
+		}
+
 		gene := s.bestPlacement(item, occ, 15)
 		c[i] = gene
 		occ.add(item, gene)
+		placed[i] = true
 	}
 	return c
 }
@@ -395,14 +418,39 @@ func (s *GeneticSolver) repairChromosome(c Chromosome) Chromosome {
 		occ.add(&s.schedulableItems[i], gene)
 	}
 
-	// Identify clashing genes (any block they occupy is also occupied by
-	// another item for the same instructor, group, or room).
-	clashing := s.findClashingGenes(result)
+	s.repairClashing(occ, result, s.findClashingGenes(result))
+	return result
+}
 
-	// Re-place each clashing gene using greedy placement.
-	// Remove the gene from occ first so it doesn't conflict with itself.
+// repairClashing re-places each clashing gene using greedy placement.
+// Remove the gene from occ first so it doesn't conflict with itself.
+// Desynced subgroup siblings are re-placed jointly so they end up on the
+// same day+block instead of drifting apart.
+func (s *GeneticSolver) repairClashing(occ *occupancyMaps, result Chromosome, clashing map[int]bool) {
+	handled := make(map[int]bool)
 	for idx := range clashing {
+		if handled[idx] {
+			continue
+		}
 		item := &s.schedulableItems[idx]
+
+		if s.IsSubgroup(item.LessonDef.Type) {
+			siblings := s.siblingIndices(idx)
+			allClashing := len(siblings) > 0
+			for _, sib := range siblings {
+				if !clashing[sib] {
+					allClashing = false
+					break
+				}
+			}
+			if allClashing {
+				s.repairSyncGroup(siblings, occ, result)
+				for _, sib := range siblings {
+					handled[sib] = true
+				}
+				continue
+			}
+		}
 
 		// Remove old placement from occupancy.
 		occ.remove(item, result[idx])
@@ -413,9 +461,85 @@ func (s *GeneticSolver) repairChromosome(c Chromosome) Chromosome {
 
 		// Register the new placement so subsequent genes see it.
 		occ.add(item, newGene)
+		handled[idx] = true
+	}
+}
+
+// siblingIndices returns the indices of all SchedulableItems that form the
+// same subgroup sync group as idx (same LessonID + DistIdx), including idx.
+func (s *GeneticSolver) siblingIndices(idx int) []int {
+	if s.syncGroups == nil {
+		return []int{idx}
+	}
+	item := &s.schedulableItems[idx]
+	key := fmt.Sprintf("%s_%d", item.LessonID, item.DistIdx)
+	return s.syncGroups[key]
+}
+
+// repairSyncGroup removes every sibling division from occupancy and then
+// jointly searches for a single (day, block) that minimises total conflict
+// across all divisions, assigning each division its own best room at that slot.
+func (s *GeneticSolver) repairSyncGroup(siblings []int, occ *occupancyMaps, result Chromosome) {
+	// Remove all siblings from occ first so they don't conflict with each other.
+	for _, idx := range siblings {
+		occ.remove(&s.schedulableItems[idx], result[idx])
 	}
 
-	return result
+	bestPenalty := math.MaxInt32
+	var bestGenes map[int]Gene
+
+	// Compute the max length (blocks spanned) across the group, so we search
+	// valid starting block indices for the longest division.
+	maxLength := 1
+	for _, idx := range siblings {
+		l := s.schedulableItems[idx].Length
+		if l > maxLength {
+			maxLength = l
+		}
+	}
+	maxBlock := len(s.blocks) - maxLength
+	if maxBlock < 0 {
+		maxBlock = 0
+	}
+
+	for attempt := 0; attempt < 25; attempt++ {
+		dayIdx := rand.Intn(len(s.days))
+		blockIdx := rand.Intn(maxBlock + 1)
+
+		genes := make(map[int]Gene, len(siblings))
+		usedRooms := make(map[int]bool)
+		penalty := 0
+		dupRoom := false
+		for _, idx := range siblings {
+			item := &s.schedulableItems[idx]
+			roomIdx := -1
+			if !item.Online && len(s.rooms) > 0 {
+				roomIdx = rand.Intn(len(s.rooms))
+				if usedRooms[roomIdx] {
+					dupRoom = true
+				}
+				usedRooms[roomIdx] = true
+			}
+			penalty += occ.conflictCount(item, dayIdx, blockIdx, roomIdx)
+			genes[idx] = Gene{DayIdx: dayIdx, BlockIdx: blockIdx, RoomIdx: roomIdx}
+		}
+		if dupRoom {
+			penalty += 100
+		}
+
+		if penalty < bestPenalty {
+			bestPenalty = penalty
+			bestGenes = genes
+			if penalty == 0 {
+				break
+			}
+		}
+	}
+
+	for idx, gene := range bestGenes {
+		result[idx] = gene
+		occ.add(&s.schedulableItems[idx], gene)
+	}
 }
 
 // findClashingGenes returns a set of gene indices that are involved in any
@@ -471,6 +595,41 @@ func (s *GeneticSolver) findClashingGenes(c Chromosome) map[int]bool {
 	}
 	for _, ivs := range roomIntervals {
 		checkOverlaps(ivs)
+	}
+
+	// Subgroup sync detection: if any division of a lesson+dist occupies a
+	// different day/block than its siblings, the WHOLE group must be flagged as
+	// clashing so repair re-places them jointly onto the same slot.
+	type syncEntry struct {
+		day, start int
+		geneIdx    int
+	}
+	syncMap := make(map[string][]syncEntry)
+	for i, gene := range c {
+		item := &s.schedulableItems[i]
+		if s.IsSubgroup(item.LessonDef.Type) {
+			key := fmt.Sprintf("%s_%d", item.LessonID, item.DistIdx)
+			syncMap[key] = append(syncMap[key], syncEntry{gene.DayIdx, gene.BlockIdx, i})
+		}
+	}
+	for _, entries := range syncMap {
+		if len(entries) < 2 {
+			continue
+		}
+		ref := entries[0]
+		desynced := false
+		for _, e := range entries[1:] {
+			if e.day != ref.day || e.start != ref.start {
+				desynced = true
+				break
+			}
+		}
+		if !desynced {
+			continue
+		}
+		for _, e := range entries {
+			clashing[e.geneIdx] = true
+		}
 	}
 
 	return clashing
@@ -835,12 +994,9 @@ func (s *GeneticSolver) mutate(c Chromosome) {
 				occ.add(&s.schedulableItems[i], gene)
 			}
 		}
-		for idx := range clashing {
-			item := &s.schedulableItems[idx]
-			newGene := s.bestPlacement(item, occ, 20)
-			c[idx] = newGene
-			occ.add(item, newGene)
-		}
+		// Reuse the sync-aware repair path so desynced subgroup divisions are
+		// re-placed jointly instead of drifting further apart.
+		s.repairClashing(occ, c, clashing)
 	}
 
 	// Pass 2: random noise on non-clashing genes.
@@ -882,6 +1038,13 @@ func (s *GeneticSolver) formatResponse(c Chromosome, runtime float64) *models.Re
 			OverallScore:  evalResult.OverallScore,
 			TimeTaken:     runtime,
 			SolutionFound: true,
+			HardScore: evalResult.HardScore,
+			PreferenceScore: evalResult.PreferenceScore,
+			DistributionScore: evalResult.DistributionScore,
+			DefaultRoomScore: evalResult.DefaultRoomScore,
+			HiddenSessions: evalResult.HiddenSessions,
+			TotalClashes: evalResult.TotalClashes,
+			Health: evalResult.Health,
 		},
 	}
 }
@@ -893,7 +1056,14 @@ func (s *GeneticSolver) formatResponse(c Chromosome, runtime float64) *models.Re
 func (s *GeneticSolver) preprocess(req *models.Request) {
 	s.rooms = req.Rooms
 	s.days = req.Days
-	s.blocks = req.Blocks
+	// Only keep schedulable period blocks — break blocks must never receive
+	// sessions. (Mirrors cp/heuristic_cp/lazy preprocess.)
+	s.blocks = make([]models.Block, 0, len(req.Blocks))
+	for _, b := range req.Blocks {
+		if b.Type != "break" {
+			s.blocks = append(s.blocks, b)
+		}
+	}
 
 	s.roomMap = make(map[string]int)
 	for i, r := range s.rooms {
@@ -952,6 +1122,9 @@ func (s *GeneticSolver) preprocess(req *models.Request) {
 
 			case "subgroup", "subgroup-lesson-merge":
 				for midIdx, m := range l.MultipleIDs {
+					// TODO: this might be a bug
+					// subgroups do not contain multiple gropups, because its a single group with elective subjects
+					// the same can not be said for subgroup-lesson-merge since it does involve multiple groups 
 					affected := m.AffectedGroups
 					if len(affected) == 0 && m.GroupID != "" {
 						affected = []string{m.GroupID}
@@ -970,6 +1143,16 @@ func (s *GeneticSolver) preprocess(req *models.Request) {
 					})
 				}
 			}
+		}
+	}
+
+	// Precompute subgroup sync groups so repair/init can place all divisions
+	// of a lesson+dist on the same day+block together.
+	s.syncGroups = make(map[string][]int)
+	for i, item := range s.schedulableItems {
+		if s.IsSubgroup(item.LessonDef.Type) {
+			key := fmt.Sprintf("%s_%d", item.LessonID, item.DistIdx)
+			s.syncGroups[key] = append(s.syncGroups[key], i)
 		}
 	}
 }

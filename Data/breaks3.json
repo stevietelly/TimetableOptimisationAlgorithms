@@ -1,0 +1,1058 @@
+{
+	"instructors": [
+		{
+			"id": "afWriz",
+			"preferences": [],
+			"color": "#f536dbff",
+			"name": "Jules",
+			"title": "Mr",
+			"short": "JRT"
+		},
+		{
+			"id": "pu2aVF",
+			"preferences": [],
+			"color": "#4a7cf7ff",
+			"name": "Ndsdsdds",
+			"title": "MS",
+			"short": "NFG"
+		},
+		{
+			"id": "nvuHSE",
+			"preferences": [],
+			"color": "#cab34cff",
+			"name": "Deadan Kiugu",
+			"title": "Mr",
+			"short": "TSC-MTH"
+		},
+		{
+			"id": "4I4rEt",
+			"preferences": [],
+			"color": "#ea0ec2ff",
+			"name": "Irene Maneno",
+			"title": "Ms",
+			"short": "TSC-KIS"
+		},
+		{
+			"id": "eMv19j",
+			"preferences": [],
+			"color": "#f376faff",
+			"name": "John Kinyanjui",
+			"title": "Mr",
+			"short": "TSC-ENG"
+		},
+		{
+			"id": "lQ1H1x",
+			"preferences": [],
+			"color": "#09bbdbff",
+			"name": "Elvis Bakayoko",
+			"title": "Mr",
+			"short": "TSC-HIST"
+		},
+		{
+			"id": "rce0HP",
+			"preferences": [],
+			"color": "#5f398cff",
+			"name": "John Oduor",
+			"title": "Mr",
+			"short": "TSC-CMP"
+		},
+		{
+			"id": "AgMx7E",
+			"preferences": [],
+			"color": "#c55000ff",
+			"name": "John Kiriba",
+			"title": "Mr",
+			"short": "TSC-PHY"
+		},
+		{
+			"id": "absUPp",
+			"preferences": [],
+			"color": "#99586dff",
+			"name": "Rose Kilonzo",
+			"title": "Mrs",
+			"short": "TSC-BIO"
+		},
+		{
+			"id": "UF1rsN",
+			"preferences": [],
+			"color": "#404950ff",
+			"name": "Kevin Muiruri",
+			"title": "Mr",
+			"short": "TSC-CHEM"
+		},
+		{
+			"id": "kOG8Tf",
+			"preferences": [],
+			"color": "#eac427ff",
+			"name": "PE Teacher",
+			"title": "Mr",
+			"short": "TSC-PE"
+		},
+		{
+			"id": "OrzJQa",
+			"preferences": [],
+			"color": "#299af4ff",
+			"name": "John Mwangi",
+			"title": "Mr",
+			"short": "TSC-AGR"
+		},
+		{
+			"id": "kVPIvR",
+			"preferences": [],
+			"color": "#31dd0fff",
+			"name": "French Teacher",
+			"title": "Mrs",
+			"short": "TSC-FRE"
+		},
+		{
+			"id": "Ez58Ps",
+			"preferences": [],
+			"color": "#91acf2ff",
+			"name": "Muthondu",
+			"title": "Mr",
+			"short": "TSC-BST"
+		},
+		{
+			"id": "36aJwE",
+			"preferences": [],
+			"color": "#11c9b7ff",
+			"name": "Second Maths Teacher",
+			"title": "Mr",
+			"short": "TSC-MTH2"
+		},
+		{
+			"id": "3lV1FN",
+			"preferences": [],
+			"color": "#68a01dff",
+			"name": "Second Swahili Teacher",
+			"title": "Ms",
+			"short": "TSC-KIS2"
+		},
+		{
+			"id": "0t0mOF",
+			"preferences": [],
+			"color": "#a6993dff",
+			"name": "Second English teacher",
+			"title": "Mrs",
+			"short": "TSC-ENG2"
+		},
+		{
+			"id": "UY3exr",
+			"preferences": [],
+			"color": "#5a83d8ff",
+			"name": "Second History Teacher",
+			"title": "Mr",
+			"short": "TSC-HIST2"
+		}
+	],
+	"rooms": [
+		{
+			"short": "R1",
+			"id": "PvW78U",
+			"capacity": 30,
+			"preferences": [],
+			"title": "Room 1",
+			"color": "#4a7cf7ff"
+		},
+		{
+			"short": "R2",
+			"id": "ihrcHR",
+			"capacity": 30,
+			"preferences": [],
+			"title": "Room 2",
+			"color": "#4a7cf7ff"
+		},
+		{
+			"short": "4S",
+			"id": "m48cos",
+			"capacity": 80,
+			"preferences": [],
+			"title": "Classroom 4 South",
+			"color": "#8f985fff"
+		},
+		{
+			"short": "CLAB",
+			"id": "GCx1hF",
+			"capacity": 40,
+			"preferences": [],
+			"title": "Computer Lab",
+			"color": "#e0b984ff"
+		},
+		{
+			"short": "FROOM",
+			"id": "WhqdML",
+			"capacity": 45,
+			"preferences": [],
+			"title": "French Room",
+			"color": "#4b7505ff"
+		},
+		{
+			"short": "AGROOM",
+			"id": "gXqPrS",
+			"capacity": 45,
+			"preferences": [],
+			"title": "Agriculture Room",
+			"color": "#b96582ff"
+		},
+		{
+			"short": "4N",
+			"id": "1bTD8P",
+			"capacity": 80,
+			"preferences": [],
+			"title": "Classroom 4 North",
+			"color": "#4af101ff"
+		},
+		{
+			"short": "FIELD",
+			"id": "qneJNH",
+			"capacity": 100000,
+			"preferences": [],
+			"title": "Football Pitch",
+			"color": "#5605beff"
+		}
+	],
+	"groups": [
+		{
+			"id": "uELDZF",
+			"units": [
+				{
+					"unitID": "yxkrfs",
+					"instructorID": "eMv19j",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "0lKAbZ",
+					"instructorID": "4I4rEt",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "QvR1Da",
+					"instructorID": "nvuHSE",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "pDAoV1",
+					"instructorID": "absUPp",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "zCcj9T",
+					"instructorID": "UF1rsN",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "dlFnlS",
+					"instructorID": "AgMx7E",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "COLlqk",
+					"instructorID": "lQ1H1x",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "i0CwWm",
+					"instructorID": "kOG8Tf",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "JK5DbM",
+					"instructorID": "kVPIvR",
+					"divisionID": "r4RKSd6",
+					"subDivisionID": "X60x6Cx"
+				},
+				{
+					"unitID": "Vg44GL",
+					"instructorID": "Ez58Ps",
+					"divisionID": "r4RKSd6",
+					"subDivisionID": "udrAM5x"
+				},
+				{
+					"unitID": "fPO371",
+					"instructorID": "OrzJQa",
+					"divisionID": "r4RKSd6",
+					"subDivisionID": "mT9njs5"
+				},
+				{
+					"unitID": "HUy05l",
+					"instructorID": "rce0HP",
+					"divisionID": "r4RKSd6",
+					"subDivisionID": "irpjKxH"
+				}
+			],
+			"total": 70,
+			"default_room": "m48cos",
+			"divisions": [],
+			"preferences": [],
+			"title": "Form 4 South",
+			"short": "4S",
+			"color": "#d0667fff"
+		},
+		{
+			"id": "caKMeS",
+			"units": [
+				{
+					"unitID": "yxkrfs",
+					"instructorID": "0t0mOF",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "0lKAbZ",
+					"instructorID": "3lV1FN",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "QvR1Da",
+					"instructorID": "36aJwE",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "pDAoV1",
+					"instructorID": "absUPp",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "zCcj9T",
+					"instructorID": "UF1rsN",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "dlFnlS",
+					"instructorID": "AgMx7E",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "COLlqk",
+					"instructorID": "UY3exr",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "i0CwWm",
+					"instructorID": "kOG8Tf",
+					"divisionID": null,
+					"subDivisionID": null
+				},
+				{
+					"unitID": "JK5DbM",
+					"instructorID": "kVPIvR",
+					"divisionID": "r4RKSd6",
+					"subDivisionID": "X60x6Cx"
+				},
+				{
+					"unitID": "Vg44GL",
+					"instructorID": "Ez58Ps",
+					"divisionID": "r4RKSd6",
+					"subDivisionID": "udrAM5x"
+				},
+				{
+					"unitID": "fPO371",
+					"instructorID": "OrzJQa",
+					"divisionID": "r4RKSd6",
+					"subDivisionID": "mT9njs5"
+				},
+				{
+					"unitID": "HUy05l",
+					"instructorID": "rce0HP",
+					"divisionID": "r4RKSd6",
+					"subDivisionID": "irpjKxH"
+				}
+			],
+			"total": 70,
+			"default_room": "1bTD8P",
+			"divisions": [
+				{
+					"identifier": "r4RKSd6",
+					"title": "Technical Students",
+					"short": "TECH",
+					"color": "#d0667fff",
+					"sub_divisions": [
+						{
+							"identifier": "irpjKxH",
+							"title": "Computer Studies",
+							"total": 15
+						},
+						{
+							"identifier": "X60x6Cx",
+							"title": "French Students",
+							"total": 25
+						},
+						{
+							"identifier": "mT9njs5",
+							"title": "Agriculture Studies",
+							"total": 16
+						},
+						{
+							"identifier": "udrAM5x",
+							"title": "Business Studies",
+							"total": 14
+						}
+					]
+				}
+			],
+			"preferences": [],
+			"title": "Form 4 North",
+			"short": "4N",
+			"color": "#d92813ff"
+		},
+		{
+			"id": "vmyFUg2",
+			"units": [
+				{
+					"unitID": "yxkrfs",
+					"instructorID": "0t0mOF",
+					"divisionID": null,
+					"subDivisionID": null
+				}
+			],
+			"total": 50,
+			"default_room": null,
+			"divisions": [],
+			"preferences": [],
+			"title": "Form 1 North",
+			"short": "1N",
+			"color": "#7ca82fff"
+		}
+	],
+	"units": [
+		{
+			"id": "yxkrfs",
+			"preferences": [],
+			"lessons": 9,
+			"instructors": ["eMv19j", "0t0mOF"],
+			"color": "#52f93bff",
+			"title": "English",
+			"short": "ENG",
+			"online": false,
+			"default_room": null
+		},
+		{
+			"id": "0lKAbZ",
+			"preferences": [],
+			"lessons": 6,
+			"instructors": ["4I4rEt", "3lV1FN"],
+			"color": "#765392ff",
+			"title": "Kiswahili",
+			"short": "KIS",
+			"online": false,
+			"default_room": null
+		},
+		{
+			"id": "QvR1Da",
+			"preferences": [],
+			"lessons": 7,
+			"instructors": ["nvuHSE", "36aJwE"],
+			"color": "#b172ccff",
+			"title": "Mathematics",
+			"short": "MAT",
+			"online": false,
+			"default_room": null
+		},
+		{
+			"id": "pDAoV1",
+			"preferences": [],
+			"lessons": 6,
+			"instructors": ["absUPp"],
+			"color": "#186a9bff",
+			"title": "Biology",
+			"short": "BIO",
+			"online": false,
+			"default_room": null
+		},
+		{
+			"id": "zCcj9T",
+			"preferences": [],
+			"lessons": 5,
+			"instructors": ["UF1rsN"],
+			"color": "#208fd4ff",
+			"title": "Chemistry",
+			"short": "CHE",
+			"online": false,
+			"default_room": null
+		},
+		{
+			"id": "dlFnlS",
+			"preferences": [],
+			"lessons": 4,
+			"instructors": ["AgMx7E"],
+			"color": "#5c4d87ff",
+			"title": "Physics",
+			"short": "PHY",
+			"online": false,
+			"default_room": null
+		},
+		{
+			"id": "COLlqk",
+			"preferences": [],
+			"lessons": 3,
+			"instructors": ["lQ1H1x", "UY3exr"],
+			"color": "#df9a37ff",
+			"title": "History",
+			"short": "HIST",
+			"online": false,
+			"default_room": null
+		},
+		{
+			"id": "HUy05l",
+			"preferences": [],
+			"lessons": 4,
+			"instructors": ["rce0HP"],
+			"color": "#c87243ff",
+			"title": "Computer",
+			"short": "COMP",
+			"online": false,
+			"default_room": null
+		},
+		{
+			"id": "i0CwWm",
+			"preferences": [],
+			"lessons": 1,
+			"instructors": ["kOG8Tf"],
+			"color": "#f87e97ff",
+			"title": "Physical Education",
+			"short": "PE",
+			"online": false,
+			"default_room": "qneJNH"
+		},
+		{
+			"id": "JK5DbM",
+			"preferences": [],
+			"lessons": 4,
+			"instructors": ["kVPIvR"],
+			"color": "#2be50cff",
+			"title": "French",
+			"short": "FRE",
+			"online": false,
+			"default_room": null
+		},
+		{
+			"id": "Vg44GL",
+			"preferences": [],
+			"lessons": 4,
+			"instructors": ["Ez58Ps"],
+			"color": "#95e1f3ff",
+			"title": "Business Studies",
+			"short": "BST",
+			"online": false,
+			"default_room": null
+		},
+		{
+			"id": "fPO371",
+			"preferences": [],
+			"lessons": 4,
+			"instructors": ["OrzJQa"],
+			"color": "#2c4df3ff",
+			"title": "Agriculture",
+			"short": "AGR",
+			"online": false,
+			"default_room": null
+		}
+	],
+	"lessons": [
+		{
+			"identifier": "X8YVH3",
+			"group": "uELDZF",
+			"unit": "yxkrfs",
+			"distribution": [2, 2, 2, 2, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 9,
+			"default_room": "m48cos",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "eMv19j"
+		},
+		{
+			"identifier": "zU1hE3",
+			"group": "uELDZF",
+			"unit": "0lKAbZ",
+			"distribution": [2, 1, 1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 6,
+			"default_room": "m48cos",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "4I4rEt"
+		},
+		{
+			"identifier": "nop7WV",
+			"group": "uELDZF",
+			"unit": "QvR1Da",
+			"distribution": [2, 2, 1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 7,
+			"default_room": "m48cos",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "nvuHSE"
+		},
+		{
+			"identifier": "G7piWs",
+			"group": "uELDZF",
+			"unit": "pDAoV1",
+			"distribution": [2, 1, 1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 6,
+			"default_room": "m48cos",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "absUPp"
+		},
+		{
+			"identifier": "mm13FH",
+			"group": "uELDZF",
+			"unit": "zCcj9T",
+			"distribution": [1, 1, 1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 5,
+			"default_room": "m48cos",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "UF1rsN"
+		},
+		{
+			"identifier": "LKriv9",
+			"group": "uELDZF",
+			"unit": "dlFnlS",
+			"distribution": [1, 1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 4,
+			"default_room": "m48cos",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "AgMx7E"
+		},
+		{
+			"identifier": "LOiroH",
+			"group": "uELDZF",
+			"unit": "COLlqk",
+			"distribution": [1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 3,
+			"default_room": "m48cos",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "lQ1H1x"
+		},
+		{
+			"identifier": "oPX3sN",
+			"group": "uELDZF",
+			"unit": "i0CwWm",
+			"distribution": [1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 1,
+			"default_room": "qneJNH",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "kOG8Tf"
+		},
+		{
+			"identifier": "bBKnmE",
+			"group": "uELDZF",
+			"unit": "r4RKSd6",
+			"distribution": [1, 1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 4,
+			"default_room": "m48cos",
+			"multiple": true,
+			"type": "subgroup",
+			"title": "",
+			"multiple_ids": [
+				{
+					"unit_id": "JK5DbM",
+					"group_id": "uELDZF",
+					"inst_id": "kVPIvR",
+					"division_id": "r4RKSd6",
+					"sub_division_id": "X60x6Cx"
+				},
+				{
+					"unit_id": "Vg44GL",
+					"group_id": "uELDZF",
+					"inst_id": "Ez58Ps",
+					"division_id": "r4RKSd6",
+					"sub_division_id": "udrAM5x"
+				},
+				{
+					"unit_id": "fPO371",
+					"group_id": "uELDZF",
+					"inst_id": "OrzJQa",
+					"division_id": "r4RKSd6",
+					"sub_division_id": "mT9njs5"
+				},
+				{
+					"unit_id": "HUy05l",
+					"group_id": "uELDZF",
+					"inst_id": "rce0HP",
+					"division_id": "r4RKSd6",
+					"sub_division_id": "irpjKxH"
+				}
+			]
+		},
+		{
+			"identifier": "2opUZ4",
+			"group": "caKMeS",
+			"unit": "yxkrfs",
+			"distribution": [2, 2, 2, 2, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 9,
+			"default_room": "1bTD8P",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "0t0mOF"
+		},
+		{
+			"identifier": "2mScWt",
+			"group": "caKMeS",
+			"unit": "0lKAbZ",
+			"distribution": [2, 1, 1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 6,
+			"default_room": "1bTD8P",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "3lV1FN"
+		},
+		{
+			"identifier": "oSnUw0",
+			"group": "caKMeS",
+			"unit": "QvR1Da",
+			"distribution": [2, 2, 1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 7,
+			"default_room": "1bTD8P",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "36aJwE"
+		},
+		{
+			"identifier": "grOh9c",
+			"group": "caKMeS",
+			"unit": "pDAoV1",
+			"distribution": [2, 1, 1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 6,
+			"default_room": "1bTD8P",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "absUPp"
+		},
+		{
+			"identifier": "2rETFJ",
+			"group": "caKMeS",
+			"unit": "zCcj9T",
+			"distribution": [1, 1, 1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 5,
+			"default_room": "1bTD8P",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "UF1rsN"
+		},
+		{
+			"identifier": "DVlVPc",
+			"group": "caKMeS",
+			"unit": "dlFnlS",
+			"distribution": [1, 1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 4,
+			"default_room": "1bTD8P",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "AgMx7E"
+		},
+		{
+			"identifier": "NctZGi",
+			"group": "caKMeS",
+			"unit": "COLlqk",
+			"distribution": [1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 3,
+			"default_room": "1bTD8P",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "UY3exr"
+		},
+		{
+			"identifier": "CQMySq",
+			"group": "caKMeS",
+			"unit": "i0CwWm",
+			"distribution": [1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 1,
+			"default_room": "qneJNH",
+			"multiple": false,
+			"type": "regular",
+			"instructor": "kOG8Tf"
+		},
+		{
+			"identifier": "UnWA1w",
+			"group": "caKMeS",
+			"unit": "r4RKSd6",
+			"distribution": [1, 1, 1, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 4,
+			"default_room": "1bTD8P",
+			"multiple": true,
+			"type": "subgroup",
+			"short": "TECH",
+			"title": "Technical Students",
+			"multiple_ids": [
+				{
+					"unit_id": "JK5DbM",
+					"group_id": "caKMeS",
+					"inst_id": "kVPIvR",
+					"division_id": "r4RKSd6",
+					"sub_division_id": "X60x6Cx"
+				},
+				{
+					"unit_id": "Vg44GL",
+					"group_id": "caKMeS",
+					"inst_id": "Ez58Ps",
+					"division_id": "r4RKSd6",
+					"sub_division_id": "udrAM5x"
+				},
+				{
+					"unit_id": "fPO371",
+					"group_id": "caKMeS",
+					"inst_id": "OrzJQa",
+					"division_id": "r4RKSd6",
+					"sub_division_id": "mT9njs5"
+				},
+				{
+					"unit_id": "HUy05l",
+					"group_id": "caKMeS",
+					"inst_id": "rce0HP",
+					"division_id": "r4RKSd6",
+					"sub_division_id": "irpjKxH"
+				}
+			]
+		},
+		{
+			"identifier": "sXslnf",
+			"group": "vmyFUg2",
+			"unit": "yxkrfs",
+			"distribution": [2, 2, 2, 2, 1],
+			"combined_preferences": {
+				"group": [],
+				"unit": [],
+				"instructor": []
+			},
+			"online": false,
+			"total_lessons": 9,
+			"multiple": false,
+			"type": "regular",
+			"instructor": "0t0mOF"
+		}
+	],
+
+	"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+	"times": [
+		"8:00am",
+		"8:40am",
+		"9:20am",
+		"10:00am",
+		"10:40am",
+		"11:20am",
+		"12:00pm",
+		"12:40pm",
+		"1:20pm",
+		"2:00pm",
+		"2:40pm",
+		"3:20pm"
+	],
+	"breaks": [
+		{
+			"title": "Morning Break",
+			"index": 0,
+			"startTime": "10:00am",
+			"duration": {
+				"duration": 40,
+				"division": "minutes"
+			}
+		},
+		{
+			"title": "Lunch Break",
+			"index": 1,
+			"startTime": "12:40pm",
+			"duration": {
+				"duration": 2,
+				"division": "hours"
+			}
+		}
+	],
+	"blocks": [
+		{
+			"type": "period",
+			"title": "Period 1",
+			"start": "8:00am",
+			"end": "8:40am",
+			"index": 0
+		},
+		{
+			"type": "period",
+			"title": "Period 2",
+			"start": "8:40am",
+			"end": "9:20am",
+			"index": 1
+		},
+		{
+			"type": "period",
+			"title": "Period 3",
+			"start": "9:20am",
+			"end": "10:00am",
+			"index": 2
+		},
+		{
+			"type": "break",
+			"title": "Morning Break",
+			"start": "10:00am",
+			"end": "10:40am",
+			"index": 0
+		},
+		{
+			"type": "period",
+			"title": "Period 4",
+			"start": "10:40am",
+			"end": "11:20am",
+			"index": 3
+		},
+		{
+			"type": "period",
+			"title": "Period 5",
+			"start": "11:20am",
+			"end": "12:00pm",
+			"index": 4
+		},
+		{
+			"type": "period",
+			"title": "Period 6",
+			"start": "12:00pm",
+			"end": "12:40pm",
+			"index": 5
+		},
+		{
+			"type": "break",
+			"title": "Lunch Break",
+			"start": "12:40pm",
+			"end": "2:40pm",
+			"index": 1
+		},
+		{
+			"type": "period",
+			"title": "Period 7",
+			"start": "2:40pm",
+			"end": "3:20pm",
+			"index": 6
+		},
+		{
+			"type": "period",
+			"title": "Period 8",
+			"start": "3:20pm",
+			"end": "4:00pm",
+			"index": 7
+		}
+	]
+}

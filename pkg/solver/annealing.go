@@ -313,6 +313,13 @@ func (s *SimulatedAnnealingSolver) formatResponse(c Chromosome, runtime float64)
 			OverallScore:  evalResult.OverallScore,
 			TimeTaken:     runtime,
 			SolutionFound: evalResult.HardScore >= 100,
+			HardScore: evalResult.HardScore,
+			PreferenceScore: evalResult.PreferenceScore,
+			DistributionScore: evalResult.DistributionScore,
+			DefaultRoomScore: evalResult.DefaultRoomScore,
+			HiddenSessions: evalResult.HiddenSessions,
+			TotalClashes: evalResult.TotalClashes,
+			Health: evalResult.Health,
 		},
 	}
 }
