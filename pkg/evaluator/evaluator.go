@@ -11,15 +11,17 @@ import (
 
 // EvaluationResult holds the full scoring breakdown.
 type EvaluationResult struct {
-	HardScore       float64              `json:"hard_score"`
-	PreferenceScore float64              `json:"preference_score"`
-	DistributionScore float64            `json:"distribution_score"`
-	DefaultRoomScore float64             `json:"default_room_score"`
-	OverallScore    float64              `json:"overall_score"`
-	TotalClashes    int                  `json:"total_clashes"`
-	HiddenSessions  int                  `json:"hidden_sessions"`
-	Health          string               `json:"health"`
-	Violations      []ConstraintViolation `json:"violations,omitempty"`
+	HardScore         float64               `json:"hard_score"`
+	PreferenceScore   float64               `json:"preference_score"`
+	DistributionScore float64               `json:"distribution_score"`
+	DefaultRoomScore  float64               `json:"default_room_score"`
+	OverallScore      float64               `json:"overall_score"`
+	TotalClashes      int                   `json:"total_clashes"`
+	HiddenSessions    int                   `json:"hidden_sessions"`
+	MissingSessions   int                   `json:"missing_sessions"`
+	ExtraSessions     int                   `json:"extra_sessions"`
+	Health            string                `json:"health"`
+	Violations        []ConstraintViolation `json:"violations,omitempty"`
 }
 
 // ConstraintViolation records a single violation.
@@ -46,18 +48,31 @@ type EvaluationParams struct {
 func Evaluate(sessions []models.Session, params *EvaluationParams) *EvaluationResult {
 	res := &EvaluationResult{}
 
-	// 1. Hard constraints — clashes
+	if len(sessions) == 0 {
+		res.HardScore = 0
+		res.PreferenceScore = 0
+		res.DistributionScore = 0
+		res.DefaultRoomScore = 0
+		res.OverallScore = 0
+		res.Health = "low"
+		return res
+	}
+
 	var periodTimes []string
+	var days []string
 	if params != nil {
 		periodTimes = params.PeriodTimes
+		days = params.Days
 	}
+
+	// 1. Hard constraints — clashes
 	hardScore, totalClashes, clashViolations := evaluateClashes(sessions, periodTimes)
 	res.HardScore = hardScore
 	res.TotalClashes = totalClashes
 	res.Violations = append(res.Violations, clashViolations...)
 
 	// 2. Hidden sessions
-	hiddenSessions := evaluateHiddenSessions(sessions, params.Days, params.PeriodTimes)
+	hiddenSessions := evaluateHiddenSessions(sessions, days, periodTimes)
 	res.HiddenSessions = hiddenSessions
 	if hiddenSessions > 0 {
 		res.Violations = append(res.Violations, ConstraintViolation{
@@ -68,19 +83,33 @@ func Evaluate(sessions []models.Session, params *EvaluationParams) *EvaluationRe
 	}
 
 	// 3. Preferences
-	prefScore, prefViolations := evaluatePreferences(sessions, params)
-	res.PreferenceScore = prefScore
-	res.Violations = append(res.Violations, prefViolations...)
+	if params != nil {
+		prefScore, prefViolations := evaluatePreferences(sessions, params)
+		res.PreferenceScore = prefScore
+		res.Violations = append(res.Violations, prefViolations...)
+	} else {
+		res.PreferenceScore = 100.0
+	}
 
-	// 4. Lesson distribution
-	distScore, distViolations := evaluateDistribution(sessions, params)
-	res.DistributionScore = distScore
-	res.Violations = append(res.Violations, distViolations...)
+	// 4. Lesson distribution & irregularities
+	if params != nil {
+		distScore, missing, extra, distViolations := evaluateDistribution(sessions, params)
+		res.DistributionScore = distScore
+		res.MissingSessions = missing
+		res.ExtraSessions = extra
+		res.Violations = append(res.Violations, distViolations...)
+	} else {
+		res.DistributionScore = 100.0
+	}
 
 	// 5. Default rooms
-	drScore, drViolations := evaluateDefaultRooms(sessions, params)
-	res.DefaultRoomScore = drScore
-	res.Violations = append(res.Violations, drViolations...)
+	if params != nil {
+		drScore, drViolations := evaluateDefaultRooms(sessions, params)
+		res.DefaultRoomScore = drScore
+		res.Violations = append(res.Violations, drViolations...)
+	} else {
+		res.DefaultRoomScore = 100.0
+	}
 
 	// 6. Overall
 	res.OverallScore = calculateOverall(res)
@@ -89,6 +118,116 @@ func Evaluate(sessions []models.Session, params *EvaluationParams) *EvaluationRe
 	res.Health = calculateHealth(res, len(sessions))
 
 	return res
+}
+
+// ---------------------------------------------------------------------------
+// 0. Unique Key Association (mirrors TypeScript createUniqueSessionLessonKey)
+// ---------------------------------------------------------------------------
+
+// CreateUniqueSessionKey creates a content-based identifier for a session.
+func CreateUniqueSessionKey(s models.Session) string {
+	switch s.Type {
+	case "regular":
+		return fmt.Sprintf("rg@%s@%s@%s", s.Group, s.Unit, s.Instructor)
+	case "lesson-merge":
+		groupIDs := make([]string, len(s.MultipleIDs))
+		for i, m := range s.MultipleIDs {
+			groupIDs[i] = m.GroupID
+		}
+		inst := s.Instructor
+		if inst == "" && len(s.MultipleIDs) > 0 {
+			inst = s.MultipleIDs[0].InstID
+		}
+		return fmt.Sprintf("lm@%s@%s@%s", strings.Join(groupIDs, "-"), s.Unit, inst)
+	case "subgroup-lesson-merge":
+		type combo struct {
+			key, groupID, unitID, instID string
+		}
+		combos := make([]combo, len(s.MultipleIDs))
+		for i, m := range s.MultipleIDs {
+			combos[i] = combo{
+				key:     fmt.Sprintf("%s:%s:%s", m.GroupID, m.UnitID, m.InstID),
+				groupID: m.GroupID,
+				unitID:  m.UnitID,
+				instID:  m.InstID,
+			}
+		}
+		sort.Slice(combos, func(i, j int) bool { return combos[i].key < combos[j].key })
+		groups := make([]string, len(combos))
+		units := make([]string, len(combos))
+		insts := make([]string, len(combos))
+		for i, c := range combos {
+			groups[i] = c.groupID
+			units[i] = c.unitID
+			insts[i] = c.instID
+		}
+		return fmt.Sprintf("sm@%s@%s@%s", strings.Join(groups, "-"), strings.Join(units, "-"), strings.Join(insts, "-"))
+	default:
+		// "subgroup"
+		if len(s.MultipleIDs) > 0 {
+			units := make([]string, len(s.MultipleIDs))
+			insts := make([]string, len(s.MultipleIDs))
+			for i, m := range s.MultipleIDs {
+				units[i] = m.UnitID
+				insts[i] = m.InstID
+			}
+			return fmt.Sprintf("sg@%s@%s@%s", s.Group, strings.Join(units, "-"), strings.Join(insts, "-"))
+		}
+		return fmt.Sprintf("rg@%s@%s@%s", s.Group, s.Unit, s.Instructor)
+	}
+}
+
+// CreateUniqueLessonKey creates a content-based identifier for a lesson.
+func CreateUniqueLessonKey(l models.Lesson) string {
+	switch l.Type {
+	case "regular":
+		return fmt.Sprintf("rg@%s@%s@%s", l.Group, l.Unit, l.Instructor)
+	case "lesson-merge":
+		groupIDs := make([]string, len(l.MultipleIDs))
+		for i, m := range l.MultipleIDs {
+			groupIDs[i] = m.GroupID
+		}
+		inst := l.Instructor
+		if inst == "" && len(l.MultipleIDs) > 0 {
+			inst = l.MultipleIDs[0].InstID
+		}
+		return fmt.Sprintf("lm@%s@%s@%s", strings.Join(groupIDs, "-"), l.Unit, inst)
+	case "subgroup-lesson-merge":
+		type combo struct {
+			key, groupID, unitID, instID string
+		}
+		combos := make([]combo, len(l.MultipleIDs))
+		for i, m := range l.MultipleIDs {
+			combos[i] = combo{
+				key:     fmt.Sprintf("%s:%s:%s", m.GroupID, m.UnitID, m.InstID),
+				groupID: m.GroupID,
+				unitID:  m.UnitID,
+				instID:  m.InstID,
+			}
+		}
+		sort.Slice(combos, func(i, j int) bool { return combos[i].key < combos[j].key })
+		groups := make([]string, len(combos))
+		units := make([]string, len(combos))
+		insts := make([]string, len(combos))
+		for i, c := range combos {
+			groups[i] = c.groupID
+			units[i] = c.unitID
+			insts[i] = c.instID
+		}
+		return fmt.Sprintf("sm@%s@%s@%s", strings.Join(groups, "-"), strings.Join(units, "-"), strings.Join(insts, "-"))
+	default:
+		// "subgroup"
+		if len(l.MultipleIDs) > 0 {
+			units := make([]string, len(l.MultipleIDs))
+			insts := make([]string, len(l.MultipleIDs))
+			for i, m := range l.MultipleIDs {
+				units[i] = m.UnitID
+				insts[i] = m.InstID
+			}
+			return fmt.Sprintf("sg@%s@%s@%s", l.Group, strings.Join(units, "-"), strings.Join(insts, "-"))
+		}
+		return fmt.Sprintf("rg@%s@%s@%s", l.Group, l.Unit, l.Instructor)
+	}
 }
 
 // ---------------------------------------------------------------------------
@@ -109,7 +248,6 @@ func evaluateClashes(sessions []models.Session, periodTimes []string) (float64, 
 	var violations []ConstraintViolation
 	totalClashes := 0
 
-	// Group by day + entity, then check block-range overlap
 	type bucketKey struct {
 		day    string
 		entity string
@@ -118,56 +256,46 @@ func evaluateClashes(sessions []models.Session, periodTimes []string) (float64, 
 	instrBuckets := make(map[bucketKey][]sessionRange)
 	roomBuckets := make(map[bucketKey][]sessionRange)
 
-	// Build the time→block-index map from the FULL period times list (passed
-	// from the solver's filtered blocks). Building it only from the session
-	// time strings causes gaps when not every period has a session, which
-	// shifts all subsequent indices down and produces false clash detections
-	// for multi-block sessions.
 	timeOrder := make(map[string]int, len(periodTimes))
 	if len(periodTimes) > 0 {
-		// Use the pre-sorted period times directly — they already come from
-		// the solver's ordered block list.
 		for i, t := range periodTimes {
-			timeOrder[t] = i
+			timeOrder[strings.ToLower(strings.TrimSpace(t))] = i
 		}
 	} else {
-		// Fallback: derive order from the session time strings (legacy path
-		// for callers that don't supply PeriodTimes).
 		allTimes := make([]string, 0, len(sessions))
 		seen := make(map[string]bool)
 		for _, s := range sessions {
-			if !seen[s.Time] {
-				seen[s.Time] = true
+			norm := strings.ToLower(strings.TrimSpace(s.Time))
+			if !seen[norm] {
+				seen[norm] = true
 				allTimes = append(allTimes, s.Time)
 			}
 		}
 		sortTimes(allTimes)
 		for i, t := range allTimes {
-			timeOrder[t] = i
+			timeOrder[strings.ToLower(strings.TrimSpace(t))] = i
 		}
 	}
-	// Guard: sessions with times outside the period grid (hidden sessions)
-	// would otherwise default to index 0 and produce false clashes.
-	// Assign any missing times distinct indices after the grid.
+
 	missing := make([]string, 0)
 	for _, s := range sessions {
-		if _, ok := timeOrder[s.Time]; !ok {
-			timeOrder[s.Time] = -1 // mark seen without allocating yet
+		norm := strings.ToLower(strings.TrimSpace(s.Time))
+		if _, ok := timeOrder[norm]; !ok {
+			timeOrder[norm] = -1
 			missing = append(missing, s.Time)
 		}
 	}
 	if len(missing) > 0 {
 		sortTimes(missing)
 		for _, t := range missing {
-			timeOrder[t] = len(periodTimes)
-			// bump a local counter rather than len(periodTimes) so each
-			// distinct missing time gets its own index
-			periodTimes = append(periodTimes, t)
+			norm := strings.ToLower(strings.TrimSpace(t))
+			timeOrder[norm] = len(timeOrder)
 		}
 	}
 
 	for _, s := range sessions {
-		startBlock := timeOrder[s.Time]
+		normTime := strings.ToLower(strings.TrimSpace(s.Time))
+		startBlock := timeOrder[normTime]
 		blocks := s.Blocks
 		if blocks < 1 {
 			blocks = 1
@@ -176,35 +304,93 @@ func evaluateClashes(sessions []models.Session, periodTimes []string) (float64, 
 
 		sr := sessionRange{s.Identifier, startBlock, endBlock}
 
-		grps := s.AffectedGroups
-		if len(grps) == 0 && s.Group != "" {
-			grps = []string{s.Group}
+		// 1. Group entities
+		var groups []string
+		if s.Multiple {
+			if s.Type == "lesson-merge" || s.Type == "subgroup-lesson-merge" {
+				for _, m := range s.MultipleIDs {
+					if m.GroupID != "" {
+						groups = append(groups, m.GroupID)
+					}
+				}
+			} else {
+				if s.Group != "" {
+					groups = append(groups, s.Group)
+				}
+			}
+		} else {
+			if s.Group != "" {
+				groups = append(groups, s.Group)
+			}
 		}
-		for _, g := range grps {
-			if g != "" {
+		if len(groups) == 0 && len(s.AffectedGroups) > 0 {
+			groups = s.AffectedGroups
+		}
+		seenG := make(map[string]bool)
+		for _, g := range groups {
+			if g != "" && !seenG[g] {
+				seenG[g] = true
 				key := bucketKey{s.Day, g}
 				groupBuckets[key] = append(groupBuckets[key], sr)
 			}
 		}
 
-		insts := s.AffectedInstructors
-		if len(insts) == 0 && s.Instructor != "" {
-			insts = []string{s.Instructor}
+		// 2. Instructor entities
+		var instrs []string
+		if s.Multiple {
+			if s.Type == "lesson-merge" {
+				if s.Instructor != "" {
+					instrs = append(instrs, s.Instructor)
+				}
+			} else {
+				for _, m := range s.MultipleIDs {
+					if m.InstID != "" {
+						instrs = append(instrs, m.InstID)
+					}
+				}
+			}
+		} else {
+			if s.Instructor != "" {
+				instrs = append(instrs, s.Instructor)
+			}
 		}
-		for _, inst := range insts {
-			if inst != "" {
+		if len(instrs) == 0 && len(s.AffectedInstructors) > 0 {
+			instrs = s.AffectedInstructors
+		}
+		seenI := make(map[string]bool)
+		for _, inst := range instrs {
+			if inst != "" && !seenI[inst] {
+				seenI[inst] = true
 				key := bucketKey{s.Day, inst}
 				instrBuckets[key] = append(instrBuckets[key], sr)
 			}
 		}
-		if !s.Online && s.Room != "" {
-			rooms := strings.Split(s.Room, ",")
-			for _, room := range rooms {
-				room = strings.TrimSpace(room)
-				if room == "" {
-					continue
+
+		// 3. Room entities (skip online)
+		var rooms []string
+		if s.Multiple {
+			if s.Type == "lesson-merge" {
+				if !s.Online && s.Room != "" {
+					rooms = append(rooms, strings.Split(s.Room, ",")...)
 				}
-				key := bucketKey{s.Day, room}
+			} else {
+				for _, m := range s.MultipleIDs {
+					if !m.Online && m.RoomID != "" {
+						rooms = append(rooms, strings.Split(m.RoomID, ",")...)
+					}
+				}
+			}
+		} else {
+			if !s.Online && s.Room != "" {
+				rooms = append(rooms, strings.Split(s.Room, ",")...)
+			}
+		}
+		seenR := make(map[string]bool)
+		for _, r := range rooms {
+			r = strings.TrimSpace(r)
+			if r != "" && !seenR[r] {
+				seenR[r] = true
+				key := bucketKey{s.Day, r}
 				roomBuckets[key] = append(roomBuckets[key], sr)
 			}
 		}
@@ -252,18 +438,24 @@ func sortTimes(times []string) {
 // ---------------------------------------------------------------------------
 
 func evaluateHiddenSessions(sessions []models.Session, days, periodTimes []string) int {
+	if len(days) == 0 && len(periodTimes) == 0 {
+		return 0
+	}
+
 	daySet := make(map[string]bool, len(days))
 	for _, d := range days {
-		daySet[d] = true
+		daySet[strings.ToLower(strings.TrimSpace(d))] = true
 	}
 	timeSet := make(map[string]bool, len(periodTimes))
 	for _, t := range periodTimes {
-		timeSet[t] = true
+		timeSet[strings.ToLower(strings.TrimSpace(t))] = true
 	}
 
 	hidden := 0
 	for _, s := range sessions {
-		if !daySet[s.Day] || !timeSet[s.Time] {
+		dayMatch := len(daySet) == 0 || daySet[strings.ToLower(strings.TrimSpace(s.Day))]
+		timeMatch := len(timeSet) == 0 || timeSet[strings.ToLower(strings.TrimSpace(s.Time))]
+		if !dayMatch || !timeMatch {
 			hidden++
 		}
 	}
@@ -294,7 +486,7 @@ func evaluatePreferences(sessions []models.Session, params *EvaluationParams) (f
 
 	dayIndex := make(map[string]int, len(params.Days))
 	for i, d := range params.Days {
-		dayIndex[d] = i
+		dayIndex[strings.ToLower(strings.TrimSpace(d))] = i
 	}
 
 	for _, s := range sessions {
@@ -303,36 +495,151 @@ func evaluatePreferences(sessions []models.Session, params *EvaluationParams) (f
 			name  string
 		}{}
 
-		grps := s.AffectedGroups
-		if len(grps) == 0 && s.Group != "" {
-			grps = []string{s.Group}
-		}
-		for _, gID := range grps {
-			if g, ok := groupMap[gID]; ok {
+		if !s.Multiple || s.Type == "regular" {
+			if u, ok := unitMap[s.Unit]; ok && len(u.Preferences) > 0 {
 				entities = append(entities, struct {
 					prefs []models.Preference
 					name  string
-				}{g.Preferences, "group:" + gID})
+				}{u.Preferences, "unit:" + s.Unit})
 			}
-		}
-
-		if u, ok := unitMap[s.Unit]; ok {
-			entities = append(entities, struct {
-				prefs []models.Preference
-				name  string
-			}{u.Preferences, "unit:" + s.Unit})
-		}
-
-		insts := s.AffectedInstructors
-		if len(insts) == 0 && s.Instructor != "" {
-			insts = []string{s.Instructor}
-		}
-		for _, iID := range insts {
-			if i, ok := instrMap[iID]; ok {
+			var grps []string
+			if s.Group != "" {
+				grps = append(grps, s.Group)
+			}
+			if len(grps) == 0 && len(s.AffectedGroups) > 0 {
+				grps = s.AffectedGroups
+			}
+			for _, gID := range grps {
+				if g, ok := groupMap[gID]; ok && len(g.Preferences) > 0 {
+					entities = append(entities, struct {
+						prefs []models.Preference
+						name  string
+					}{g.Preferences, "group:" + gID})
+				}
+			}
+			var instrs []string
+			if s.Instructor != "" {
+				instrs = append(instrs, s.Instructor)
+			}
+			if len(instrs) == 0 && len(s.AffectedInstructors) > 0 {
+				instrs = s.AffectedInstructors
+			}
+			for _, iID := range instrs {
+				if i, ok := instrMap[iID]; ok && len(i.Preferences) > 0 {
+					entities = append(entities, struct {
+						prefs []models.Preference
+						name  string
+					}{i.Preferences, "instructor:" + iID})
+				}
+			}
+		} else if s.Type == "subgroup" {
+			if g, ok := groupMap[s.Group]; ok && len(g.Preferences) > 0 {
 				entities = append(entities, struct {
 					prefs []models.Preference
 					name  string
-				}{i.Preferences, "instructor:" + iID})
+				}{g.Preferences, "group:" + s.Group})
+			}
+			seenU := make(map[string]bool)
+			seenI := make(map[string]bool)
+			for _, mid := range s.MultipleIDs {
+				if mid.InstID != "" && !seenI[mid.InstID] {
+					seenI[mid.InstID] = true
+					if inst, ok := instrMap[mid.InstID]; ok && len(inst.Preferences) > 0 {
+						entities = append(entities, struct {
+							prefs []models.Preference
+							name  string
+						}{inst.Preferences, "instructor:" + mid.InstID})
+					}
+				}
+				if mid.UnitID != "" && !seenU[mid.UnitID] {
+					seenU[mid.UnitID] = true
+					if u, ok := unitMap[mid.UnitID]; ok && len(u.Preferences) > 0 {
+						entities = append(entities, struct {
+							prefs []models.Preference
+							name  string
+						}{u.Preferences, "unit:" + mid.UnitID})
+					}
+				}
+			}
+		} else if s.Type == "subgroup-lesson-merge" {
+			seenG := make(map[string]bool)
+			seenU := make(map[string]bool)
+			seenI := make(map[string]bool)
+			for _, mid := range s.MultipleIDs {
+				if mid.GroupID != "" && !seenG[mid.GroupID] {
+					seenG[mid.GroupID] = true
+					if g, ok := groupMap[mid.GroupID]; ok && len(g.Preferences) > 0 {
+						entities = append(entities, struct {
+							prefs []models.Preference
+							name  string
+						}{g.Preferences, "group:" + mid.GroupID})
+					}
+				}
+				if mid.InstID != "" && !seenI[mid.InstID] {
+					seenI[mid.InstID] = true
+					if inst, ok := instrMap[mid.InstID]; ok && len(inst.Preferences) > 0 {
+						entities = append(entities, struct {
+							prefs []models.Preference
+							name  string
+						}{inst.Preferences, "instructor:" + mid.InstID})
+					}
+				}
+				if mid.UnitID != "" && !seenU[mid.UnitID] {
+					seenU[mid.UnitID] = true
+					if u, ok := unitMap[mid.UnitID]; ok && len(u.Preferences) > 0 {
+						entities = append(entities, struct {
+							prefs []models.Preference
+							name  string
+						}{u.Preferences, "unit:" + mid.UnitID})
+					}
+				}
+			}
+		} else { // lesson-merge
+			seenG := make(map[string]bool)
+			for _, mid := range s.MultipleIDs {
+				if mid.GroupID != "" && !seenG[mid.GroupID] {
+					seenG[mid.GroupID] = true
+					if g, ok := groupMap[mid.GroupID]; ok && len(g.Preferences) > 0 {
+						entities = append(entities, struct {
+							prefs []models.Preference
+							name  string
+						}{g.Preferences, "group:" + mid.GroupID})
+					}
+				}
+			}
+			if len(seenG) == 0 {
+				for _, gID := range s.AffectedGroups {
+					if gID != "" && !seenG[gID] {
+						seenG[gID] = true
+						if g, ok := groupMap[gID]; ok && len(g.Preferences) > 0 {
+							entities = append(entities, struct {
+								prefs []models.Preference
+								name  string
+							}{g.Preferences, "group:" + gID})
+						}
+					}
+				}
+			}
+			var instrs []string
+			if s.Instructor != "" {
+				instrs = append(instrs, s.Instructor)
+			}
+			if len(instrs) == 0 && len(s.AffectedInstructors) > 0 {
+				instrs = s.AffectedInstructors
+			}
+			for _, iID := range instrs {
+				if inst, ok := instrMap[iID]; ok && len(inst.Preferences) > 0 {
+					entities = append(entities, struct {
+						prefs []models.Preference
+						name  string
+					}{inst.Preferences, "instructor:" + iID})
+				}
+			}
+			if u, ok := unitMap[s.Unit]; ok && len(u.Preferences) > 0 {
+				entities = append(entities, struct {
+					prefs []models.Preference
+					name  string
+				}{u.Preferences, "unit:" + s.Unit})
 			}
 		}
 
@@ -358,38 +665,49 @@ func evaluatePreferences(sessions []models.Session, params *EvaluationParams) (f
 	return score, violations
 }
 
+func matchRoom(sessionRooms string, targetRoom string) bool {
+	target := strings.ToLower(strings.TrimSpace(targetRoom))
+	for _, r := range strings.Split(sessionRooms, ",") {
+		if strings.ToLower(strings.TrimSpace(r)) == target {
+			return true
+		}
+	}
+	return false
+}
+
 func isPreferenceViolated(s models.Session, pref models.Preference, dayIndex map[string]int, params *EvaluationParams) bool {
 	kind := pref.Target.Kind
 	value := pref.Target.Value
 
-	dayLwr := strings.ToLower(s.Day)
+	dayLwr := strings.ToLower(strings.TrimSpace(s.Day))
+	valLwr := strings.ToLower(strings.TrimSpace(value))
 
 	switch pref.Type {
 	case "ONLY":
 		switch kind {
 		case "DAY":
-			return strings.ToLower(value) != dayLwr
+			return valLwr != dayLwr
 		case "TIME":
 			return !compareTimeEqual(s.Time, value)
 		case "ROOM":
-			return !strings.Contains(strings.ToLower(s.Room), strings.ToLower(value))
+			return !matchRoom(s.Room, value)
 		}
 
 	case "EXCEPT":
 		switch kind {
 		case "DAY":
-			return strings.ToLower(value) == dayLwr
+			return valLwr == dayLwr
 		case "TIME":
 			return compareTimeEqual(s.Time, value)
 		case "ROOM":
-			return strings.Contains(strings.ToLower(s.Room), strings.ToLower(value))
+			return matchRoom(s.Room, value)
 		}
 
 	case "BEFORE":
 		switch kind {
 		case "DAY":
-			sIdx, ok1 := dayIndex[s.Day]
-			tIdx, ok2 := dayIndex[value]
+			sIdx, ok1 := dayIndex[dayLwr]
+			tIdx, ok2 := dayIndex[valLwr]
 			if ok1 && ok2 {
 				return sIdx >= tIdx
 			}
@@ -404,8 +722,8 @@ func isPreferenceViolated(s models.Session, pref models.Preference, dayIndex map
 	case "AFTER":
 		switch kind {
 		case "DAY":
-			sIdx, ok1 := dayIndex[s.Day]
-			tIdx, ok2 := dayIndex[value]
+			sIdx, ok1 := dayIndex[dayLwr]
+			tIdx, ok2 := dayIndex[valLwr]
 			if ok1 && ok2 {
 				return sIdx <= tIdx
 			}
@@ -421,143 +739,196 @@ func isPreferenceViolated(s models.Session, pref models.Preference, dayIndex map
 }
 
 // ---------------------------------------------------------------------------
-// 4. Lesson Distribution
+// 4. Lesson Distribution & Session Irregularities
 // ---------------------------------------------------------------------------
 
-func evaluateDistribution(sessions []models.Session, params *EvaluationParams) (float64, []ConstraintViolation) {
+func evaluateDistribution(sessions []models.Session, params *EvaluationParams) (float64, int, int, []ConstraintViolation) {
 	var violations []ConstraintViolation
 
-	lessonMap := make(map[string]models.Lesson, len(params.Lessons))
+	// Build map from lesson unique key to lesson
+	lessonKeyMap := make(map[string]models.Lesson, len(params.Lessons))
 	for _, l := range params.Lessons {
-		lessonMap[l.Identifier] = l
+		key := CreateUniqueLessonKey(l)
+		lessonKeyMap[key] = l
 	}
 
-	// Count actual sessions per (lessonID, distIdx)
-	type sessKey struct {
-		lessonID string
-		distIdx  int
-	}
-	actualCounts := make(map[sessKey]int)
-
-	for _, s := range sessions {
-		lessonID, distIdx := parseSessionIdentifier(s.Identifier)
-		if lessonID == "" {
-			continue
-		}
-		key := sessKey{lessonID, distIdx}
-		count := s.Blocks
-		if count < 1 {
-			count = 1
-		}
-		actualCounts[key] += count
-	}
-
-	// Group by lesson
-	type lessonDist struct {
-		lessonID     string
-		desiredTotal int
-		desired      []int
-	}
-	lessonDists := make(map[string]*lessonDist)
-
-	for key := range actualCounts {
-		lesson, ok := lessonMap[key.lessonID]
-		if !ok {
-			continue
-		}
-		if _, exists := lessonDists[key.lessonID]; !exists {
-			desiredTotal := 0
-			for _, c := range lesson.Distribution {
-				desiredTotal += c
-			}
-			// Only consider lessons that have a meaningful distribution
-			if desiredTotal == 0 {
-				continue
-			}
-			lessonDists[key.lessonID] = &lessonDist{
-				lessonID:     key.lessonID,
-				desiredTotal: desiredTotal,
-				desired:      lesson.Distribution,
+	// Map sessions to lessons: match by unique key first, fallback to identifier
+	lessonSessions := make(map[string][]models.Session)
+	for _, l := range params.Lessons {
+		lKey := CreateUniqueLessonKey(l)
+		var matched []models.Session
+		for _, s := range sessions {
+			sKey := CreateUniqueSessionKey(s)
+			if sKey == lKey {
+				matched = append(matched, s)
+			} else if l.Identifier != "" && (s.Identifier == l.Identifier || strings.HasPrefix(s.Identifier, l.Identifier+"-")) {
+				matched = append(matched, s)
 			}
 		}
+		lessonSessions[l.Identifier] = matched
+	}
+
+	timeIdx := make(map[string]int, len(params.PeriodTimes))
+	for i, t := range params.PeriodTimes {
+		timeIdx[strings.ToLower(strings.TrimSpace(t))] = i
 	}
 
 	wellDistributed := 0
-	totalLessons := len(lessonDists)
+	totalLessons := 0
+	missingSessions := 0
+	extraSessions := 0
 
-	for _, ld := range lessonDists {
-		actualTotal := 0
-		actualBlocks := make([]int, len(ld.desired))
-		for i := range ld.desired {
-			key := sessKey{ld.lessonID, i}
-			actualBlocks[i] = actualCounts[key]
-			actualTotal += actualBlocks[i]
+	for _, lesson := range params.Lessons {
+		sessList := lessonSessions[lesson.Identifier]
+
+		// Session count irregularities
+		actualCount := 0
+		for _, s := range sessList {
+			blocks := s.Blocks
+			if blocks < 1 {
+				blocks = 1
+			}
+			actualCount += blocks
 		}
 
-		fit := calculateFit(ld.desired, ld.desiredTotal, actualBlocks, actualTotal)
+		if lesson.TotalLessons > 0 {
+			if actualCount < lesson.TotalLessons {
+				missingSessions += lesson.TotalLessons - actualCount
+			} else if actualCount > lesson.TotalLessons {
+				extraSessions += actualCount - lesson.TotalLessons
+			}
+		}
+
+		desiredTotal := 0
+		var desired []int
+		for _, c := range lesson.Distribution {
+			if c > 0 {
+				desiredTotal += c
+				desired = append(desired, c)
+			}
+		}
+		if desiredTotal == 0 {
+			continue
+		}
+
+		totalLessons++
+
+		// Reconstruct contiguous runs per day (matching TypeScript EvaluateLessonDistribution)
+		daySlots := make(map[string][]int)
+		offGrid := 0
+		for _, s := range sessList {
+			normTime := strings.ToLower(strings.TrimSpace(s.Time))
+			ti, ok := timeIdx[normTime]
+			if !ok {
+				offGrid++
+				continue
+			}
+			dayKey := strings.ToLower(strings.TrimSpace(s.Day))
+			blocks := s.Blocks
+			if blocks < 1 {
+				blocks = 1
+			}
+			for b := 0; b < blocks; b++ {
+				daySlots[dayKey] = append(daySlots[dayKey], ti+b)
+			}
+		}
+
+		var actual []int
+		for _, idxs := range daySlots {
+			sort.Ints(idxs)
+			// Remove duplicates in case of overlaps
+			uniqueIdxs := make([]int, 0, len(idxs))
+			for i, val := range idxs {
+				if i == 0 || val != idxs[i-1] {
+					uniqueIdxs = append(uniqueIdxs, val)
+				}
+			}
+
+			run := 1
+			for i := 1; i <= len(uniqueIdxs); i++ {
+				if i < len(uniqueIdxs) && uniqueIdxs[i] == uniqueIdxs[i-1]+1 {
+					run++
+				} else {
+					actual = append(actual, run)
+					run = 1
+				}
+			}
+		}
+		for i := 0; i < offGrid; i++ {
+			actual = append(actual, 1)
+		}
+		sort.Slice(actual, func(i, j int) bool { return actual[i] > actual[j] })
+		sort.Slice(desired, func(i, j int) bool { return desired[i] > desired[j] })
+
+		actualTotal := 0
+		for _, a := range actual {
+			actualTotal += a
+		}
+
+		fit := calculateFit(desired, desiredTotal, actual, actualTotal)
 		if fit >= 0.8 {
 			wellDistributed++
 		} else {
 			violations = append(violations, ConstraintViolation{
 				Type:        "distribution",
-				Description: fmt.Sprintf("lesson %s: fit=%.2f (desired=%v, actual=%v)", ld.lessonID, fit, ld.desired, actualBlocks),
+				Description: fmt.Sprintf("lesson %s: fit=%.2f (desired=%v, actual=%v)", lesson.Identifier, fit, desired, actual),
 				Penalty:     1.0 - fit,
 			})
 		}
 	}
 
 	if totalLessons == 0 {
-		return 100.0, violations
+		return 100.0, missingSessions, extraSessions, violations
 	}
 	score := float64(wellDistributed) / float64(totalLessons) * 100.0
-	return score, violations
+	return score, missingSessions, extraSessions, violations
 }
 
-func calculateFit(desired []int, desiredTotal int, actualBlocks []int, actualTotal int) float64 {
+func calculateFit(desiredBlocks []int, desiredTotal int, actualBlocks []int, actualTotal int) float64 {
 	if actualTotal == 0 {
 		return 0.0
 	}
 
+	var fit float64
 	if desiredTotal == actualTotal {
-		desiredNonZero := 0
-		for _, c := range desired {
-			if c > 0 {
-				desiredNonZero++
-			}
-		}
-		actualNonZero := 0
-		for _, c := range actualBlocks {
-			if c > 0 {
-				actualNonZero++
-			}
-		}
-
-		if desiredNonZero == actualNonZero {
-			matchCount := 0.0
-			for i := range desired {
-				if desired[i] > 0 && desired[i] == actualBlocks[i] {
-					matchCount++
+		if len(desiredBlocks) == len(actualBlocks) {
+			match := true
+			for i := range desiredBlocks {
+				if desiredBlocks[i] != actualBlocks[i] {
+					match = false
+					break
 				}
 			}
-			if matchCount == float64(desiredNonZero) {
+			if match {
 				return 1.0
 			}
 		}
 
-		// Partial match per block
+		maxBlocks := len(desiredBlocks)
+		if len(actualBlocks) > maxBlocks {
+			maxBlocks = len(actualBlocks)
+		}
 		matchScore := 0.0
-		for i := range desired {
-			if desired[i] > 0 {
-				diff := math.Abs(float64(desired[i] - actualBlocks[i]))
-				matchScore += 1.0 - diff/float64(desired[i])
+		for i := 0; i < maxBlocks; i++ {
+			d := 0
+			if i < len(desiredBlocks) {
+				d = desiredBlocks[i]
+			}
+			a := 0
+			if i < len(actualBlocks) {
+				a = actualBlocks[i]
+			}
+			if d > 0 {
+				matchScore += 1.0 - math.Abs(float64(d-a))/float64(d)
 			}
 		}
-		return matchScore / float64(max(1, desiredNonZero))
+		fit = matchScore / float64(max(1, len(desiredBlocks)))
+	} else {
+		countMatch := math.Max(0, 1.0-math.Abs(float64(actualTotal-desiredTotal))/float64(max(1, desiredTotal)))
+		fit = countMatch * 0.5
 	}
 
-	// Different totals
-	countMatch := math.Max(0, 1.0-math.Abs(float64(actualTotal-desiredTotal))/float64(max(1, desiredTotal)))
-	return countMatch * 0.5
+	return math.Min(1.0, math.Max(0.0, math.Round(fit*100)/100))
 }
 
 // ---------------------------------------------------------------------------
@@ -567,18 +938,18 @@ func calculateFit(desired []int, desiredTotal int, actualBlocks []int, actualTot
 func evaluateDefaultRooms(sessions []models.Session, params *EvaluationParams) (float64, []ConstraintViolation) {
 	var violations []ConstraintViolation
 
-	lessonByGroupUnit := make(map[string]models.Lesson)
+	lessonMap := make(map[string]models.Lesson, len(params.Lessons))
 	for _, l := range params.Lessons {
 		key := l.Group + "|" + l.Unit
-		lessonByGroupUnit[key] = l
+		lessonMap[key] = l
 	}
 
-	groupMap := make(map[string]models.Group)
+	groupMap := make(map[string]models.Group, len(params.Groups))
 	for _, g := range params.Groups {
 		groupMap[g.ID] = g
 	}
 
-	unitMap := make(map[string]models.Unit)
+	unitMap := make(map[string]models.Unit, len(params.Units))
 	for _, u := range params.Units {
 		unitMap[u.ID] = u
 	}
@@ -591,20 +962,29 @@ func evaluateDefaultRooms(sessions []models.Session, params *EvaluationParams) (
 			continue
 		}
 
-		preferred := ""
-
-		grps := s.AffectedGroups
-		if len(grps) == 0 && s.Group != "" {
-			grps = []string{s.Group}
+		var roomsToCheck []string
+		if !s.Multiple || s.Type == "regular" || s.Type == "lesson-merge" {
+			if s.Room != "" {
+				roomsToCheck = append(roomsToCheck, s.Room)
+			}
+		} else {
+			for _, mid := range s.MultipleIDs {
+				if !mid.Online && mid.RoomID != "" {
+					roomsToCheck = append(roomsToCheck, mid.RoomID)
+				}
+			}
 		}
 
-		// 1. Lesson's default_room (matched by affected_group + unit)
-		for _, gID := range grps {
-			lessonKey := gID + "|" + s.Unit
-			if l, ok := lessonByGroupUnit[lessonKey]; ok && l.DefaultRoom != "" {
-				preferred = l.DefaultRoom
-				break
-			}
+		if len(roomsToCheck) == 0 {
+			continue
+		}
+
+		preferred := ""
+
+		// 1. Lesson's default_room
+		lessonKey := s.Group + "|" + s.Unit
+		if l, ok := lessonMap[lessonKey]; ok && l.DefaultRoom != "" {
+			preferred = l.DefaultRoom
 		}
 
 		// 2. Unit's default_room
@@ -616,11 +996,8 @@ func evaluateDefaultRooms(sessions []models.Session, params *EvaluationParams) (
 
 		// 3. Group's default_room
 		if preferred == "" {
-			for _, gID := range grps {
-				if g, ok := groupMap[gID]; ok && g.DefaultRoom != "" {
-					preferred = g.DefaultRoom
-					break
-				}
+			if g, ok := groupMap[s.Group]; ok && g.DefaultRoom != "" {
+				preferred = g.DefaultRoom
 			}
 		}
 
@@ -629,15 +1006,21 @@ func evaluateDefaultRooms(sessions []models.Session, params *EvaluationParams) (
 		}
 
 		totalWithPref++
-		sessionRooms := strings.Split(s.Room, ",")
-		found := false
-		for _, r := range sessionRooms {
-			if strings.TrimSpace(r) == preferred {
-				found = true
+
+		matched := false
+		for _, rawRoom := range roomsToCheck {
+			for _, r := range strings.Split(rawRoom, ",") {
+				if strings.TrimSpace(r) == preferred {
+					matched = true
+					break
+				}
+			}
+			if matched {
 				break
 			}
 		}
-		if found {
+
+		if matched {
 			satisfied++
 		} else {
 			violations = append(violations, ConstraintViolation{
@@ -660,37 +1043,27 @@ func evaluateDefaultRooms(sessions []models.Session, params *EvaluationParams) (
 // ---------------------------------------------------------------------------
 
 func calculateOverall(res *EvaluationResult) float64 {
-	return res.HardScore*0.60 + res.PreferenceScore*0.20 +
-		res.DistributionScore*0.10 + res.DefaultRoomScore*0.10
+	return math.Round((res.HardScore*0.60+res.PreferenceScore*0.20+
+		res.DistributionScore*0.10+res.DefaultRoomScore*0.10)*10) / 10
 }
 
 func calculateHealth(res *EvaluationResult, totalSessions int) string {
-	if res.HiddenSessions > 10 || (totalSessions > 0 && res.HiddenSessions > int(float64(totalSessions)*0.2)) {
+	sessionIrregularities := res.HiddenSessions + res.MissingSessions + res.ExtraSessions
+	if sessionIrregularities > 10 || (totalSessions > 0 && float64(sessionIrregularities) > float64(totalSessions)*0.2) {
 		return "low"
 	}
+	health := "low"
 	if res.OverallScore >= 85 {
-		return "high"
+		health = "high"
+	} else if res.OverallScore >= 60 {
+		health = "medium"
 	}
-	if res.OverallScore >= 60 {
-		return "medium"
+	if sessionIrregularities > 0 && health == "high" {
+		health = "medium"
 	}
-	return "low"
+	return health
 }
 
-func parseSessionIdentifier(identifier string) (lessonID string, distIdx int) {
-	idx := strings.LastIndex(identifier, "-")
-	if idx < 0 {
-		return identifier, 0
-	}
-	lessonID = identifier[:idx]
-	distIdx, err := strconv.Atoi(identifier[idx+1:])
-	if err != nil {
-		return identifier, 0
-	}
-	return lessonID, distIdx
-}
-
-// Time comparison helpers — converts "8:00am" to minutes since midnight.
 func timeToMinutes(t string) int {
 	t = strings.ToLower(strings.TrimSpace(t))
 
@@ -734,7 +1107,6 @@ func compareTimeAfter(a, b string) bool {
 	return timeToMinutes(a) > timeToMinutes(b)
 }
 
-// Session end time: start + 40 minutes (standard lesson duration).
 func sessionEndMinutes(s models.Session) int {
 	return timeToMinutes(s.Time) + 40
 }
@@ -743,10 +1115,6 @@ func isSessionNotBeforePeriod(s models.Session, periodTitle string, params *Eval
 	for _, b := range params.Blocks {
 		if b.Title == periodTitle {
 			periodStart := timeToMinutes(b.Start)
-			periodDuration := b.Duration.Hours*60 + b.Duration.Minutes + b.Duration.Duration
-			if periodDuration <= 0 {
-				periodDuration = 40 // default
-			}
 			endTime := sessionEndMinutes(s)
 			return endTime >= periodStart
 		}
@@ -758,10 +1126,6 @@ func isSessionNotBeforeBreak(s models.Session, breakTitle string, params *Evalua
 	for _, b := range params.Breaks {
 		if b.Title == breakTitle {
 			breakStart := timeToMinutes(b.StartTime)
-			breakDuration := b.Duration.Hours*60 + b.Duration.Minutes + b.Duration.Duration
-			if breakDuration <= 0 {
-				breakDuration = 15 // default break
-			}
 			endTime := sessionEndMinutes(s)
 			return endTime >= breakStart
 		}
@@ -805,5 +1169,3 @@ func max(a, b int) int {
 	}
 	return b
 }
-
-
